@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 6 • 📘 Book 2 (A1.2 - High Elementary) - Guía de Inglés UTM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 900px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-btn, .print-btn {
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .back-btn:hover, .print-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 0 0 6px 0;
+        }
+        .header .subtitle {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: inline-flex;
+            gap: 16px;
+            background: #f1f5f9;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+        .skill-section {
+            margin-top: 40px;
+        }
+        .skill-section h2 {
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 6px solid #2563eb;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .task-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .task-card h3 {
+            color: #1e293b;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .task-obj {
+            font-size: 14px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .task-expl {
+            font-size: 14px;
+            color: #0369a1;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        .question-card {
+            background: #fafafa;
+            border-left: 4px solid #3b82f6;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+        .q-header {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .q-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .q-num {
+            color: #3b82f6;
+            margin-right: 4px;
+        }
+        .q-desc {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .options-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .opt {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .opt.correct {
+            background: #ecfdf5;
+            border-color: #10b981;
+            color: #065f46;
+            font-weight: 600;
+        }
+        .badge-correct {
+            background: #10b981;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            float: right;
+            font-weight: 600;
+        }
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .match-table th, .match-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .match-table th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        .match-ans {
+            color: #065f46;
+            background: #ecfdf5;
+            font-weight: 600;
+        }
+        .order-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        .fill-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .fill-list li {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        @media print {
+            body { background: #ffffff; padding: 0; }
+            .top-nav { display: none; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .task-card { page-break-inside: avoid; }
+            .question-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="../index.html" class="back-btn">← Volver al Portal General</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Guardar / Imprimir PDF</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>📘 Universidad Técnica de Manabí</h1>
+            <div class="subtitle">Simulador de Inglés • Unidad 6 • 📘 Book 2 (A1.2 - High Elementary)</div>
+            <div class="stats">
+                <span>📋 18 Tareas</span>
+                <span>❓ 182 Preguntas Verificadas</span>
+            </div>
+        </div>
+        <div class="skill-section"><h2 style="border-left-color: #2563eb">🧠 Grammar (Estructuras Gramaticales)</h2><div class="task-card"><h3>📌 Tarea #69: THE RISKS OF INTERNET</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To use the definite article to refer to a specific person, thing or situation.</p><div class="task-expl">💡 <strong>Explicación:</strong> The definite article (THE) is used to refer to a specific ítem, one understood to exist. The definite article (THE) is not used when we refer about things in general.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Fill in the gaps with the article (the) or (-) if no definite article is needed:</div>
+<div class="tf-block">
+<p><strong>• I study </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Fill in the gaps with the article (the) or (-) if no definite article is needed:</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Choose the best option in the following sentences doing use or not of the article “the”:</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Choose the best option in the following sentences doing use or not of the article “the”:</div>
+<div class="tf-block">
+<p><strong>• Egypt is ____ land of ____ pyramids.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Are these sentences correct (TRUE) or incorrect (FALSE)?</div>
+<div class="tf-block">
+<p><strong>• South África is in southern hemisphere.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I care about nature.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The president of the United States is really famous.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I like to meet the foreign people.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#6</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Women are not easy to understand"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#7</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Summer is the perfect time to go to the beach"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Read the sentences doing reference to the use of the article “the” and choose if these are true or false:</div>
+<div class="tf-block">
+<p><strong>• The computers allow us to send information anywhere in the world.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The time taken for this activity is indicated.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Control of access to internet will be a major project for computer industry.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Such control could be achieved by checking the user´s ID and age.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Choose the best option in the following sentences (TRUE OR FALSE):</div>
+<div class="tf-block">
+<p><strong>• The definite article is used to refer to a specific item.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Choose the best option in the following sentences (TRUE OR FALSE):</div>
+<div class="tf-block">
+<p><strong>• The definite article is used when we refer about things in general.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #70: WE CAN DO MANY ACTIVITIES</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To use “can” in affirmative, negative and interrogative sentences.</p><div class="task-expl">💡 <strong>Explicación:</strong> Uses of this modal to show ability.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Choose the right option according to the sentence:</div>
+<div class="tf-block">
+<p><strong>• I ____ walk but I ____ fly.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I ____ drive a truck but I ____ drive a bike.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Choose the right word in the following sentences to complete them.</div>
+<div class="tf-block">
+<p><strong>• My best friend </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Choose the right word in the following sentences to complete them.</div>
+<div class="tf-block">
+<p><strong>• This woman </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Choose the best option in the following sentences indicating if it is true or false:</div>
+<div class="tf-block">
+<p><strong>• My brother can practice sports every day.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Choose the best option in the following sentences indicating if it is true or false:</div>
+<div class="tf-block">
+<p><strong>• Can this woman speaks English?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Are these sentences correct (TRUE) or incorrect (FALSE)?</div>
+<div class="tf-block">
+<p><strong>• You can to swim very well.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Can you cook like your mom?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I can climb a mountain.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• We cann´t speak French</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#7</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Can you cook the dinner tonight ?"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#8</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I can learn another language by taking classes on the internet"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Choose the right option according to the sentence:</div>
+<div class="tf-block">
+<p><strong>• I ____ swim in the pool but I ____ swim in the ocean.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I ____ jog alone but I ____ play football alone.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#10</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"You can not climb a mountain without help"</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #71: WE ALWAYS STUDY ENGLISH TOGETHER</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To use adverbs of frequency in the correct position.</p><div class="task-expl">💡 <strong>Explicación:</strong> We use some adverbs to describe how frequently we do an activity. These are called adverbs of frequency.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Choose the best option in the following sentences using the percentage for each adverb of frequency:</div>
+<div class="tf-block">
+<p><strong>• I </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#2</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I always watch the commercials on TV"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Are these sentences correct (TRUE) or incorrect (FALSE)?</div>
+<div class="tf-block">
+<p><strong>• The teacher sends the homework late never.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Monica is always ready to start her classes.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Choose in the sentences if it is an ADJECTIVE or an ADVERB OF FREQUENCY:</div>
+<div class="tf-block">
+<p><strong>• I sometimes answer my phone in classes.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Choose in the sentences if it is an ADJECTIVE or an ADVERB OF FREQUENCY:</div>
+<div class="tf-block">
+<p><strong>• I have a beautiful and amazing family.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Choose the best option in the following sentences using the percentage for each adverb of frequency:</div>
+<div class="tf-block">
+<p><strong>• My family and I </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#7</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"My friends often go out after classes"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#8</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I never read the newspaper on weekdays"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Fill in the gaps with the correct option:</div>
+<div class="tf-block">
+<p><strong>• I </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• My mother </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Fill in the gaps with the correct option:</div>
+<div class="tf-block">
+<p><strong>• My uncle </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• These girls </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #72: WOULD YOU LIKE TO EAT?</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To make requests and offers with would you like.</p><div class="task-expl">💡 <strong>Explicación:</strong> The expression “I would like…” is an expression often used to request food items or other things. It´s a form of polite request. The contraction is “I´d like”. It´s considered rude, or not very polite to request items, food or otherwise using (want), it sounds rare to ask for items using (desire).</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Match the activities with the correct verb.</div>
+<div class="tf-block">
+<p><strong>• To become immortal.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Match the activities with the correct verb.</div>
+<div class="tf-block">
+<p><strong>• A place to live.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Choose the best option in the following sentences:</div>
+<div class="tf-block">
+<p><strong>• What </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Choose the best option in the following sentences:</div>
+<div class="tf-block">
+<p><strong>• Pay attention, please.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Are these sentences correct (TRUE) or incorrect (FALSE)?</div>
+<div class="tf-block">
+<p><strong>• I would to like a coffee, please.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• What would you like to eat?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• We would like to order a small pizza.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Mary would like drinking a cup of tea, please.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#6</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I would like to have a chance"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#7</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"What would you like for lunch ?"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#8</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Would you like to drink coffee ?"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Fill in the blanks with the correct word:</div>
+<div class="tf-block">
+<p><strong>• What </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Fill in the blanks with the correct word:</div>
+<div class="tf-block">
+<p><strong>• I think </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #059669">📖 Vocabulary (Vocabulario)</h2><div class="task-card"><h3>📌 Tarea #77: SHAPES AND FORMS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To describe shapes and forms.</p><div class="task-expl">💡 <strong>Explicación:</strong> It is important to teach students certain basic words about shapes or figures because in this way they can relate some instructions at the time of a practice within the course, a worksheet or in exams, for example when we indicate to them; Circle the correct verb tense. Learning words about basic shapes can also be useful when students try to explain the description of an object and do not know the word in English, another partner or the teacher can help by indicating the correct word.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#1</span> Look at the phrases. Order them into: the subject, the verb and the complement.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The moon circles the earth"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The small triangle is in the center"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The rooms are all very square"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the question and choose the best answer: How many sides does a triangle have?</div>
+<ul class="options-list">
+<li class="opt">one</li>
+<li class="opt">five</li>
+<li class="opt">four</li>
+<li class="opt correct"><strong>three</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#3</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Martina drew a right rectangle"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#4</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"the red triangle denotes danger"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Which sentence is correct?</div>
+<ul class="options-list">
+<li class="opt">The area of the office is 35 meters square.</li>
+<li class="opt correct"><strong>The area of the office is 35 square meters.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The area of the office is square meters 35.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> Match the definition to the right shapes and forms words.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>It is a line that is curved so that its ends meet and every point on the line is the same distance from the center:</td><td class="match-ans"><strong>circle</strong> ✅</td></tr>
+<tr><td>It is a closed figure with three sides:</td><td class="match-ans"><strong>triangle</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Choose the best option to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• He is having a Dorito. It is a great example of a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• A ball looks like a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the question and choose the best answer: How many sides does a square have?</div>
+<ul class="options-list">
+<li class="opt">one</li>
+<li class="opt">five</li>
+<li class="opt correct"><strong>four</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">three</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Are these sentences correct (TRUE) or incorrect (FALSE)?</div>
+<div class="tf-block">
+<p><strong>• My English teacher is part of a select social circle and most of the time goes to the “tennis club”.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Her room is twenty circle meters.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The triangle has 3 sides.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The area is approximately 100 circle kilometers.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the correct one.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A square has four sides.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A triangle has two sides.</li>
+<li class="opt">A circle has a square.</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #78: RULES AT HOME</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To identify modal verbs to be used to taking about rules and use them in simple statements.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> Match the definition to the right modal word.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>This expresses obligation due to the existence of a norm or rule:</td><td class="match-ans"><strong>must</strong> ✅</td></tr>
+<tr><td>These express possibility. This use is usually a generalization or a  supposition:</td><td class="match-ans"><strong>can/can´t</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the best option to complete the sentences: He __________ have changed clothes during the night.</div>
+<ul class="options-list">
+<li class="opt">can</li>
+<li class="opt correct"><strong>must</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the best option to complete the sentences: You __________ play in class.</div>
+<ul class="options-list">
+<li class="opt">must</li>
+<li class="opt correct"><strong>mustn´t</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Are these sentences TRUE or FALSE?</div>
+<div class="tf-block">
+<p><strong>• Kids must go to the supermarket alone.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Kids must respect their parents.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Kids can destroy things at home.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Kids can help at home.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Are these sentences TRUE or FALSE?</div>
+<div class="tf-block">
+<p><strong>• Mothers can take care their children.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Mothers can cook for their children.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Pets can talk.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Pets can work.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose a, b, or c, according to the picture.</div>
+<ul class="options-list">
+<li class="opt">She must go to bed after 11 pm.</li>
+<li class="opt">She must play video games.</li>
+<li class="opt correct"><strong>She must do her homework.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Which sentence is correct?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>You must listen to the teacher.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">You must to listen the teacher.</li>
+<li class="opt">You must listen the to teacher.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct option (possibility): The florist ________ the bouquet early.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>can deliver</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">can swim</li>
+<li class="opt">can cook</li>
+<li class="opt">can eat</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct option (possibility): My friend ________ me this week.</div>
+<ul class="options-list">
+<li class="opt">can run</li>
+<li class="opt correct"><strong>can visit</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">can go</li>
+<li class="opt">can eat</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#10</span> Look at the phrases. Order them into: the subject, the verb and the complement.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"You mustn´t sleep in the class"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"You can see the starts"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"You must pay attention to the teacher"</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #79: SPORTS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand and use vocabulary related to sports.</p><div class="task-expl">💡 <strong>Explicación:</strong> There is a growing body of research linking physical activity to improvements in educational performance. This is because sports help students develop character and learn important social and brain skills such as problem solving, resilience, perseverance, confidence, and teamwork. Others researchers also say that by watching or discussing sports, it helps activate the part of the brain involved with playing sports and that helps to understand sports terminology better.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the statement and choose the best answer: I like swimming. I can practice it in the ________</div>
+<ul class="options-list">
+<li class="opt correct"><strong>pool</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">court</li>
+<li class="opt">field</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Are these sentences TRUE or FALSE?</div>
+<div class="tf-block">
+<p><strong>• There are 7 players in each basketball team. (14 players).</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There is only 1 player in each tennis team. (2 players).</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There are 5 players in each soccer team and a goalkeeper. (11 players).</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#3</span> Match the definition to the right modal word.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>It is a team sport, played between two sets of five players each for four periods or quarters of ten or twelve minutes each one:</td><td class="match-ans"><strong>basketball</strong> ✅</td></tr>
+<tr><td>It is practiced on a special court in which a small ball is used that is sent from one side of the court to the other over a net with the help of a pair of rackets:</td><td class="match-ans"><strong>tennis</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Choose the best option to complete the sentences:</div>
+<div class="tf-block">
+<p><strong>• Are you and your friend going to play </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The kids play </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the statement and choose the best answer: You can practice this sport on it. The field is a big place to play ________</div>
+<ul class="options-list">
+<li class="opt">swimming</li>
+<li class="opt correct"><strong>soccer</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">basketball</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the statement and choose the best answer: You can practice some sports on it. The court is a big place to play ________</div>
+<ul class="options-list">
+<li class="opt">soccer</li>
+<li class="opt">swimming</li>
+<li class="opt correct"><strong>tennis</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#7</span> Put in order the following letters to create words related to sports.</div>
+<ul class="fill-list">
+<li><code>NTESNI</code> ➔ <strong>TENNIS</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>KESTALBABL</code> ➔ <strong>BASKETBALL</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>MINSIWNG</code> ➔ <strong>SWIMMING</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct one: Where do tennis players play?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Tennis players play on the tennis court.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Tennis players play on the tennis field.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Which sentence is correct?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Swimming is my favorite form of exercise.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Swimming is my form of favorite exercise.</li>
+<li class="opt">Swimming of exercise is my favorite form.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#10</span> Look at the phrases. Order them into: the subject, the verb and the complement.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"My favorite sport is swimming"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Michael goes swimming on weekends"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I find swimming very therapeutic"</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #80: WISE SHOPPING</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand and use words related to shopping.</p><div class="task-expl">💡 <strong>Explicación:</strong> One of the best ways to teach students shopping vocabulary is to take them on a shopping trip. This may be difficult to handle, but it will be worth the effort. It will give students the opportunity to shop as they normally do, but with an interpreter. The teacher will be there to explain why things happened or why people said what they said. Another way is the students can meet with their teacher at the store with their own money. That way, when the teacher goes shopping, the students will have real questions and can practice the vocabulary.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#1</span> Complete the words with the correct vowels.</div>
+<ul class="fill-list">
+<li><code>SH _ PP _ NG</code> ➔ <strong>SHOPPING</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>M _ LL</code> ➔ <strong>MALL</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>D _ P _ RTM _ NT ST _ R _</code> ➔ <strong>DEPARTMENT STORE</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#2</span> Find the places to these definitions.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Mall</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Designers´shop</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Department store</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#3</span> Find the places to these definitions.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Street markeT</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Second hand shop</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the question and choose the best answer: Where can I buy clothes from recognized brands?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Designers´shop</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Department store</li>
+<li class="opt">Street market</li>
+<li class="opt">Second hand shop</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the question and choose the best answer: Where can I buy used things?</div>
+<ul class="options-list">
+<li class="opt">Designers´shop</li>
+<li class="opt">Department store</li>
+<li class="opt">Street market</li>
+<li class="opt correct"><strong>Second hand shop</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the question and choose the best answer: Where can I buy a gift for my sister?</div>
+<ul class="options-list">
+<li class="opt">Post office</li>
+<li class="opt correct"><strong>Department store</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Pharmacy</li>
+<li class="opt">Second hand shop</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Are these sentences TRUE or FALSE?</div>
+<div class="tf-block">
+<p><strong>• Malls sell used things.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Second-hand shops sell very shop things.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Designers ‘shops sell products of recognized brands.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the best option: Maria Eugenia suggests that Karla goes to the __________ to buy presents for her mom.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Department store</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Second hand shop</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Which sentence is correct?</div>
+<ul class="options-list">
+<li class="opt">My hobby favorite is shopping.</li>
+<li class="opt">My favorite shopping is hobby.</li>
+<li class="opt correct"><strong>My favorite hobby is shopping.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#10</span> Look at the phrases. Order them into: the subject, the verb and the complement.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Street markets sell very shop things"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Shopping “El Rosado” has a special fascination"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Department Stores are congested at Christmas"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#11</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I'm a suitable person for the position"</em> ✅</div>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #d97706">📚 Reading (Comprensión Lectora)</h2><div class="task-card"><h3>📌 Tarea #73: MY TYPICAL DAY</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand simple questions in questionnaires on familiar topics.</p><div class="task-expl">💡 <strong>Explicación:</strong> This is a very common task that you might be asked to talk about in English. It could happen in an interview for college or sometimes a job interview. But it is a very common topic that could take place in an English conversation. You may not have a conversation about your entire daily schedule, but you might have to talk about a small part of your day and what you do. When talking about your daily routine you will only need to use one verb tense. And that is the Simple Present Tense. This is the most basic and easiest of English verb tenses and it is the only one you will need when talking about the things you do every day.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> Read the interview and drag the corresponding questions for the answers.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Interviewer:</td><td class="match-ans"><strong>What do you do?</strong> ✅</td></tr>
+<tr><td>Interviewer:</td><td class="match-ans"><strong>Where do you work?</strong> ✅</td></tr>
+<tr><td>Interviewer:</td><td class="match-ans"><strong>How is your typical day?</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#2</span> Match the questions with the answers.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>I love my job because every day is different and I really appreciate my students.</td><td class="match-ans"><strong>Do you like your job?</strong> ✅</td></tr>
+<tr><td>Sometimes it is very hard and very stressful too. I have a big responsibility by taking care of Young People.</td><td class="match-ans"><strong>What do you dislike about your job?</strong> ✅</td></tr>
+<tr><td>I go to the beach and listen to music. I also read a book or I go to the cinema.</td><td class="match-ans"><strong>How do you relax?</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the best option to complete the sentence: I work ___________</div>
+<ul class="options-list">
+<li class="opt">a cup of coffee</li>
+<li class="opt correct"><strong>in a public school</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">always is a hurry</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the best option to complete the sentence: I am ___________</div>
+<ul class="options-list">
+<li class="opt">a book</li>
+<li class="opt">my job</li>
+<li class="opt correct"><strong>always is a hurry</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> Drag and drop the halves to complete the sentences.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>I have </td><td class="match-ans"><strong>a cup of coffee for breakfast.</strong> ✅</td></tr>
+<tr><td>I love </td><td class="match-ans"><strong>my job.</strong> ✅</td></tr>
+<tr><td>I read</td><td class="match-ans"><strong>a book.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> Order the sentences according to the time.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>6:00 am</td><td class="match-ans"><strong>I wake up.</strong> ✅</td></tr>
+<tr><td>7:00 am</td><td class="match-ans"><strong>I have breakfast.</strong> ✅</td></tr>
+<tr><td>7:45 am</td><td class="match-ans"><strong>I go to work.</strong> ✅</td></tr>
+<tr><td>5:00 pm</td><td class="match-ans"><strong>I take the bus to go back home.</strong> ✅</td></tr>
+<tr><td>6:00 pm</td><td class="match-ans"><strong>I prepare the dinner.</strong> ✅</td></tr>
+<tr><td>9:30 pm</td><td class="match-ans"><strong>I go to sleep.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#7</span> Match the words with the pictures.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>GET UP</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>READ</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>LISTEN TO MUSIC</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>LEAVE HOME</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>WORK</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> Match the words with the definitions.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>You do this after a long day and just before you fall asleep.</td><td class="match-ans"><strong>GO TO BED</strong> ✅</td></tr>
+<tr><td>You do this when your alarm clock goes off in the morning.</td><td class="match-ans"><strong>WAKE UP</strong> ✅</td></tr>
+<tr><td>You do this in the morning because it is the most important meal of the day.</td><td class="match-ans"><strong>HAVE BREAKFAST</strong> ✅</td></tr>
+<tr><td>You do this at the dinner table with your family.</td><td class="match-ans"><strong>HAVE DINNER</strong> ✅</td></tr>
+<tr><td>You do this after you wake up.</td><td class="match-ans"><strong>GET UP</strong> ✅</td></tr>
+<tr><td>You do this so you can meet your friends and learn new things.</td><td class="match-ans"><strong>GO TO SCHOOL</strong> ✅</td></tr>
+<tr><td>You do this to learn after school.</td><td class="match-ans"><strong>DO HOMEWORK</strong> ✅</td></tr>
+<tr><td>Your dentist will be pleased if you do this twice a day.</td><td class="match-ans"><strong>BRUSH YOUR TEETH</strong> ✅</td></tr>
+<tr><td>You do this in the afternoon when your classes at school have finished.</td><td class="match-ans"><strong>GO HOME</strong> ✅</td></tr>
+<tr><td>You do this to make your body and hair clean.</td><td class="match-ans"><strong>HAVE A SHOWER</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Choose the best option to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• I usually </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• My school finishes at 3 p.m. and then I </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• On the weekends, I </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#10</span> Read the actions and put them in the order of a normal day.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"WAKE  UP GET UP HAVE BREAKFAST GO TO SCHOOL HAVE LUNCH GO HOME DO HOMEWORK HAVE DINNER GO TO BED"</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #74: AN INTERESTING COURSE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To get the gist of short, simple narratives, with visual support.</p><div class="task-expl">💡 <strong>Explicación:</strong> The following activities concern with the use of advertisements, which have the potential to develop the skills of communication using visual support. These types of activities could improve students’ cognitive learning skills and initiates them in terms of motivation and creativity thus improving their critical thinking.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Read the ads and choose the correct answer.</div>
+<div class="q-desc">DRUMMER WANTED
+For recently formed band. Must have ability and experience. We play mostly indie rock. Many songs already written. Some performances in local bars in Oct/Nov. Send details and sound samples to:  niceband @gmail.com
+
+BABYSITTER  WANTED
+For 2 years old twins. Occasional weekday evenings for upto six hours. Would be suitable for a student with some experience. $4.50 an hour. Phone Mary on 0968576476
+
+LOST!!!
+Small brown dog missing in Manabí Ave. area. She's frightened  of cats and little boys. If you see him, please, phone 0987664664 We really miss him.</div>
+<div class="tf-block">
+<p><strong>• What should you do if you find a brown dog?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• How many children will the babysitter have to look for?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Where do the band have some performances booked?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Who should you call if you want to work as a babysitter?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Read the ads. Choose True or False.</div>
+<div class="q-desc">CELLPHONES PROBLEMS?
+Experience IT engineer will sort out problems with cellphones (Samsung and iPhone) Phone the cellphone doctor now for a free estimate:
+0982345679
+
+I LOVE ZUMBA
+Get fit to the sound of Latin music.
+It’s easier than you think and loads of fun. Join us TODAY¡
+Beginners classes: Mon/ Wed 11-12 pm
+Intermediate classes: Tue/ Thu 2-3 pm
+Advanced classes: Mon/wed 7-8 pm
+Come and book your place before 14 August at Fitness Gym. (Places are limited)
+
+SUPERMAXI MARKETS
+PART TIME SUPERMARKET WORK
+Evening and weekend hours available. Experience on shelf-stacking an advantage but not essential.
+Apply at the store manager.
+
+5 de Junio Street.</div>
+<div class="tf-block">
+<p><strong>• There are no Zumba classes on Friday.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The job at the supermarket requires experience.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The Cellphone Doctor only fixes cellphones.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read the ad, then read the sentences and choose if they are TRUE or FALSE.</div>
+<div class="q-desc">ECUADORIAN COOKING INSTITUTE 
+•	#1 cooking school in Ecuador
+•	 For professional and home chefs 
+•	Full equipped kitchens
+•	12 hours of instruction face to face 
+•	$650 per level
+Info: 052 478 3828 ecuadoriancookinginstitute@gmail.com</div>
+<div class="tf-block">
+<p><strong>• You have to pay $700 per level.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• You can take online sessions.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There are full equipped kitchens.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the ad. What is it for?  Choose the best option.</div>
+<ul class="options-list">
+<li class="opt">Product sales</li>
+<li class="opt correct"><strong>Education</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Travel</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the ad. What is it for?  Choose the best option.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Product sales</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Education</li>
+<li class="opt">Travel</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> Use the words to fill the gaps.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>If you want to approach potential 1.</td><td class="match-ans"><strong>Customer</strong> ✅</td></tr>
+<tr><td>2.</td><td class="match-ans"><strong>Slogans</strong> ✅</td></tr>
+<tr><td>Such as “Think different” in APPLE adverts. 3.</td><td class="match-ans"><strong>Peak</strong> ✅</td></tr>
+<tr><td>To persuade the customers about the quality of their product, they often 4.</td><td class="match-ans"><strong>Exaggerate</strong> ✅</td></tr>
+<tr><td>Famous brands often use 5.</td><td class="match-ans"><strong>Celebrities</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Read the ad, then read the sentences and choose if they are TRUE or FALSE.</div>
+<div class="q-desc">Interested in taking dynamic classes and getting an academic degree from the comfort of your home or office?
+"THE REAL UNIVERSITY"
+•	$400 per class
+•	Each class lasts 5 weeks
+•	Get a college degree in 2 years.
+Contac us:
+therealuniversityinfo@hotmail.es
+0993219876 (weekdays only)</div>
+<div class="tf-block">
+<p><strong>• Each class lasts 4 weeks.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• You can call for info on weekends.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Classes are 100% practical.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Read the ads. Choose R if The Real University or E if the Ecuadorian Cooking Institute.</div>
+<div class="tf-block">
+<p><strong>• Classes cost $400.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• For professionals an non professionals.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• You can get a degree in 2 years.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• 12 hours of instruction.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the ads and choose the correct answer: In which ad can you get fit?</div>
+<ul class="options-list">
+<li class="opt">Ad A</li>
+<li class="opt">Ad B</li>
+<li class="opt correct"><strong>Ad C</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read the ads and choose the correct answer: In which ad can you earn just under $5 an hour?</div>
+<ul class="options-list">
+<li class="opt">Ad A</li>
+<li class="opt correct"><strong>Ad B</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Ad C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#11</span> Read the ads and choose the correct answer: In which ad should you reserve a place before the end of August?</div>
+<ul class="options-list">
+<li class="opt">Ad A</li>
+<li class="opt">Ad B</li>
+<li class="opt correct"><strong>Ad C</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#12</span> Read the ads. Choose True or False.</div>
+<div class="q-desc">DRUMMER WANTED
+For recently formed band. Must have ability and experience. We play mostly indie rock. Many songs already written. Some performances in local bars in Oct/Nov. Send details and sound samples to:  niceband @gmail.com
+
+BABYSITTER  WANTED
+For 2 years old twins. Occasional weekday evenings for upto six hours. Would be suitable for a student with some experience. $4.50 an hour. Phone Mary on 0968576476
+
+LOST!!!
+Small brown dog missing in Manabí Ave. area. She's frightened  of cats and little boys. If you see him, please, phone 0987664664 We really miss him.</div>
+<div class="tf-block">
+<p><strong>• The band is looking for a drummer to play salsa music.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The babysitter will be required to work on weekends only.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The lost cat is scared of some other animals and people.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#13</span> Read the ads and choose the correct answer: In which ad can you get help installing some new software?</div>
+<div class="q-desc">DRUMMER WANTED
+For recently formed band. Must have ability and experience. We play mostly indie rock. Many songs already written. Some performances in local bars in Oct/Nov. Send details and sound samples to:  niceband @gmail.com
+
+BABYSITTER  WANTED
+For 2 years old twins. Occasional weekday evenings for upto six hours. Would be suitable for a student with some experience. $4.50 an hour. Phone Mary on 0968576476
+
+LOST!!!
+Small brown dog missing in Manabí Ave. area. She's frightened  of cats and little boys. If you see him, please, phone 0987664664 We really miss him.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Ad A</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Ad B</li>
+<li class="opt">Ad C</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #75: PREPARING MY BREAKFAST</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand simple instructions on everyday equipment.</p><div class="task-expl">💡 <strong>Explicación:</strong> You often see the imperative form in instruction manuals or when someone tells you how to do something. To make a negative imperative, put “do not” or “don’t” before the verb. (Don’t is more informal than “do not”.) There are often “sequencing” words to show the steps in the process. For example, “firstly”, “secondly” and “finally”. You can also say “after that” instead of “then” and “first” / “second” instead of “firstly” and “secondly”.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the text. Choose the best option to complete the sentence: This dialogue is about:</div>
+<div class="q-desc">Mom: Hurry up Liz! Today you are going to prepare your breakfast.
+Liz: Why Mom?
+Mom: Because I have to attend an important meeting in the office. There is some bread, cheese or jam, butter, juice, tea, milk or coffee in the kitchen. I don’t know what you would like to eat.
+Liz: I'll prepare some delicious toasts. But mom... How do I prepare toasts?
+Mom: My gosh, Liz! Are you kidding me? Ok, it is very simple...</div>
+<ul class="options-list">
+<li class="opt">A mother who Works in an office.</li>
+<li class="opt correct"><strong>A girl who doesn’t know how to prepare toasts.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A delicious toast recipe.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the blog quickly and choose the best option: This Reading is about my favorite ____________</div>
+<div class="q-desc">There are two artists who drive me crazy, not only because of their talent but also because of their physical aspect. One of them is Robert Downey Jr. and although he is not so Young, he stays quiet well. Robertis a singer and an actor. His most famous movies are the Ironman Saga for Marvel Studios. Robert is average size. He has black eyes. His hair is black and he has a beard that makes him look very attractive. He is in his 50's. 
+Dwayne “The Rock” Johnson is my other favorite artist. Well, he is not only an actor; he is a bodybuilder and professional wrestler too. He is 45 years old. He is very, very tall and tan. He is not heavy but he keeps good weight and musculature because of the training he does. He is strong. He doesn’t have a beard and he is bald. I think he is very handsome and I love his movies.</div>
+<ul class="options-list">
+<li class="opt">Artists’ talent</li>
+<li class="opt correct"><strong>Artists’ physical characteristics</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the best answer: _____ the button to toast the bread.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Push down</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Get up</li>
+<li class="opt">Pop up</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the best answer: ______ the toast from the toaster ______. It is very hot.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Remove / carefully</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Get out / careful</li>
+<li class="opt">Push / carefuly</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the best answer: Do you usually have breakfast?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Yes, I do.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Yes, I have.</li>
+<li class="opt">Yes, I don’t.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the best answer: What do you have for breakfast?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I have some eggs and break for breakfast.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I has some milk.</li>
+<li class="opt">I do have chicken soup.</li>
+<li class="opt">She has rice and chicken.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Read the text and choose TRUE or FALSE for these sentences.</div>
+<div class="tf-block">
+<p><strong>• Liz’s mother can’t prepare breakfast for her because she is ill.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Liz has to go to the grocery store to buy bread and milk.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Liz doesn’t know how to prepare toasts in the toaster machine.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#8</span> Read the text. Order the instructions to prepare toasts.</div>
+<div class="q-desc">Liz: I'll prepare some delicious toasts. But mom... How do I prepare toasts? 
+Mom: My gosh, Liz! Are you kidding me? Ok, it is very simple.... First; put your slices of bread carefully into the bread slots of the toaster. Make sure the slices aren't too thick or too wide. 
+Liz: Ok, I've gotit! 
+Mom: second; choose the setting for darkness of the toast. Depending on the type and thickness of the bread, and how crunchy you want it, set the knob higher or lower. Please, don't burn the toast. 
+And third push down the button to toast the bread but please, keep an eye on the toaster to make sure it doesn’t burn. After, it pops ups, remove the toast from the toaster carefully. It is very hot!</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Put the slices of bread into the bread slots of the toaster. Set the knob lower or higher depending on how crunchy you want your toasts. Push down the toaster button to toast the bread. Remove the toast from the toaster when it pops up."</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the best answer: _____ your slices of bread carefully _____ the bread slots of the toaster.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Put / into</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Get / out</li>
+<li class="opt">Have / in</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> _____ you sure you _____ the toaster to the power outlet?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Are / connected</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Is / connect</li>
+<li class="opt">Do / connecting</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #76: MY FAVORITE ARTISTS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand simple descriptions of people’s physical appearance.</p><div class="task-expl">💡 <strong>Explicación:</strong> An adjective is a describing word, the main syntactic role of which is to qualify a noun or noun phrase, giving more information about the object signified. Appearance is defined as the way someone or something looks.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Read the blog. Are they CORRECT or INCORRECT?</div>
+<div class="q-desc">There are two artists who drive me crazy, not only because of their talent but also because of their physical aspect. One of them is Robert Downey Jr. and although he is not so Young, he stays quiet well. Robertis a singer and an actor. His most famous movies are the Ironman Saga for Marvel Studios. Robert is average size. He has black eyes. His hair is black and he has a beard that makes him look very attractive. He is in his 50's. 
+Dwayne “The Rock” Johnson is my other favorite artist. Well, he is not only an actor; he is a bodybuilder and professional wrestler too. He is 45 years old. He is very, very tall and tan. He is not heavy but he keeps good weight and musculature because of the training he does. He is strong. He doesn’t have a beard and he is bald. I think he is very handsome and I love his movies.</div>
+<div class="tf-block">
+<p><strong>• Robert Downey Jr. is very old.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Dwayne Johnson is just an actor.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• “The Bomb” is Dwayne Johnson’s nickname.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Ironman is the most famous Robert Downey Jr. movie.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#2</span> Read the sentences and choose the ones that belong to the picture.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>He has a beard.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>He is bald.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He is in his 70's.</li>
+<li class="opt correct"><strong>He has a strong musculature.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">His eyes are blue.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Look at to the picture, and then read the sentences. Are they TRUE or FALSE?</div>
+<div class="tf-block">
+<p><strong>• He has a beard.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He is bald.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He is in his 30’s.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He is very thin.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• His eyes are black.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#4</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Robert is a singer and an actor"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#5</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The Rock is my favorite artist"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> Read the paragraph and complete with the words.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Robert Downey Jr. is not so young but he stays quiet well. Robert is a singer and an actor. His most famous movies are the Ironman Saga for Marvel Studios. Robert is 1.</td><td class="match-ans"><strong>average</strong> ✅</td></tr>
+<tr><td>He has black 2.</td><td class="match-ans"><strong>eyes</strong> ✅</td></tr>
+<tr><td> His hair is 3.</td><td class="match-ans"><strong>black</strong> ✅</td></tr>
+<tr><td>and he has a 4.</td><td class="match-ans"><strong>beard</strong> ✅</td></tr>
+<tr><td>that makes him look very 5.</td><td class="match-ans"><strong>attractive</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#7</span> Put in order the following letters to create adjectives.</div>
+<ul class="fill-list">
+<li><code>TOSRNG</code> ➔ <strong>STRONG</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>ALBD</code> ➔ <strong>BALD</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>GNOUY</code> ➔ <strong>YOUNG</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>TRACVTEATI</code> ➔ <strong>ATTRACTIVE</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>LLTA</code> ➔ <strong>TALL</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> Read the questions and answers. Match them.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Q. </td><td class="match-ans"><strong>Who’s your favorite artist?</strong> ✅</td></tr>
+<tr><td>Q. </td><td class="match-ans"><strong>What do you like the most about an artist?</strong> ✅</td></tr>
+<tr><td>Q. </td><td class="match-ans"><strong>Do you think the physical appearance is the most important thing in an artist?</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#9</span> Complete the chart with the correct adjectives.</div>
+<ul class="options-list">
+<li class="opt">polite</li>
+<li class="opt correct"><strong>young</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>attractive</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">lazy</li>
+<li class="opt">honest</li>
+<li class="opt correct"><strong>tall</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>bald</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">friendly</li>
+<li class="opt">angry</li>
+<li class="opt correct"><strong>beautiful</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>strong</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #7c3aed">🎧 Listening (Comprensión Auditiva)</h2><div class="task-card"><h3>📌 Tarea #316: STUDY ABROAD</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Why is Ella going to the airport?</div>
+<ul class="options-list">
+<li class="opt">For a vacation</li>
+<li class="opt correct"><strong>To study abroad</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">To visit a friend</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> How does Ella feel about traveling?</div>
+<ul class="options-list">
+<li class="opt">Bored and tired</li>
+<li class="opt correct"><strong>Excited but a little nervous</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Angry and upset</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> What is Ella going to do in another country?</div>
+<ul class="options-list">
+<li class="opt">Visit family</li>
+<li class="opt correct"><strong>Attend classes at a new school</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Go sightseeing</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> What did Ella do to prepare for her trip?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Packed her bags carefully</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Bought a new phone</li>
+<li class="opt">Read a book</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> What did Ella double-check before leaving?</div>
+<ul class="options-list">
+<li class="opt">Her phone charger</li>
+<li class="opt correct"><strong>Her passport</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Her tickets</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> What does Ella hope her trip will be?</div>
+<ul class="options-list">
+<li class="opt">Boring and uneventful</li>
+<li class="opt correct"><strong>A great adventure and educational</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Expensive and tiring</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Arrange the events in the order they occurred and draw a simple timeline to show the sequence.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>1.</td><td class="match-ans"><strong>Ella feels excited and nervous.</strong> ✅</td></tr>
+<tr><td>2</td><td class="match-ans"><strong>Ella packs her bags.</strong> ✅</td></tr>
+<tr><td>3</td><td class="match-ans"><strong>Ella checks her tickets.</strong> ✅</td></tr>
+<tr><td>4</td><td class="match-ans"><strong>Ella heads to the airport.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Listen again and choose the best summary</div>
+<ul class="options-list">
+<li class="opt">“Ella is going to the airport for her studies. She feels excited. She carefully packed her bags before heading to the airport.”</li>
+<li class="opt">“Ella is going to the airport for her study abroad program. She feels excited but a little nervous about traveling. She carefully packed her bags before heading to the airport.”</li>
+<li class="opt correct"><strong>“Ella is going to the airport for her study abroad program. She feels excited but a little nervous about traveling alone. She carefully packed her bags and double-checked her tickets before heading to the airport.”</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #318: AT THE GYM</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the best description about how Lisa feels after her gym sessions and explain why.</div>
+<ul class="options-list">
+<li class="opt">Lisa feels happy and cool after her gym sessions because exercising helps her release endorphins and boosts her mood.</li>
+<li class="opt correct"><strong>Lisa feels happy and energetic after her workout because exercising helps her feel relaxed.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Lisa feels tired after her gym sessions because exercising makes her feel stressed.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> How often does Lisa go to the gym?</div>
+<ul class="options-list">
+<li class="opt">Once a week</li>
+<li class="opt">Twice a week</li>
+<li class="opt correct"><strong>Three times a week</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> What activities does Lisa enjoy at the gym?</div>
+<ul class="options-list">
+<li class="opt">Playing basketball and swimming</li>
+<li class="opt correct"><strong>Lifting weights and using the treadmill</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Yoga and dance classes</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> What does Lisa do first when she arrives at the gym?</div>
+<ul class="options-list">
+<li class="opt">Start lifting weights</li>
+<li class="opt">Use the treadmill</li>
+<li class="opt correct"><strong>Warm up her muscles</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> What types of exercises does Lisa do during her workout?</div>
+<ul class="options-list">
+<li class="opt">Only cardio</li>
+<li class="opt">Only strength training</li>
+<li class="opt correct"><strong>A mix of cardio and strength training</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> What does Lisa do after her workout?</div>
+<ul class="options-list">
+<li class="opt">Have a snack</li>
+<li class="opt correct"><strong>Stretch to cool down</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Go home immediately</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> How does Lisa feel after her gym sessions?</div>
+<ul class="options-list">
+<li class="opt">Tired and unhappy</li>
+<li class="opt correct"><strong>Happy and energetic</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Bored and sleepy</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Lisa does a mix of cardio and strength training during her gym sessions.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>TRUE</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">FALSE</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #db2777">✍️ Writing (Expresión Escrita)</h2><div class="task-card"><h3>📌 Tarea #81: A NEW JOB</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To give personal information in a written form.</p><div class="task-expl">💡 <strong>Explicación:</strong> Your job application package is the very first way you present yourself to a potential new employer, and so it is very important that you do it correctly. In this lesson students could practice how to fill a form and to write a text to apply for a job.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> Match the corresponding answer to complete the chart.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>NAME:</td><td class="match-ans"><strong>Andrea</strong> ✅</td></tr>
+<tr><td>AGE:</td><td class="match-ans"><strong>25</strong> ✅</td></tr>
+<tr><td>CITY:</td><td class="match-ans"><strong>Calceta</strong> ✅</td></tr>
+<tr><td>STUDIES:</td><td class="match-ans"><strong>Pedagogy</strong> ✅</td></tr>
+<tr><td>ADDRESS:</td><td class="match-ans"><strong>Los Olivos</strong> ✅</td></tr>
+<tr><td>CELLPHONE NUMBER:</td><td class="match-ans"><strong>052934487</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Read the text. Then answer true or false to the statements.</div>
+<div class="q-desc">It is a pleasure to write you back about the job you are offering, and I am glad to give you all the information you need.
+I am from Calceta, but I live in Jipijapa, in los Olivos neighborhood. I study Pedagogy at Universidad Laica Vicente Rocafuerte. I am in the 5th level of my career. My cellphone number is 099 111 0979. I do not like pets, but I really love flowers and plants. I think I am a suitable person for the position.
+Yours sincerely,
+
+Andrea Gorozabel</div>
+<div class="tf-block">
+<p><strong>• Andrea is applying for a job.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• She studies Medicine.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Mr. Balda is applying for a job, too.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Andrea loves pets.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• She lives in Calceta.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the description and choose the correct job: Prepare and cook food.</div>
+<ul class="options-list">
+<li class="opt">A teacher</li>
+<li class="opt">A waiter</li>
+<li class="opt">A secretary</li>
+<li class="opt correct"><strong>A chef</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#4</span> Choose the information you should include in a job application.</div>
+<ul class="options-list">
+<li class="opt">eyes color</li>
+<li class="opt correct"><strong>full name</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">favorite singer</li>
+<li class="opt">hobbies</li>
+<li class="opt correct"><strong>studies</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>skills</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">hair color</li>
+<li class="opt correct"><strong>address</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>phone number</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the description and choose the correct job: To arrange appointments, type letters and organize meetings.</div>
+<ul class="options-list">
+<li class="opt">A teacher</li>
+<li class="opt">A waiter</li>
+<li class="opt correct"><strong>A secretary</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A chef</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the description and choose the correct job: To teach people. They work in a school.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A teacher</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A waiter</li>
+<li class="opt">A secretary</li>
+<li class="opt">A chef</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#7</span> Order the letters to write words about jobs and occupations in a bank.</div>
+<ul class="fill-list">
+<li><code>angraem</code> ➔ <strong>manager</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>hasceri</code> ➔ <strong>cashier</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>reeracsyt</code> ➔ <strong>secretary</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#8</span> Match the occupation according to the pictures.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>secretary</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>teacher</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>accountant</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>doctor</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the description and choose the correct job: To serve people food and drinks.</div>
+<ul class="options-list">
+<li class="opt">A teacher</li>
+<li class="opt correct"><strong>A waiter</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A secretary</li>
+<li class="opt">A chef</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Choose the correct answer to respond to the questions according to the reading.</div>
+<div class="q-desc">Dear Mr. Balda,
+
+It is a pleasure to write you back about the job you are offering, and I am glad to give you all the information you need.
+I am from Calceta, but I live in Jipijapa, in Los Olivos neighborhood. I study Pedagogy at Universidad Laica Vicente Rocafuerte. I am in the 5th level of my career. My cellphone number is 099 111 0979. I do not like pets, but I really love flowers and plants. I think I am a suitable person for the position. Yours sincerely,
+
+Andrea Gorozabel</div>
+<div class="tf-block">
+<p><strong>• Is Mr. Balda applying for a job?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Does Andrea study Pedagogy?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Does she like pets?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Is Mr. Balda from Calceta?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #82: HE HAS BLOND HAIR</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To give personal information in a written form.</p><div class="task-expl">💡 <strong>Explicación:</strong> In this lesson students will write information about themselves using adjectives to describe other people or their own information. Learning how to give personal information in English is crucial when you want to learn a new language and communicate with others. There are many phrases including questions and answers to talk or write about personal information in English. Most of these questions and answers have to do with the Simple Present so that tense should receive priority above the others.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> READ THE SENTENCE AND CHOOSE THE BEST OPTION</div>
+<div class="tf-block">
+<p><strong>• In my next</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Children are the happiest at</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The bride is the most beautiful in the</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• People usually give chocolates to their lovers on</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Read the text. Then answer TRUE OR FALSE to the statements.</div>
+<div class="q-desc">Chris Evans is a famous actor. He is 36 years old. He was born in Massachusetts on June 13th, 1981. He is American. He is one of the most popular actors of this decade. He has participated in many movies like Avengers, The Fantastic Four, where he plays the Human Torch. He also plays Captain America in the movie with the same name. He is tall. He is about 1,83 meters tall. He has short blond hair and blue eyes. He has two sisters, Carly and Shana, and a younger brother named Scott. His uncle is very famous as well. He is the popular actor Mike Capuano.</div>
+<div class="tf-block">
+<p><strong>• Is Chris Evans an actor?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Was he born in Canada?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Did he play Captain America, a science fiction character?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Does he have 3 sisters?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#3</span> Match the occupation according to the pictures.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>He is an actor. He is medium height.</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>He has dark skin. He is Ecuadorian.</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>He is in his thirties. He is Colombian.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read the text. Then answer TRUE OR FALSE to the statements.</div>
+<div class="q-desc">Chris Evans is a famous actor. He is 36 years old. He was born in Massachusetts on June 13th, 1981. He is American. He is one of the most popular actors of this decade. He has participated in many movies like Avengers, The Fantastic Four, where he plays the Human Torch. He also plays Captain America in the movie with the same name. He is tall. He is about 1,83 meters tall. He has short blond hair and blue eyes. He has two sisters, Carly and Shana, and a younger brother named Scott. His uncle is very famous as well. He is the popular actor Mike Capuano.</div>
+<div class="tf-block">
+<p><strong>• Chris Evans was born in Chicago.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He is European.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He has short hair.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• His eyes are green.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He starred in Captain America.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Answer TRUE or FALSE to the following statement based on the picture.</div>
+<div class="tf-block">
+<p><strong>• Samuel Jackson is African American actor.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Answer TRUE or FALSE to the following statement based on the picture.</div>
+<div class="tf-block">
+<p><strong>• Paris Hilton is a fat woman.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Answer TRUE or FALSE to the following statement based on the picture.</div>
+<div class="tf-block">
+<p><strong>• Ashton Kutcher has blond hair.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> Match the opposite of each adjective about physical appearance.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>tall</td><td class="match-ans"><strong>short</strong> ✅</td></tr>
+<tr><td>black</td><td class="match-ans"><strong>white</strong> ✅</td></tr>
+<tr><td>thin</td><td class="match-ans"><strong>fat</strong> ✅</td></tr>
+<tr><td>strong</td><td class="match-ans"><strong>weak</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#9</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"She has blond hair"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#10</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Chris Evans was born in Chicago"</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #83: CONGRATULATIONS!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To write a standard greeting on a card.</p><div class="task-expl">💡 <strong>Explicación:</strong> Knowing how to write good greeting card messages is a skill. Who hasn’t occasionally thought that being a greeting card writer at Hallmark Cards would be a great job? Sitting in your climate-controlled office all day jotting down pearls of wisdom and funny sayings. It sounds like a dream job. But, even writing greeting card messages can be a challenge. You may be under pressure to be witty, romantic, thoughtful, or sympathetic.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the questions. Choose the correct answer: Do most people celebrate their birthday with a party?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Yes, they do.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">No, they don´t.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#2</span> Read the names of holidays. What do people do on these occasions? Match the corresponding answer.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Mother's day</td><td class="match-ans"><strong>Kiss and say how much we love her.</strong> ✅</td></tr>
+<tr><td>Christmas’ Eve</td><td class="match-ans"><strong>The family gets together to have a special dinner.</strong> ✅</td></tr>
+<tr><td>Valentine´s day</td><td class="match-ans"><strong>We say how much we appreciate a friend.</strong> ✅</td></tr>
+<tr><td>Birthday</td><td class="match-ans"><strong>Blow a candle and eat some cake.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the definition and choose the correct answer: Lovers express their affection with greetings and gifts.</div>
+<ul class="options-list">
+<li class="opt">Wedding</li>
+<li class="opt">Birthday</li>
+<li class="opt">Christmas</li>
+<li class="opt correct"><strong>Valentine’s day</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the definition and choose the correct answer: Christian festival celebrating the birth of Jesus.</div>
+<ul class="options-list">
+<li class="opt">Wedding</li>
+<li class="opt">Birthday</li>
+<li class="opt correct"><strong>Christmas</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Valentine’s day</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#5</span> Look at the pictures. Grab the corresponding name of the occasion under each one.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Birthday</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Valentine’s day</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Christmas</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Mother’s day</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#6</span> Look at the pictures. Match the correct occasion for each picture.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Happy Birthday</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Happy Anniversary</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#7</span> Order the letters to write words about special occasions.</div>
+<ul class="fill-list">
+<li><code>dyathbir</code> ➔ <strong>birthday</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>hriassctm</code> ➔ <strong>christmas</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>wingedd</code> ➔ <strong>wedding</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the definition and choose the correct answer: The day of a person's birth.</div>
+<ul class="options-list">
+<li class="opt">Wedding</li>
+<li class="opt correct"><strong>Birthday</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Christmas</li>
+<li class="opt">Valentine’s day</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the definition and choose the correct answer: Ceremony in which two people are united in marriage.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Wedding</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Birthday</li>
+<li class="opt">Christmas</li>
+<li class="opt">Valentine’s day</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read the questions. Choose the correct answer: Do Catholic people celebrate Christmas in January?</div>
+<ul class="options-list">
+<li class="opt">Yes, they do.</li>
+<li class="opt correct"><strong>No, they don´t.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#11</span> Read the questions. Choose the correct answer: Do lovers express affection on Valentine's day with gifts?</div>
+<ul class="options-list">
+<li class="opt">No, they don´t.</li>
+<li class="opt correct"><strong>Yes, they do.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#12</span> Complete the sentences with the corresponding special occasion: Next month, we will attend my son´s ____________.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Wedding</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Birthday</li>
+<li class="opt">Christmas</li>
+<li class="opt">Valentine’s day</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#13</span> Complete the sentences with the corresponding special occasion: My girlfriend gave me a card for ____________.</div>
+<ul class="options-list">
+<li class="opt">Wedding</li>
+<li class="opt">Birthday</li>
+<li class="opt">Christmas</li>
+<li class="opt correct"><strong>Valentine’s day</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #84: ROUTINES</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To use basic connector like and, but, so, then.</p><div class="task-expl">💡 <strong>Explicación:</strong> Sometimes students need to organize their ideas to write or talk about a story. There are certain elements that help us explain it more clearly and in a logical sequence, those elements are called sequence connectors. The correct use of these elements will allow students to organize the information they have, in a better way.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#1</span> Read the text and tick the activities Melissa prefers to do when goes on vacation.</div>
+<div class="q-desc">I´m Melissa. I'm a dentist. I work in a hospital  in Cayambe. I really love going to the beach. I think it is the best place to go on vacation. I like to go early, so I can enjoy all day there, but I have pale skin, so I have to use good sun protection cream. There are plenty of funny things to do on the beach. First, I play volleyball or soccer with my friends, then I swim and surf, and finally I have some rest and drink something cold. In the afternoon, I love going to a small restaurant in front of the beach and have lunch. I usually eat lobster soup, a shrimp salad, and cold pineapple juice. Mmmm delicious!!!</div>
+<ul class="options-list">
+<li class="opt">I work in a hospital in Cayambe.</li>
+<li class="opt correct"><strong>I love going to the beach.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I have pale skin.</li>
+<li class="opt">I have to use good sun protection cream.</li>
+<li class="opt correct"><strong>I play volleyball or soccer with my friends.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>I swim and surf.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>I have some rest and drink something cold.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>I love going to a small restaurant in front of the beach and have lunch.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>I eat lobster soup, a shrimp salad and cold pineapple juice.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It’s delicious.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#2</span> Look at the pictures. Grab the corresponding name of the occasion under each one.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Mall</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Park</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Beach</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read the text. Then answer TRUE or FALSE to the statements.</div>
+<div class="tf-block">
+<p><strong>• Melissa goes to the beach in the afternoon</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• She loves to play sports on the beach</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• She has lunch on the beach</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• She has fruits and vegetables for lunch</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Answer the questions according to the reading.</div>
+<div class="tf-block">
+<p><strong>• Is Melissa a nurse?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Does she work in a clinic?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Does she love going to the beach?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Does she hate seafood?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Complete the sentences using the appropriate word.</div>
+<div class="tf-block">
+<p><strong>• Mary always has toasts</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Let's go to the beach,</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• At night, it is cold on the beach,</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Choose the correct connector to give meaning to the sentence.</div>
+<div class="tf-block">
+<p><strong>• I have a sister</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• it was a very sunny day,</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#7</span> Read the sentences. Check the use of and, so, and but. Tick the correct sentences.</div>
+<ul class="options-list">
+<li class="opt">I like English or I like French very much.</li>
+<li class="opt correct"><strong>My brother likes maths, but he doesn’t like history.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>The children forgot their homework, so the teacher was angry with them.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Can you read but write English words?</li>
+<li class="opt correct"><strong>Are the questions right or wrong?</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Read the definition. Choose the corresponding answer.</div>
+<div class="tf-block">
+<p><strong>• One action follows another in the chronological order:</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• It is used to suggest a contrast:</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• It is used to suggest that only one possibility can be realized:</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#9</span> Order the sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I play soccer or volleyball with my friends"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Choose if these sentences are CORRECT or INCORRECT.</div>
+<div class="tf-block">
+<p><strong>• I love tea and coffee.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I want to eat pizza so hamburgers.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I always play soccer or volleyball on the beach.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I didn’t study so I got a bad grade.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div>
+    </div>
+</body>
+</html>

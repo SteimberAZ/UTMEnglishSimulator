@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 3 • 📗 Book 1 (A1.1 - Elementary) - Guía de Inglés UTM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 900px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-btn, .print-btn {
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .back-btn:hover, .print-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 0 0 6px 0;
+        }
+        .header .subtitle {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: inline-flex;
+            gap: 16px;
+            background: #f1f5f9;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+        .skill-section {
+            margin-top: 40px;
+        }
+        .skill-section h2 {
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 6px solid #2563eb;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .task-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .task-card h3 {
+            color: #1e293b;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .task-obj {
+            font-size: 14px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .task-expl {
+            font-size: 14px;
+            color: #0369a1;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        .question-card {
+            background: #fafafa;
+            border-left: 4px solid #3b82f6;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+        .q-header {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .q-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .q-num {
+            color: #3b82f6;
+            margin-right: 4px;
+        }
+        .q-desc {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .options-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .opt {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .opt.correct {
+            background: #ecfdf5;
+            border-color: #10b981;
+            color: #065f46;
+            font-weight: 600;
+        }
+        .badge-correct {
+            background: #10b981;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            float: right;
+            font-weight: 600;
+        }
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .match-table th, .match-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .match-table th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        .match-ans {
+            color: #065f46;
+            background: #ecfdf5;
+            font-weight: 600;
+        }
+        .order-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        .fill-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .fill-list li {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        @media print {
+            body { background: #ffffff; padding: 0; }
+            .top-nav { display: none; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .task-card { page-break-inside: avoid; }
+            .question-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="../index.html" class="back-btn">← Volver al Portal General</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Guardar / Imprimir PDF</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>📘 Universidad Técnica de Manabí</h1>
+            <div class="subtitle">Simulador de Inglés • Unidad 3 • 📗 Book 1 (A1.1 - Elementary)</div>
+            <div class="stats">
+                <span>📋 17 Tareas</span>
+                <span>❓ 147 Preguntas Verificadas</span>
+            </div>
+        </div>
+        <div class="skill-section"><h2 style="border-left-color: #2563eb">🧠 Grammar (Estructuras Gramaticales)</h2><div class="task-card"><h3>📌 Tarea #36: THAT IS A BIRD</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use 'this', 'these', and 'those' as determiners relating to people and objects</p><div class="task-expl">💡 <strong>Explicación:</strong> Demonstrative pronouns show a relationship with the item they are referring to. They refer to distance of the object being described. They also match the subject described in number.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read and select the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>THOSE ARE MY CATS.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">THAT ARE MY CATS.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read and select the correct sentence.</div>
+<ul class="options-list">
+<li class="opt">That are the new English teachers.</li>
+<li class="opt">This is the new English teachers.</li>
+<li class="opt correct"><strong>Those are the new English teachers.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Those is the new English teachers.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#3</span> Read the sentences and select the demonstrative pronouns from the box to complete them.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>This</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Those</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>That</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>These</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read and select the correct option.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read and chooose the correct sentence.</div>
+<ul class="options-list">
+<li class="opt">Those is great house.</li>
+<li class="opt correct"><strong>That is a great house.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">That great house is.</li>
+<li class="opt">That is a house great.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read and select the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>THAT CAR IS RED.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">THOSE CAR IS RED.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read and select the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>THOSE PENCILS ARE MINE.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">THAT PENCILS ARE MINE.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Read the words and accorthing to them choose the correct demonstrative pronouns.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read and select the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>THESE ARE MY FRIENDS.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">THIS ARE MY FRIENDS.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read and select the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>THIS IS MY HOUSE.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">THESE IS MY HOUSE.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#11</span> Read and select the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>THIS IS A BEAUTIFUL CITY.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">THESE IS A BEATIFUL CITY.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#12</span> Read and select the correct sentence.</div>
+<ul class="options-list">
+<li class="opt">THIS ARE MY SISTERS.</li>
+<li class="opt correct"><strong>THESE ARE MY SISTERS.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#13</span> Read and select the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>THAT IS MY FATHER.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">THOSE IS MY FATHER.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#14</span> Read and put in order the following set of words to make a sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"this is your phone"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"these are her keys"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"these are Simon's photos"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"that is Andy's school ID card"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#15</span> Read and put in order the following set of words to make a sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"this isn't my brother's MP3 player"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"those are my neighbors"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"that is Miguel's teacher"</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #37: THE APPLE IS ON THE TABLE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use basic prepositions of place whit nouns and noun phrases</p><div class="task-expl">💡 <strong>Explicación:</strong> Prepositions of Place are used to show the position or location of one thing with another.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> Read the sentences and select the demonstrative pronouns from the box to complete them.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>She </td><td class="match-ans"><strong>is</strong> ✅</td></tr>
+<tr><td>They</td><td class="match-ans"><strong>are</strong> ✅</td></tr>
+<tr><td>I </td><td class="match-ans"><strong>am</strong> ✅</td></tr>
+<tr><td>That </td><td class="match-ans"><strong>isn't</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#2</span> Read and complete the following sentences using in – on – at.</div>
+<ul class="fill-list">
+<li><code>My keys are</code> ➔ <strong>in</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>There is a beautiful picture</code> ➔ <strong>on</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>My father works</code> ➔ <strong>at</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>There was an accident</code> ➔ <strong>on</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>I feel safe when I am</code> ➔ <strong>at</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> In the following picture, complete the sentences with the correct preposition of place.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>1.ON 2.IN 3.NEXT TO 4.UNDER 5.BEHIND 6.IN FRONT OF</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">1.IN 2.ON 3.NEXT TO 4.UNDER 5.BEHIND 6.IN FRONT OF</li>
+<li class="opt">1.ON 2.IN 3.NEXT TO 4.BEHIND 5.UNDER 6.IN FRONT OF</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read the sentences and choose the correct preposition for each sentence.</div>
+<div class="tf-block">
+<p><strong>• My son is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• We always go to school</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There are four cats</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The party is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #38: SUBJECT PRONOUNS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use subject pronouns with the correct form of the verb 'be' in the simple present</p><div class="task-expl">💡 <strong>Explicación:</strong> A subject pronoun is exactly what it sounds like: a pronoun that takes the place of a noun as the subject of a sentence. Remember, a sentence's subject is the person or thing that performs the action of a verb. ... Subject pronouns can be singular or plural, and they can be masculine, feminine, or gender neutral.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the sentence and choose the correct option to complete it.  Alfredo ___________ work in quito. He works in esmeraldas.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Doesn't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Don't</li>
+<li class="opt">Is not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the sentence and choose the correct option to complete it.  Dogs ___________ whistle. They bark.</div>
+<ul class="options-list">
+<li class="opt">Doesn't</li>
+<li class="opt correct"><strong>Don't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Are not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the sentences and choose the correct option without a mistake.</div>
+<ul class="options-list">
+<li class="opt">She is good friends.</li>
+<li class="opt">They are the best friend.</li>
+<li class="opt">He are a good friend.</li>
+<li class="opt correct"><strong>He is a great friend.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the sentence and choose the correct option to complete it. I ___________ have any brothers or sisters.</div>
+<ul class="options-list">
+<li class="opt">Doesn't</li>
+<li class="opt correct"><strong>Don't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Are not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the sentences and choose the correct option without a mistake.</div>
+<ul class="options-list">
+<li class="opt">We is student in this class.</li>
+<li class="opt">We are student in this class.</li>
+<li class="opt correct"><strong>He is a student in this class.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He is students in this class.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the sentences and choose the correct option to complete them.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>It is summer time.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I am your friends.</li>
+<li class="opt">She are a nice person.</li>
+<li class="opt">It am summer time.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#7</span> Read the words and order the following sentences.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"he is a good man"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"they are friendly"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"it is raining outside"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"we are not at home"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> Read the sentenctes and choose from the words in the box to complete them.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>She </td><td class="match-ans"><strong>is</strong> ✅</td></tr>
+<tr><td>They</td><td class="match-ans"><strong>are</strong> ✅</td></tr>
+<tr><td>I </td><td class="match-ans"><strong>am</strong> ✅</td></tr>
+<tr><td>That </td><td class="match-ans"><strong>isn't</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the sentence and choose the correct option to complete it. My parents ___________ speak english.</div>
+<ul class="options-list">
+<li class="opt">Doesn't</li>
+<li class="opt correct"><strong>Don't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Is not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read the sentence and choose the correct option to complete it. Marcia ___________ live in portoviejo. She lives in manta.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Doesn't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Don't</li>
+<li class="opt">Is not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#11</span> Read the sentence and choose the correct option to complete it. She ___________ need help.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Doesn't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Don't</li>
+<li class="opt">Is not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#12</span> Read the sentence and choose the correct option to complete it. It ___________ rain in summer.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Doesn't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Don't</li>
+<li class="opt">Is not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#13</span> Read the sentence and choose the correct option to complete it. They ___________ go to the church on mondays.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Don't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Doesn't</li>
+<li class="opt">Are not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#14</span> Read the sentence and choose the correct option to complete it. We ___________ time to study a language.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Don't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Doesn't</li>
+<li class="opt">Are not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#15</span> Read the sentence and choose the correct option to complete it. He ___________ like ice cream.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Doesn't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Don't</li>
+<li class="opt">Is not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#16</span> Read the sentence and choose the correct option to complete it. My brothers and i ......go to bed late.</div>
+<ul class="options-list">
+<li class="opt">Doesn't</li>
+<li class="opt correct"><strong>Don't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Am not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#17</span> Read the sentence and choose the correct option to complete it. She ..... Cook dinner on weekends.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Doesn't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Don't</li>
+<li class="opt">Am not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#18</span> Read the sentence and choose the correct option to complete it. I _____ Get up early on weekends.</div>
+<ul class="options-list">
+<li class="opt">Doesn't</li>
+<li class="opt correct"><strong>Don't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Am not</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #39: WHERE DOES ADELE LIVE?</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can ask wh-questions using the present simple</p><div class="task-expl">💡 <strong>Explicación:</strong> Wh- questions are questions that require more information in their answers. Typical wh- words are what, where, when, why, who, how, how many, how much.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the questions and choose the correct option without a mistake.</div>
+<ul class="options-list">
+<li class="opt">How much shoes do you have?</li>
+<li class="opt">How many candy do you eat?</li>
+<li class="opt">How many brother do you have?</li>
+<li class="opt correct"><strong>How much money do you spend every month?</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#2</span> Read the words and order to make questions.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"what does he eat ?"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"where does he live ?"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"what does he like to do ?"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"where do you go ?"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#3</span> Answer the following questions about Adele. Use the clues underlined in the article.</div>
+<div class="q-desc">Read the article about Adele’s biography 
+Adele was born in Tottenham, London, England on May 5th 1988.
+She is famous singer-songwriter.
+She lives in London with her husband and her little son named Angelo.
+She likes to read poetry in her free time
+She is on a strict diet. She only eats vegetables, fruits, almonds and dairy products
+As a good Briton, Adele drinks tea in the afternoon.
+She is well known for her hits such as: Hello, Someone like you, Skyfall, Rolling in the deep and more…</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>What does she eat?</td><td class="match-ans"><strong>She only eats vegetables, fruits, almonds and dairy products.</strong> ✅</td></tr>
+<tr><td>What does she drink?</td><td class="match-ans"><strong>Adele drinks tea.</strong> ✅</td></tr>
+<tr><td>What songs do you know?</td><td class="match-ans"><strong>Hello, Someone like you, Skyfall, Rolling in the deep.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#4</span> Read the words and order to make questions.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"how many bananas are there in the basket ?"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"how many days are there in a year ?"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"how much money do you need ?"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"how much honey is there in the tin ?"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> Read the questions. Then match the answers to them.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>How many brothers do you have?</td><td class="match-ans"><strong>I have seven brothers</strong> ✅</td></tr>
+<tr><td>How many sisters do you have?</td><td class="match-ans"><strong>I have one sister</strong> ✅</td></tr>
+<tr><td>How much money do you have?</td><td class="match-ans"><strong>I have ten dollars</strong> ✅</td></tr>
+<tr><td>How much water do you drink?</td><td class="match-ans"><strong>I drink a lot of water</strong> ✅</td></tr>
+<tr><td> How many friends do you have?</td><td class="match-ans"><strong>I have a lot of friends</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the questions and choose the correct one.</div>
+<ul class="options-list">
+<li class="opt">When do you do for a living?</li>
+<li class="opt">Where do you do for a living?</li>
+<li class="opt">How do you do for a living?</li>
+<li class="opt correct"><strong>What do you do for a living?</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Read and choose the correct question word from the word box to complete the question.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>When</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Where</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>How</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Why</strong> ✅</td></tr>
+</tbody></table>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #059669">📖 Vocabulary (Vocabulario)</h2><div class="task-card"><h3>📌 Tarea #29: TAKING CARE OF MYSELF</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Understand and use vocabulary related to parts of the body.</p><div class="task-expl">💡 <strong>Explicación:</strong> A body part is a part of an organism such as an organ or extremity.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#1</span> Look at the images. Choose the right option according to the picture.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>eyes</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>ears</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>mouth</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>hair</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the words and find the odd word.</div>
+<ul class="options-list">
+<li class="opt">Eye</li>
+<li class="opt">hair</li>
+<li class="opt correct"><strong>hand</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">ear</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#3</span> Look at the images match the items to the picture.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>mouth</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>ears</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>nose</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>eyes</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>hair</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>teeth</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the words and find the odd word.</div>
+<ul class="options-list">
+<li class="opt">Toes</li>
+<li class="opt">nails</li>
+<li class="opt">fingers</li>
+<li class="opt correct"><strong>eyes</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the words and find the odd word.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Hand</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">ear</li>
+<li class="opt">mouth</li>
+<li class="opt">nose</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the words and find the odd word.</div>
+<ul class="options-list">
+<li class="opt">Mouth</li>
+<li class="opt">tongue</li>
+<li class="opt">tooth</li>
+<li class="opt correct"><strong>feet</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the words and find the odd word.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Face</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">eyebrow</li>
+<li class="opt">eyelashes</li>
+<li class="opt">eye</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#8</span> Look at the images. Choose the right part of the head according to the picture.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Eyes</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Ears</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Mouth</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Nose</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Hair</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Look at the pictures. Read and choose the words to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• I've got</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I have got a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I have got a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#10</span> Complete the sentences with the correct part of the body word.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>One of the two parts in your head that you see with</td><td class="match-ans"><strong>EYES</strong> ✅</td></tr>
+<tr><td>One of the two parts of the body that are used for hearing</td><td class="match-ans"><strong>EARS</strong> ✅</td></tr>
+<tr><td>One of the hard-white things in your mouth, you use for eating</td><td class="match-ans"><strong>TOOTH</strong> ✅</td></tr>
+<tr><td>Long parts of the human body used for walking or standing</td><td class="match-ans"><strong>LEGS</strong> ✅</td></tr>
+<tr><td>One of the five parts at the endo of each hand</td><td class="match-ans"><strong>FINGER</strong> ✅</td></tr>
+</tbody></table>
+</div></div><div class="task-card"><h3>📌 Tarea #30: IT IS ON THE TABLE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Understand and use prepositions.</p><div class="task-expl">💡 <strong>Explicación:</strong> Prepositions of place describe the position of a person or thing in relation to another person or thing.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Look at the picture and choose the right option. Where is the bottle?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>It's in the box.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It's on the box.</li>
+<li class="opt">It's under the box.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Look at the map and choose the correct answer: where is the police station?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>It's in behind of the post office.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It's in front of the post office.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Observe the map and choose the correct preposition: The toy store is ____ the music store and the restaurant.</div>
+<ul class="options-list">
+<li class="opt">In front of</li>
+<li class="opt correct"><strong>Between</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">On the corner of</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Observe the map and choose the correct preposition: The music store is ____ Santos Dumont Street and Rosa e Silva Avenue.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>On the corner of.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">In front of</li>
+<li class="opt">Next to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Observe the map and choose the correct preposition: The supermarket is ____ the restaurant.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Opposite.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Next to</li>
+<li class="opt">Behind</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Observe the map and choose the correct preposition: The hospital is ____ the pet shop.</div>
+<ul class="options-list">
+<li class="opt">Opposite.</li>
+<li class="opt correct"><strong>Behind</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Between</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#7</span> Look at the pictures and choose the correct answer. The ball is ___ in the box.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>IN</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>BEHIND</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>BETWEEN</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>BESIDE</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>FAR</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>ON</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>UNDER</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>IN FRONT OF</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Look at the picture and choose the right option. Where is the book?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>It's under the box.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It's on the box.</li>
+<li class="opt">It's in the box.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Look at the map and choose the correct answer: Are the park and the hospital near the river?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Yes, they are.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">No, they aren't.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Look at the map and choose the correct answer: is the train station opposite the bank?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Yes, it is.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">No, it isn't</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#11</span> Look at the map and choose the correct answer: is the bank next to the river?</div>
+<ul class="options-list">
+<li class="opt">Yes, it is.</li>
+<li class="opt correct"><strong>No, it isn't</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#12</span> Look at the map and choose the correct answer: what is near the train station?</div>
+<ul class="options-list">
+<li class="opt">the police station</li>
+<li class="opt correct"><strong>the zoo</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#13</span> Look at the map and choose the correct answer: what is behind the market?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>the park</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">the train station</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#14</span> Look at the map and choose the correct answer: what is in front of the police station?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>the post office</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">the zoo</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#15</span> Look at the map and choose the correct answer: What is near the river?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>the park</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">the bank</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#16</span> Look at the map and choose the correct answer: What is next to the hospital?</div>
+<ul class="options-list">
+<li class="opt">the zoom</li>
+<li class="opt correct"><strong>the market</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#17</span> Look at the map and choose the correct answer: What is opposite the school?</div>
+<ul class="options-list">
+<li class="opt">the train station</li>
+<li class="opt correct"><strong>the market</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#18</span> Look at the picture and choose the right option. Where is the parrot?</div>
+<ul class="options-list">
+<li class="opt">It's in the branch.</li>
+<li class="opt">It's under the branch.</li>
+<li class="opt correct"><strong>It's on the branch.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #31: WHERE IS THE BUS STATION?</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Understand and learn vocabulary related to places in town and giving directions.</p><div class="task-expl">💡 <strong>Explicación:</strong> There are many places, buildings and stores that you will find in a city or town.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Look the map of the city and choose the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The bank is next to the school.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The bank is behind the school.</li>
+<li class="opt">The bank is between the school and the pool.</li>
+<li class="opt">The bank is behind the school.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Complete the sentence and choose the correct option. I am ________ for the new children’s library.  looking</div>
+<ul class="options-list">
+<li class="opt">Asking</li>
+<li class="opt">Finding</li>
+<li class="opt">Trying</li>
+<li class="opt correct"><strong>Looking</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the most appropriate answer: In this place you can see many old objects (and sometimes paintings)</div>
+<ul class="options-list">
+<li class="opt">Library.</li>
+<li class="opt correct"><strong>Museum.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Departmen store.</li>
+<li class="opt">Zoo.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the most appropriate answer: Excuse me! …….. is the post office, please?</div>
+<ul class="options-list">
+<li class="opt">How</li>
+<li class="opt">What</li>
+<li class="opt">When</li>
+<li class="opt correct"><strong>Where</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the correct word: the place you go when you want to travel by plane to another city.</div>
+<ul class="options-list">
+<li class="opt">Train station</li>
+<li class="opt">Bus stop</li>
+<li class="opt correct"><strong>Airport</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Shopping</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the most appropriate answer: Can you tell me where ………, please?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>is the bank</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">the bank</li>
+<li class="opt">the bank is</li>
+<li class="opt">there a bank</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#7</span> Put in order the following letters to create words related places.</div>
+<ul class="fill-list">
+<li><code>LOSHCO</code> ➔ <strong>SCHOOL</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>KABEYR</code> ➔ <strong>BAKERY</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>ORTRAIP</code> ➔ <strong>AIRPORT</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>KOBORSTEO</code> ➔ <strong>BOOKSTORE</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Answer the question and choose the correct option: Where can I buy bread?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Bakery</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Hospital</li>
+<li class="opt">Bank</li>
+<li class="opt">Butcher's</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Complete the sentence and chose the correct option: There are several sourvenir shops on Apple Street, about three blocks ________.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>From here</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Away from</li>
+<li class="opt">Near here</li>
+<li class="opt">Not far</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Complete the sentence and choose the correct option: You can watch a film at the ____.</div>
+<ul class="options-list">
+<li class="opt">Bank</li>
+<li class="opt">Park</li>
+<li class="opt correct"><strong>Cinema</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Hospital</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #32: TIME FOR LEARNING</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> use some basic words related to the educational environment.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read and find the odd word.</div>
+<ul class="options-list">
+<li class="opt">desk</li>
+<li class="opt correct"><strong>listen</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">notebook</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Read the sentences and complete them with the right option.</div>
+<div class="tf-block">
+<p><strong>• I am good at cycling</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The students did the homework</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• My sister always goes to the beach</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I don’t like to drink coffee</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• What do you prefer: soda</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I buy a present</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I read a book</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read and answer the questiong. How do you say 'grapa' in english?</div>
+<ul class="options-list">
+<li class="opt">Flah</li>
+<li class="opt">Scissors</li>
+<li class="opt">Floor</li>
+<li class="opt correct"><strong>Stapler</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> According to vocabulary related by educational environment. Choose the incorrect word.</div>
+<ul class="options-list">
+<li class="opt">Backpack</li>
+<li class="opt">Eraser</li>
+<li class="opt">Dictionary</li>
+<li class="opt correct"><strong>Hospital</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#5</span> Complete the vocabulary with the correct vowels.</div>
+<ul class="fill-list">
+<li><code>B_CKP_CK</code> ➔ <strong>BACKPACK</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>F_LD_R</code> ➔ <strong>FOLDER</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>C_LC_L_T_R</code> ➔ <strong>CALCULATOR</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>T__CH_R</code> ➔ <strong>TEACHER</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>SH_RP_N_R</code> ➔ <strong>SHARPENER</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#6</span> Put in order the following letters to create words related classroom objects.</div>
+<ul class="fill-list">
+<li><code>OKNOETBO</code> ➔ <strong>NOTEBOOK</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>SERAER</code> ➔ <strong>ERASER</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>PEPRA</code> ➔ <strong>PAPER</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>RSOISCS</code> ➔ <strong>SCISSORS</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the sentence and choose the correct word: i can see what the teacher wrote on the ____.</div>
+<ul class="options-list">
+<li class="opt">Desk</li>
+<li class="opt">Table</li>
+<li class="opt correct"><strong>Board</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Book</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#8</span> Drag and drop the sentences according to the picture.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Read the book.</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>I finish my homework.</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Please, write in your notebook.</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Listen the dialogue.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read and find the odd word.</div>
+<ul class="options-list">
+<li class="opt">read</li>
+<li class="opt">write</li>
+<li class="opt correct"><strong>computer</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read and find the odd word.</div>
+<ul class="options-list">
+<li class="opt">new</li>
+<li class="opt">big</li>
+<li class="opt correct"><strong>finish</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#11</span> Read and find the odd word.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>small</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">classroom</li>
+<li class="opt">teacher</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#12</span> Read the sentence and complete it with the best option. I don´t understand this word, so i need my ____.</div>
+<ul class="options-list">
+<li class="opt">Book</li>
+<li class="opt correct"><strong>Dictionary</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Notebook</li>
+<li class="opt">Lesson</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#13</span> Read and choose the right answer.</div>
+<div class="tf-block">
+<p><strong>• I </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #d97706">📚 Reading (Comprensión Lectora)</h2><div class="task-card"><h3>📌 Tarea #33: DIRECTIONS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can follow short, simple directions (e.g. to go from x to y)</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the text. Answer the question according to the text. Does the tourist know where the bus station is?</div>
+<div class="q-desc">Tourist: Excuse me. Can you help me? I’m lost.
+Kelly: Of course. Where would you like to go?
+Tourist: I’d like to go to the bus station, but I can’t find it.
+Kelly: Well, take it easy! It is not so far. 
+It’s just 10 minutes by walking.
+Tourist: Should I call a taxi?
+Kelly: No, it is not necessary. I can give you directions.
+Tourist: Thanks a lot! That’s very kind of you.
+Kelly: Don’t worry! Ok, pay attention.  Go straight this street to the traffic lights. Do you see them?
+Tourist: Yes, I do.
+Kelly: Well, at the traffic lights turn right to Green Street.
+Tourist: Green Street.
+Kelly: Go ahead for one block and then take the first street on your left. Walk along one block more. At the end of the road, you will see a café in the corner. Now you are in King’s Road. From this place on your right, you can see the bus station in front of an Italian restaurant. It is near the café.
+Tourist: Ok, Green Street and then the first street on my right.
+Kelly: No, it is the first street on your left.
+Tourist: Well, walk alone one block more and at the end of the road there is a café in the corner.  On my right, I can see the bus station, right? It is in front of an Italian restaurant, right?
+Kelly: Yes, it is. Good luck and enjoy your visit to the city.
+Tourist: Many thanks for your help. 
+Kelly: Not at all.</div>
+<ul class="options-list">
+<li class="opt">Yes, he does.</li>
+<li class="opt correct"><strong>No, he doesn´t.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the text. Answer the question according to the text. What is the conversation about?</div>
+<div class="q-desc">Tourist: Excuse me. Can you help me? I’m lost.
+Kelly: Of course. Where would you like to go?
+Tourist: I’d like to go to the bus station, but I can’t find it.
+Kelly: Well, take it easy! It is not so far. 
+It’s just 10 minutes by walking.
+Tourist: Should I call a taxi?
+Kelly: No, it is not necessary. I can give you directions.
+Tourist: Thanks a lot! That’s very kind of you.
+Kelly: Don’t worry! Ok, pay attention.  Go straight this street to the traffic lights. Do you see them?
+Tourist: Yes, I do.
+Kelly: Well, at the traffic lights turn right to Green Street.
+Tourist: Green Street.
+Kelly: Go ahead for one block and then take the first street on your left. Walk along one block more. At the end of the road, you will see a café in the corner. Now you are in King’s Road. From this place on your right, you can see the bus station in front of an Italian restaurant. It is near the café.
+Tourist: Ok, Green Street and then the first street on my right.
+Kelly: No, it is the first street on your left.
+Tourist: Well, walk alone one block more and at the end of the road there is a café in the corner.  On my right, I can see the bus station, right? It is in front of an Italian restaurant, right?
+Kelly: Yes, it is. Good luck and enjoy your visit to the city.
+Tourist: Many thanks for your help. 
+Kelly: Not at all.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Asking for instructions on how to get to a place.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Asking for a hotel information.</li>
+<li class="opt">Asking for a scholarship.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the text. Answer the question according to the text. Where is the tourist?</div>
+<div class="q-desc">Tourist: Excuse me. Can you help me? I’m lost.
+Kelly: Of course. Where would you like to go?
+Tourist: I’d like to go to the bus station, but I can’t find it.
+Kelly: Well, take it easy! It is not so far. 
+It’s just 10 minutes by walking.
+Tourist: Should I call a taxi?
+Kelly: No, it is not necessary. I can give you directions.
+Tourist: Thanks a lot! That’s very kind of you.
+Kelly: Don’t worry! Ok, pay attention.  Go straight this street to the traffic lights. Do you see them?
+Tourist: Yes, I do.
+Kelly: Well, at the traffic lights turn right to Green Street.
+Tourist: Green Street.
+Kelly: Go ahead for one block and then take the first street on your left. Walk along one block more. At the end of the road, you will see a café in the corner. Now you are in King’s Road. From this place on your right, you can see the bus station in front of an Italian restaurant. It is near the café.
+Tourist: Ok, Green Street and then the first street on my right.
+Kelly: No, it is the first street on your left.
+Tourist: Well, walk alone one block more and at the end of the road there is a café in the corner.  On my right, I can see the bus station, right? It is in front of an Italian restaurant, right?
+Kelly: Yes, it is. Good luck and enjoy your visit to the city.
+Tourist: Many thanks for your help. 
+Kelly: Not at all.</div>
+<ul class="options-list">
+<li class="opt">He is on King’s road.</li>
+<li class="opt correct"><strong>He is on Green Street.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He is on Board Street.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the text. Then read the sentence and choose best option according to the text.</div>
+<div class="q-desc">Tourist: Excuse me. Can you help me? I’m lost.
+Kelly: Of course. Where would you like to go?
+Tourist: I’d like to go to the bus station, but I can’t find it.
+Kelly: Well, take it easy! It is not so far. 
+It’s just 10 minutes by walking.
+Tourist: Should I call a taxi?
+Kelly: No, it is not necessary. I can give you directions.
+Tourist: Thanks a lot! That’s very kind of you.
+Kelly: Don’t worry! Ok, pay attention.  Go straight this street to the traffic lights. Do you see them?
+Tourist: Yes, I do.
+Kelly: Well, at the traffic lights turn right to Green Street.
+Tourist: Green Street.
+Kelly: Go ahead for one block and then take the first street on your left. Walk along one block more. At the end of the road, you will see a café in the corner. Now you are in King’s Road. From this place on your right, you can see the bus station in front of an Italian restaurant. It is near the café.
+Tourist: Ok, Green Street and then the first street on my right.
+Kelly: No, it is the first street on your left.
+Tourist: Well, walk alone one block more and at the end of the road there is a café in the corner.  On my right, I can see the bus station, right? It is in front of an Italian restaurant, right?
+Kelly: Yes, it is. Good luck and enjoy your visit to the city.
+Tourist: Many thanks for your help. 
+Kelly: Not at all.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The bus station is 10 minutes by walking.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The bus station is 5 minutes by walking.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Where does he want to go?</div>
+<div class="q-desc">Tourist: Excuse me. Can you help me? I’m lost.
+Kelly: Of course. Where would you like to go?
+Tourist: I’d like to go to the bus station, but I can’t find it.
+Kelly: Well, take it easy! It is not so far. 
+It’s just 10 minutes by walking.
+Tourist: Should I call a taxi?
+Kelly: No, it is not necessary. I can give you directions.
+Tourist: Thanks a lot! That’s very kind of you.
+Kelly: Don’t worry! Ok, pay attention.  Go straight this street to the traffic lights. Do you see them?
+Tourist: Yes, I do.
+Kelly: Well, at the traffic lights turn right to Green Street.
+Tourist: Green Street.
+Kelly: Go ahead for one block and then take the first street on your left. Walk along one block more. At the end of the road, you will see a café in the corner. Now you are in King’s Road. From this place on your right, you can see the bus station in front of an Italian restaurant. It is near the café.
+Tourist: Ok, Green Street and then the first street on my right.
+Kelly: No, it is the first street on your left.
+Tourist: Well, walk alone one block more and at the end of the road there is a café in the corner.  On my right, I can see the bus station, right? It is in front of an Italian restaurant, right?
+Kelly: Yes, it is. Good luck and enjoy your visit to the city.
+Tourist: Many thanks for your help. 
+Kelly: Not at all.</div>
+<ul class="options-list">
+<li class="opt">To the police station</li>
+<li class="opt correct"><strong>To the bus station</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">To the underground station</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the text. Answer the question according to the text. Is the bus station near the café?</div>
+<div class="q-desc">Tourist: Excuse me. Can you help me? I’m lost.
+Kelly: Of course. Where would you like to go?
+Tourist: I’d like to go to the bus station, but I can’t find it.
+Kelly: Well, take it easy! It is not so far. 
+It’s just 10 minutes by walking.
+Tourist: Should I call a taxi?
+Kelly: No, it is not necessary. I can give you directions.
+Tourist: Thanks a lot! That’s very kind of you.
+Kelly: Don’t worry! Ok, pay attention.  Go straight this street to the traffic lights. Do you see them?
+Tourist: Yes, I do.
+Kelly: Well, at the traffic lights turn right to Green Street.
+Tourist: Green Street.
+Kelly: Go ahead for one block and then take the first street on your left. Walk along one block more. At the end of the road, you will see a café in the corner. Now you are in King’s Road. From this place on your right, you can see the bus station in front of an Italian restaurant. It is near the café.
+Tourist: Ok, Green Street and then the first street on my right.
+Kelly: No, it is the first street on your left.
+Tourist: Well, walk alone one block more and at the end of the road there is a café in the corner.  On my right, I can see the bus station, right? It is in front of an Italian restaurant, right?
+Kelly: Yes, it is. Good luck and enjoy your visit to the city.
+Tourist: Many thanks for your help. 
+Kelly: Not at all.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Yes. It is.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">No, it isn´t.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Read the text. Select the correct option according to Kelly´s instructions.</div>
+<div class="q-desc">Tourist: Excuse me. Can you help me? I’m lost.
+Kelly: Of course. Where would you like to go?
+Tourist: I’d like to go to the bus station, but I can’t find it.
+Kelly: Well, take it easy! It is not so far. 
+It’s just 10 minutes by walking.
+Tourist: Should I call a taxi?
+Kelly: No, it is not necessary. I can give you directions.
+Tourist: Thanks a lot! That’s very kind of you.
+Kelly: Don’t worry! Ok, pay attention.  Go straight this street to the traffic lights. Do you see them?
+Tourist: Yes, I do.
+Kelly: Well, at the traffic lights turn right to Green Street.
+Tourist: Green Street.
+Kelly: Go ahead for one block and then take the first street on your left. Walk along one block more. At the end of the road, you will see a café in the corner. Now you are in King’s Road. From this place on your right, you can see the bus station in front of an Italian restaurant. It is near the café.
+Tourist: Ok, Green Street and then the first street on my right.
+Kelly: No, it is the first street on your left.
+Tourist: Well, walk alone one block more and at the end of the road there is a café in the corner.  On my right, I can see the bus station, right? It is in front of an Italian restaurant, right?
+Kelly: Yes, it is. Good luck and enjoy your visit to the city.
+Tourist: Many thanks for your help. 
+Kelly: Not at all.</div>
+<div class="tf-block">
+<p><strong>• Walk along one block more. At the end of the road you will see a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the text. Answer the question according to the text. Where are they?</div>
+<div class="q-desc">Tourist: Excuse me. Can you help me? I’m lost.
+Kelly: Of course. Where would you like to go?
+Tourist: I’d like to go to the bus station, but I can’t find it.
+Kelly: Well, take it easy! It is not so far. 
+It’s just 10 minutes by walking.
+Tourist: Should I call a taxi?
+Kelly: No, it is not necessary. I can give you directions.
+Tourist: Thanks a lot! That’s very kind of you.
+Kelly: Don’t worry! Ok, pay attention.  Go straight this street to the traffic lights. Do you see them?
+Tourist: Yes, I do.
+Kelly: Well, at the traffic lights turn right to Green Street.
+Tourist: Green Street.
+Kelly: Go ahead for one block and then take the first street on your left. Walk along one block more. At the end of the road, you will see a café in the corner. Now you are in King’s Road. From this place on your right, you can see the bus station in front of an Italian restaurant. It is near the café.
+Tourist: Ok, Green Street and then the first street on my right.
+Kelly: No, it is the first street on your left.
+Tourist: Well, walk alone one block more and at the end of the road there is a café in the corner.  On my right, I can see the bus station, right? It is in front of an Italian restaurant, right?
+Kelly: Yes, it is. Good luck and enjoy your visit to the city.
+Tourist: Many thanks for your help. 
+Kelly: Not at all.</div>
+<ul class="options-list">
+<li class="opt">They are in the university.</li>
+<li class="opt">They are at the hospital.</li>
+<li class="opt correct"><strong>They are on the street.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #34: FOOD RECIPE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can follow basic instructions for making something simple. Can follow simple instructions to carry out a straightforward task.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Look at the picture and read the recipe. Choose the verb that fits with the sentence.</div>
+<div class="tf-block">
+<p><strong>• According to the recipe, what do you have to do with the onion, bacon and red peppers…………</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Look at the picture and read the recipe. Select the correct word to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• In a big pot of boiling water,</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Look at the picture and read the recipe. Select the correct word to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• Serve the pasta with the</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Look at the picture and read the recipe. According to the text, you have to:</div>
+<ul class="options-list">
+<li class="opt">Draw a picture.</li>
+<li class="opt correct"><strong>Follow instructions.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Listen to a friend.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Look at the picture and read the text. This article is about …..</div>
+<ul class="options-list">
+<li class="opt">Delicious food.</li>
+<li class="opt">Food in the world.</li>
+<li class="opt correct"><strong>How to prepare food.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #35: CARDINAL NUMBERS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can follow simple instructions to carry out a straightforward task.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the text. Answer the question according to the text. Why does Helen need more computers?</div>
+<div class="q-desc">Helen: I’ve got a new office now!
+Meg: That sounds great! Congratulations!
+Helen: I’ll need a desk and a cabinet.  There are many, many folders with customers’ information and I need to label and put them away.z
+Meg: How many folders?
+Helen: Umm… 52 - 58 approximately.
+Meg: That’s a big number.
+Helen: Yes, it is. And also, I need a big meeting table with almost 18 seats to work with the whole principal staff.
+Meg: I see. How many employees do you have now?
+Helen: There are 75 people working in the company. Do you notice what I have on my shoulders?
+Meg: Don’t worry! You are very capable of doing it! Just keep calm and breathe.
+Helen: Thanks a lot for your support my friend! Oh, by the way, I have to buy 24 new laptops for assistants and secretaries. Also, I need an interior designer. As we have expanded, we need to change colors and to make bigger and more pleasant our workplace.
+Meg: Don’t stress. I know there are many things you have to do, but you need to organize yourself.  I can help you. 
+Helen: Can you?
+Meg: Of course! What do I have to do? 
+Helen: Well,
+1. Call Mrs. James and Mrs. Jenner – Organize folders 
+2. Go to Home Furniture – Buy meeting table and seats
+3. Buy computers – 24 laptops
+4. Contact an interior designer – ask for information
+Meg: It’s a piece of cake! It’s like my son’s “To Do List”          
+Helen: I really appreciate your help!</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Because the company does not have computers.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Because they are out-of-date.</li>
+<li class="opt">Because someone stole them.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the text. Complete the sentence according to the text. The principal staff is composed by:</div>
+<div class="q-desc">Helen: I’ve got a new office now!
+Meg: That sounds great! Congratulations!
+Helen: I’ll need a desk and a cabinet.  There are many, many folders with customers’ information and I need to label and put them away.z
+Meg: How many folders?
+Helen: Umm… 52 - 58 approximately.
+Meg: That’s a big number.
+Helen: Yes, it is. And also, I need a big meeting table with almost 18 seats to work with the whole principal staff.
+Meg: I see. How many employees do you have now?
+Helen: There are 75 people working in the company. Do you notice what I have on my shoulders?
+Meg: Don’t worry! You are very capable of doing it! Just keep calm and breathe.
+Helen: Thanks a lot for your support my friend! Oh, by the way, I have to buy 24 new laptops for assistants and secretaries. Also, I need an interior designer. As we have expanded, we need to change colors and to make bigger and more pleasant our workplace.
+Meg: Don’t stress. I know there are many things you have to do, but you need to organize yourself.  I can help you. 
+Helen: Can you?
+Meg: Of course! What do I have to do? 
+Helen: Well,
+1. Call Mrs. James and Mrs. Jenner – Organize folders 
+2. Go to Home Furniture – Buy meeting table and seats
+3. Buy computers – 24 laptops
+4. Contact an interior designer – ask for information
+Meg: It’s a piece of cake! It’s like my son’s “To Do List”          
+Helen: I really appreciate your help!</div>
+<ul class="options-list">
+<li class="opt">18 seats.</li>
+<li class="opt correct"><strong>18 people.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">18 folders.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the text. Answer the question according to the text. What is the advice meg gives to helen?</div>
+<div class="q-desc">Helen: I’ve got a new office now!
+Meg: That sounds great! Congratulations!
+Helen: I’ll need a desk and a cabinet.  There are many, many folders with customers’ information and I need to label and put them away.z
+Meg: How many folders?
+Helen: Umm… 52 - 58 approximately.
+Meg: That’s a big number.
+Helen: Yes, it is. And also, I need a big meeting table with almost 18 seats to work with the whole principal staff.
+Meg: I see. How many employees do you have now?
+Helen: There are 75 people working in the company. Do you notice what I have on my shoulders?
+Meg: Don’t worry! You are very capable of doing it! Just keep calm and breathe.
+Helen: Thanks a lot for your support my friend! Oh, by the way, I have to buy 24 new laptops for assistants and secretaries. Also, I need an interior designer. As we have expanded, we need to change colors and to make bigger and more pleasant our workplace.
+Meg: Don’t stress. I know there are many things you have to do, but you need to organize yourself.  I can help you. 
+Helen: Can you?
+Meg: Of course! What do I have to do? 
+Helen: Well,
+1. Call Mrs. James and Mrs. Jenner – Organize folders 
+2. Go to Home Furniture – Buy meeting table and seats
+3. Buy computers – 24 laptops
+4. Contact an interior designer – ask for information
+Meg: It’s a piece of cake! It’s like my son’s “To Do List”          
+Helen: I really appreciate your help!</div>
+<ul class="options-list">
+<li class="opt">Go to the beach and relax.</li>
+<li class="opt">Have fun!.</li>
+<li class="opt correct"><strong>Keep calm and breathe.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the text. Answer the question according to the text. How many employees are there in the company?</div>
+<div class="q-desc">Helen: I’ve got a new office now!
+Meg: That sounds great! Congratulations!
+Helen: I’ll need a desk and a cabinet.  There are many, many folders with customers’ information and I need to label and put them away.z
+Meg: How many folders?
+Helen: Umm… 52 - 58 approximately.
+Meg: That’s a big number.
+Helen: Yes, it is. And also, I need a big meeting table with almost 18 seats to work with the whole principal staff.
+Meg: I see. How many employees do you have now?
+Helen: There are 75 people working in the company. Do you notice what I have on my shoulders?
+Meg: Don’t worry! You are very capable of doing it! Just keep calm and breathe.
+Helen: Thanks a lot for your support my friend! Oh, by the way, I have to buy 24 new laptops for assistants and secretaries. Also, I need an interior designer. As we have expanded, we need to change colors and to make bigger and more pleasant our workplace.
+Meg: Don’t stress. I know there are many things you have to do, but you need to organize yourself.  I can help you. 
+Helen: Can you?
+Meg: Of course! What do I have to do? 
+Helen: Well,
+1. Call Mrs. James and Mrs. Jenner – Organize folders 
+2. Go to Home Furniture – Buy meeting table and seats
+3. Buy computers – 24 laptops
+4. Contact an interior designer – ask for information
+Meg: It’s a piece of cake! It’s like my son’s “To Do List”          
+Helen: I really appreciate your help!</div>
+<ul class="options-list">
+<li class="opt">70</li>
+<li class="opt correct"><strong>75</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">50</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the text. Answer the question according to the text. How many folders does Helen have?</div>
+<div class="q-desc">Helen: I’ve got a new office now!
+Meg: That sounds great! Congratulations!
+Helen: I’ll need a desk and a cabinet.  There are many, many folders with customers’ information and I need to label and put them away.z
+Meg: How many folders?
+Helen: Umm… 52 - 58 approximately.
+Meg: That’s a big number.
+Helen: Yes, it is. And also, I need a big meeting table with almost 18 seats to work with the whole principal staff.
+Meg: I see. How many employees do you have now?
+Helen: There are 75 people working in the company. Do you notice what I have on my shoulders?
+Meg: Don’t worry! You are very capable of doing it! Just keep calm and breathe.
+Helen: Thanks a lot for your support my friend! Oh, by the way, I have to buy 24 new laptops for assistants and secretaries. Also, I need an interior designer. As we have expanded, we need to change colors and to make bigger and more pleasant our workplace.
+Meg: Don’t stress. I know there are many things you have to do, but you need to organize yourself.  I can help you. 
+Helen: Can you?
+Meg: Of course! What do I have to do? 
+Helen: Well,
+1. Call Mrs. James and Mrs. Jenner – Organize folders 
+2. Go to Home Furniture – Buy meeting table and seats
+3. Buy computers – 24 laptops
+4. Contact an interior designer – ask for information
+Meg: It’s a piece of cake! It’s like my son’s “To Do List”          
+Helen: I really appreciate your help!</div>
+<ul class="options-list">
+<li class="opt">Between 40-50.</li>
+<li class="opt correct"><strong>Between 50-60.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Between 60-80.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> Read the phrases and match them with their meanings.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Don’t stress.</td><td class="match-ans"><strong>Not worry about unnecessary things.</strong> ✅</td></tr>
+<tr><td>It’s a piece of cake.</td><td class="match-ans"><strong>Very easy</strong> ✅</td></tr>
+<tr><td>On my shoulders.</td><td class="match-ans"><strong>A big responsibility is trusted to someone.</strong> ✅</td></tr>
+</tbody></table>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #7c3aed">🎧 Listening (Comprensión Auditiva)</h2><div class="task-card"><h3>📌 Tarea #327: Grocery Store.</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Listen to the audio and select the appropriate option: A grocery store is a place where you buy________</div>
+<ul class="options-list">
+<li class="opt">clothes</li>
+<li class="opt correct"><strong>food</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">toys</li>
+<li class="opt">books</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Listen to the audio and select the appropriate option: Some people use a shopping _______ to remember what they need.</div>
+<ul class="options-list">
+<li class="opt">cart</li>
+<li class="opt">bag </li>
+<li class="opt correct"><strong>list</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">box</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Listen to the audio and select the appropriate option: At the grocery store, you pick what you want and put it in your __________</div>
+<ul class="options-list">
+<li class="opt correct"><strong>cart</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">hand</li>
+<li class="opt">pocket</li>
+<li class="opt">basket</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Listen to the audio and select the appropriate option: After shopping, you go to the ______ to pay</div>
+<ul class="options-list">
+<li class="opt">manager</li>
+<li class="opt correct"><strong>cashier</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">teacher</li>
+<li class="opt">driver</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Listen to the audio and select the appropriate option: The cashier scans your items and tells you the total________</div>
+<ul class="options-list">
+<li class="opt">size</li>
+<li class="opt">weight</li>
+<li class="opt">color</li>
+<li class="opt correct"><strong>cost</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #328: Ecuador is a Nature Paradise.</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> According to the audio, select the right option: Where is Ecuador located?</div>
+<ul class="options-list">
+<li class="opt">North America</li>
+<li class="opt">Europe</li>
+<li class="opt correct"><strong>South America</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Asia</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> According to the audio, select the right option: What are the Galápagos Islands famous for?</div>
+<ul class="options-list">
+<li class="opt">Beautiful beaches</li>
+<li class="opt">Tall mountains</li>
+<li class="opt correct"><strong>Unique animals like giant tortoises</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Large cities</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> According to the audio, select the right option: What can you find in the Amazon rainforest?</div>
+<ul class="options-list">
+<li class="opt">Deserts</li>
+<li class="opt correct"><strong>Many plants and animals</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Ice and snow</li>
+<li class="opt">Tall buildings</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> According to the audio, select the right option: What can you see in the Andes Mountains?</div>
+<ul class="options-list">
+<li class="opt">Oceans</li>
+<li class="opt correct"><strong>Volcanoes</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Dunes</li>
+<li class="opt">Skyscrapers</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> According to the audio, select the right option: Why is Ecuador called a nature paradise?</div>
+<ul class="options-list">
+<li class="opt">It has large cities</li>
+<li class="opt correct"><strong>It has amazing nature for exploring</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It is very cold </li>
+<li class="opt">It is close to the ocean</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #329: Welcome to the University</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> According to the audio, select the right option: What can you do at the university?</div>
+<ul class="options-list">
+<li class="opt">Sleep all day</li>
+<li class="opt correct"><strong>Learn new things</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Play video games</li>
+<li class="opt">Travel the world</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> According to the audio, select the right option: Who will help you understand important ideas?</div>
+<ul class="options-list">
+<li class="opt">Friends</li>
+<li class="opt correct"><strong>Professors</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Parents</li>
+<li class="opt">Coaches</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> According to the audio, select the right option: What can you choose to study at the university?</div>
+<ul class="options-list">
+<li class="opt">Movies</li>
+<li class="opt correct"><strong>Different subjects like science, art, or history</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cooking</li>
+<li class="opt">Shopping</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> According to the audio, select the right option: Where can you make friends and explore your interests at the university?</div>
+<ul class="options-list">
+<li class="opt">In the cafeteria</li>
+<li class="opt correct"><strong>In clubs, sports teams, and libraries</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">At home</li>
+<li class="opt">In the parking lot</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> According to the audio, select the right option: What is the university for?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Learning, growing, and discovering who you want to be</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Watching movies</li>
+<li class="opt">Playing games</li>
+<li class="opt">Eating and sleeping</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #331: Professions</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Listen to the audio and match the profession with the correct definition: Doctor.</div>
+<ul class="options-list">
+<li class="opt">Designs buildings</li>
+<li class="opt correct"><strong>Helps sick people</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Teaches students</li>
+<li class="opt">Cooks food</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Listen to the audio and match the profession with the correct definition: Teacher.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Teaches students</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Keeps the community safe</li>
+<li class="opt">Saves people from fires</li>
+<li class="opt">Drives a bus</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Listen to the audio and match the profession with the correct definition: Firefighter.</div>
+<ul class="options-list">
+<li class="opt">Keeps the community safe</li>
+<li class="opt correct"><strong>Saves people from fires</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cooks food</li>
+<li class="opt">Builds houses</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Listen to the audio and match the profession with the correct definition: Police officer.</div>
+<ul class="options-list">
+<li class="opt">Teaches students</li>
+<li class="opt">Cooks food</li>
+<li class="opt correct"><strong>Keeps the community safe</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Drives a train</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Listen to the audio and match the profession with the correct definition: Chef.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Cooks food</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Helps sick people</li>
+<li class="opt">Designs machines</li>
+<li class="opt">Saves people from fires</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #db2777">✍️ Writing (Expresión Escrita)</h2><div class="task-card"><h3>📌 Tarea #27: TURN AROUND</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Copy short sentences on everyday subjects (e.g. directions how to get somewhere)</p><div class="task-expl">💡 <strong>Explicación:</strong> When you are in a country you don’t know, you can easily get lost at some point during the trip, even if you have a map. So it’s really useful to know how to ask for and understand directions in English so you can reach your destination. It’s also great to be able to give directions yourself to tourists or foreign colleagues. So what words and phrases can help you give and ask for directions? Read on to find out! First of all, you need to know some basic vocabulary. The most important words and phrases are:</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#1</span> Read the sentences and order them.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The basketball court is next to the school"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The bank is between the library and the drugstore"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Turn left to go to the market"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Walk to the corner, there is the restaurant"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Stav at the traffic light"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#2</span> Read and complete the sentences with the words from the box.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>This</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Those</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>That</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>These</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Look at the map. You are at the school. How do you get to the library?</div>
+<ul class="options-list">
+<li class="opt">Turn right and walk to the corner, then turn left, the library is next to the bank.</li>
+<li class="opt correct"><strong>Turn left and walk to the corner, then turn right, the library is next to the bank and the tree.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Turn left and walk to the corner, then turn right, the library is next to the tree.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the sentence and choose the best option. It is a place where children go to be educated.</div>
+<ul class="options-list">
+<li class="opt">Hospital</li>
+<li class="opt">Restaurant</li>
+<li class="opt">Football pitch</li>
+<li class="opt correct"><strong>School</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Bus Station</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#5</span> Look at the pictures and label them with the instructions.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Turn left</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Turn right</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Cross the street</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>walk to the corner</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the meaning and choose the best option. It is a building where objects of historical, scientific, or artistic interest are kept.</div>
+<ul class="options-list">
+<li class="opt">School</li>
+<li class="opt">Bus Station</li>
+<li class="opt">Library</li>
+<li class="opt">Restaurant</li>
+<li class="opt correct"><strong>Museum</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Look at the picture and read the e-mail. Then read the sentences and choose true or false.</div>
+<div class="tf-block">
+<p><strong>• Susana can take the bus from Manta?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Did Rita write the email?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Does Rita have to walk blocks left and turn right?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Is the house behind the drugstore?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#8</span> Look at the picture and read the text. Then order the instructions</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"walk 2 blocks left and turn right walk to the corner cross the street turn right"</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #28: WELCOME TO SCHOOL</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Copy familiar words and short phrases about everyday objects and set phrases.
+Write consistently with joined-up letters.
+Spell a range of common greetings.</p><div class="task-expl">💡 <strong>Explicación:</strong> We are surrounded by household items, so it isn't surprising that we include them in our everyday idioms. Normally we use these expressions in our daily routines. It´s important to know when use them.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#1</span> Look at the pictures. Match the instructions to the pictures.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Turn on the computer</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Close the window</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Write the date</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#2</span> Read the conversations and complete them using the information from the box.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>09:00
+</td><td class="match-ans"><strong>Good morning Mr.</strong> ✅</td></tr>
+<tr><td>15:30
+</td><td class="match-ans"><strong>Good Afternoon Mr.</strong> ✅</td></tr>
+<tr><td>20:00
+</td><td class="match-ans"><strong>Good evening Jose</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read the questions and choose true or false.</div>
+<div class="tf-block">
+<p><strong>• Desk, notebook, chair are school items?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Backpack, scissords are school items?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Armchair, sofa are school items?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Highlighter, clip, pins are school items?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Blanket, pillow, towel are home items?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read the words and match them with the phrases from the box.</div>
+<div class="tf-block">
+<p><strong>• Carpet: </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Pencil case: </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Television: </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Dining table: </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Compass: </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• School bag: </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#5</span> Read the words from the box and choose the things you can find at the classroom.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>pencil</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">tv</li>
+<li class="opt correct"><strong>books</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">suitcase</li>
+<li class="opt correct"><strong>computers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>windows</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>lamps</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>chairs</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div></div>
+    </div>
+</body>
+</html>

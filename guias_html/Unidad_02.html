@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 2 • 📗 Book 1 (A1.1 - Elementary) - Guía de Inglés UTM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 900px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-btn, .print-btn {
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .back-btn:hover, .print-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 0 0 6px 0;
+        }
+        .header .subtitle {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: inline-flex;
+            gap: 16px;
+            background: #f1f5f9;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+        .skill-section {
+            margin-top: 40px;
+        }
+        .skill-section h2 {
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 6px solid #2563eb;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .task-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .task-card h3 {
+            color: #1e293b;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .task-obj {
+            font-size: 14px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .task-expl {
+            font-size: 14px;
+            color: #0369a1;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        .question-card {
+            background: #fafafa;
+            border-left: 4px solid #3b82f6;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+        .q-header {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .q-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .q-num {
+            color: #3b82f6;
+            margin-right: 4px;
+        }
+        .q-desc {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .options-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .opt {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .opt.correct {
+            background: #ecfdf5;
+            border-color: #10b981;
+            color: #065f46;
+            font-weight: 600;
+        }
+        .badge-correct {
+            background: #10b981;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            float: right;
+            font-weight: 600;
+        }
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .match-table th, .match-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .match-table th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        .match-ans {
+            color: #065f46;
+            background: #ecfdf5;
+            font-weight: 600;
+        }
+        .order-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        .fill-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .fill-list li {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        @media print {
+            body { background: #ffffff; padding: 0; }
+            .top-nav { display: none; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .task-card { page-break-inside: avoid; }
+            .question-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="../index.html" class="back-btn">← Volver al Portal General</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Guardar / Imprimir PDF</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>📘 Universidad Técnica de Manabí</h1>
+            <div class="subtitle">Simulador de Inglés • Unidad 2 • 📗 Book 1 (A1.1 - Elementary)</div>
+            <div class="stats">
+                <span>📋 17 Tareas</span>
+                <span>❓ 140 Preguntas Verificadas</span>
+            </div>
+        </div>
+        <div class="skill-section"><h2 style="border-left-color: #2563eb">🧠 Grammar (Estructuras Gramaticales)</h2><div class="task-card"><h3>📌 Tarea #23: How much is an apple?</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can ask about the price of something using ‘How much is/are?’</p><div class="task-expl">💡 <strong>Explicación:</strong> How much is and how much are are used to ask about the price of something. How much is is used to ask for a price in singular and how much are is used to ask for a price in plural.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> Read and complete the sentences. Match the phrases to the statements.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>We like reading. We have</td><td class="match-ans"><strong>many books</strong> ✅</td></tr>
+<tr><td>She enjoyed her visit to Italy. She met</td><td class="match-ans"><strong>many friends</strong> ✅</td></tr>
+<tr><td> Isabella doesn’t have</td><td class="match-ans"><strong>much money</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Read and complete the questions with how much…?  Or how many…?</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read the questions and complete with ‘how much’ or ‘how many’</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read and complete the questions with much or many.</div>
+<div class="tf-block">
+<p><strong>• How</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• How</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• How</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Read the questions and complete the spaces with much or many.</div>
+<div class="tf-block">
+<p><strong>• There aren’t</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• We don’t have</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Were there</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Did</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#6</span> Read the words and order the following sentences.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"How much water do you drink every day?"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"How many lemons do you need for a lemonade?"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"How many days are there in a week?"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#7</span> Read and choose the words that are used with how much is…?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>bread</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>milk</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>orange juice</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">bananas</li>
+<li class="opt">oranges</li>
+<li class="opt">eggs</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #24: This is Fernando’s car</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use (‘s) to express possession with singular and plural nouns</p><div class="task-expl">💡 <strong>Explicación:</strong> We use the apostrophe (‘s) to show ownership, belonging to</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the sentence and decide which sentence is correct?</div>
+<ul class="options-list">
+<li class="opt">That’s Bobs’ car.</li>
+<li class="opt">That’s Bobs car.</li>
+<li class="opt correct"><strong>That’s Bob’s car.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> In the box, choose the correct form of the sentences joined with the use of the possessive form. Read the following senteces: the women have kids. The kids are playing.</div>
+<ul class="options-list">
+<li class="opt">The womens kids are playing.</li>
+<li class="opt">The womens´ kids are playing.</li>
+<li class="opt correct"><strong>The women’s kids are playing.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read and complete the sentence with the information from the box. Write your name at the _______.</div>
+<ul class="options-list">
+<li class="opt">page in the top</li>
+<li class="opt">page’s top</li>
+<li class="opt correct"><strong>top of the page</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read and complete the sentence. That’s not my bag. It’s my _______.</div>
+<ul class="options-list">
+<li class="opt">brothers’s</li>
+<li class="opt">brothers</li>
+<li class="opt correct"><strong>brother’s</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read and which word goes in the space? Can you look after the _______ rabbit while we are on holiday?</div>
+<ul class="options-list">
+<li class="opt">childrens’s</li>
+<li class="opt">childrens’</li>
+<li class="opt correct"><strong>children’s</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#6</span> Read and order the following sentences using the (‘s).</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Martha ´s house is very big"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"My dog ´s bed is comfortable"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Ecuador ´s beaches are beautiful"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Carolina ´s brother is fat"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Read and match the sentences with the correct information from the box.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>The bones that belong to the dog</td><td class="match-ans"><strong>The dog’s bones</strong> ✅</td></tr>
+<tr><td>The bike that belongs to Tommy</td><td class="match-ans"><strong>Tommy’s bike</strong> ✅</td></tr>
+<tr><td>The shirts that belong to Andrea</td><td class="match-ans"><strong>Andrea’s shirts</strong> ✅</td></tr>
+<tr><td>The laptop that belongs to my son</td><td class="match-ans"><strong>My son’s laptop</strong> ✅</td></tr>
+<tr><td>The house that belongs to my uncle</td><td class="match-ans"><strong>My uncle’s house</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> In the box, choose the correct form of the sentences joined with the use of the possessive form. Read the following senteces: the student has a pen. The pen is on the table.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The student’s pen is on the table.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The student pen is on the table.</li>
+<li class="opt">The students pen is on the table.</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #25: There are four bedrooms</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use ‘there + be’ to express presence/absence</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read and complete the sentence with the correct phrase. How many pencils _____ ______ in your bag?</div>
+<ul class="options-list">
+<li class="opt">is there</li>
+<li class="opt">there is</li>
+<li class="opt correct"><strong>are there</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">there are</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Read and complete the sentences. Choose is or are.</div>
+<div class="tf-block">
+<p><strong>• There</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#3</span> Look at the phrases and order them to make sentences. ( the subject, the activity (verb), and the complement)</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"There is a lamp in the bedroom."</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"There aren't any people at the party"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"There are Japanese students in my class"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read and complete the sentence with the correct noun according to the sentence.</div>
+<div class="tf-block">
+<p><strong>• There is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There are two</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There are</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read and select the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Are there workers in the office?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Are there worker in the office?</li>
+<li class="opt">Aren´t there worker in the office?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read and select the correct sentence.</div>
+<ul class="options-list">
+<li class="opt">There aren't milks in the bottle.</li>
+<li class="opt correct"><strong>There isn't any milk in the bottle.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">There isn't many milk in the bottle.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read and select the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>There are some eggs in the basket.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">There are some egg in the basket.</li>
+<li class="opt">There is some eggs in the basket.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Read and select the correct or incorrect sentence.</div>
+<div class="tf-block">
+<p><strong>• There aren't any computers in the music room.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Are there a wardrobe in your bedroom?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Is there a swimming pool at your school?' 'Yes, there is.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read and complete the dialogue with the correct phrase from the box. A: how many questions _________ in your examination? B: _________ ten questions.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>are there / there are</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">is there / there is</li>
+<li class="opt">there are / are there</li>
+<li class="opt">there is / there are</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#10</span> Read the phrases and match the sentences with:  there are…</div>
+<ul class="options-list">
+<li class="opt">a beautiful girl in my class</li>
+<li class="opt">a pencil on my desk</li>
+<li class="opt correct"><strong>five students in the classroom</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">a spider on my bed</li>
+<li class="opt correct"><strong>some children playing soccer</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>seven days in a week</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#11</span> Read the phrases and match the sentences with: there is…</div>
+<ul class="options-list">
+<li class="opt correct"><strong>a beautiful girl in my class</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>a pencil on my desk</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">five students in the classroom</li>
+<li class="opt correct"><strong>a spider on my bed</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">some children playing soccer</li>
+<li class="opt">seven days in a week</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#12</span> Look at the picture and read the phrases. Choose the correct option to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #26: I have ten books</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use regular and irregular nouns in the plural form</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the words and identify what is the plural of leaf?</div>
+<ul class="options-list">
+<li class="opt">leafs</li>
+<li class="opt correct"><strong>leaves</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">leavies</li>
+<li class="opt">leafes</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the sentence. From the box select the mistake:  there are three cats under the tree.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>cat</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">There</li>
+<li class="opt">Tree</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the sentence and decide which words go in the spaces? We saw ___ film yesterday. It was about ___ extreme experience in the forest.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>a / an</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt"> a / the</li>
+<li class="opt"> the / a</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read the sentencess and choose the correct definite or indefinite article: a, an, or x (zero article)</div>
+<div class="tf-block">
+<p><strong>• I bought</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I saw</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I do not like</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• They are staying at</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the words and identify what is the plural of chef?</div>
+<ul class="options-list">
+<li class="opt">cheves</li>
+<li class="opt">chef</li>
+<li class="opt">chef</li>
+<li class="opt correct"><strong>chefs</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read and complete the sentence by choosing the correct plural. This garden has beautiful….</div>
+<ul class="options-list">
+<li class="opt correct"><strong>flowers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">floweres</li>
+<li class="opt">flowereves</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read and complete the sentence by choosing the appropriate plural. I love…</div>
+<ul class="options-list">
+<li class="opt">babyes</li>
+<li class="opt">babys</li>
+<li class="opt correct"><strong>babies</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the words and identify what is the plural of tomato?</div>
+<ul class="options-list">
+<li class="opt">tomatos</li>
+<li class="opt correct"><strong>tomatoes</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">tomatoos</li>
+<li class="opt">tomato</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read and complete the sentence by choosing the appropriate plural. I want to catch a lot of…</div>
+<ul class="options-list">
+<li class="opt correct"><strong>fish</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">fishes</li>
+<li class="opt">fishs</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read the sentence. From the box select the mistake:  these horse are beautiful.</div>
+<ul class="options-list">
+<li class="opt">These</li>
+<li class="opt correct"><strong>Horse</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Beautiful</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#11</span> Read the sentence. From the box select the mistake:  those child are from my class.</div>
+<ul class="options-list">
+<li class="opt">Those</li>
+<li class="opt correct"><strong>Child</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Are</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#12</span> How do 'house' and 'mouse' differ in their plural forms?</div>
+<ul class="options-list">
+<li class="opt">'House' is an irregular plural and 'mouse' is regular.</li>
+<li class="opt correct"><strong>'Mouse' is an irregular plural and 'house' is regular.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">They are not different; both are regular.</li>
+<li class="opt">They are not different; both are irregular.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#13</span> Read the words and identify what is the plural of church?</div>
+<ul class="options-list">
+<li class="opt">churchs</li>
+<li class="opt">church</li>
+<li class="opt correct"><strong>churches</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">churchies</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#14</span> Read the statements and choose the correct form of the plural of nouns to make sentences.</div>
+<div class="tf-block">
+<p><strong>• There are ten</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I take various</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• We are thirty five</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Best</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#15</span> Read and complete the sentences using the correct indefinite article.</div>
+<div class="tf-block">
+<p><strong>• We work in</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• They have</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Rafael has</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I am</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• She works in</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #059669">📖 Vocabulary (Vocabulario)</h2><div class="task-card"><h3>📌 Tarea #19: ¿HOW OFTEN DO YOU …………?</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Understand and use frequency adverbs</p><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#1</span> Read the words and order the next sentences.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I sometimes get up early"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"It rarely rains here"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The bus is always late"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Winter is usually cold here"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the sentence and choose the correct answer: I _______ watch cartoons because i hate them. News shows are much better.</div>
+<ul class="options-list">
+<li class="opt">Always</li>
+<li class="opt">Sometimes</li>
+<li class="opt correct"><strong>Never</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Rarely</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the sentence and choose the correct answer: My sister __________ two days of school in a row.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Often has missed</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Has missed often</li>
+<li class="opt">Has often missed</li>
+<li class="opt">Missed often has</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Look at the picture about diego’s extracurricular activities. Read the sentences and choose true or false.</div>
+<div class="tf-block">
+<p><strong>• He always studies French</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He rarely studies Mandarin</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• THe never practices soccer</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He ocassionally  goes to acting class</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the sentence and choose the correct answer: It  [0%] _____ rains here in the summer.</div>
+<ul class="options-list">
+<li class="opt">Sometimes</li>
+<li class="opt correct"><strong>Never</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Rarely</li>
+<li class="opt">Always</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read and choose the incorrect sentence.</div>
+<ul class="options-list">
+<li class="opt">Diana listens  to music sometimes.</li>
+<li class="opt correct"><strong>Diana listen sometimes to music.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Diana sometimes listens to music.</li>
+<li class="opt">Sometimes Diana listens to music.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the sentence and choose the correct answer: I __________study very hard, so i get high grades in school.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Always</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Sometimes</li>
+<li class="opt">Never</li>
+<li class="opt">Rarely</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the sentence and choose the correct answer: James goes to the beach only once a year. He ……… goes to the beach.</div>
+<ul class="options-list">
+<li class="opt">Always</li>
+<li class="opt">Sometimes</li>
+<li class="opt">Often</li>
+<li class="opt correct"><strong>Almost never</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the sentence and choose the best option: mrs. Silva is always in a good mood. She is ________sad.</div>
+<ul class="options-list">
+<li class="opt">Always</li>
+<li class="opt">Sometimes</li>
+<li class="opt correct"><strong>Never</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Rarely</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#10</span> Read the words and choose the adverbs of frequency.</div>
+<ul class="options-list">
+<li class="opt">Lazy</li>
+<li class="opt correct"><strong>always</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">you</li>
+<li class="opt">read</li>
+<li class="opt correct"><strong>sometimes</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>never</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>usually</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">morning</li>
+<li class="opt correct"><strong>often</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">happy</li>
+<li class="opt">tallest</li>
+<li class="opt correct"><strong>seldom</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">movie</li>
+<li class="opt">write</li>
+<li class="opt">students</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #20: Describe me¡</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Understand and use adjectives to describe nouns</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Look at the picture and choose the correct adjective.</div>
+<ul class="options-list">
+<li class="opt">Young</li>
+<li class="opt correct"><strong>Old</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Look at the picture and choose the correct adjective.</div>
+<ul class="options-list">
+<li class="opt">Ugly</li>
+<li class="opt correct"><strong>beautiful</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the phrases and choose the correct order of adjective.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Orange shirt</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Shirt orange</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the phrases and choose the correct order of adjective.</div>
+<ul class="options-list">
+<li class="opt">Woman beautiful</li>
+<li class="opt correct"><strong>Beautiful woman</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the sentence and choose the correct answer. I have ______ straight blond hair and blue eyes.</div>
+<ul class="options-list">
+<li class="opt">Big</li>
+<li class="opt">Old</li>
+<li class="opt correct"><strong>Long</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Tall</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Look at the picture and choose the correct adjective.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Tall</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Short</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read and complete the sentence. Words that modify or describe a noun are called ________.</div>
+<ul class="options-list">
+<li class="opt">pronoun</li>
+<li class="opt correct"><strong>adjective</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">verb</li>
+<li class="opt">adverbs</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read and find the adjective.</div>
+<ul class="options-list">
+<li class="opt">Filled</li>
+<li class="opt">Book</li>
+<li class="opt correct"><strong>Bright</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Pickture</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Look at the picture and choose the correct adjective.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Hot</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cold</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Select the adjective in the next sentence: Tanya is a graceful dancer.</div>
+<ul class="options-list">
+<li class="opt">Tanya</li>
+<li class="opt">Is</li>
+<li class="opt correct"><strong>Graceful</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Dancer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#11</span> Read the sentences and  Choose true or false.</div>
+<div class="tf-block">
+<p><strong>• An adjective describe a verb</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• An adjective describe a noun</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Most adjectives can be used in front of a noun</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• We use the with the comparative adjectives</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#12</span> Read the words and choose which term is an adjective.</div>
+<ul class="options-list">
+<li class="opt">Wear</li>
+<li class="opt">Dog</li>
+<li class="opt">Apple</li>
+<li class="opt correct"><strong>Crazy</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#13</span> Read the phrases and choose the correct order of adjective.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Delicious meal</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Meal delicious</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#14</span> Read the phrases and choose the correct order of adjective.</div>
+<ul class="options-list">
+<li class="opt">Car small</li>
+<li class="opt correct"><strong>Small car</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#15</span> Look at the picture and choose the correct adjective.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>sad</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">happy</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #21: MOVING AROUND¡</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Identify and use vocabulary related to transportation</p><div class="task-expl">💡 <strong>Explicación:</strong> Means of transportation is any of the different kinds of transport facilities used for moving goods and people from one location to the other. The means of transportation are bus, train, aeroplane, ship, car, etc while the mode of transportation refers to road, air, sea/ocean, etc.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the sentence and choose the correct option. It is got four doors and four wheels.</div>
+<ul class="options-list">
+<li class="opt">Train</li>
+<li class="opt">Plane</li>
+<li class="opt">Bike</li>
+<li class="opt correct"><strong>Car</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the sentence and choose the correct option. It hasn’t got wings but it can fly.</div>
+<ul class="options-list">
+<li class="opt">Bike</li>
+<li class="opt correct"><strong>Airplane</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Boat</li>
+<li class="opt">Motorcycle</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#3</span> READ THE SENTENCES AND COMPLETE THEM. USE THE WORDS IN THE BOX.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>It is not typical in Ecuador, but Alfaro built one in the past</td><td class="match-ans"><strong>train</strong> ✅</td></tr>
+<tr><td>You can go to Quito in just 30 minutes and it is very confortable.</td><td class="match-ans"><strong>plane</strong> ✅</td></tr>
+<tr><td>You travel with a Little money. It is color yellow</td><td class="match-ans"><strong>taxi</strong> ✅</td></tr>
+<tr><td>It is a nive way to travel in the wáter</td><td class="match-ans"><strong>ship</strong> ✅</td></tr>
+<tr><td>It has four wheels and it needs fuels to move</td><td class="match-ans"><strong>bus</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the sentence and choose the correct option. It is got only two wheels.</div>
+<ul class="options-list">
+<li class="opt">Car</li>
+<li class="opt correct"><strong>Bike</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Boat</li>
+<li class="opt">Train</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the sentence and choose the correct option. Which is land transport?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Bus</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Boat</li>
+<li class="opt">Ship</li>
+<li class="opt">Helicopter</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> Match the verbs with the correct mains of transportation.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Ride</td><td class="match-ans"><strong>a bicycle</strong> ✅</td></tr>
+<tr><td>Drive</td><td class="match-ans"><strong>a car</strong> ✅</td></tr>
+<tr><td>Sail</td><td class="match-ans"><strong>in a boat</strong> ✅</td></tr>
+<tr><td>Fly</td><td class="match-ans"><strong>in a plane</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the questions and choose the correct option. Which type of vehicles do not cause air pollution?</div>
+<ul class="options-list">
+<li class="opt">Motorcycle</li>
+<li class="opt correct"><strong>Bike</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Bus</li>
+<li class="opt">Truck</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct option. MOST VEHICLES RUN ON __________</div>
+<ul class="options-list">
+<li class="opt">Water</li>
+<li class="opt">Fax</li>
+<li class="opt">Air</li>
+<li class="opt correct"><strong>Fuel </strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #22: YUMMY¡</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Identify and use words related to food and drinks</p><div class="task-expl">💡 <strong>Explicación:</strong> Food, substance consisting essentially of protein, carbohydrate, fat, and other nutrients used in the body of an organism to sustain growth and vital processes and to furnish energy. A drink  is a liquid intended for human consumption. In addition to their basic function of satisfying thirst, drinks play important roles in human culture. Common types of drinks include plain drinking water, milk, coffee, tea, hot chocolate, juice and soft drinks.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read and answer the question. How do you say jugo in english?</div>
+<ul class="options-list">
+<li class="opt">Milk</li>
+<li class="opt">Wisky</li>
+<li class="opt">Beer</li>
+<li class="opt correct"><strong>Juice</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Complete the sentence and choose the correct answer. When i get up, I always have a ______of coffee.</div>
+<ul class="options-list">
+<li class="opt">Bottle</li>
+<li class="opt correct"><strong>Cup</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Glass</li>
+<li class="opt">Bowl</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Complete the sentence and choose the correct answer. We eat soup with a _____.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Spoon</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Fork</li>
+<li class="opt">Knife</li>
+<li class="opt">Glass</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#4</span> Put in order the following letters to created words related to food and drink.</div>
+<ul class="fill-list">
+<li><code>REBTUT</code> ➔ <strong>BUTTER</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>CIKNEHC</code> ➔ <strong>CHICKEN</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>ILKM</code> ➔ <strong>MILK</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>EINW</code> ➔ <strong>WINE</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Look at the picture and choose the correct option.</div>
+<ul class="options-list">
+<li class="opt">Toast</li>
+<li class="opt">Sandwhich</li>
+<li class="opt">Chicken</li>
+<li class="opt correct"><strong>Hamburger</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Complete the sentence and choose the correct option. A tomate is a …</div>
+<ul class="options-list">
+<li class="opt">Fruit</li>
+<li class="opt correct"><strong>Vegetable</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Herb</li>
+<li class="opt">Drink</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Look the picture and choose the correct option.</div>
+<ul class="options-list">
+<li class="opt">Bread</li>
+<li class="opt">Pizza</li>
+<li class="opt">Butter</li>
+<li class="opt correct"><strong>Cheese</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the sentence and choose the correct option. What do babies drink?</div>
+<ul class="options-list">
+<li class="opt">Coffe</li>
+<li class="opt correct"><strong>Milk</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Tea</li>
+<li class="opt">Beer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the sentence and choose the right answer. For pancakes. We need _____.</div>
+<ul class="options-list">
+<li class="opt">Tea</li>
+<li class="opt">Banana</li>
+<li class="opt correct"><strong>Eggs</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Tomatoes</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #d97706">📚 Reading (Comprensión Lectora)</h2><div class="task-card"><h3>📌 Tarea #16: In the hotel</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can recognize cardinal numbers up to 10</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the dialogue and select the correct sentence.</div>
+<div class="q-desc">Receptionist: Good morning. Welcome to Ceibo Real Hotel. How may I help you?
+Guest: I would like to reserve two rooms.
+Receptionist: Of course, Which date do you require the room?
+Guest: Three days from now, and I want a double and a twin room, please. My family is with me.
+Receptionist: Sure sir! A double and a twin room are available right now and its rate is $35 per night and it includes breakfast in our cafeteria.
+Guest: Great. My name is Diego Martinez.
+Receptionist: Please, spell your last name.
+Guest: M-A-R-T-I-N-E-Z
+Receptionist:  What is your I.D. card number?
+Guest: 1304724749
+Receptionist:  Excuse me. Could you repeat it again?
+Guest:  Yes! It is 1304724749
+Receptionist:  And your cell phone number, please?
+Guest:  It is 225-16-72
+Receptionist:  Great Mr. Martinez. Please, sign your registration card. Your code is 3484720 and your room are 212 and 213 on the second floor. Have a nice stay with us Mr. Martinez.
+Guest:  Thanks a lot.</div>
+<ul class="options-list">
+<li class="opt">Mr. Martinez and his family will stay five days in the hotel</li>
+<li class="opt correct"><strong>Mr. Martinez and his family will stay three days in the hotel.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the dialogue and select the correct sentence.</div>
+<div class="q-desc">Receptionist: Good morning. Welcome to Ceibo Real Hotel. How may I help you?
+Guest: I would like to reserve two rooms.
+Receptionist: Of course, Which date do you require the room?
+Guest: Three days from now, and I want a double and a twin room, please. My family is with me.
+Receptionist: Sure sir! A double and a twin room are available right now and its rate is $35 per night and it includes breakfast in our cafeteria.
+Guest: Great. My name is Diego Martinez.
+Receptionist: Please, spell your last name.
+Guest: M-A-R-T-I-N-E-Z
+Receptionist:  What is your I.D. card number?
+Guest: 1304724749
+Receptionist:  Excuse me. Could you repeat it again?
+Guest:  Yes! It is 1304724749
+Receptionist:  And your cell phone number, please?
+Guest:  It is 225-16-72
+Receptionist:  Great Mr. Martinez. Please, sign your registration card. Your code is 3484720 and your room are 212 and 213 on the second floor. Have a nice stay with us Mr. Martinez.
+Guest:  Thanks a lot.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Mr. Martinez’s registration code is 3484720</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Mr. Martinez’s registration code is 4724749</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the dialogue and select the correct sentence.</div>
+<div class="q-desc">Receptionist: Good morning. Welcome to Ceibo Real Hotel. How may I help you?
+Guest: I would like to reserve two rooms.
+Receptionist: Of course, Which date do you require the room?
+Guest: Three days from now, and I want a double and a twin room, please. My family is with me.
+Receptionist: Sure sir! A double and a twin room are available right now and its rate is $35 per night and it includes breakfast in our cafeteria.
+Guest: Great. My name is Diego Martinez.
+Receptionist: Please, spell your last name.
+Guest: M-A-R-T-I-N-E-Z
+Receptionist:  What is your I.D. card number?
+Guest: 1304724749
+Receptionist:  Excuse me. Could you repeat it again?
+Guest:  Yes! It is 1304724749
+Receptionist:  And your cell phone number, please?
+Guest:  It is 225-16-72
+Receptionist:  Great Mr. Martinez. Please, sign your registration card. Your code is 3484720 and your room are 212 and 213 on the second floor. Have a nice stay with us Mr. Martinez.
+Guest:  Thanks a lot.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Mr. Martinez’s ID card is 1304724749</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Mr. Martinez’s ID card is 1304772749</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the dialogue and select the correct sentence.</div>
+<div class="q-desc">Receptionist: Good morning. Welcome to Ceibo Real Hotel. How may I help you?
+Guest: I would like to reserve two rooms.
+Receptionist: Of course, Which date do you require the room?
+Guest: Three days from now, and I want a double and a twin room, please. My family is with me.
+Receptionist: Sure sir! A double and a twin room are available right now and its rate is $35 per night and it includes breakfast in our cafeteria.
+Guest: Great. My name is Diego Martinez.
+Receptionist: Please, spell your last name.
+Guest: M-A-R-T-I-N-E-Z
+Receptionist:  What is your I.D. card number?
+Guest: 1304724749
+Receptionist:  Excuse me. Could you repeat it again?
+Guest:  Yes! It is 1304724749
+Receptionist:  And your cell phone number, please?
+Guest:  It is 225-16-72
+Receptionist:  Great Mr. Martinez. Please, sign your registration card. Your code is 3484720 and your room are 212 and 213 on the second floor. Have a nice stay with us Mr. Martinez.
+Guest:  Thanks a lot.</div>
+<ul class="options-list">
+<li class="opt">The rooms for Mr. Martinez are 212 and 215</li>
+<li class="opt correct"><strong>The rooms for Mr. Martinez are 212 and 213</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the dialogue and Select false sentence</div>
+<div class="q-desc">Receptionist: Good morning. Welcome to Ceibo Real Hotel. How may I help you?
+Guest: I would like to reserve two rooms.
+Receptionist: Of course, Which date do you require the room?
+Guest: Three days from now, and I want a double and a twin room, please. My family is with me.
+Receptionist: Sure sir! A double and a twin room are available right now and its rate is $35 per night and it includes breakfast in our cafeteria.
+Guest: Great. My name is Diego Martinez.
+Receptionist: Please, spell your last name.
+Guest: M-A-R-T-I-N-E-Z
+Receptionist:  What is your I.D. card number?
+Guest: 1304724749
+Receptionist:  Excuse me. Could you repeat it again?
+Guest:  Yes! It is 1304724749
+Receptionist:  And your cell phone number, please?
+Guest:  It is 225-16-72
+Receptionist:  Great Mr. Martinez. Please, sign your registration card. Your code is 3484720 and your room are 212 and 213 on the second floor. Have a nice stay with us Mr. Martinez.
+Guest:  Thanks a lot.</div>
+<ul class="options-list">
+<li class="opt">Mr. Martinez wants a double and a twin room.</li>
+<li class="opt correct"><strong>Mr. Martinez’s name is David.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The rates for the rooms are $35 per night.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the dialogue and select the correct sentence.</div>
+<div class="q-desc">Receptionist: Good morning. Welcome to Ceibo Real Hotel. How may I help you?
+Guest: I would like to reserve two rooms.
+Receptionist: Of course, Which date do you require the room?
+Guest: Three days from now, and I want a double and a twin room, please. My family is with me.
+Receptionist: Sure sir! A double and a twin room are available right now and its rate is $35 per night and it includes breakfast in our cafeteria.
+Guest: Great. My name is Diego Martinez.
+Receptionist: Please, spell your last name.
+Guest: M-A-R-T-I-N-E-Z
+Receptionist:  What is your I.D. card number?
+Guest: 1304724749
+Receptionist:  Excuse me. Could you repeat it again?
+Guest:  Yes! It is 1304724749
+Receptionist:  And your cell phone number, please?
+Guest:  It is 225-16-72
+Receptionist:  Great Mr. Martinez. Please, sign your registration card. Your code is 3484720 and your room are 212 and 213 on the second floor. Have a nice stay with us Mr. Martinez.
+Guest:  Thanks a lot.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The name of the hotel is “Ceibo Real”</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The name of the hotel is “El Dorado”</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #17: Families in the world</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can recognize basic plural forms of nouns. Can recognize familiar names, words and very basic phrases on simple notices</p><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Mark the statements that are true (T) or false (F) according to the text.</div>
+<div class="q-desc">All over the world people have families.  They help people us and, care us and they make feel us safe and loved.  Some families have lots of children and others can have just a child.  Some families have one pet or many pets instead of children and they consider them as part of their family.
+In many parts of the world, families share a big house where you can find aunts, uncles, nieces and nephews, parents and grandparents living together.  Some families have just a small place to live with parents, sons or daughters but they are also happy.  Sometimes family members meet in one place to celebrate special events like birthdays, anniversaries or holidays.  Adults help children to learn new things and they pass on family stories or traditions generation from generation.
+Older siblings help care for the younger brothers or sisters.  They also help parents by doing house chores such as washing the dishes, sweeping the house or feeding the cats and dogs.
+I live with three people and Chloe, my Kitty.  She is part of my family too.  We live in a small house near the hospital.  It is because my mother is a nurse and twice a week, she has to work late by taking care of people.  My father is a teacher. He works in a school and he helps my mother by cooking and cleaning the house.  My little sister is Amy.  She is only 5 years old and she assists the kindergarten in my father´s school.  I go to the University from Monday to Saturday and I really love the time we are together.
+Families are an important part of our lives; they guide us and make us who we are an I love mine.</div>
+<div class="tf-block">
+<p><strong>• Some families share a big house where you can find aunts, uncles, nieces and nephews, parents and grandparents living together</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• Some families have just a small place to live with parents, sons or daughters but they are also happy</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• Some families have lots of children and others can have just a child.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Look at the picture.  Then answer the question. What is their relationship?</div>
+<div class="q-desc">All over the world people have families.  They help people us and, care us and they make feel us safe and loved.  Some families have lots of children and others can have just a child.  Some families have one pet or many pets instead of children and they consider them as part of their family.
+In many parts of the world, families share a big house where you can find aunts, uncles, nieces and nephews, parents and grandparents living together.  Some families have just a small place to live with parents, sons or daughters but they are also happy.  Sometimes family members meet in one place to celebrate special events like birthdays, anniversaries or holidays.  Adults help children to learn new things and they pass on family stories or traditions generation from generation.
+Older siblings help care for the younger brothers or sisters.  They also help parents by doing house chores such as washing the dishes, sweeping the house or feeding the cats and dogs.
+I live with three people and Chloe, my Kitty.  She is part of my family too.  We live in a small house near the hospital.  It is because my mother is a nurse and twice a week, she has to work late by taking care of people.  My father is a teacher. He works in a school and he helps my mother by cooking and cleaning the house.  My little sister is Amy.  She is only 5 years old and she assists the kindergarten in my father´s school.  I go to the University from Monday to Saturday and I really love the time we are together.
+Families are an important part of our lives; they guide us and make us who we are an I love mine.</div>
+<ul class="options-list">
+<li class="opt">They are friends</li>
+<li class="opt correct"><strong>They are a family</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">They are classmates</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the text and select the best headline to it.</div>
+<div class="q-desc">All over the world people have families.  They help people us and, care us and they make feel us safe and loved.  Some families have lots of children and others can have just a child.  Some families have one pet or many pets instead of children and they consider them as part of their family.
+In many parts of the world, families share a big house where you can find aunts, uncles, nieces and nephews, parents and grandparents living together.  Some families have just a small place to live with parents, sons or daughters but they are also happy.  Sometimes family members meet in one place to celebrate special events like birthdays, anniversaries or holidays.  Adults help children to learn new things and they pass on family stories or traditions generation from generation.
+Older siblings help care for the younger brothers or sisters.  They also help parents by doing house chores such as washing the dishes, sweeping the house or feeding the cats and dogs.
+I live with three people and Chloe, my Kitty.  She is part of my family too.  We live in a small house near the hospital.  It is because my mother is a nurse and twice a week, she has to work late by taking care of people.  My father is a teacher. He works in a school and he helps my mother by cooking and cleaning the house.  My little sister is Amy.  She is only 5 years old and she assists the kindergarten in my father´s school.  I go to the University from Monday to Saturday and I really love the time we are together.
+Families are an important part of our lives; they guide us and make us who we are an I love mine.</div>
+<ul class="options-list">
+<li class="opt">People who live in foreign countries</li>
+<li class="opt">The different types of the house where families live</li>
+<li class="opt correct"><strong>Families around the world and their importance for people</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the text.  Then read and match the sentence to the correct phrase. My father helps________.</div>
+<div class="q-desc">All over the world people have families.  They help people us and, care us and they make feel us safe and loved.  Some families have lots of children and others can have just a child.  Some families have one pet or many pets instead of children and they consider them as part of their family.
+In many parts of the world, families share a big house where you can find aunts, uncles, nieces and nephews, parents and grandparents living together.  Some families have just a small place to live with parents, sons or daughters but they are also happy.  Sometimes family members meet in one place to celebrate special events like birthdays, anniversaries or holidays.  Adults help children to learn new things and they pass on family stories or traditions generation from generation.
+Older siblings help care for the younger brothers or sisters.  They also help parents by doing house chores such as washing the dishes, sweeping the house or feeding the cats and dogs.
+I live with three people and Chloe, my Kitty.  She is part of my family too.  We live in a small house near the hospital.  It is because my mother is a nurse and twice a week, she has to work late by taking care of people.  My father is a teacher. He works in a school and he helps my mother by cooking and cleaning the house.  My little sister is Amy.  She is only 5 years old and she assists the kindergarten in my father´s school.  I go to the University from Monday to Saturday and I really love the time we are together.
+Families are an important part of our lives; they guide us and make us who we are an I love mine.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>to clean the house.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">to learn new things.</li>
+<li class="opt">twice a week.</li>
+<li class="opt">near the hospital.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read and match the sentences to complete them. We live in a small house________</div>
+<div class="q-desc">All over the world people have families.  They help people us and, care us and they make feel us safe and loved.  Some families have lots of children and others can have just a child.  Some families have one pet or many pets instead of children and they consider them as part of their family.
+In many parts of the world, families share a big house where you can find aunts, uncles, nieces and nephews, parents and grandparents living together.  Some families have just a small place to live with parents, sons or daughters but they are also happy.  Sometimes family members meet in one place to celebrate special events like birthdays, anniversaries or holidays.  Adults help children to learn new things and they pass on family stories or traditions generation from generation.
+Older siblings help care for the younger brothers or sisters.  They also help parents by doing house chores such as washing the dishes, sweeping the house or feeding the cats and dogs.
+I live with three people and Chloe, my Kitty.  She is part of my family too.  We live in a small house near the hospital.  It is because my mother is a nurse and twice a week, she has to work late by taking care of people.  My father is a teacher. He works in a school and he helps my mother by cooking and cleaning the house.  My little sister is Amy.  She is only 5 years old and she assists the kindergarten in my father´s school.  I go to the University from Monday to Saturday and I really love the time we are together.
+Families are an important part of our lives; they guide us and make us who we are an I love mine.</div>
+<ul class="options-list">
+<li class="opt">to clean the house</li>
+<li class="opt">to learn new things</li>
+<li class="opt">twice a week</li>
+<li class="opt correct"><strong>near the hospital</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Read the text. Select the correct answer to complete them according to the text.</div>
+<div class="q-desc">All over the world people have families.  They help people us and, care us and they make feel us safe and loved.  Some families have lots of children and others can have just a child.  Some families have one pet or many pets instead of children and they consider them as part of their family.
+In many parts of the world, families share a big house where you can find aunts, uncles, nieces and nephews, parents and grandparents living together.  Some families have just a small place to live with parents, sons or daughters but they are also happy.  Sometimes family members meet in one place to celebrate special events like birthdays, anniversaries or holidays.  Adults help children to learn new things and they pass on family stories or traditions generation from generation.
+Older siblings help care for the younger brothers or sisters.  They also help parents by doing house chores such as washing the dishes, sweeping the house or feeding the cats and dogs.
+I live with three people and Chloe, my Kitty.  She is part of my family too.  We live in a small house near the hospital.  It is because my mother is a nurse and twice a week, she has to work late by taking care of people.  My father is a teacher. He works in a school and he helps my mother by cooking and cleaning the house.  My little sister is Amy.  She is only 5 years old and she assists the kindergarten in my father´s school.  I go to the University from Monday to Saturday and I really love the time we are together.
+Families are an important part of our lives; they guide us and make us who we are an I love mine.</div>
+<div class="tf-block">
+<p><strong>• My father is a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• My little sister is Amy she is only</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #18: This is my family</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can read and understand simple prices. Can identify very common food and drink on a menu.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the text and answer the question. Where does Karen live?</div>
+<div class="q-desc">My name is Karen and I live in Quito because of my work but my family lives in Portoviejo. My favorite place to visit in this beautiful city is Il Café. It is a small restaurant located in Manabí Avenue. People in charge of the local are very kind. They prepare delicious food and it is not too expensive.  I usually go there with my friends or family.
+
+My mother loves coffee it only costs $ 1,00. She always drinks one with a piece of cake. The cake costs $3,50.  My little sister instead, she eats ham and cheese sandwich. It is just $2,50. For drinking, she always has chocolate and regular fries. My father prefers a roast beef sandwich which costs $5,00 and his cup of tea. This is only $1,25.
+
+My favorite food is chicken so, the chicken salad sandwich in Il Café is exquisite! It costs $4,25. I always eat one with my cappuccino.
+
+On the other hand, my friends prefer Ice Tea. We buy a large bottle there and it costs $1,75.  When we meet together, we usually have some nachos, house salad and cake. We love cakes!</div>
+<ul class="options-list">
+<li class="opt">Portoviejo</li>
+<li class="opt correct"><strong>Quito</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the text and answer the question. What is Karen´s favorite place to visit in Portoviejo?</div>
+<div class="q-desc">My name is Karen and I live in Quito because of my work but my family lives in Portoviejo. My favorite place to visit in this beautiful city is Il Café. It is a small restaurant located in Manabí Avenue. People in charge of the local are very kind. They prepare delicious food and it is not too expensive.  I usually go there with my friends or family.
+
+My mother loves coffee it only costs $ 1,00. She always drinks one with a piece of cake. The cake costs $3,50.  My little sister instead, she eats ham and cheese sandwich. It is just $2,50. For drinking, she always has chocolate and regular fries. My father prefers a roast beef sandwich which costs $5,00 and his cup of tea. This is only $1,25.
+
+My favorite food is chicken so, the chicken salad sandwich in Il Café is exquisite! It costs $4,25. I always eat one with my cappuccino.
+
+On the other hand, my friends prefer Ice Tea. We buy a large bottle there and it costs $1,75.  When we meet together, we usually have some nachos, house salad and cake. We love cakes!</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Il Café.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Jean Pierre</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the text and answer the question. What is her favorite food?</div>
+<div class="q-desc">My name is Karen and I live in Quito because of my work but my family lives in Portoviejo. My favorite place to visit in this beautiful city is Il Café. It is a small restaurant located in Manabí Avenue. People in charge of the local are very kind. They prepare delicious food and it is not too expensive.  I usually go there with my friends or family.
+
+My mother loves coffee it only costs $ 1,00. She always drinks one with a piece of cake. The cake costs $3,50.  My little sister instead, she eats ham and cheese sandwich. It is just $2,50. For drinking, she always has chocolate and regular fries. My father prefers a roast beef sandwich which costs $5,00 and his cup of tea. This is only $1,25.
+
+My favorite food is chicken so, the chicken salad sandwich in Il Café is exquisite! It costs $4,25. I always eat one with my cappuccino.
+
+On the other hand, my friends prefer Ice Tea. We buy a large bottle there and it costs $1,75.  When we meet together, we usually have some nachos, house salad and cake. We love cakes!</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Chicken salad sandwich</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cheese sandwich</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Select the correct sentence according to the reading.</div>
+<div class="q-desc">My name is Karen and I live in Quito because of my work but my family lives in Portoviejo. My favorite place to visit in this beautiful city is Il Café. It is a small restaurant located in Manabí Avenue. People in charge of the local are very kind. They prepare delicious food and it is not too expensive.  I usually go there with my friends or family.
+
+My mother loves coffee it only costs $ 1,00. She always drinks one with a piece of cake. The cake costs $3,50.  My little sister instead, she eats ham and cheese sandwich. It is just $2,50. For drinking, she always has chocolate and regular fries. My father prefers a roast beef sandwich which costs $5,00 and his cup of tea. This is only $1,25.
+
+My favorite food is chicken so, the chicken salad sandwich in Il Café is exquisite! It costs $4,25. I always eat one with my cappuccino.
+
+On the other hand, my friends prefer Ice Tea. We buy a large bottle there and it costs $1,75.  When we meet together, we usually have some nachos, house salad and cake. We love cakes!</div>
+<ul class="options-list">
+<li class="opt">Karen´s mother always drinks a coffee with a sandwich.</li>
+<li class="opt correct"><strong>Karen´s mother always drinks a coffee with a piece of cake.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the text and answer the question. What kind of drink do their friends prefer?</div>
+<div class="q-desc">My name is Karen and I live in Quito because of my work but my family lives in Portoviejo. My favorite place to visit in this beautiful city is Il Café. It is a small restaurant located in Manabí Avenue. People in charge of the local are very kind. They prepare delicious food and it is not too expensive.  I usually go there with my friends or family.
+
+My mother loves coffee it only costs $ 1,00. She always drinks one with a piece of cake. The cake costs $3,50.  My little sister instead, she eats ham and cheese sandwich. It is just $2,50. For drinking, she always has chocolate and regular fries. My father prefers a roast beef sandwich which costs $5,00 and his cup of tea. This is only $1,25.
+
+My favorite food is chicken so, the chicken salad sandwich in Il Café is exquisite! It costs $4,25. I always eat one with my cappuccino.
+
+On the other hand, my friends prefer Ice Tea. We buy a large bottle there and it costs $1,75.  When we meet together, we usually have some nachos, house salad and cake. We love cakes!</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Ice tea</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cappuccino.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#6</span> Look at the picture and read the menu. Then match the correct heading according to menu.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Main dishes</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Drinks</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Side orders</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Select the correct sentence according to the reading.</div>
+<div class="q-desc">My name is Karen and I live in Quito because of my work but my family lives in Portoviejo. My favorite place to visit in this beautiful city is Il Café. It is a small restaurant located in Manabí Avenue. People in charge of the local are very kind. They prepare delicious food and it is not too expensive.  I usually go there with my friends or family.
+
+My mother loves coffee it only costs $ 1,00. She always drinks one with a piece of cake. The cake costs $3,50.  My little sister instead, she eats ham and cheese sandwich. It is just $2,50. For drinking, she always has chocolate and regular fries. My father prefers a roast beef sandwich which costs $5,00 and his cup of tea. This is only $1,25.
+
+My favorite food is chicken so, the chicken salad sandwich in Il Café is exquisite! It costs $4,25. I always eat one with my cappuccino.
+
+On the other hand, my friends prefer Ice Tea. We buy a large bottle there and it costs $1,75.  When we meet together, we usually have some nachos, house salad and cake. We love cakes!</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Karen´s father prefers a roast beef sandwich which costs $5,00</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Karen´s father prefers a roast beef sandwich which costs $7,00</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Look the photo. What kind of place does the photo show?</div>
+<ul class="options-list">
+<li class="opt">a museum</li>
+<li class="opt correct"><strong>a restaurant</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">a cinema</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #7c3aed">🎧 Listening (Comprensión Auditiva)</h2><div class="task-card"><h3>📌 Tarea #315: Jobs</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Please listen to the audio and choose the right option for the question: Why do people have jobs?</div>
+<ul class="options-list">
+<li class="opt">To have fun</li>
+<li class="opt">To meet new friends</li>
+<li class="opt correct"><strong>To earn money</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">To travel</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Please listen to the audio and choose the right option for the question: Where do some people work?</div>
+<ul class="options-list">
+<li class="opt">In parks</li>
+<li class="opt correct"><strong>In offices</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">At home</li>
+<li class="opt">On the moon</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Please listen to the audio and choose the right option for the question: What does a teacher do?</div>
+<ul class="options-list">
+<li class="opt">Cooks food</li>
+<li class="opt correct"><strong>Helps students learn</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Drives a bus</li>
+<li class="opt">Sells clothes</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Please listen to the audio and choose the right option for the question: Who helps people when they are sick?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A doctor</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A teacher</li>
+<li class="opt">A cashier</li>
+<li class="opt">A farmer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Please listen to the audio and choose the right option for the question: Why is it important to work hard at your job?</div>
+<ul class="options-list">
+<li class="opt">To get famous</li>
+<li class="opt correct"><strong>To help you and your family live well</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">To have more free time</li>
+<li class="opt">To travel the world</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #317: Sports</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> According to de audio, match the sport with the definition: Soccer</div>
+<ul class="options-list">
+<li class="opt">Shooting the ball into a ring</li>
+<li class="opt">Played with a racket and a small ball</li>
+<li class="opt correct"><strong>Kicking the ball to score goals</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Helps you work with others and stay active</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> According to de audio, match the sport with the definition: Basketball</div>
+<ul class="options-list">
+<li class="opt">Played with a racket and a small ball</li>
+<li class="opt">Helps you work with others and stay active</li>
+<li class="opt">Kicking the ball to score goals </li>
+<li class="opt correct"><strong>Shooting the ball into a ring</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> According to de audio, match the sport with the definition: Tennis</div>
+<ul class="options-list">
+<li class="opt">Helps you work with others and stay active</li>
+<li class="opt">Kicking the ball to score goals</li>
+<li class="opt">Shooting the ball into a ring</li>
+<li class="opt correct"><strong>Played with a racket and a small ball </strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> According to de audio, match “Playing sport” with the definition: Playing sports</div>
+<ul class="options-list">
+<li class="opt">Shooting the ball into a ring</li>
+<li class="opt correct"><strong>Helps you work with others and stay active</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Kicking the ball to score goals</li>
+<li class="opt">Played with a racket and a small ball </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> Match the sport with its description</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td></td><td class="match-ans"><strong>Kicking the ball to score goals.</strong> ✅</td></tr>
+<tr><td>Basketball</td><td class="match-ans"><strong>Shooting the ball into a ring.</strong> ✅</td></tr>
+<tr><td>Tennis</td><td class="match-ans"><strong>Played with a racket and a small ball.</strong> ✅</td></tr>
+<tr><td>Playing</td><td class="match-ans"><strong>Helps you work with others and stay active</strong> ✅</td></tr>
+</tbody></table>
+</div></div><div class="task-card"><h3>📌 Tarea #319: Countries</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Please listen to the audio and fill in the blanks with the appropriate option: France is known for its ______ Tower and French language.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Eiffel</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Leaning</li>
+<li class="opt">Tokyo</li>
+<li class="opt">Freedom</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Please listen to the audio and fill in the blanks with the appropriate option: Japan is famous for its cherry ______ and sushi.</div>
+<ul class="options-list">
+<li class="opt">trees</li>
+<li class="opt correct"><strong>flowers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">mountains </li>
+<li class="opt">beaches</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Please listen to the audio and fill in the blanks with the appropriate option: Learning about different countries helps us understand and ______ how people live.</div>
+<ul class="options-list">
+<li class="opt">enjoy </li>
+<li class="opt">create</li>
+<li class="opt">forget</li>
+<li class="opt correct"><strong>appreciate</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Please listen to the audio and fill in the blanks with the appropriate option: Each country has its own flag, ______, and traditions.</div>
+<ul class="options-list">
+<li class="opt">history</li>
+<li class="opt">food</li>
+<li class="opt correct"><strong>language</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">music</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Please listen to the audio and fill in the blanks with the appropriate option: The United States has a flag with stars and ______.</div>
+<ul class="options-list">
+<li class="opt">circles</li>
+<li class="opt correct"><strong>stripes</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">squares</li>
+<li class="opt">triangles</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #326: Working Out</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Please listen to the audio and fill in the blanks with the appropriate option: Working out is good for your body and ______.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>mind</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">clothes</li>
+<li class="opt">shoes</li>
+<li class="opt">room</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Please listen to the audio and fill in the blanks with the appropriate option: When you exercise, you can run, lift ______, or do yoga.</div>
+<ul class="options-list">
+<li class="opt">books</li>
+<li class="opt correct"><strong>weights</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">chairs</li>
+<li class="opt">toys</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Please listen to the audio and fill in the blanks with the appropriate option: Some people like to work out at the ______.</div>
+<ul class="options-list">
+<li class="opt">park</li>
+<li class="opt">school</li>
+<li class="opt correct"><strong>gym</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">office</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Please listen to the audio and fill in the blanks with the appropriate option: You can work out with friends or ______.</div>
+<ul class="options-list">
+<li class="opt">family</li>
+<li class="opt">teachers</li>
+<li class="opt">pets</li>
+<li class="opt correct"><strong>alone</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Please listen to the audio and fill in the blanks with the appropriate option: It’s important to exercise regularly to keep your body in good ______.</div>
+<ul class="options-list">
+<li class="opt">clothes</li>
+<li class="opt">health</li>
+<li class="opt correct"><strong>shape</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">time</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #db2777">✍️ Writing (Expresión Escrita)</h2><div class="task-card"><h3>📌 Tarea #14: TRAVELLING ABROAD</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Complete simple forms with basic personal details and complete a simple form requiring travel information (e.g. landing card, customs declaration).</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the phrases. Choose the correct place according to the paragraph. A building that people, usually one family, live in.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A house</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A school</li>
+<li class="opt">A jail</li>
+<li class="opt">A room</li>
+<li class="opt">An office</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#2</span> Look at the pictures and match the words according to the images.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>school</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>park</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>travel agency</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>market</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#3</span> Complete the registration form with the correct information.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>NAME:</td><td class="match-ans"><strong>Maria Andrarde</strong> ✅</td></tr>
+<tr><td>TRAVEL DESTINATION:</td><td class="match-ans"><strong>Ambato</strong> ✅</td></tr>
+<tr><td>ID:</td><td class="match-ans"><strong>1312435679</strong> ✅</td></tr>
+<tr><td>AGE:</td><td class="match-ans"><strong>32</strong> ✅</td></tr>
+<tr><td>NATIONALITY:</td><td class="match-ans"><strong>Ecuadorian</strong> ✅</td></tr>
+<tr><td>CITY:</td><td class="match-ans"><strong>Manta</strong> ✅</td></tr>
+<tr><td>ADDRESS:</td><td class="match-ans"><strong>Flavio Reyes Avenue</strong> ✅</td></tr>
+<tr><td>PHONE NUMBER:</td><td class="match-ans"><strong>09987564532</strong> ✅</td></tr>
+<tr><td>E-MAIL ADDRESS:</td><td class="match-ans"><strong>mariapia@yahoo.com</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Look at the picture. Read the registration form and choose what is it for.</div>
+<ul class="options-list">
+<li class="opt">A library</li>
+<li class="opt correct"><strong>A travel agency</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A sport team</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> Read the phrases and dentify the pieces of writing.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Name</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>E-mail address</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Greeting</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Farewell</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Address</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> Read the sentences and match the words with the meaning.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>To dislike someone or something very much.</td><td class="match-ans"><strong>Hate</strong> ✅</td></tr>
+<tr><td>To like, choose, or want one thing rather than another.</td><td class="match-ans"><strong>Prefer</strong> ✅</td></tr>
+<tr><td>To enjoy or approve of something or someone.</td><td class="match-ans"><strong>Like</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#7</span> Read the statements and order the words to make a sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Sara travels to Guadalajara last friday"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Andree asks for a ticket in the travel agency"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Patricia’s plane is landing"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The Travel agency is in the next street"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I want to live abroad"</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #15: FRIENDS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Write simple sentences about things that they and other people have and use basic punctuation (e.g. commas, full stops, question marks)</p><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> Read the statements. Match the words with the definitions.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Comma</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Full stops</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Question Marks</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Exclamation marks</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the text and complete the sentence. Amelia has_______.</div>
+<ul class="options-list">
+<li class="opt">short curly hair</li>
+<li class="opt correct"><strong>long dark hair and she has green eyes</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">a best friend</li>
+<li class="opt">a brother</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#3</span> Look at the pictures and label them with the information from the box.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Twins</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Sisters</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Friends</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>A couple</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#4</span> Read the texts and identify the title for each one.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>My best friend</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>My brother</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#5</span> Read the words and order them to make a sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I study Science and Math"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"You clean the house"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"We Like to study Chemistry, physics and geography"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"She watches TV everyday"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#6</span> Look at the picture and match it with the correct sentence.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>He has a cat.</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>She has a blue butterfly.</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>They have a bicycle.</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>He has some balloons.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the text and complete the sentence. Orlando has_______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>short curly hair</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">long dark hair and she has green eyes</li>
+<li class="opt">a best friend</li>
+<li class="opt">a brother</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the text and complete the sentence. Rodrigo has_______</div>
+<ul class="options-list">
+<li class="opt">short curly hair</li>
+<li class="opt">long dark hair and she has green eyes</li>
+<li class="opt">a best friend</li>
+<li class="opt correct"><strong>a brother</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the text and complete the sentence. Kathy has_______</div>
+<ul class="options-list">
+<li class="opt">short curly hair</li>
+<li class="opt">long dark hair and she has green eyes</li>
+<li class="opt correct"><strong>a best friend</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">a brother</li>
+</ul>
+</div></div></div>
+    </div>
+</body>
+</html>

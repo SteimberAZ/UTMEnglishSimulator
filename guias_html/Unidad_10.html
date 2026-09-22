@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 10 • 📙 Book 3 (A2.1 - Pre-Intermediate) - Guía de Inglés UTM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 900px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-btn, .print-btn {
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .back-btn:hover, .print-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 0 0 6px 0;
+        }
+        .header .subtitle {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: inline-flex;
+            gap: 16px;
+            background: #f1f5f9;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+        .skill-section {
+            margin-top: 40px;
+        }
+        .skill-section h2 {
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 6px solid #2563eb;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .task-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .task-card h3 {
+            color: #1e293b;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .task-obj {
+            font-size: 14px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .task-expl {
+            font-size: 14px;
+            color: #0369a1;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        .question-card {
+            background: #fafafa;
+            border-left: 4px solid #3b82f6;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+        .q-header {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .q-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .q-num {
+            color: #3b82f6;
+            margin-right: 4px;
+        }
+        .q-desc {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .options-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .opt {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .opt.correct {
+            background: #ecfdf5;
+            border-color: #10b981;
+            color: #065f46;
+            font-weight: 600;
+        }
+        .badge-correct {
+            background: #10b981;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            float: right;
+            font-weight: 600;
+        }
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .match-table th, .match-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .match-table th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        .match-ans {
+            color: #065f46;
+            background: #ecfdf5;
+            font-weight: 600;
+        }
+        .order-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        .fill-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .fill-list li {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        @media print {
+            body { background: #ffffff; padding: 0; }
+            .top-nav { display: none; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .task-card { page-break-inside: avoid; }
+            .question-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="../index.html" class="back-btn">← Volver al Portal General</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Guardar / Imprimir PDF</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>📘 Universidad Técnica de Manabí</h1>
+            <div class="subtitle">Simulador de Inglés • Unidad 10 • 📙 Book 3 (A2.1 - Pre-Intermediate)</div>
+            <div class="stats">
+                <span>📋 18 Tareas</span>
+                <span>❓ 168 Preguntas Verificadas</span>
+            </div>
+        </div>
+        <div class="skill-section"><h2 style="border-left-color: #2563eb">🧠 Grammar (Estructuras Gramaticales)</h2><div class="task-card"><h3>📌 Tarea #145: PORTOVIEJO HAS SEVERAL NATURAL ATTRACTIONS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> TO USE A WIDE RANGE OF QUANTIFIERS WITH COUNTABLES NOUNS.</p><div class="task-expl">💡 <strong>Explicación:</strong> STUDENTS WILL BE ABLE TO DESCRIBE QUANTITIES RELATED TO COUNTABLE NOUNS.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> READ THE SENTENCES AND CIRCLE THE CORRECT OPTION (QUANTIFIERS):</div>
+<div class="tf-block">
+<p><strong>• SHE IS VERY TIMID. SHE HAS</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> READ THE SENTENCES AND CIRCLE THE CORRECT OPTION (QUANTIFIERS):</div>
+<div class="tf-block">
+<p><strong>• ISABEL WENT ON VACATION. SHE TOOK</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> READ THE SENTENCES AND CIRCLE THE CORRECT OPTION (QUANTIFIERS):</div>
+<div class="tf-block">
+<p><strong>• YESTERDAY, THE CLASS WAS QUIET.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> READ THE SENTENCES AND CIRCLE THE CORRECT OPTION (QUANTIFIERS):</div>
+<div class="tf-block">
+<p><strong>• THERE WAS A CAR ACCIDENT LAST NIGHT. LUCKILY</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> READ THE SENTENCES AND CIRCLE THE CORRECT OPTION (QUANTIFIERS):</div>
+<div class="tf-block">
+<p><strong>• KARLA TOOK</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> CHOOSE THE BEST ANSWER</div>
+<div class="tf-block">
+<p><strong>• JULIA ATE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> CHOOSE THE BEST ANSWER</div>
+<div class="tf-block">
+<p><strong>• HE FOUND</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> CHOOSE THE BEST ANSWER</div>
+<div class="tf-block">
+<p><strong>• PEOPLE DON'T WRITE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> CHOOSE THE BEST ANSWER</div>
+<div class="tf-block">
+<p><strong>• I HAVE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> CHOOSE THE BEST ANSWER</div>
+<div class="tf-block">
+<p><strong>• MICHELLE HAS</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #146: WE DON'T HAVE ENOUGH TIME</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> TO EXPRESS SUFFICIENCY OR INSUFFICIENCY WITH ENOUGH AND TOO.</p><div class="task-expl">💡 <strong>Explicación:</strong> STUDENTS CAN EXPRESS WHETHER COUNTABLE OR UNCOUNTABLE NOUNS AND/OR QUALITIES ARE SUFFICIENT OR NOT.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> COMPLETE THE SENTENCES WITH ENOUGH OR TOO.</div>
+<div class="tf-block">
+<p><strong>• THIS CAR IS NOT FAST</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> COMPLETE THE SENTENCES WITH ENOUGH OR TOO.</div>
+<div class="tf-block">
+<p><strong>• I CAN'T MAKE A HAMBURGUER. THERE ISN'T</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> COMPLETE THE SENTENCES WITH ENOUGH OR TOO.</div>
+<div class="tf-block">
+<p><strong>• THIS WATER IS NOT WARM</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #147: SOMEBODY IS HERE!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> TO USE SINGULAR VERB FORMS WITH IMPERSONAL PRONOUNS EVERY / ANY / NO / SOME + BODY / WHERE / ONE / THING</p><div class="task-expl">💡 <strong>Explicación:</strong> STUDENTS WILL BE ABLE TO DESCRIBE SUBJECTS OR NOUNS WITHOUT DIRECTLY SPECIFYING NAMES IN DIFFERENT CONTEXTS.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> COMPLETE THE SENTENCES WITH AN INDEFINITE PRONOUN.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> COMPLETE THE SENTENCES WITH AN INDEFINITE PRONOUN.</div>
+<div class="tf-block">
+<p><strong>• I DON'T KNOW</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> COMPLETE THE SENTENCES WITH AN INDEFINITE PRONOUN.</div>
+<div class="tf-block">
+<p><strong>• DO YOU LIVE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> COMPLETE THE SENTENCES WITH AN INDEFINITE PRONOUN.</div>
+<div class="tf-block">
+<p><strong>• I HAVE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> COMPLETE THE SENTENCES WITH AN INDEFINITE PRONOUN.</div>
+<div class="tf-block">
+<p><strong>• THERE IS</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> COMPLETE THE SENTENCES WITH AN INDEFINITE PRONOUN.</div>
+<div class="tf-block">
+<p><strong>• I WOULD LIKE TO GO</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> COMPLETE THE SENTENCES WITH AN INDEFINITE PRONOUN.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> COMPLETE THE SENTENCES WITH AN INDEFINITE PRONOUN.</div>
+<div class="tf-block">
+<p><strong>• I BOUGHT</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> COMPLETE THE SENTENCES WITH AN INDEFINITE PRONOUN.</div>
+<div class="tf-block">
+<p><strong>• I GAVE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> COMPLETE THE SENTENCES WITH AN INDEFINITE PRONOUN.</div>
+<div class="tf-block">
+<p><strong>• KAREN WOULDN'T FOLLOW YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #148: DO YOU KNOW WHERE PARIS IS?</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> CAN MAKE STATEMENTS AND QUESTIONS WITH KNOW + WH-CLAUSES</p><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> COMPLETE THE SENTENCES WITH WH QUESTIONS.</div>
+<div class="tf-block">
+<p><strong>• DO YOU KNOW</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> COMPLETE THE SENTENCES WITH WH QUESTIONS.</div>
+<div class="tf-block">
+<p><strong>• DO YOU KNOW</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> COMPLETE THE SENTENCES WITH WH QUESTIONS.</div>
+<div class="tf-block">
+<p><strong>• DO YOU KNOW</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> COMPLETE THE SENTENCES WITH WH QUESTIONS.</div>
+<div class="tf-block">
+<p><strong>• DO YOU KNOW</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> COMPLETE THE SENTENCES WITH WH QUESTIONS.</div>
+<div class="tf-block">
+<p><strong>• DO YOU KNOW</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> COMPLETE THE SENTENCES WITH WH QUESTIONS.</div>
+<div class="tf-block">
+<p><strong>• DO YOU KNOW</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> COMPLETE THE SENTENCES WITH WH QUESTIONS.</div>
+<div class="tf-block">
+<p><strong>• DO YOU KNOW</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> COMPLETE THE SENTENCES WITH WH QUESTIONS.</div>
+<div class="tf-block">
+<p><strong>• DO YOU KNOW</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> COMPLETE THE SENTENCES WITH WH QUESTIONS.</div>
+<div class="tf-block">
+<p><strong>• DO YOU KNOW</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> COMPLETE THE SENTENCES WITH WH QUESTIONS.</div>
+<div class="tf-block">
+<p><strong>• DO</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #059669">📖 Vocabulary (Vocabulario)</h2><div class="task-card"><h3>📌 Tarea #137: HOW MANY...?</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand and use vocabulary related to numbers and quantities.</p><div class="task-expl">💡 <strong>Explicación:</strong> In this lesson you will find exercises to learn words related to numbers</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Use one of the symbols to make each equation true</div>
+<div class="tf-block">
+<p><strong>• Four hundred fifty-eight</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the best option: Which of the following is true?</div>
+<ul class="options-list">
+<li class="opt">700 is a group of seven tens.</li>
+<li class="opt correct"><strong>700 is a group of seventy tens.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">700 is a group of seventy ones.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Circle the correct option.</div>
+<ul class="options-list">
+<li class="opt">24,157 in word form is written as.</li>
+<li class="opt correct"><strong>Twenty-four thousand one hundred and fifty-seven</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Four thousand one hundred and fifty-seven</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Complete with the right number.</div>
+<div class="tf-block">
+<p><strong>• What number is missing to complete the multiplication: 6X</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the option that uses <(greater than),> (less than) or = (equal) signs correctly.</div>
+<ul class="options-list">
+<li class="opt">49 > 100</li>
+<li class="opt">29 = 19 + 7</li>
+<li class="opt correct"><strong>22 < 15 + 9</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Answer True or False to the following statement:</div>
+<div class="tf-block">
+<p><strong>• 'Natural numbers have a first and last element'</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• The mathematical symbol, which represents a quantity given as a fraction in 100 equal parts is:</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the best option: 789 is equal to</div>
+<ul class="options-list">
+<li class="opt">700 + 8 + 90</li>
+<li class="opt">700 + 90 + 8</li>
+<li class="opt correct"><strong>700 + 80 + 9</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct option: How is the following number written in digits: 'fourteen' ?</div>
+<ul class="options-list">
+<li class="opt">34</li>
+<li class="opt correct"><strong>14</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">4</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the operation that results in 38.</div>
+<ul class="options-list">
+<li class="opt">28 + 5</li>
+<li class="opt">60 - 12</li>
+<li class="opt correct"><strong>40 - 2</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #138: I DO!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand and vocabulary about relationships.</p><div class="task-expl">💡 <strong>Explicación:</strong> A relationship is a close connection between two people, especially one involving romantic.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Read and complete the question.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read and complete the sentence:  If they ______ (not argue) so much, they ______ (be) a lot happier</div>
+<ul class="options-list">
+<li class="opt">do not argue/are</li>
+<li class="opt correct"><strong>did not argue/were</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">did not argue/will be</li>
+<li class="opt">do not argue/were</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the correct word: Do you get on well with her?</div>
+<ul class="options-list">
+<li class="opt">Yes, please.</li>
+<li class="opt">You are welcome.</li>
+<li class="opt correct"><strong>Yes, we have a lot in common.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">No way, he is really sick.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Complete with the correct word.</div>
+<div class="tf-block">
+<p><strong>• Carlos and I had a big row, but we</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Complete the following sentence with the right word.</div>
+<div class="tf-block">
+<p><strong>• If you fancy him, why don't you ask him</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the correct option: They have a lot in common means...</div>
+<ul class="options-list">
+<li class="opt correct"><strong>they share similar ideas and interests.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">they live together.</li>
+<li class="opt">they are dating.</li>
+<li class="opt">they fancy each other.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Complete the sentence:</div>
+<div class="tf-block">
+<p><strong>• She is not my wife. We are</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Circle the best option:</div>
+<div class="tf-block">
+<p><strong>• We are not together now. she took the kids and moved to her home town. We are</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Fill in the blank with the right answer.</div>
+<div class="tf-block">
+<p><strong>• I'm sorry I lied to you. Do you want to get</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #139: MY FIRST HOUSE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To identify and use vocabulary related to housing.</p><div class="task-expl">💡 <strong>Explicación:</strong> You will be able to learn some frequently used words referring to parts of the House and other words that are related to it.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Select and complete the best option</div>
+<div class="tf-block">
+<p><strong>• Tomorrow, we will have a barbecue in the</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The family meets in the</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> True or false:</div>
+<div class="tf-block">
+<p><strong>• A bed is in the bedroom</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• A sofa is in the bathroom</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• A chair is in the kitchen</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#3</span> Read the following riddle and match them with the right word. What is it?</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Apartment</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Gated community</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Cottage</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#4</span> Put the following sentences in the correct order.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Concrete walls are much safer than wooden ones"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"That balcony has some beautiful flowers"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read. Choose the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>This is my dining room. It has got four brown chairs and a brown table.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">These is my living room. It have got three chairs and two tables.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>This is my garden. It has got blue, green and red flowers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Those is my garden. It has got green and flowers red.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Match the halves with a line.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>We can cook in the</td><td class="match-ans"><strong>Kitchen</strong> ✅</td></tr>
+<tr><td>We take a shower in the</td><td class="match-ans"><strong>Bathroom</strong> ✅</td></tr>
+<tr><td>We keep the car in the</td><td class="match-ans"><strong>Garage</strong> ✅</td></tr>
+<tr><td>We have a meeting in the</td><td class="match-ans"><strong>Living room</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#8</span> Put in the correct order the following sentences.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I can find a tree in my garden"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I can find a sofa in my living room"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Choose the right options to answer the questions.:</div>
+<div class="tf-block">
+<p><strong>• Where do you take a shower?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Choose the right options to answer the questions:</div>
+<div class="tf-block">
+<p><strong>• Where do you have breakfast?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #140: THE GOOD TIMES!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand and use vocabulary related to school.</p><div class="task-expl">💡 <strong>Explicación:</strong> Learn school subjects in English with examples and images to improve and enlarge your vocabulary.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Complete the sentence with the best option</div>
+<div class="tf-block">
+<p><strong>• Learn about the past is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#2</span> Look at the following pictures. Match the pictures with the words.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Geography</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Biology</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#3</span> Look at the following pictures. Match the pictures with the words.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Music</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Science</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#4</span> Match the sentences with the correct subject it describes.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Play team sports and other physical activities</td><td class="match-ans"><strong>Physical education</strong> ✅</td></tr>
+<tr><td>Solve numerical problems.</td><td class="match-ans"><strong>Mathematics</strong> ✅</td></tr>
+<tr><td>Draw or paint and other visual things</td><td class="match-ans"><strong>Art</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Complete the sentence with the best option</div>
+<div class="tf-block">
+<p><strong>• Do vocabulary exercises and use them in a sentence is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#6</span> Choose the right answer for the following question: Which of these 'nouns' are not class objects?</div>
+<ul class="options-list">
+<li class="opt">Table</li>
+<li class="opt correct"><strong>Dog</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Pencil</li>
+<li class="opt correct"><strong>Rabbit</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>Car</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Book</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> LOOK AT THE PICTURE AND SELEC THE CORRECT WORD: How do you say this in English?</div>
+<ul class="options-list">
+<li class="opt">Table</li>
+<li class="opt correct"><strong>Ruler</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">pencil case</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> LOOK AT THE PICTURE AND SELECT THE CORRECT WORD: What are they?</div>
+<ul class="options-list">
+<li class="opt">Mechanic</li>
+<li class="opt correct"><strong>Teachers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Boys</li>
+<li class="opt">Players</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> SELECT THE CORRECT WORD</div>
+<div class="tf-block">
+<p><strong>• My</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> SELECT THE CORRECT WORD</div>
+<div class="tf-block">
+<p><strong>• Juan</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #d97706">📚 Reading (Comprensión Lectora)</h2><div class="task-card"><h3>📌 Tarea #141: A SPECIAL OCCASION</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To make basic inferences from simple information in a short text.</p><div class="task-expl">💡 <strong>Explicación:</strong> The adjectives allow us to describe details of nouns.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> According to the text decide if the idea is true or false.</div>
+<div class="q-desc">While this was happening, Bryan was trying to put a small white envelope into Ms. Garcia’s mailbox. Kevin took a red envelope from his pocket. He tried to put it on Irina’s desk, but he couldn’t because Cesar saw him and he felt embarrassed. Kevin ran with the envelope. Irina tried to reach him but he was already with the other children around Ms. Garcia who was putting red balloons on the wall.</div>
+<div class="tf-block">
+<p><strong>• Bryan took a red envelope from his pocket.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the best option. According to the text, what did Ms. Garcia bring to the classroom?</div>
+<div class="q-desc">Today was a special day in Ms. Garcia’s class. Some of the children were standing in small groups around their desks while others were walking in various directions through the classroom. All of them were painting and putting finishing details on a cardboard mailbox that Ms. Garcia brought last class.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Cardboard mailbox</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Details</li>
+<li class="opt">Cardboard</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Complete the information. Choose the right words: While _____ was trying to put an envelope into the mailbox _____ took a red envelope and tried to put it on _____ desk but _____ saw him and he felt embarrassed and ran with the envelope.</div>
+<ul class="options-list">
+<li class="opt">Kevin/Bryan/Cesar's/Irina</li>
+<li class="opt">Bryan/Cesar/Kevin's/Irina</li>
+<li class="opt correct"><strong>Bryan/Kevin/Irina's/Cesar</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the correct answer. According to the text, what did Cesar do?</div>
+<div class="q-desc">After coloring a nice heart on the side of his envelope, César got off his chair. He went to Irina’s desk, and left his small envelope into her rainbow lunchbox. Irina smiled and played with her little friend but she didn’t open the envelope yet.</div>
+<ul class="options-list">
+<li class="opt">He colored a nice heart on an envelope and left it Irina's desk.</li>
+<li class="opt">He colored a nice heart on an envelope and left it Irina's chair.</li>
+<li class="opt correct"><strong>He colored a nice heart on an envelope and left it Irina's rainbow lunchbox.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Complete the sentence. According to the text, where are Ms. Garcia and her students?</div>
+<div class="q-desc">Today was a special day in Ms. Garcia’s class. Some of the children were standing in small groups around their desks while others were walking in various directions through the classroom. All of them were painting and putting finishing details on a cardboard mailbox that Ms. Garcia brought last class.</div>
+<ul class="options-list">
+<li class="opt">In groups</li>
+<li class="opt">Various directions</li>
+<li class="opt correct"><strong>In the classroom</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Complete the sentence. According to the text, what is Ms. Garcia occupation?: She is _______</div>
+<div class="q-desc">Today was a special day in Ms. Garcia’s class. Some of the children were standing in small groups around their desks while others were walking in various directions through the classroom. All of them were painting and putting finishing details on a cardboard mailbox that Ms. Garcia brought last class.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A teacher</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A doctor</li>
+<li class="opt">An engineer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the best option. According to the text, what were the children doing?</div>
+<div class="q-desc">Today was a special day in Ms. Garcia’s class. Some of the children were standing in small groups around their desks while others were walking in various directions through the classroom. All of them were painting and putting finishing details on a cardboard mailbox that Ms. Garcia brought last class.</div>
+<ul class="options-list">
+<li class="opt">They were making a mailbox</li>
+<li class="opt correct"><strong>They were working in small groups to prepare something</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">They were helping to Ms. Garcia</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> According to the text decide if the idea is true or false.</div>
+<div class="q-desc">While this was happening, Bryan was trying to put a small white envelope into Ms. Garcia’s mailbox. Kevin took a red envelope from his pocket. He tried to put it on Irina’s desk, but he couldn’t because Cesar saw him and he felt embarrassed. Kevin ran with the envelope. Irina tried to reach him but he was already with the other children around Ms. Garcia who was putting red balloons on the wall.</div>
+<div class="tf-block">
+<p><strong>• Ms. Garcia was putting red balloons on the wall while Bryan, Kevin and Irina were doing other activities.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #142: I LOVE COFFEE!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand simple technical information</p><div class="task-expl">💡 <strong>Explicación:</strong> Students can understand information about topics related to electrical devices.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> According to the text. Select true sentence:</div>
+<div class="q-desc">(1) Many people need only a cup of coffee to start their day and everything goes on, or they just prefer to meet their best friend by drinking coffee in a cafeteria or in the comfort of their home. 
+
+(2) For many of us who loves coffee, a coffee maker is not only a machine, it is part of our lives, but have you ever wondered what happens when you scoop in the coffee? How does it heat up so quickly and what is that noise which gives off that delicious aroma? 
+
+(3) A coffee maker is a very simple machine which has three main parts: The reservoir that holds the water, the tube that leads up from below the reservoir base carrying the hot water, and a shower head which sprays hot water over the coffee grounds. 
+
+(4) Inside the coffee maker there are many electronic devices such as sensors and fuses that let heat the water and keep coffee warm. 
+
+(5) When your coffee machine doesn’t work, it is because of these common problems: 
+>The power on/off cord is bad: it is best to replace it or buy a new coffee maker 
+>The valve which lets the water pass can get clogged because of the coffee’s remains. You can solve it by fishing them out with a toothpick. 
+>The tube can get clogged with calcium. Just run vinegar through the machine once and then, put two cups of water to rinse the vinegar and voila! You can enjoy your coffee again.</div>
+<ul class="options-list">
+<li class="opt">A coffee maker is a very complicated machine.</li>
+<li class="opt">Many people don't need a cup of coffee to start their day.</li>
+<li class="opt correct"><strong>The tube can get clogged with calcium.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#2</span> Read the text again. Order the ideas according to the text.</div>
+<div class="q-desc">(1) Many people need only a cup of coffee to start their day and everything goes on, or they just prefer to meet their best friend by drinking coffee in a cafeteria or in the comfort of their home. 
+
+(2) For many of us who loves coffee, a coffee maker is not only a machine, it is part of our lives, but have you ever wondered what happens when you scoop in the coffee? How does it heat up so quickly and what is that noise which gives off that delicious aroma? 
+
+(3) A coffee maker is a very simple machine which has three main parts: The reservoir that holds the water, the tube that leads up from below the reservoir base carrying the hot water, and a shower head which sprays hot water over the coffee grounds. 
+
+(4) Inside the coffee maker there are many electronic devices such as sensors and fuses that let heat the water and keep coffee warm. 
+
+(5) When your coffee machine doesn’t work, it is because of these common problems: 
+>The power on/off cord is bad: it is best to replace it or buy a new coffee maker 
+>The valve which lets the water pass can get clogged because of the coffee’s remains. You can solve it by fishing them out with a toothpick. 
+>The tube can get clogged with calcium. Just run vinegar through the machine once and then, put two cups of water to rinse the vinegar and voila! You can enjoy your coffee again.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Coffee and its social use Main parts of a coffee maker Internal parts of a coffee maker Solutions for common problems related to coffee machines."</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> According to the text. Select false sentence</div>
+<div class="q-desc">(1) Many people need only a cup of coffee to start their day and everything goes on, or they just prefer to meet their best friend by drinking coffee in a cafeteria or in the comfort of their home. 
+
+(2) For many of us who loves coffee, a coffee maker is not only a machine, it is part of our lives, but have you ever wondered what happens when you scoop in the coffee? How does it heat up so quickly and what is that noise which gives off that delicious aroma? 
+
+(3) A coffee maker is a very simple machine which has three main parts: The reservoir that holds the water, the tube that leads up from below the reservoir base carrying the hot water, and a shower head which sprays hot water over the coffee grounds. 
+
+(4) Inside the coffee maker there are many electronic devices such as sensors and fuses that let heat the water and keep coffee warm. 
+
+(5) When your coffee machine doesn’t work, it is because of these common problems: 
+>The power on/off cord is bad: it is best to replace it or buy a new coffee maker 
+>The valve which lets the water pass can get clogged because of the coffee’s remains. You can solve it by fishing them out with a toothpick. 
+>The tube can get clogged with calcium. Just run vinegar through the machine once and then, put two cups of water to rinse the vinegar and voila! You can enjoy your coffee again.</div>
+<ul class="options-list">
+<li class="opt">The valve which lets the water pass can get clogged because of the coffee's remains.</li>
+<li class="opt correct"><strong>Inside the coffee maker there are many candies and lollypops.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The power on/off coed is bad: It is best to replace it or buy a new coffee maker.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the text quickly and select the correct answer: What this text talks about?</div>
+<div class="q-desc">(1) Many people need only a cup of coffee to start their day and everything goes on, or they just prefer to meet their best friend by drinking coffee in a cafeteria or in the comfort of their home. 
+
+(2) For many of us who loves coffee, a coffee maker is not only a machine, it is part of our lives, but have you ever wondered what happens when you scoop in the coffee? How does it heat up so quickly and what is that noise which gives off that delicious aroma? 
+
+(3) A coffee maker is a very simple machine which has three main parts: The reservoir that holds the water, the tube that leads up from below the reservoir base carrying the hot water, and a shower head which sprays hot water over the coffee grounds. 
+
+(4) Inside the coffee maker there are many electronic devices such as sensors and fuses that let heat the water and keep coffee warm. 
+
+(5) When your coffee machine doesn’t work, it is because of these common problems: 
+>The power on/off cord is bad: it is best to replace it or buy a new coffee maker 
+>The valve which lets the water pass can get clogged because of the coffee’s remains. You can solve it by fishing them out with a toothpick. 
+>The tube can get clogged with calcium. Just run vinegar through the machine once and then, put two cups of water to rinse the vinegar and voila! You can enjoy your coffee again.</div>
+<ul class="options-list">
+<li class="opt">Mr. Martinez would like to reserve five rooms.</li>
+<li class="opt">How to prepare coffee in a coffee maker?</li>
+<li class="opt correct"><strong>How does coffee maker work?</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> According to the text, answer the question: What are the main parts of the coffee maker?</div>
+<div class="q-desc">(1) Many people need only a cup of coffee to start their day and everything goes on, or they just prefer to meet their best friend by drinking coffee in a cafeteria or in the comfort of their home. 
+
+(2) For many of us who loves coffee, a coffee maker is not only a machine, it is part of our lives, but have you ever wondered what happens when you scoop in the coffee? How does it heat up so quickly and what is that noise which gives off that delicious aroma? 
+
+(3) A coffee maker is a very simple machine which has three main parts: The reservoir that holds the water, the tube that leads up from below the reservoir base carrying the hot water, and a shower head which sprays hot water over the coffee grounds. 
+
+(4) Inside the coffee maker there are many electronic devices such as sensors and fuses that let heat the water and keep coffee warm. 
+
+(5) When your coffee machine doesn’t work, it is because of these common problems: 
+>The power on/off cord is bad: it is best to replace it or buy a new coffee maker 
+>The valve which lets the water pass can get clogged because of the coffee’s remains. You can solve it by fishing them out with a toothpick. 
+>The tube can get clogged with calcium. Just run vinegar through the machine once and then, put two cups of water to rinse the vinegar and voila! You can enjoy your coffee again.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The reservoir, the tube and a shower head.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The valve, the power on/off cord and a cup.</li>
+<li class="opt">Water, coffee and milk.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Look at the pictures, choose the right option: Which of them is the most used by housewives?</div>
+<ul class="options-list">
+<li class="opt">Popcorn machine.</li>
+<li class="opt">Ice cream machine.</li>
+<li class="opt correct"><strong>Coffee machine.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Match the words with their meanings.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>To take something somewhere</td><td class="match-ans"><strong>Lead</strong> ✅</td></tr>
+<tr><td>blocked by something</td><td class="match-ans"><strong>Get clogged</strong> ✅</td></tr>
+<tr><td>To pick something up using a spoon</td><td class="match-ans"><strong>Scoop</strong> ✅</td></tr>
+<tr><td>Device for detonating an explosive charge</td><td class="match-ans"><strong>Fuse</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> According to the text, answer the question: What devices are there inside a coffee machine and what are their functions?</div>
+<div class="q-desc">(1) Many people need only a cup of coffee to start their day and everything goes on, or they just prefer to meet their best friend by drinking coffee in a cafeteria or in the comfort of their home. 
+
+(2) For many of us who loves coffee, a coffee maker is not only a machine, it is part of our lives, but have you ever wondered what happens when you scoop in the coffee? How does it heat up so quickly and what is that noise which gives off that delicious aroma? 
+
+(3) A coffee maker is a very simple machine which has three main parts: The reservoir that holds the water, the tube that leads up from below the reservoir base carrying the hot water, and a shower head which sprays hot water over the coffee grounds. 
+
+(4) Inside the coffee maker there are many electronic devices such as sensors and fuses that let heat the water and keep coffee warm. 
+
+(5) When your coffee machine doesn’t work, it is because of these common problems: 
+>The power on/off cord is bad: it is best to replace it or buy a new coffee maker 
+>The valve which lets the water pass can get clogged because of the coffee’s remains. You can solve it by fishing them out with a toothpick. 
+>The tube can get clogged with calcium. Just run vinegar through the machine once and then, put two cups of water to rinse the vinegar and voila! You can enjoy your coffee again.</div>
+<ul class="options-list">
+<li class="opt">On/off cord to replace or buy a new coffee maker.</li>
+<li class="opt correct"><strong>Sensors and fuses to heat water and keep coffee warm.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The valve to let the water pass.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#9</span> Match the common problems you can have with your coffee machine and its solutions.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>The tube is clogged with calcium.</td><td class="match-ans"><strong>Put vinegar and water to clean it.</strong> ✅</td></tr>
+<tr><td>The on/off power cord doesn't work</td><td class="match-ans"><strong>Buy a new one.</strong> ✅</td></tr>
+<tr><td>The valve is clogged with coffee's remains</td><td class="match-ans"><strong>Use a toothpick to remove it.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Read these ideas and match them with a paragraph.</div>
+<div class="q-desc">(1) Many people need only a cup of coffee to start their day and everything goes on, or they just prefer to meet their best friend by drinking coffee in a cafeteria or in the comfort of their home. 
+
+(2) For many of us who loves coffee, a coffee maker is not only a machine, it is part of our lives, but have you ever wondered what happens when you scoop in the coffee? How does it heat up so quickly and what is that noise which gives off that delicious aroma? 
+
+(3) A coffee maker is a very simple machine which has three main parts: The reservoir that holds the water, the tube that leads up from below the reservoir base carrying the hot water, and a shower head which sprays hot water over the coffee grounds.</div>
+<div class="tf-block">
+<p><strong>•  Having coffee as a part of a daily habit. </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The reservoir, tube and shower are parts of a coffee maker.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Having coffee for breakfast or in a meeting.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #143: THE GRANNY'S LETTER</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand short and simple personal emails and letters. To recognize short, simple personal emails and letters.</p><div class="task-expl">💡 <strong>Explicación:</strong> The students practice reading skills and learn about relevant information of a letter.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the best option: Which of the following is NOT a feature of a friendly letter?</div>
+<ul class="options-list">
+<li class="opt">greeting</li>
+<li class="opt">closing</li>
+<li class="opt correct"><strong>materials list</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">signature</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the text again and answer the question:Why could not Susana attend Sarah's party?</div>
+<div class="q-desc">Sarah Medina 
+205 Manabí Avenue 
+Portoviejo (1) 
+
+Dear Sarah, (2) 
+
+I would like to sincerely apologize for not (3) going to your birthday party last week. I had to rush out of town to attend an important meeting about my retirement pension here in Quito; it was not possible for me to travel to Portoviejo on that date. Your mom knows better what happened. 
+
+I really hope you understand my predicament and forgive me. I do look forward to other occasions for us to celebrate together, my dear granddaughter. 
+
+With best wishes and love, (4) 
+Susana (5)</div>
+<ul class="options-list">
+<li class="opt">Susana had no money to buy a gift.</li>
+<li class="opt">Susana missed the plane.</li>
+<li class="opt correct"><strong>Susana had an important meeting.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read the text again, look at the part with numbers and match them with the different parts of the letter.</div>
+<div class="q-desc">Sarah Medina 
+205 Manabí Avenue 
+Portoviejo (1) 
+
+Dear Sarah, (2) 
+
+I would like to sincerely apologize for not (3) going to your birthday party last week. I had to rush out of town to attend an important meeting about my retirement pension here in Quito; it was not possible for me to travel to Portoviejo on that date. Your mom knows better what happened. 
+
+I really hope you understand my predicament and forgive me. I do look forward to other occasions for us to celebrate together, my dear granddaughter. 
+
+With best wishes and love, (4) 
+Susana (5)</div>
+<div class="tf-block">
+<p><strong>• Signature</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Salutation</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Closing </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Body</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Heading</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> According to the text choose the correct option and answer the question.</div>
+<div class="q-desc">Sarah Medina 
+205 Manabí Avenue 
+Portoviejo (1) 
+
+Dear Sarah, (2) 
+
+I would like to sincerely apologize for not (3) going to your birthday party last week. I had to rush out of town to attend an important meeting about my retirement pension here in Quito; it was not possible for me to travel to Portoviejo on that date. Your mom knows better what happened. 
+
+I really hope you understand my predicament and forgive me. I do look forward to other occasions for us to celebrate together, my dear granddaughter. 
+
+With best wishes and love, (4) 
+Susana (5)</div>
+<div class="tf-block">
+<p><strong>• What is the relationship between Sarah and Susana?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> True or False</div>
+<div class="tf-block">
+<p><strong>• A Friendly Letter has 5 parts.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the best option:  A letter is _____</div>
+<ul class="options-list">
+<li class="opt correct"><strong>a medium of communication.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">a medium of photography session.</li>
+<li class="opt">a medium of a vacation.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the best option: Where do you write your address?</div>
+<ul class="options-list">
+<li class="opt">Top left</li>
+<li class="opt correct"><strong>Top right</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Bottom left</li>
+<li class="opt">Bottom right</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> True or False</div>
+<div class="tf-block">
+<p><strong>• The Greeting looks like this: Dear Sally</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the following letter. Choose the best option: The main aim of this letter is:</div>
+<ul class="options-list">
+<li class="opt">To ask for a product.</li>
+<li class="opt">To congratulate for something.</li>
+<li class="opt correct"><strong>To apologize for something.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read the following letter. Choose the best option: The text is:</div>
+<div class="q-desc">Sarah Medina 
+205 Manabí Avenue 
+Portoviejo (1) 
+
+Dear Sarah, (2) 
+
+I would like to sincerely apologize for not (3) going to your birthday party last week. I had to rush out of town to attend an important meeting about my retirement pension here in Quito; it was not possible for me to travel to Portoviejo on that date. Your mom knows better what happened. 
+
+I really hope you understand my predicament and forgive me. I do look forward to other occasions for us to celebrate together, my dear granddaughter. 
+
+With best wishes and love, (4) 
+Susana (5)</div>
+<ul class="options-list">
+<li class="opt">A business letter.</li>
+<li class="opt correct"><strong>A personal letter.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">An personal letter.</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #144: HEALTHY AND SAFETY</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand rules and regulations (e.g. safety) if expressed in simple language. To identify very common rules and regulations.</p><div class="task-expl">💡 <strong>Explicación:</strong> The students can know about safety signs.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Read the text again. Write true or false next to the statements.</div>
+<div class="q-desc">Safety signs are very important tools for communicating any kind of warning at school, streets or workplace. They help to identify hazards, prevent risks, protect people from injuries and they make prohibitions when necessary. 
+
+There are four different types of sings that everyone needs to be aware of: 
+
+( ) These signs are used for prevention and points out actions that are forbidden. They are commonly round shaped and they have a red edging as well as a red diagonal line across them. 
+
+( ) They usually indicate actions that must be taken. These signs have a round shape with a white pictogram on a blue background. 
+
+( ) These signs have a triangular shape with a yellow background and a black edging. The yellow indicates caution, so people can stay alert to any danger around them and reduce unnecessary risks. 
+
+( ) They are used to provide general information like evacuation routes or meeting points. They have a square or rectangular shape and a green background. 
+
+Remember that safety sings provide vital information to protect everybody.</div>
+<div class="tf-block">
+<p><strong>• Red round signs are used for actions and prevention.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Blue background indicates meeting points. </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Triangle signs are used for warnings.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Rectangles are only used for prohibition.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the article again. Choose the best option to complete the sentence: The article mentions _______ to identify the safety signs.</div>
+<div class="q-desc">Safety signs are very important tools for communicating any kind of warning at school, streets or workplace. They help to identify hazards, prevent risks, protect people from injuries and they make prohibitions when necessary. 
+
+There are four different types of sings that everyone needs to be aware of: 
+
+( ) These signs are used for prevention and points out actions that are forbidden. They are commonly round shaped and they have a red edging as well as a red diagonal line across them. 
+
+( ) They usually indicate actions that must be taken. These signs have a round shape with a white pictogram on a blue background. 
+
+( ) These signs have a triangular shape with a yellow background and a black edging. The yellow indicates caution, so people can stay alert to any danger around them and reduce unnecessary risks. 
+
+( ) They are used to provide general information like evacuation routes or meeting points. They have a square or rectangular shape and a green background. 
+
+Remember that safety sings provide vital information to protect everybody.</div>
+<ul class="options-list">
+<li class="opt">Objects and colors</li>
+<li class="opt">Signs and objects</li>
+<li class="opt correct"><strong>Shapes and colors</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the text. Match the following types of safety signs with the description in the text.</div>
+<div class="q-desc">Safety signs are very important tools for communicating any kind of warning at school, streets or workplace. They help to identify hazards, prevent risks, protect people from injuries and they make prohibitions when necessary. 
+
+There are four different types of sings that everyone needs to be aware of:</div>
+<ul class="options-list">
+<li class="opt">Warning signs</li>
+<li class="opt">Mandatory signs</li>
+<li class="opt">Prohibitory signs</li>
+<li class="opt">Emergency scape or first-aids signs</li>
+<li class="opt correct"><strong>Definition of safety signs</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Look at the picture and answer the question: What kind of signs does the photo show?</div>
+<ul class="options-list">
+<li class="opt">Advertising signs</li>
+<li class="opt correct"><strong>Safety signs</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Mandatory signs</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the article, choose the main idea, circle it</div>
+<div class="q-desc">Safety signs are very important tools for communicating any kind of warning at school, streets or workplace. They help to identify hazards, prevent risks, protect people from injuries and they make prohibitions when necessary. 
+
+There are four different types of sings that everyone needs to be aware of: 
+
+( ) These signs are used for prevention and points out actions that are forbidden. They are commonly round shaped and they have a red edging as well as a red diagonal line across them. 
+
+( ) They usually indicate actions that must be taken. These signs have a round shape with a white pictogram on a blue background. 
+
+( ) These signs have a triangular shape with a yellow background and a black edging. The yellow indicates caution, so people can stay alert to any danger around them and reduce unnecessary risks. 
+
+( ) They are used to provide general information like evacuation routes or meeting points. They have a square or rectangular shape and a green background. 
+
+Remember that safety sings provide vital information to protect everybody.</div>
+<ul class="options-list">
+<li class="opt">How to prevent risk.</li>
+<li class="opt correct"><strong>The importance and use of safety signs.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Where should safety signs be placed.  </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> Match the number with the correct option: In safety signs color are very important to determine the information they are provide they are providing. In that way:</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Yellow is used for</td><td class="match-ans"><strong>Caution</strong> ✅</td></tr>
+<tr><td>Red is used for</td><td class="match-ans"><strong>Prohibition</strong> ✅</td></tr>
+<tr><td>Green is used for</td><td class="match-ans"><strong>Positive actions</strong> ✅</td></tr>
+<tr><td>Blue is used for</td><td class="match-ans"><strong>Mandatory actions</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the text. Match the following types of safety signs with the description in the text.</div>
+<div class="q-desc">( ) These signs are used for prevention and points out actions that are forbidden. They are commonly round shaped and they have a red edging as well as a red diagonal line across them.</div>
+<ul class="options-list">
+<li class="opt">Warning signs</li>
+<li class="opt">Mandatory signs</li>
+<li class="opt correct"><strong>Prohibitory signs</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Emergency scape or first-aids signs</li>
+<li class="opt">Definition of safety signs</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the text. Match the following types of safety signs with the description in the text.</div>
+<div class="q-desc">( ) They usually indicate actions that must be taken. These signs have a round shape with a white pictogram on a blue background</div>
+<ul class="options-list">
+<li class="opt">Warning signs</li>
+<li class="opt correct"><strong>Mandatory signs</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Prohibitory signs</li>
+<li class="opt">Emergency scape or first-aids signs</li>
+<li class="opt">Definition of safety signs</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the text. Match the following types of safety signs with the description in the text.</div>
+<div class="q-desc">( ) These signs have a triangular shape with a yellow background and a black edging. The yellow indicates caution, so people can stay alert to any danger around them and reduce unnecessary risks.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Warning signs</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Mandatory signs</li>
+<li class="opt">Prohibitory signs</li>
+<li class="opt">Emergency scape or first-aids signs</li>
+<li class="opt">Definition of safety signs</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read the text. Match the following types of safety signs with the description in the text.</div>
+<div class="q-desc">( ) They are used to provide general information like evacuation routes or meeting points. They have a square or rectangular shape and a green background. 
+Remember that safety sings provide vital information to protect everybody.</div>
+<ul class="options-list">
+<li class="opt">Warning signs</li>
+<li class="opt">Mandatory signs</li>
+<li class="opt">Prohibitory signs</li>
+<li class="opt correct"><strong>Emergency scape or first-aids signs</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Definition of safety signs</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #7c3aed">🎧 Listening (Comprensión Auditiva)</h2><div class="task-card"><h3>📌 Tarea #338: At the Library</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> What did Laura do at the library?</div>
+<ul class="options-list">
+<li class="opt">Borrowed some movies</li>
+<li class="opt correct"><strong>Borrowed two books</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Bought some books</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> What are the subjects of the books Laura borrowed?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>History and science</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Art and literature</li>
+<li class="opt">Math and geography</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> How does Laura feel about the library?</div>
+<ul class="options-list">
+<li class="opt">It is too noisy</li>
+<li class="opt">It is very interesting</li>
+<li class="opt correct"><strong>It is quiet and enjoyable</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> How many books does Laura plan to read this week?</div>
+<ul class="options-list">
+<li class="opt">One</li>
+<li class="opt correct"><strong>Two</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Three</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> What is the library like?</div>
+<ul class="options-list">
+<li class="opt">Busy and noisy</li>
+<li class="opt correct"><strong>Quiet</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Small and crowded</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> According to Laura, which statement best describes her feelings about the books she borrowed?</div>
+<ul class="options-list">
+<li class="opt">She finds both books equally interesting.</li>
+<li class="opt correct"><strong>She finds the history book very interesting, but does not mention her opinion about the science book.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">She plans to read only the history book this week.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Fill in the Blanks:</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Laura</td><td class="match-ans"><strong>two</strong> ✅</td></tr>
+<tr><td>One</td><td class="match-ans"><strong>history</strong> ✅</td></tr>
+<tr><td>She</td><td class="match-ans"><strong>quiet</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> Match each statement with its corresponding detail from the script</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>The</td><td class="match-ans"><strong>Quiet</strong> ✅</td></tr>
+<tr><td>Laura’s</td><td class="match-ans"><strong>Read both books this week</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> What does Laura enjoy about spending time at the library?</div>
+<ul class="options-list">
+<li class="opt">The library's collection of books</li>
+<li class="opt correct"><strong>The library’s quiet atmosphere</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The library's café</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #339: At the Park</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> What did John do after walking?</div>
+<ul class="options-list">
+<li class="opt">Went home</li>
+<li class="opt correct"><strong>Sat on a bench to rest</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Bought ice cream</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> What did John do at the park?</div>
+<ul class="options-list">
+<li class="opt">Had a picnic</li>
+<li class="opt correct"><strong>Went for a walk</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Played soccer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> What did John see at the park?</div>
+<ul class="options-list">
+<li class="opt">Dogs and cats</li>
+<li class="opt correct"><strong>People jogging and children playing</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cars and buses</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> How long did John walk?</div>
+<ul class="options-list">
+<li class="opt">For about 30 minutes</li>
+<li class="opt correct"><strong>For about an hour</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">For about two hours</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> What did John eat?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A sandwich</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A salad</li>
+<li class="opt">A burger</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> Fill in the Blanks</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>John</td><td class="match-ans"><strong>walk</strong> ✅</td></tr>
+<tr><td>He</td><td class="match-ans"><strong>jogging</strong> ✅</td></tr>
+<tr><td>After</td><td class="match-ans"><strong>bench</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#7</span> Select the true sentences.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>John enjoyed the fresh air while sitting on a bench at the park.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>John walked for approximately an hour before taking a break.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>John saw children playing and people jogging during his visit to the park.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">John walked for two hours and then ate a sandwich in the park.</li>
+<li class="opt">John described the weather as rainy and cold during his visit.</li>
+<li class="opt">John went to the park to play sports and did not mention eating a sandwich.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> Complete the following sentences based on John’s visit to the park:</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>John</td><td class="match-ans"><strong>about an hour</strong> ✅</td></tr>
+<tr><td>While</td><td class="match-ans"><strong>people jogging</strong> ✅</td></tr>
+<tr><td>John</td><td class="match-ans"><strong>fresh</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> What did John do first during his visit to the park?</div>
+<ul class="options-list">
+<li class="opt">He ate a sandwich.</li>
+<li class="opt">He sat on a bench to rest.</li>
+<li class="opt correct"><strong>He walked for about an hour.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He observed children playing.</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #db2777">✍️ Writing (Expresión Escrita)</h2><div class="task-card"><h3>📌 Tarea #133: CELEBRATIONS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To write a simple story or description using basic time expressions.</p><div class="task-expl">💡 <strong>Explicación:</strong> An invitation is a written or spoken request to come to an event such as a party, a meal, or a meeting. An invitation is the card or paper on which an invitation is written or printed.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the right option: What do you need for planning a party?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Balloons, party hats, ice cream</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Party hats, math books, lanterns</li>
+<li class="opt">Pair of shoes, lantern, balloons</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the right option: What do you carry your clothes and personal items in when traveling?</div>
+<ul class="options-list">
+<li class="opt">Gate</li>
+<li class="opt correct"><strong>Baggage</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Box</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the right option: Which of the following is required to get on a flight?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Boarding pass</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Baggage</li>
+<li class="opt">Airport</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the things that you need to celebrate a Party:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Balloons, party hats, ice cream</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Party hats, math books, lanterns</li>
+<li class="opt">Pair of shoes, lantern, balloons</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the right option: The thing you must wear when the planes take off and lands.</div>
+<ul class="options-list">
+<li class="opt">Overhead locker</li>
+<li class="opt">Baggage</li>
+<li class="opt correct"><strong>Seat belt</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the best option to answer the following question: What couples do in Valentine's Day in your country?</div>
+<ul class="options-list">
+<li class="opt">Wear yellow Clothes.</li>
+<li class="opt correct"><strong>They go out and drink wine.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the best option to answer the following question: How do you celebrate Christmas?</div>
+<ul class="options-list">
+<li class="opt">Go to church.</li>
+<li class="opt correct"><strong>Spend time with family and friends.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the best option to answer the following question: What do you do to celebrate your Birthday party?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Sing happy birthday with a chocolate Cake.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I do not celebrate my Birthday party, it is boring. </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#9</span> Match the columns:</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>A short journey taken for a pleasure</td><td class="match-ans"><strong>Excursion</strong> ✅</td></tr>
+<tr><td>A small house in the country</td><td class="match-ans"><strong>Cottage</strong> ✅</td></tr>
+<tr><td>A person who shows tourists the city</td><td class="match-ans"><strong>Guide</strong> ✅</td></tr>
+<tr><td>The places that visitors go</td><td class="match-ans"><strong>Destination</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the best option to answer the following question: What do you do for your mother in your mother's day?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I visit her with my family.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I never visit my mother on this date.</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #134: WELCOME TO MY PARTY</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To write a basic email/letter accepting or declining an invitation.</p><div class="task-expl">💡 <strong>Explicación:</strong> To accept an invitation to an informal party / dinner, you can write: 'Thanks for your invitation'. Accept an invitation to an informal party / dinner, you can write: 'Thanks for your invitation'</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#1</span> Write the correct name under the pictures:</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Wedding party</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Birthday party</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Graduating party</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#2</span> Identify the type of Invitation:</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Christmas invitation</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Party Invitation</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#3</span> Match the parts of invitation with the information.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>To:</td><td class="match-ans"><strong>Pedro Jones</strong> ✅</td></tr>
+<tr><td>Date:</td><td class="match-ans"><strong>July 4th</strong> ✅</td></tr>
+<tr><td>Address:</td><td class="match-ans"><strong>America Avenue</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read the text. True or False:</div>
+<div class="tf-block">
+<p><strong>• It is an Accepting invitation.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Read the text. True or False:</div>
+<div class="tf-block">
+<p><strong>• It is an accepting invitation</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the right answer: The most important part in an invitation card.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Address</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Number of people</li>
+<li class="opt">Clothes</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Complete and match the parts of the invitation with the information:</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>From:</td><td class="match-ans"><strong>Brenda Watson</strong> ✅</td></tr>
+<tr><td>Date:</td><td class="match-ans"><strong>December 20th</strong> ✅</td></tr>
+<tr><td>Address:</td><td class="match-ans"><strong>Urbina Avenue</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> True or False:</div>
+<div class="tf-block">
+<p><strong>• It is Accepting an invitation</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the right answer: What are the things do you need to plan a Birthday party?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Invitations, Food, Guest list, Activities</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Invitations, Food, Guest list</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Complete the sentence: Amelia wants to _______ a _______ for her birthday</div>
+<ul class="options-list">
+<li class="opt">Loan/a cottage</li>
+<li class="opt">Rent / a cottage</li>
+<li class="opt correct"><strong>Buy/ cake</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #135: MOVING</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To write a short letter or email for asking information for renting a house or an apartment.</p><div class="task-expl">💡 <strong>Explicación:</strong> A variety of vocabulary improves all areas of communication, listening, speaking, reading, and writing.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> Match the columns using the following words.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>The price of rent</td><td class="match-ans"><strong>$ 450</strong> ✅</td></tr>
+<tr><td>The services</td><td class="match-ans"><strong>A shopping center and a Drugstore</strong> ✅</td></tr>
+<tr><td>The</td><td class="match-ans"><strong>4 rooms</strong> ✅</td></tr>
+<tr><td>The neighborhood</td><td class="match-ans"><strong>Universitario Avenue</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read and choose the words related to  the options for renting an apartment or house.</div>
+<ul class="options-list">
+<li class="opt">The rent, the neighbors, how big is it.</li>
+<li class="opt">The neighbors, the services available, the numbers of rooms.</li>
+<li class="opt correct"><strong>The rent, how big is it, the numbers of rooms.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read the following text and choose True or False:</div>
+<div class="tf-block">
+<p><strong>• The person who sent the letter was Gaby Poveda.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#4</span> Circle the right options: What information do you think is necessary to know before renting a nesa house?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>How big it is</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">How many neighbors there are</li>
+<li class="opt correct"><strong>The rent</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>The available services</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The grass and yards</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Complete the sentence with the right word:</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Complete the sentence with the right word:</div>
+<div class="tf-block">
+<p><strong>• To finish an informal letter you have to use the phrase 'All The</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Complete the sentence with the right word: You can invite someone informally using this phrase in a formal letter:</div>
+<ul class="options-list">
+<li class="opt">You must go?</li>
+<li class="opt">Do you have to go?</li>
+<li class="opt correct"><strong>Would you like to go?</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Read the e-mail and circle the right information:</div>
+<div class="tf-block">
+<p><strong>• Amelia wants to rent a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• She has a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• She wants to know the price of</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Read the text and match the columns according to the following information.</div>
+<div class="tf-block">
+<p><strong>• Does Gaby want to rent?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Does she need a garage?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• How many rooms does it have?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Does she know the price of the rent?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#10</span> Match the columns using the following words.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>The price of rent</td><td class="match-ans"><strong>$ 350</strong> ✅</td></tr>
+<tr><td>The services</td><td class="match-ans"><strong>Store</strong> ✅</td></tr>
+<tr><td>The</td><td class="match-ans"><strong>5 rooms</strong> ✅</td></tr>
+<tr><td>The neighborhood</td><td class="match-ans"><strong>America Avenue</strong> ✅</td></tr>
+</tbody></table>
+</div></div><div class="task-card"><h3>📌 Tarea #136: IT IS MY FAVORITE CITY</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To write short basic descriptions of people, places, or things.</p><div class="task-expl">💡 <strong>Explicación:</strong> The primary purpose of descriptive writing is to describe a person, place, or thing is such a way that a picture is formed in the reader's mind. Capturing an event through descriptive writing involves paying close attention to the detail's by using all your five senses.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Choose the right word to complete the sentence:</div>
+<div class="tf-block">
+<p><strong>• The</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Choose the right word to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• We went to watch the carnival but it was absolutely</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Choose the right word to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• There are some</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Choose the right word to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• Ecuador is located in</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Choose the right word to complete the sentence</div>
+<div class="tf-block">
+<p><strong>• This is a very</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the text below and choose the best title for it:</div>
+<ul class="options-list">
+<li class="opt">Quilotoa lake</li>
+<li class="opt correct"><strong>People of Highland Region</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Zimbabua river</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Read the text and answer the following question:</div>
+<div class="tf-block">
+<p><strong>• Is Ecuador located in North America?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the text and answer the following question: How many Regions does Ecuador have?</div>
+<ul class="options-list">
+<li class="opt">Three</li>
+<li class="opt correct"><strong>Four</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Two</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Read the text and choose if the sentence is True or False.</div>
+<div class="tf-block">
+<p><strong>• Ecuador is located in North America</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> According to the text, choose the best information matching the columns.</div>
+<div class="tf-block">
+<p><strong>• It has many beaches</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Country</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Capital</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Famous gastronomy</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div>
+    </div>
+</body>
+</html>

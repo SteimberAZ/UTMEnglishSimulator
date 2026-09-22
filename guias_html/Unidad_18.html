@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 18 • 📓 Book 5 (B1.1 - Independent) - Guía de Inglés UTM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 900px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-btn, .print-btn {
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .back-btn:hover, .print-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 0 0 6px 0;
+        }
+        .header .subtitle {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: inline-flex;
+            gap: 16px;
+            background: #f1f5f9;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+        .skill-section {
+            margin-top: 40px;
+        }
+        .skill-section h2 {
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 6px solid #2563eb;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .task-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .task-card h3 {
+            color: #1e293b;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .task-obj {
+            font-size: 14px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .task-expl {
+            font-size: 14px;
+            color: #0369a1;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        .question-card {
+            background: #fafafa;
+            border-left: 4px solid #3b82f6;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+        .q-header {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .q-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .q-num {
+            color: #3b82f6;
+            margin-right: 4px;
+        }
+        .q-desc {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .options-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .opt {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .opt.correct {
+            background: #ecfdf5;
+            border-color: #10b981;
+            color: #065f46;
+            font-weight: 600;
+        }
+        .badge-correct {
+            background: #10b981;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            float: right;
+            font-weight: 600;
+        }
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .match-table th, .match-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .match-table th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        .match-ans {
+            color: #065f46;
+            background: #ecfdf5;
+            font-weight: 600;
+        }
+        .order-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        .fill-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .fill-list li {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        @media print {
+            body { background: #ffffff; padding: 0; }
+            .top-nav { display: none; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .task-card { page-break-inside: avoid; }
+            .question-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="../index.html" class="back-btn">← Volver al Portal General</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Guardar / Imprimir PDF</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>📘 Universidad Técnica de Manabí</h1>
+            <div class="subtitle">Simulador de Inglés • Unidad 18 • 📓 Book 5 (B1.1 - Independent)</div>
+            <div class="stats">
+                <span>📋 18 Tareas</span>
+                <span>❓ 182 Preguntas Verificadas</span>
+            </div>
+        </div>
+        <div class="skill-section"><h2 style="border-left-color: #2563eb">🧠 Grammar (Estructuras Gramaticales)</h2><div class="task-card"><h3>📌 Tarea #273: MILLENNIALS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> CAN UNDERSTAND THE MAIN POINTS OF A SIMPLE PODCAST</p><div class="task-expl">💡 <strong>Explicación:</strong> WOULD RATHER... THAN - RATHER - OR RATHER</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> CHOOSE THE CORRECT OPTION: I _______ YOU HADN'T SAID THAT. YOU UPSET HER</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt correct"><strong>WOULD RATHER</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">RATHER THAN</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> CHOOSE THE CORRECT OPTION: _______ THAN SPENDING THE LAST OF MY CASH FOR A MEAL, I CHOSE TO STAY HUNGRY</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt">WOULD RATHER</li>
+<li class="opt correct"><strong>RATHER THAN</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> CHOOSE THE CORRECT OPTION: HE IS _______</div>
+<ul class="options-list">
+<li class="opt">RATHER FOOL</li>
+<li class="opt">A RATHER FOOL</li>
+<li class="opt correct"><strong>RATHER A FOOL</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> CHOOSE THE CORRECT OPTION: THAT WAS _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>RATHER A GOOD IDEA</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A RATHER A GOOD IDEA</li>
+<li class="opt">BOTH ARE CORRECT</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> CHOOSE THE CORRECT OPTION: WE _______ HOPING HE WOULD LEAVE SOON</div>
+<ul class="options-list">
+<li class="opt">RATHER WERE</li>
+<li class="opt correct"><strong>WERE RATHER</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> CHOOSE THE CORRECT OPTION: I WOULD PREFER TO COME ON TUESDAY _______ ON THURSDAY</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt">WOULD RATHER</li>
+<li class="opt correct"><strong>RATHER THAN</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> CHOOSE THE CORRECT OPTION: I DECIDED TO PHONE _______ WRITING</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt">WOULD RATHER</li>
+<li class="opt correct"><strong>RATHER THAN</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> CHOOSE THE CORRECT OPTION: I _______ HAVE SOMETHING TO EAT</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt correct"><strong>WOULD RATHER</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">RATHER THAN</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> CHOOSE THE CORRECT OPTION: IT IS IMPORTANT TO FIND NEW MARKETS _______ HIRING NEW PEOPLE</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt">WOULD RATHER</li>
+<li class="opt correct"><strong>RATHER THAN</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #274: EQUIPPING MY HOUSE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> CAN UNDERSTAND SIMPLE TECHNICAL INFORMATION (E.G. INSTRUCTIONS FOR EVERYDAY EQUIPMENT)</p><div class="task-expl">💡 <strong>Explicación:</strong> WOULD RATHER... THAN - RATHER - OR RATHER</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> CHOOSE THE CORRECT OPTION: HE _______ HAVE BREAKFAST IN THE BALCONY</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt correct"><strong>WOULD RATHER</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">RATHER THAN</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> CHOOSE THE CORRECT OPTION: I _______ DIE THAN LIVE WITHOUT YOU</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt correct"><strong>WOULD RATHER</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">RATHER THAN</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> CHOOSE THE CORRECT OPTION: THE GOVERNMENT'S RESPONSE TO THE PROBLEM WAS REACTIVE _______ PROACTIVE</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt">WOULD RATHER</li>
+<li class="opt correct"><strong>RATHER THAN</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> CHOOSE THE CORRECT OPTION: I AM FEELING _______ CONFUSED ABOUT WHAT HAPPENED</div>
+<ul class="options-list">
+<li class="opt correct"><strong>RATHER</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">WOULD RATHER</li>
+<li class="opt">RATHER THAN</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> CHOOSE THE CORRECT OPTION: I _______ ENJOY THE ORIGINAL</div>
+<ul class="options-list">
+<li class="opt correct"><strong>RATHER</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">WOULD RATHER</li>
+<li class="opt">RATHER THAN</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> CHOOSE THE CORRECT OPTION: THIS IS _______ ABSURD</div>
+<ul class="options-list">
+<li class="opt correct"><strong>RATHER</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">WOULD RATHER</li>
+<li class="opt">RATHER THAN</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> CHOOSE THE CORRECT OPTION: HER PREFERENCE IS FOR COMFORTABLE CLOTHES _______ STYLISH CLOTHES</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt">WOULD RATHER</li>
+<li class="opt correct"><strong>RATHER THAN</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> CHOOSE THE CORRECT OPTION: I _______ NOT SAY</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt correct"><strong>WOULD RATHER</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">RATHER THAN</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> CHOOSE THE CORRECT OPTION: I _______ BE ALONE</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt correct"><strong>WOULD RATHER</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">RATHER THAN</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> CHOOSE THE CORRECT OPTION: I PREFER TEA _______ COFFEE</div>
+<ul class="options-list">
+<li class="opt">RATHER</li>
+<li class="opt">WOULD RATHER</li>
+<li class="opt correct"><strong>RATHER THAN</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #275: FOREST AND DISAPPEARING</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> CAN UNDERSTAND THE CONCEPT OF DEFORESTATION, ITS EFFECTS ON THE ENVIRONMENT AND HOW PEOPLE ARE WORKING TO SAVE FORESTS</p><div class="task-expl">💡 <strong>Explicación:</strong> MAY/MIGHT (+NOT) HAVE</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• IT</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• CHARLES</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• I WAS AFRAID THAT I</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• HE ASKED ME IF HE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #276: I'M OLDER THAN YOU</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> CAN COMPARE THEIR OWN AND OTHERS POSSESSIONS USING SIMPLE LANGUAGE</p><div class="task-expl">💡 <strong>Explicación:</strong> MAY/MIGHT (+NOT) HAVE</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> CHOOSE THE CORRECT OPTION: WHICH SENTENCE IS CORRECT?</div>
+<ul class="options-list">
+<li class="opt">WE MAY GOING TO A CONCERT NEXT WEEK</li>
+<li class="opt correct"><strong>WE MAY GO TO A CONCERT NEXT WEEK</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">WE MAY TO GOING TO A CONCERT NEXT WEEK</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> CHOOSE THE CORRECT OPTION: WHAT IS THE CORRECT NEGATIVE SENTENCE?</div>
+<ul class="options-list">
+<li class="opt">WE DON'T MIGHT HAVE TIME TO SEE JULIUS</li>
+<li class="opt correct"><strong>WE MIGHT NOT HAVE TIME TO SEE JULIUS</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">WE MIGHT HAVEN'T TIME TO SEE JULIUS</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> CHOOSE THE CORRECT OPTION: WHICH WORD GOES IN THE SPACE?</div>
+<div class="tf-block">
+<p><strong>• TOM</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> CHOOSE THE CORRECT OPTION: WHICH SENTENCE IS NOT POSSIBLE?</div>
+<ul class="options-list">
+<li class="opt">SHE MIGHT BE IN HER BEDROOM AT THE MOMENT</li>
+<li class="opt">WE MAY HAVE A PARTY NEXT WEEKEND</li>
+<li class="opt correct"><strong>HE MAY GO TO HIS FRIEND'S HOUSE LAST NIGHT</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> CHOOSE THE CORRECT OPTION: WHICH SENTENCE IS CORRECT?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>WHEN MIGHT THE PACKAGE ARRIVE?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">WHEN WILL THE PACKAGE MIGHT ARRIVE?</li>
+<li class="opt">WHEN THE PACKAGE MIGHT ARRIVE?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> CHOOSE THE CORRECT OPTION: COMPLETE THE SENTENCE</div>
+<div class="tf-block">
+<p><strong>• WE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> CHOOSE THE CORRECT OPTION: WHICH SENTENCE IS CORRECT?</div>
+<ul class="options-list">
+<li class="opt">I NOT MAY BE ABLE TO COME TO THE PARTY</li>
+<li class="opt">I MAY BE NOT BE ABLE TO COME TO THE PARTY</li>
+<li class="opt correct"><strong>I MIGHT NOT BE ABLE TO COME TO THE PARTY</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• HE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• SHE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> CHOOSE THE CORRECT OPTION:</div>
+<div class="tf-block">
+<p><strong>• DON'T RING THE BELL WHEN YOU GET HOME. MY LITTLE SON</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #059669">📖 Vocabulary (Vocabulario)</h2><div class="task-card"><h3>📌 Tarea #265: PERIODIC TABLE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> The students will be able to use and understand vocabulary related to chemical elements from the periodic table.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the correct metal element</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Calcium</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Nitrogen</li>
+<li class="opt">Oxygen</li>
+<li class="opt">Carbon</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the correct chemical element of these vocabulary words</div>
+<ul class="options-list">
+<li class="opt">Diesel</li>
+<li class="opt">Oil</li>
+<li class="opt correct"><strong>Gold</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Gas</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the right option to answer the question: How many chemical elements does the periodic table have, at the present day?</div>
+<ul class="options-list">
+<li class="opt">103</li>
+<li class="opt">117</li>
+<li class="opt correct"><strong>118</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">105</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Answer the question: Which of these chemical elements is a gas?</div>
+<ul class="options-list">
+<li class="opt">Gold</li>
+<li class="opt">Silver</li>
+<li class="opt correct"><strong>Nitrogen</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Aluminum</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the right option to answer the question: Which of these chemical elements is a liquid metal?</div>
+<ul class="options-list">
+<li class="opt">Calcium</li>
+<li class="opt">Potassium</li>
+<li class="opt">Lead</li>
+<li class="opt correct"><strong>Mercury </strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Answer the question: When was the society of civil engineers founded?</div>
+<ul class="options-list">
+<li class="opt">1772</li>
+<li class="opt">1871</li>
+<li class="opt correct"><strong>1771</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">1777</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Match the question with the appropriate option: Who was the first man called a civil engineer?</div>
+<ul class="options-list">
+<li class="opt">James Brindley</li>
+<li class="opt">John Rennie</li>
+<li class="opt correct"><strong>John Smeaton</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">James Scott</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Answer the question: How are the chemical elements of the periodic table arranged?</div>
+<ul class="options-list">
+<li class="opt">According to the mass</li>
+<li class="opt correct"><strong>According to the atomic numbers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">According to the atomic weight</li>
+<li class="opt">None </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Match the question with the appropriate option: Who invented the periodic table?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Dmitri Mendeléyev</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Charles Darwin</li>
+<li class="opt">Isaac Newton</li>
+<li class="opt">Niels Bohr</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Answer the question: Which is the chemical formula of water?</div>
+<ul class="options-list">
+<li class="opt">HO2</li>
+<li class="opt correct"><strong>H2O</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">HHO</li>
+<li class="opt">OOHH</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #266: CRIME AND PUNISHMENT</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can name people in court and describe words related to punishment when people commit crimes</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Match this definition with the correct word: When someone commits a robbery it is called _______</div>
+<ul class="options-list">
+<li class="opt">Court</li>
+<li class="opt correct"><strong>Thief</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Lawyer</li>
+<li class="opt">Policeman</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Match this definition with the correct word: The sentenced people go to _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Jail</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Church</li>
+<li class="opt">Case</li>
+<li class="opt">Jury</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Match this definition with the correct word: The person who has broken the law and evidence confirms it _______</div>
+<ul class="options-list">
+<li class="opt">Evidence</li>
+<li class="opt correct"><strong>Guilty</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Jury</li>
+<li class="opt">Crime</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Match the following definition with the correct word: To say that something is not true _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Deny</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Case</li>
+<li class="opt">Attorney</li>
+<li class="opt">Crime</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Match the following definition with the correct word: A place where a judge decides if someone is a criminal or not _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Court</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">House</li>
+<li class="opt">Hospital</li>
+<li class="opt">Restaurant</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Match the definition with the correct word: A crime that police, detectives and lawyers are trying to solve _______</div>
+<ul class="options-list">
+<li class="opt">Judge</li>
+<li class="opt">Trial</li>
+<li class="opt correct"><strong>Case</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Witness</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Match the definition with the correct word: A legal process to decide if someone is guilty of a crime or not _______</div>
+<ul class="options-list">
+<li class="opt">Case</li>
+<li class="opt correct"><strong>Trial</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Jury</li>
+<li class="opt">None</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Match the definition with the correct word: To say that someone has done something wrong or illegal _______</div>
+<ul class="options-list">
+<li class="opt">Case</li>
+<li class="opt">Witness</li>
+<li class="opt">Trial</li>
+<li class="opt correct"><strong>Accuse</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Match the definition with the correct word: Twelve ordinary people in a court who decide if someone is guilty of a crime _______</div>
+<ul class="options-list">
+<li class="opt">Judge</li>
+<li class="opt correct"><strong>Jury</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Lawyer</li>
+<li class="opt">Policeman</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Match the definition with the correct word: A sentence imposed on someone who has committed a crime or a fault</div>
+<ul class="options-list">
+<li class="opt">Guilty</li>
+<li class="opt correct"><strong>Punish</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Case</li>
+<li class="opt">Jury</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #267: DIGITAL CONNECTION AND THE JOB THAT I HAVE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can describe vocabulary related to technology, specially computers and the web. Can name people involved in the business world and the relationships involved.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Answer the question: What does WWW mean?</div>
+<ul class="options-list">
+<li class="opt">Wide web world</li>
+<li class="opt correct"><strong>World wide web</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Web wide world</li>
+<li class="opt">None</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Match the definition with the correct word: The connection to computers and other devices between them without wires</div>
+<ul class="options-list">
+<li class="opt">Connection</li>
+<li class="opt">Update</li>
+<li class="opt">E-mail</li>
+<li class="opt correct"><strong>Wireless</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Match the definition with the correct word: To look for information on the internet _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Browse</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Web</li>
+<li class="opt">News</li>
+<li class="opt">None</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Match the definition with the correct word: A connection between documents or websites on the internet.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Link</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Update</li>
+<li class="opt">Wireless</li>
+<li class="opt">Computer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Match the definition with the correct word: To close any operation for a time or permanently</div>
+<ul class="options-list">
+<li class="opt">Wireless</li>
+<li class="opt">Update</li>
+<li class="opt correct"><strong>Shutdown</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Turn on</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Match the definition with the correct word: All the people who buy a particular thing or the place where they can sell and buy things _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Market</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Head</li>
+<li class="opt">Chief</li>
+<li class="opt">Work</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Match the definition with the correct word: The action of being in control of a group, situation or organization</div>
+<ul class="options-list">
+<li class="opt">Market</li>
+<li class="opt correct"><strong>Leadership</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Competitor</li>
+<li class="opt">Race</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Match the definition with the correct word: A competition in which an organization or people fight to show who is the best</div>
+<ul class="options-list">
+<li class="opt">Chief</li>
+<li class="opt">Market</li>
+<li class="opt correct"><strong>Race</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Leadership</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Match the definition with the correct word: The leader of a group _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Head</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Chief</li>
+<li class="opt">Market</li>
+<li class="opt">Race</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Match the definition with the correct word: Someone who tries to win a competition _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Competitor</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Race</li>
+<li class="opt">Head</li>
+<li class="opt">Leadership</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #268: EQUIPPING MY HOUSE AND I HAVE TO VISIT MY DOCTOR</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can understand simple technical information. Can understand written instructions for taking medication.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Match the definition with the correct word: A conductor as a copper wire in a spiral or other form _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Wire</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Dial</li>
+<li class="opt">Coil</li>
+<li class="opt">Burner</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Match the definition with the correct word: A thin piece of metal used to conduct electricity _______</div>
+<ul class="options-list">
+<li class="opt">Wire</li>
+<li class="opt">Dial</li>
+<li class="opt correct"><strong>Coil</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Burner</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Match the definition with the correct word: The part of a gas or electric appliance from which flame or heats comes out _______</div>
+<ul class="options-list">
+<li class="opt">Wire</li>
+<li class="opt">Dial</li>
+<li class="opt">Coil</li>
+<li class="opt correct"><strong>Burner</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Match the definition with the correct word: A control switch used for regulating a mechanism _______</div>
+<ul class="options-list">
+<li class="opt">Wire</li>
+<li class="opt correct"><strong>Dial</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Coil</li>
+<li class="opt">Burner</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Match the definition with the correct word: A flow of electrons is called _______</div>
+<ul class="options-list">
+<li class="opt">Wire</li>
+<li class="opt">Cooper</li>
+<li class="opt correct"><strong>Electricity</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Gas</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Complete with the correct word about the topic: I have been having some _______ I my back and joints.</div>
+<ul class="options-list">
+<li class="opt">Treatment</li>
+<li class="opt correct"><strong>Pain</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Doctor</li>
+<li class="opt">Prescription</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Complete with the correct word about the topic: I am going to give you a _______</div>
+<ul class="options-list">
+<li class="opt">Hospital</li>
+<li class="opt">Pain</li>
+<li class="opt">Medicine</li>
+<li class="opt correct"><strong>Prescription</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Complete with the correct word about the topic: Do not drink alcohol during the _______</div>
+<ul class="options-list">
+<li class="opt">Pain</li>
+<li class="opt">Prescription</li>
+<li class="opt correct"><strong>Treatment</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Medicine</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Complete with the correct word about the topic: You can get the _______ in any pharmacy.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Medicine</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Pain</li>
+<li class="opt">Prescription</li>
+<li class="opt">Doctor</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Complete with the correct word about the topic: The doctor says: you have the flu and you have to drink _______</div>
+<ul class="options-list">
+<li class="opt">Coffee</li>
+<li class="opt">Tea</li>
+<li class="opt correct"><strong>Flu syrup</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Coke</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #d97706">📚 Reading (Comprensión Lectora)</h2><div class="task-card"><h3>📌 Tarea #269: ahh</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Recognize example and their relation to the idea they support the fuel uses.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read and choose the correct option: The crude oil is transported over long distances.</div>
+<div class="q-desc"><p><strong>Petroleum</strong></p><p class="ql-align-justify">Crude oil supplies the world with about 40% of its energy. It is not only used to make petrol and heating oil but chemicals, fertilizers, plastics, drugs and other products as well.&nbsp;</p><p class="ql-align-justify">Most of our petroleum lies in rock layers deep below the surface of the earth. Oil workers pump it out by drilling into these layers. Then it is transported over long distances, mostly by pipeline or tankers to refineries, where it is made into petrol and diesel as well as other petroleum products.&nbsp;</p><p class="ql-align-justify">But like coal, petroleum creates problems in our environment. Tanker accidents cause oil to leak out into the ocean. Burning petrol or diesel in cars and trucks leads to smog and other kinds of pollution.&nbsp;</p><p class="ql-align-justify">Although oil reserves are slowly running out, oil companies are constantly searching for new reserves. Such new reserves, however, lie mostly in areas which are very difficult to reach.&nbsp;</p><p>In some places, like the western United States, there are big deposits of oil rock, called oil shale. Petroleum can be extracted from this rock but such a process is still very expensive.</p></div>
+<ul class="options-list">
+<li class="opt">The crude oil is transported over long distances by ferries</li>
+<li class="opt">The crude oil is transported over long distances by airplane</li>
+<li class="opt">The crude oil is transported over long distances by train</li>
+<li class="opt correct"><strong>The crude oil is transported over long distances by pipeline</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> According to the reading reply the question: which of the following statements is false?</div>
+<div class="q-desc"><p>Kim wants to drive her three kids and their two friends to the soccer game. the problem is that her shiny new suv only has room for five passengers including the driver. Kim misses her old eight passenger suv but she’s still thankful that the new one gets much better gas mileage.</p></div>
+<ul class="options-list">
+<li class="opt">Kim's new vehicle is not meant to carry six people.</li>
+<li class="opt">Kim's old suv had seating for more passengers than the new one.</li>
+<li class="opt correct"><strong>Kim won't be able to take her kids to the soccer game.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read and choose (T) True or (F) False</div>
+<div class="q-desc"><p><strong>Coal</strong></p><p class="ql-align-justify">This fuel supplies us with about 28% of all the energy used. It is burned to make water hot and produce steam. The steam, in turn, generates electric power or operates steam engines. In many countries people use coal to heat their homes.&nbsp;</p><p class="ql-align-justify">Coal mining has caused many problems in the past. Accidents in coal mines kill workers every year and breathing coal dust can lead to lung diseases. Although many factories have installed cleaning filters, coal emits Sulphur oxides that pollute our air when burned.&nbsp;</p><p class="ql-align-justify">Today, scientists are looking into ways to burn coal in a cleaner way – like turning it into liquid or gas first. Such methods are still very expensive and probably cannot be used on a large scale for years to come.&nbsp;</p><p>Coal will remain a major source of energy for a long time, because the world still has reserves to last a few hundred years</p></div>
+<div class="tf-block">
+<p><strong>• Coal supplies us with about 28% of all the energy used</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read and match the correct option: An electrical stove needs _______</div>
+<ul class="options-list">
+<li class="opt">Coal</li>
+<li class="opt">Gas</li>
+<li class="opt correct"><strong>Electricity</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> According to the reading, reply to the question.</div>
+<div class="tf-block">
+<p><strong>• What's cheaper in Ecuador?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read and match the correct option: We can find a gigantic gas fields in _______</div>
+<div class="q-desc"><p><strong>Natural Gas</strong></p><p>About 20% of the energy used worldwide comes from natural gas. Deposits are usually found in the same areas as petroleum, but there are places, like Siberia that have gigantic gas fields.&nbsp;</p><p>Natural gas is a cleaner form of energy because it doesn’t have most of the pollutants that coal and oil have. The gas is turned into liquid and can be transported over long distances through pipelines.</p></div>
+<ul class="options-list">
+<li class="opt">USA</li>
+<li class="opt">Canada</li>
+<li class="opt correct"><strong>Siberia</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">France</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Read this page from a guide book about liverpool. Are sentences 1-6 'right' (a) or 'wrong' (b)?  if there is not enough information to answer 'right' (a) or 'wrong' (b), choose 'doesn't say' (c).</div>
+<div class="tf-block">
+<p><strong>• It is easy to reach the Albert Dock on foot from the city center.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Tourists have enjoyed coming to the Albert Dock since 1846.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The Maritime Museum is in a new building.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The people who moved to other countries found their lives improved.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• You can see modern art in Tate Liverpool.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The exhibitions in the entrance hall of Tate Liverpool often change.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#8</span> Read Karen's text and write the numbers from 1 to five according to the order of the events.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Karen is flying to Washington on Friday. The weather is very hot there. Karen and Olivia are going to see the Washington Monument. They are going to have dinner at Tyson's Corner Center. Karen wants to eat in an American restaurant."</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> According to the reading reply the question: which one of the following do you think scientists needed in order to make this discovery?</div>
+<div class="q-desc"><p>Scientists in Australia have discovered a planet that seems to be a solid diamond. They estimate it to be about five times the size of the earth. The diamond planet is 4,000 light-years away, so don’t plan on traveling there any time soon.</p></div>
+<ul class="options-list">
+<li class="opt">a microscope</li>
+<li class="opt">a smartphone</li>
+<li class="opt">a jewelry store</li>
+<li class="opt correct"><strong>a radio telescope</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> According to the reading reply to the question: what did Karim want to buy?</div>
+<div class="q-desc"><p>Karim had $500 dollars to invest. he was considering a number of options.</p><p> “i’d really like to buy gold bars with the money and hide them in a big hole in our yard,” he said.</p><p>&nbsp;five hundred dollars won’t buy much gold,” his father pointed out. “you could put all the gold in your shoe and never notice that it’s there.”</p><p> &nbsp;“that takes all the fun out of it!” Karim groaned. “i just won’t buy any gold at all!”</p><p> when Karim’s father suggested that he deposit the money in his new savings account at the local bank, Karim quietly stated, “that could work.”</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">new shoes</li>
+<li class="opt">a small gold coin</li>
+<li class="opt correct"><strong>gold bars</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">a used hamburger</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #270: CRIME AND PUNISHMENT</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Recognize examples and their relation to the idea they support in Civil Engineering history.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the passage and choose the correct options according to the reading: What kind of food does Ben grow?</div>
+<div class="q-desc"><p>Ben works on a farm.</p><p>He grows corn.</p><p>He grows peas.</p><p>He grows carrots.</p></div>
+<ul class="options-list">
+<li class="opt">flowers</li>
+<li class="opt correct"><strong>vegetables</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">animals</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Read the following paragraph. Choose true or false.</div>
+<div class="q-desc"><p>&nbsp;An electrical stove is an integrated device to cook and bake. It is controlled by a switch, which allows energy to produce heating power. It has an internal coil that sits underneath the cooking surface. When you turn the dial on the stove, electricity runs to a wire inside the coils on the cooktop and it heats up the metal. Sometimes you can see how electricity is flowing to the cooktop when it turns into a bright orange color. The more you turn the dial, the more electrical<strong> </strong>charge flows to the burner.</p></div>
+<div class="tf-block">
+<p><strong>• The electrical stoves have a wire inside internal coils.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read the text. are the sentences true (t) or false (f)?</div>
+<div class="q-desc"><p>Hello,</p><p>My name’s Rose and I feel like crying! I’m fifteen years old and I have a lot of acne. Everybody says I’m pretty, but I hate looking in the mirror. My girlfriends all have beautiful, clear skin, and I feel different and very depressed. I don’t want to go anywhere because I look so ugly! I never leave the house without makeup. On weekends I just stay at home, eat a lot of junk food and watch TV. I don’t know what to do. Can anyone give me any suggestions? HELP ME!</p></div>
+<div class="tf-block">
+<p><strong>• Rose is really sad and down.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Rose loves looking at herself in the mirror.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• She never goes out on weekends.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Her friends also have acne problems.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• She wears makeup at school.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read the text. Are these sentences true or false?</div>
+<div class="q-desc"><p>Gabriella works for a very traditional company. She starts work at 8:30 am and leaves at 5:30 pm or later depending on the day. Most of her work is based on consumers’ attention. She and her coworkers have to share information, advertise and offer the company’s goods and services to interested people in buying them or maybe just help.</p><p class="ql-align-justify">My sister is the chief of the agency in Portoviejo. She is responsible for the work. Every weekend, she has to report to the head of the company the results from her team. She cares about the progress, strengths, and weaknesses of the group of employees with whom she works. Her leadership has helped to achieve significant sales in recent months, and it has let them establish themselves as one of the most reliable companies in the market.&nbsp;</p><p class="ql-align-justify">The race is not easy. In our city, many companies are offering cheaper products or benefits in the payment, but not all of them are truthful. These kinds of competitors encourage my sister’s workgroup to improve themselves to take advantage of the quality of the products they offer. The opposition represents an important role in her action plan, analyzing how to be better than it.&nbsp;</p><p>My sister is a brilliant woman. She is a mother, friend, a very smart sales executive and I love her. I am studying business administration and in the future, I would like to have my own company and be like her.</p></div>
+<div class="tf-block">
+<p><strong>• Gabriella works in a traditional company. She is allowed to work from home and spend time with family.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Gabriela's work is based on sharing information and offering the company's goods and services to other people.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• It is easy for Gabriella to know if employees are not working effectively.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Read Lucas and Jennifer's letters and choose true (T) or false (F)</div>
+<div class="q-desc"><p>&nbsp;</p><p class="ql-align-justify">  Dear Abigail,</p><p class="ql-align-justify">I love listening to music, especially heavy metal. The problem is that my older sister thinks it’s awful. I play it in my room only, but she still gets mad. I also want to be in a heavy metal band, but my parents won’t let me. They say I need to study harder, but I always get good grades at school. Please help!</p><p class="ql-align-justify">Lucas</p><p>  &nbsp;</p><p class="ql-align-justify">  Dear Abigail,</p><p class="ql-align-justify">I’ve known my best friend for twelve years, and we used to have a lot of fun together. Last Friday I invited her to the movies, but she said she was having dinner with her grandparents. I went to the movies with my brother, and I saw my best friend outside a disco with her new friends. I felt really sad. What should I do?</p><p class="ql-align-justify">Jennifer</p><p>  </p></div>
+<div class="tf-block">
+<p><strong>• Lucas and his sister don't like the same music.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Lucas is in a heavy metal band.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Jennifer's friend didn't have dinner with her grandparents.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Jennifer and her brother went to a disco.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Jennifer went to the movies on Friday.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read this short dialogue. After reply the question: What do they talk about?</div>
+<div class="q-desc"><p>Silvia: … Doctor Andre, I have some pain in my back and joints, especially the knees.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>Andre: How long have you had this pain?&nbsp;</p><p>Silvia: It started two or three weeks ago.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>Andre: Do you have any other problems like weakness, headaches or fatigue?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>Silvia: Well, I have had recently a terrible flu.</p><p>&nbsp;</p></div>
+<ul class="options-list">
+<li class="opt correct"><strong>Silvia's illness.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Silvia's pain</li>
+<li class="opt">Some Andre's problems.</li>
+<li class="opt">How have Silvia acquired weakness, headaches and fatigue?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the passage and choose the correct options according to the reading: Where does Ben work?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>on a farm</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">at a store</li>
+<li class="opt">at a park</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the passage and choose the correct options according to the reading: Ben grows _______</div>
+<ul class="options-list">
+<li class="opt">potatoes</li>
+<li class="opt correct"><strong>carrots</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">onions</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Read the magazine article and circle True or False:</div>
+<div class="q-desc"><p class="ql-align-justify">Everything started in 1957 when the USSR launched into an elliptical low orbit of our planet, the first artificial satellite called Sputnik I. Its objective was to study the Earth and other planets, observe the distance of the Universe and to help us to communicate in a better and a faster way. During almost a decade, many scientists, the U.S. government and business created different technologies based on codes that permit machines to exchange data, but there were many limitations yet. After many attempts, in 1966 it was created ARPANET (Advanced Research Projects Agency Network); an early form of the Internet we know today.&nbsp;</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• This text talks about the first artificial satellite called Sputnik I</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the word of the best answer to referring about the reading.</div>
+<div class="q-desc"><p>Just take one tablet of ibuprofen, 200 mg. every eight hours for seven days. Take one tablet of Neurobion 100 mg. daily after meals for 15 days and do not drink alcohol during the treatment. If you do not feel better in fifteen days, I’d like you to come back in.</p></div>
+<ul class="options-list">
+<li class="opt">Suggestion</li>
+<li class="opt">Medicine</li>
+<li class="opt">Recommendation</li>
+<li class="opt correct"><strong>Prescription</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#11</span> Read the passage and choose the correct options according to the reading: Ben does not grow _______</div>
+<ul class="options-list">
+<li class="opt">corn</li>
+<li class="opt">peas</li>
+<li class="opt correct"><strong>lettuce</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#12</span> Read the passage and choose the correct options according to the reading: Ben probably also grows _______</div>
+<ul class="options-list">
+<li class="opt">chickens</li>
+<li class="opt">pigs</li>
+<li class="opt correct"><strong>tomatoes</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #271: FOREST ARE DISAPPEARING</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can understand the concept of deforestation, its effects on the environment and how people are working to save forests.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Read the text and mark true (T) or false (F)</div>
+<div class="q-desc"><p class="ql-align-justify">Julie Montague is a French model, and she’s going to become an actress soon. She was born on March 19, 1993, in Toulouse, but she now lives in New York with her sister Monique and their dog, Jazz. Julie is taking drama classes at the New York Film Academy and Monique is studying classical music at the French American Conservatory.</p><p class="ql-align-justify">On Saturdays both girls get up early in the morning and go running in Central Park. After that Julie cleans their flat and Monique does the shopping. Julie can’t cook, so Monique has to prepare all their meals. Julie always washes the dishes. In the afternoon they usually walk Jazz or go to the movies. In the evening, they go dancing with their friends. On Sundays they relax at home. Julie loves reading fashion magazines and Monique listens to music.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Julie was born in New York.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Julie is studying drama.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read to the dialogue and identify the main idea: The dialogue is about _______</div>
+<div class="q-desc"><p>a. Hello Daniel, how are you?</p><p>b. Hello Patrick, I´m ok, what about you?</p><p>a. I´m ok too, a little tired but I´m ok after all</p><p>b. How come?</p><p>a. I´m tired because I was in my school all day working with&nbsp;</p><p>my little students</p><p>b. Really? What did you do?</p><p>a. Well, I arrived at 7 am to my classroom, and I started to&nbsp;</p><p>clean the chairs because we don’t have a janitor, then my&nbsp;</p><p>class started at 7:30.</p><p>b. so, do you teach all day long?</p><p>a. Yes, I teach math, social studies and science, sometimes I&nbsp;</p><p>help with the chemistry classes.</p><p>b. Wow, you work a lot in your school, what do you do after&nbsp;</p><p>school?</p><p>a. Well, after school I take the bus to my house, I arrive to my&nbsp;</p><p>house at 2 pm; I take a shower and go to a restaurant to&nbsp;</p><p>have lunch.</p><p>b. Right after you finish your lunch, you go to your house?</p><p>a. No, I go to the University because I’m studying a master&nbsp;</p><p>program.</p><p>b. Now, I understand why you are so tired, what about your&nbsp;</p><p>wife?</p><p>a. Well, she works at the same school and we go home&nbsp;</p><p>together.</p><p>b. Well Patrick it was a nice conversation but it’s time to go&nbsp;</p><p>home, have a nice weekend, bye!</p><p>a. Good bye Daniel, take care and say hello to your family!</p><p>b. Likewise!</p></div>
+<ul class="options-list">
+<li class="opt">His plans.</li>
+<li class="opt correct"><strong>His daily routine.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt"> His day in the school.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the text again and choose the correct option.</div>
+<div class="q-desc"><p>The battle of Pichincha was a historical fact that was&nbsp;</p><p>recorded in Ecuador on May 24, 1922.&nbsp;</p><p>Soldiers from Ecuador commanded by Venezuelan General Antonio Jose de Sucre fought against the Spanish army, the events occurred in Quito. After the battle, Ecuador was free and began its republican life. With this background the other countries of America were liberated and exercised their democracy.</p></div>
+<ul class="options-list">
+<li class="opt">The battle was a ficticial fact</li>
+<li class="opt">Soldiers from Ecuador commanded by Colombian General</li>
+<li class="opt correct"><strong>With this background the other countries of America were liberated</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">After, the battle Ecuador wasn't free</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read the text and mark true (T) or false (F)</div>
+<div class="q-desc"><p>I really admire Jiri Jezek. He’s a top cyclist and has represented his country, the Czech Republic, in competitions all over the world. Jiri is a special athlete, because he has a disability. Jiri lost a leg in a car accident when he was 11. He started to cycle seriously when he was 18, and he began to compete in cycling races at 20. He’s been a Paralympic champion twice, at Sydney 2000 and Athens 2004. He’s formed his own team now, and he spends most of his time training. Jiri cycles more than 25,000 kilometers a year. He’s been successful in almost all cycling disciplines, from the track to road racing and from mountain biking to cyclo-cross. He’s a great inspiration to many people around the world and an extraordinary example of courage and perseverance.</p></div>
+<div class="tf-block">
+<p><strong>• Jiri Jezek won a gold medal at the Sydney paralympics.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• He lost a leg when he was 18.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Read the text and mark true (T) or false (F)</div>
+<div class="tf-block">
+<p><strong>• He rides thousands of kilometers a year.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• He's a very successful cyclist.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Read the text and mark true (T) or false (F)</div>
+<div class="tf-block">
+<p><strong>• Both sisters get up late on Saturdays.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Monique can cook.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Read the text and mark true (T) or false (F)</div>
+<div class="tf-block">
+<p><strong>• They walk their cat Jazz.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Read the following paragraph and choose true or false.</div>
+<div class="q-desc"><p>Hello, my name is Valery. I am 23 years old. I am short and thin. Well, I considered myself as a generous person because I like to help people, also I am very loyal to my friend. I am happy and talkative because I like to share special moments with nice people.&nbsp;</p><p>My best friend, Maria is very friendly because she likes to have a lot of friends, she is tall and a little heavy but she likes to practice sports. We are volunteers in a foundation which takes care of homeless people giving them food and shelter.</p></div>
+<div class="tf-block">
+<p><strong>• Maria isn't tall and she doesn't like to practice sport. </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Read the conversation and mark with an X the correct option.</div>
+<div class="q-desc"><p>Hello Julia. Do you have a minute?&nbsp;</p><p>b. Hi, Frank. Tell me.&nbsp;</p><p>a. What are you going to do this Friday?&nbsp;</p><p>b. Nothing. I think I will go to the church with my family.&nbsp;</p><p>a. There will be a party this Friday. Would you like to come with me?&nbsp;</p><p>b. It sounds good, but you know I really have to go. I promised&nbsp;</p><p>my mother that I will go with all of them.&nbsp;</p><p>a. What about after the mass? I could pick you up at 10 pm.&nbsp;</p><p>b. Great! No problem. I’ll go with you, thanks.&nbsp;</p><p>a. Ok. I’ll be in your house at that time.&nbsp;</p><p>b. I’ll be waiting for you.&nbsp;</p><p>a. See you on Friday. Bye&nbsp;</p></div>
+<div class="tf-block">
+<p><strong>• They will go together to the</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Read the text and mark true (T) or false (F)</div>
+<div class="q-desc"><p>I really admire Jiri Jezek. He’s a top cyclist and has represented his country, the Czech Republic, in competitions all over the world. Jiri is a special athlete, because he has a disability. Jiri lost a leg in a car accident when he was 11. He started to cycle seriously when he was 18, and he began to compete in cycling races at 20. He’s been a Paralympic champion twice, at Sydney 2000 and Athens 2004. He’s formed his own team now, and he spends most of his time training. Jiri cycles more than 25,000 kilometers a year. He’s been successful in almost all cycling disciplines, from the track to road racing and from mountain biking to cyclo-cross. He’s a great inspiration to many people around the world and an extraordinary example of courage and perseverance.</p></div>
+<div class="tf-block">
+<p><strong>• He's German.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #272: I'M OLDER THAN YOU!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can compare their own and others' possessions using simple language.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the passage. Then answer the questions below: Based on information in paragraph 3, it can be understood that if you get sick with malaria or yellow fever, your chances of survival are _______</div>
+<div class="q-desc"><p>When we are young, we learn that tigers and sharks are dangerous animals. We might be scared of them because they are big and powerful. As we get older, however, we learn that sometimes the most dangerous animals are also the smallest animals. In fact, the animal that kills the most people every yearis one that you have probably killed yourself many times: the mosquito.</p><p>While it may seem that all mosquitoes are biters, this is not actually the case. Male mosquitoes eat plant nectar. On the other hand, female mosquitoes feed on animal blood. They need this blood to live and produce eggs. When a female mosquito bites a human being, it transmits a small amount of saliva into the blood. This saliva may or may not contain a deadly disease. The result of the bite can be as minor as an itchy bump or as serious as death.&nbsp;</p><p>Because a mosquito can bite many people in the course of its life, it can carry diseases from one person to another very easily. Two of the most deadly diseases carried by mosquitoes are malaria and yellow fever. More than 700 million people become sick from these diseases every year. At least 2 million of these people will die from these diseases.&nbsp;</p><p>Many scientists are working on safer and better ways to kill mosquitoes, but so far, there is no sure way to protect everyone in the world from their deadly bites. Mosquito nets can be placed over beds to protect people against being bitten. These nets help people stay safe at night, but they do not kill any mosquitoes. Mosquitoes have many natural enemies like bats, birds, dragonflies, and certain kinds of fish. Bringing more of these animals into places where mosquitoes live might help to cut down the amount of mosquitoes in that area. This is a natural solution, but it does not always work very well. Mosquitoes can also be killed with poisons or sprays. Even though these sprays kill mosquitoes, they may also harm other plants or animals.&nbsp;</p><p>Although mosquitoes may not seem as scary as larger, more powerful animals, they are far more dangerous to human beings. But things are changing. It is highly likely that one day scientists will find away to keep everyone safe from mosquitoes and the diseases they carry.&nbsp;</p></div>
+<ul class="options-list">
+<li class="opt">terrible</li>
+<li class="opt">mediocre</li>
+<li class="opt">good</li>
+<li class="opt correct"><strong>excellent</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Read the text. Are the sentences true (T) or false (F)?</div>
+<div class="q-desc"><p><em>Have </em>you <em>ever </em>wondered why some people can learn languages easilyand others find it difficult? Recently researchers <em>have </em>discovered that goodlanguage learners possess certain habits that help them learn more easily.</p><p>First, good language learners are not afraid to guess, and they are goodat guessing, too. Second, they <em>have </em>a strong desire to communicate, andthey are always looking for opportunities to talk with people in the language</p><p>they are learning. Third, while good language learners are interested in communicatingtheir ideas, they are also interested in being correct.</p><p>Good language learners also <em>have </em>a <em>very </em>positive attitude toward thepeople that use the new language and the culture that it comes from. Theyunderstand that practice is an essential part of learning a language, andthey employ good study strategies, such as keeping <em>vocabulary </em>lists anpreviewing notes.</p></div>
+<div class="tf-block">
+<p><strong>• They hate English and people who speak English.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• Good language learners practice outside school.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Good language learners often guess.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read the text and answer true or false.</div>
+<div class="q-desc"><p><em>Ecuador is one of the most beautiful countries on the planet. It is set on the equator, and it is home to volcanic mountains, jungle and a beautiful Pacific coastline. </em>The people are very friendly<em>, and </em>it has cities that are full of life<em>. Here is a guide for visitors to Ecuador of the most fabulous tourist attractions in the country.&nbsp;</em></p><p><strong><em>Cotopaxi&nbsp;</em></strong></p><p><em>Cotopaxi is the second-highest mountain peak in the country, and it is also a beautiful snow-covered volcano. </em>It is very near Quito, which makes it a great hiking experience for visitors <em>who want to explore the volcano up close.&nbsp;</em></p><p><strong><em>Quilotoa&nbsp;</em></strong></p><p><em>This beautiful Crater Lake is set high in the Andes. The lake is more than 250 meters deep, and it holds stunningly beautiful water where people can relax, </em>sailing on it<em>. The color shifts between the most eye-catching blues and greens as the sun changes angles along its surface.&nbsp;</em></p><p><strong><em>Cajas National Park&nbsp;</em></strong></p><p><em>This is a stunningly beautiful place that features more than 250 lakes for visitors to explore. </em>You can also observe many varieties of plants and animals<em>, including one of the most bio diverse collections of spice plants on the planet.&nbsp;</em></p><p><strong><em>Tena&nbsp;</em></strong></p><p><em>Tena is the launching point for jungle expeditions to the Amazon and </em>it is one of the best places in the country to go white water rafting <em>as well.&nbsp;</em></p><p><strong><em>Montañita&nbsp;</em></strong></p><p>It is a very energetic little village <em>that is home to some great resorts and some of the most beautiful oceanside property in the world. </em>It is a great place for visitors who want to learn to surf, <em>and </em>it is also home to some great Spanish-learning schools.</p></div>
+<div class="tf-block">
+<p><strong>• Cotopaxi is located near from Quito.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Quilotoa water looks dark.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• In Cajas National Park there are a lot of lakes.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the following paragraph and answer the question: What did she compare?</div>
+<ul class="options-list">
+<li class="opt">Houses</li>
+<li class="opt">Cars</li>
+<li class="opt correct"><strong>Cell phones</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Read the texts and complete the sentences with the correct name.</div>
+<div class="q-desc"><p>  &nbsp;</p><p>My name’s Alexis and I’m from Greece, but I live in the USA. Americans eat bacon and eggs for breakfast, but I like toast and a chocolate milkshake. For lunch, I usually have soup and fried chicken, but sometimes I have fish. In the evening my mother often cooks baked lamb with potatoes.</p><p>    &nbsp;</p><p>My name’s Valery and I’m from Russia. I’m a vegetarian, so I never eat meat, but I often eat milk products and eggs. For breakfast I have cereal and a glass of orange juice. For lunch I usually have eggs, rice and vegetables. My favorite dinner is fruit salad.</p><p>  </p></div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Read the text and answer true or false.</div>
+<div class="tf-block">
+<p><strong>• People can't practice extreme sports in the rivers in Tena.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• In Montañita, everybody speaks one more languages.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Read the text.Are the sentences true (T) or false (F)?</div>
+<div class="tf-block">
+<p><strong>• They don't need to communicate with others.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• Good language learners like to be correct.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the passage. Then answer the questions below: According to the author, some people are more afraid of tigers and sharks than mosquitoes because tigers and sharks.</div>
+<ul class="options-list">
+<li class="opt">kills more people than mosquitoes</li>
+<li class="opt correct"><strong>is big and powerful</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">are found all over the world</li>
+<li class="opt">has no natural enemies</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the passage. Then answer the questions below: In paragraph 2 the author writes, 'This saliva may or may not contain a deadly disease.' The purpose of this statement is to</div>
+<ul class="options-list">
+<li class="opt">oppose a previous argument</li>
+<li class="opt">question an upcoming conclusion</li>
+<li class="opt">confirm a hypothesis</li>
+<li class="opt correct"><strong>support a later statement</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read the passage. Then answer the questions below: As used in paragraph 2, minor most nearly means</div>
+<ul class="options-list">
+<li class="opt correct"><strong>insignificant</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">deadly</li>
+<li class="opt">frustrating</li>
+<li class="opt">dangerous</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#11</span> Read the text and Mark true (T) or false (F).</div>
+<div class="q-desc"><p>Hello, my name is Tracy. There are a lot of jobs you can do over the vacation. If you like washing cars, you won’t make a lot of money, but you’ll have plenty of free time. The same applies to gardening and tidying yards. Full-time work means more money. Grocery stores always need people in the summer. Another possibility is your local mall. It’s best to find a job near your home so you’ll spend less time and money traveling to work. Last summer I worked as a dog walker in my town. It was good but I couldn’t control all the dogs. I had eight of them! Good luck jobseeker!</p></div>
+<div class="tf-block">
+<p><strong>• If you wash cars, you'll make a lot of money.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Gardening and tidying yards don't pay well.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• If you work full time, you'll earn more money. </strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• You'll save time if you get a job locally. </strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• Last summer Tracy worked in a dogs's home.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #7c3aed">🎧 Listening (Comprensión Auditiva)</h2><div class="task-card"><h3>📌 Tarea #356: SECTION 3</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Where is the barbeque going to be?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">B</li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Where should people go when the bell rings?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt correct"><strong>B</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Where is the woman?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">B</li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> What time is the next train to London?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt correct"><strong>B</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Which house is the man talking about?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt">B</li>
+<li class="opt correct"><strong>C</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Where is Andy?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt">B</li>
+<li class="opt correct"><strong>C</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> When is Chris repairing the heating?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt correct"><strong>B</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Where is Jane’s party?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt correct"><strong>B</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Which is the correct picture?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">B</li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Who is the speaker?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt">B</li>
+<li class="opt correct"><strong>C</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #357: SECTION 4</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> What do you learn about Miss Green?</div>
+<ul class="options-list">
+<li class="opt">She’s often absent through illness</li>
+<li class="opt correct"><strong>She doesn’t give much homework.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">She hates going on courses.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Which shop has the speaker just visited?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>a clothes shop</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">a shoe shop</li>
+<li class="opt">a music shop</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> How is Tim going to school today?</div>
+<ul class="options-list">
+<li class="opt">by bus</li>
+<li class="opt">by bike</li>
+<li class="opt correct"><strong>by car</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> What does the speaker say about this year’s school trip?</div>
+<ul class="options-list">
+<li class="opt">It will be more exciting than last year.</li>
+<li class="opt">It’s a long way to travel.</li>
+<li class="opt correct"><strong>They have been there before.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Which subject is the speaker going to do next year?</div>
+<ul class="options-list">
+<li class="opt">extra sport</li>
+<li class="opt correct"><strong>cookery </strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">art</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Why does Mick shop online?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>It saves time.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It is cheaper.</li>
+<li class="opt">It is enjoyable.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Why would Ben prefer a holiday in the mountains?</div>
+<ul class="options-list">
+<li class="opt">The hotel there is better.</li>
+<li class="opt correct"><strong>It will be cooler there.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">There is more to do.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Which change is going to happen in the school library?</div>
+<ul class="options-list">
+<li class="opt">Morning opening times will be later.</li>
+<li class="opt">Students can borrow fewer books.</li>
+<li class="opt correct"><strong>It will now close earlier in the afternoon.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Which statement is true?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Martha lent Robert a book.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Robert borrowed a book from Paul.</li>
+<li class="opt">Paul returned the book to Martha.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Where are the speakers?</div>
+<ul class="options-list">
+<li class="opt">at a pizza restaurant</li>
+<li class="opt correct"><strong>at a train station</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">at a bus-stop</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #db2777">✍️ Writing (Expresión Escrita)</h2><div class="task-card"><h3>📌 Tarea #261: CHEMICAL ELEMENTS OF THE PERIODIC TABLE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Students will be able to make writing related to chemical elements of the periodic table.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> According to the paragraph showed. Choose the best option to answer the question: What is the Spanish translation of 'National School of Bridges and Highways'?</div>
+<div class="q-desc">The beginnings of civil engineering as a separate discipline may be seen in the foundation in France in 1716 of the Bridge and Highway Corps, out of which in 1747 grew the École Nationale des Ponts et Chaussées (“National School of Bridges and Highways”). Its teachers wrote books that became standard works on the mechanics of materials</div>
+<ul class="options-list">
+<li class="opt">Escuela de Puentes y Carreteras</li>
+<li class="opt">Escuela Nacional de Carreteras</li>
+<li class="opt correct"><strong>Escuela Nacional de Puentes y Carreteras</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Escuela Nacional de Puentes y montañas</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the paragraph with its question. Choose the correct option to complete it: When was the beginnings of civil engineering as a separate discipline?</div>
+<div class="q-desc">The beginnings of civil engineering as a separate discipline may be seen in the foundation in France in 1716 of the Bridge and Highway Corps, out of which in 1747 grew the École Nationale des Ponts et Chaussées (“National School of Bridges and Highways”). Its teachers wrote books that became standard works on the mechanics of materials</div>
+<ul class="options-list">
+<li class="opt">It was in France in 1747</li>
+<li class="opt correct"><strong>It was in France in 1716</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It was in Ecuador in 1716</li>
+<li class="opt">It was in France in 1816</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Choose true or false according to the sentence.</div>
+<div class="tf-block">
+<p><strong>• Calcium is a chemical element of atomic number 20, a soft gray metal.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Choose true or false according to the sentence.</div>
+<div class="tf-block">
+<p><strong>• Oxygen is a colorless, odorless reactive gas, the chemical element of atomic number 8 and the life-supporting component of the air.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Choose true or false according to the sentence.</div>
+<div class="tf-block">
+<p><strong>• Oxygen is a colorless, odorless reactive metal, the chemical element of atomic number 20 and the life-supporting component of the air.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#6</span> Read the words, and select which ones don't belong to chemical elements</div>
+<ul class="options-list">
+<li class="opt">Cadmium</li>
+<li class="opt correct"><strong>Petroleum</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Gold</li>
+<li class="opt">Palladium</li>
+<li class="opt correct"><strong>Oil</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Zinc</li>
+<li class="opt">Magnesium</li>
+<li class="opt correct"><strong>Paper</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>Gas</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#7</span> Read the words, and select which ones don't belong to chemical elements</div>
+<ul class="options-list">
+<li class="opt">Hydrogen</li>
+<li class="opt correct"><strong>Liquid</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Mercury</li>
+<li class="opt correct"><strong>Smog</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>Surface</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Nitrogen</li>
+<li class="opt">Phosphorus</li>
+<li class="opt correct"><strong>Pollutant</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Iron</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Fill in the blank with the right chemical element: It's a chemical element of atomic number 24, symbol Cr known as _______; It is used in stainless steel and other alloys.</div>
+<ul class="options-list">
+<li class="opt">Calcium</li>
+<li class="opt">Cesium</li>
+<li class="opt">Carbon</li>
+<li class="opt correct"><strong>Chromium</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> According to the description. Select the appropriate chemical element: The chemical element (symbol N) with an atomic number of 7 and atomic weight of 14.0067. It is a colorless and odorless gas: _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Nitrogen</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Nickel</li>
+<li class="opt">Sodium</li>
+<li class="opt">Aluminum</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Match the symbol with the chemical element.</div>
+<div class="q-desc">1.	Hydrogen                              a. Ag
+2.	Phosphorus                          b. H
+3.	Mercury                                 c. P
+4.	Silver                                      d. Hg</div>
+<ul class="options-list">
+<li class="opt">1a 2b 3d 4a</li>
+<li class="opt correct"><strong>1b 2c 3d 4a</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">1d 2a 3c 4a</li>
+<li class="opt">1b 2c 3a 4d</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #262: CRIME AND PUNISHMENT</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can name people in court and describe words related to punish ment when people commit crimes.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Complete the paragraph with the correct option</div>
+<div class="q-desc">According to the (1) _______ and the descriptions given by very few witnesses who were around the bank that night, in an extensive police operation, the officers found two possible criminals who were (2) ______ and detained. By the way, a (3) _______ expresses that “The place doesn’t offer any (4) _______ to the people who live there. There are no cameras, or police assistance even there is an important bank in this block.”</div>
+<ul class="options-list">
+<li class="opt correct"><strong>1b 2c 3a 4d</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">1c 2b 3d 4a</li>
+<li class="opt">1d 2c 3a 4b</li>
+<li class="opt">1a 2b 3c 4d</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Match the definition with an appropriate word: A building where people are kept as a punishment for a crime _______</div>
+<ul class="options-list">
+<li class="opt">Witness</li>
+<li class="opt correct"><strong>Jail</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Guilty</li>
+<li class="opt">Trial</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Match the definition with an appropriate word: A body of people (typically twelve in number) sworn to give a verdict in a legal case on the basis of evidence submitted to them in court _______</div>
+<ul class="options-list">
+<li class="opt">Judge</li>
+<li class="opt">Accused</li>
+<li class="opt">Deny</li>
+<li class="opt correct"><strong>Jury</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Select the right word for completing the definition: A public official appointed to decide cases in a court of law _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Judge</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Accused</li>
+<li class="opt">Deny</li>
+<li class="opt">Guilty</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Select the right word for completing the definition: Someone who Have broken a law _______</div>
+<ul class="options-list">
+<li class="opt">Punish</li>
+<li class="opt">Judge</li>
+<li class="opt">Witness</li>
+<li class="opt correct"><strong>Guilty</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Choose true or false according to the sentence</div>
+<div class="tf-block">
+<p><strong>• Government is a group of people who officially control a country.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Choose true or false according to the sentence</div>
+<div class="tf-block">
+<p><strong>• Court is a place where a judge decides if his students pass a course.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read and choose the members that you need in a court to be a part of a judgment.</div>
+<ul class="options-list">
+<li class="opt">Surgeon, judge, lawyer, jury, wireless</li>
+<li class="opt">Accused, judge, lawyer, teacher, witness</li>
+<li class="opt">Actor, judge, lawyer, surgeon, witness</li>
+<li class="opt correct"><strong>Accused, judge, lawyer, jury, witness</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Complete the paragraph with the correct option</div>
+<div class="q-desc">I am going to give you instructions for some medicine to help you to get better. You have some inflammation in your joints because of the flu but it is not serious. You can get the medicine in any pharmacy.</div>
+<ul class="options-list">
+<li class="opt">Jail</li>
+<li class="opt">Trial</li>
+<li class="opt correct"><strong>Crime</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Court</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Complete the paragraph with the correct option</div>
+<div class="q-desc"><p>In spite of the evidence to the contrary, the perpetrators (1) ______ all the accusations, but at the end of the (2) ______, the (3) ______ determined that they were not innocent and must be punished. They were immediately sent to (4) _____ with a final sentence of 5 years.</p><p>a.&nbsp;Jail</p><p>b.&nbsp;Trial</p><p>c.&nbsp;Denied</p><p>d.&nbsp;Jury</p></div>
+<ul class="options-list">
+<li class="opt">1a 2b 3c 4a</li>
+<li class="opt correct"><strong>1c 2b 3d 4a</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">1d 2b 3a 4c</li>
+<li class="opt">1c 2d 3b 4a</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #263: DIGITAL CONNECTION AND THE JOB THAT I HAVE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can describe vocabulary related to technology, specially computers and the web. Can name people involved in the business world and the relationships involved.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Match the definition with an appropriate word: The state of being a leader of a group.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Leadership</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Leader</li>
+<li class="opt">Consumer</li>
+<li class="opt">Marker</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> According to the paragraph. Choose the correct information.</div>
+<div class="q-desc"><p>This great technological advance gave way to the creation of the WEB, which is not the same as the Internet. In 1989, Peter Berners-Lee created the World Wide Web (WWW). It is a subset of the internet consisting of pages or sites that can be accessed by a web browser and contain documents, images, videos and other online content. BuzzFeed or Wikipedia are examples of them. In 1998, Google begins operations making it the leader of web search engines.</p></div>
+<ul class="options-list">
+<li class="opt">Peter Berners creates the internet</li>
+<li class="opt">Peter Berners creates google</li>
+<li class="opt correct"><strong>Peter Berners creates the WWW</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Peter Berners creates documents, imagines and videos in online</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Fill in the blanks in correct order to complete the reading. Choose the word from the list.</div>
+<div class="q-desc">Mauricio’s wife is the (1) _______ of Martha’s boutique agency in Chone. She is responsible for the work. Every weekend, she has to report to the (2) _______ of the company the results from her team. She cares about the progress, strengths, and weaknesses of the group of employees with whom she works. Her (3) _______ has helped to achieve significant sales in recent months, and it has let them establish themselves as one of the most reliable companies in the market (4) _______.
+a.	Market.
+b.	Head
+c.	Chief
+d.	Leadership</div>
+<ul class="options-list">
+<li class="opt">1c 2a 3b 4c</li>
+<li class="opt correct"><strong>1c 2b 3d 4a</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">1a 2d 3c 4b</li>
+<li class="opt">1d 2a 3b 4c</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read the paragraph. Choose true or false according to the sentence.</div>
+<div class="q-desc"><p>This great technological advance gave way to the creation of the WEB, which is not the same as the Internet. In 1989, Peter Berners-Lee created the World Wide Web (WWW). It is a subset of the internet consisting of pages or sites that can be accessed by a web browser and contain documents, images, videos and other online content. BuzzFeed or Wikipedia are examples of them. In 1998, Google begins operations making it the leader of web search engines.</p></div>
+<div class="tf-block">
+<p><strong>• Google created the Word Wide Web.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Choose true or false according to the sentence.</div>
+<div class="tf-block">
+<p><strong>• Many people know that the internet is a system of global networks that provides us a lot of information around the world.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Read the paragraph. Choose true or false according to the sentence.</div>
+<div class="tf-block">
+<p><strong>• The web and internet are the same.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Fill in the blank with the correct word to complete a definition: _______ is a computer program that allows you to look at pages on the internet.</div>
+<ul class="options-list">
+<li class="opt">Web</li>
+<li class="opt correct"><strong>Browser</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Login</li>
+<li class="opt">Attach</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Fill in the blank with the correct word to complete a definition: _______ is a connection between documents or areas on the internet.</div>
+<ul class="options-list">
+<li class="opt">Attach</li>
+<li class="opt">Post</li>
+<li class="opt">Back up</li>
+<li class="opt correct"><strong>Link</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Fill in the blank with the correct word to complete a definition: _______ consist of joining a file, such as a document, picture, or computer program, to an email.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Attach</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Post</li>
+<li class="opt">Back up</li>
+<li class="opt">Link</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Match the definition with an appropriate word: The person who is in charge of an organization.</div>
+<ul class="options-list">
+<li class="opt">Chief</li>
+<li class="opt">Consumer</li>
+<li class="opt correct"><strong>Head</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Leader</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #264: EQUIPPING MY HOUSE AND I HAVE TO VISIT MY DOCTOR</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can understand simple technical information. Can understand written instructions for taking medication.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> According to the paragraph choose the main idea:</div>
+<div class="q-desc">I am going to give you instructions for some medicine to help you to get better. You have some inflammation in your joints because of the flu but it is not serious. You can get the medicine in any pharmacy.</div>
+<ul class="options-list">
+<li class="opt">Talk about medical suggestion</li>
+<li class="opt">Talk about medical information</li>
+<li class="opt correct"><strong>Talk about medical prescription</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Talk about medical obligation</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Choose true or false according to the definition.</div>
+<div class="tf-block">
+<p><strong>• Stove is an apparatus for cooking or heating that operates by burning fuel or using electricity.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Choose true or false according to the definition.</div>
+<div class="tf-block">
+<p><strong>• Coil is a thin piece of metal used to conduct electricity.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Fill in the blank with the correct word to complete the sentence: An electrical __________ is an integrated device to cook and bake. It is controlled by a switch which allows energy to produce heating power.</div>
+<ul class="options-list">
+<li class="opt">Fridge</li>
+<li class="opt">Electric motorcycle</li>
+<li class="opt correct"><strong>Stove</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Iron</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Complete the sentence with a word from the list: My grandmother has been having some _______ in her body the last days. She needs more care of.</div>
+<ul class="options-list">
+<li class="opt">Feeling</li>
+<li class="opt correct"><strong>Pain</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Headache</li>
+<li class="opt">Stomach ache</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Match the definition with an appropriate word: An instruction written by a medical practitioner that authorizes a patient to be provided a medicine or treatment.</div>
+<ul class="options-list">
+<li class="opt">Medicine</li>
+<li class="opt">Treatment</li>
+<li class="opt">Illness</li>
+<li class="opt correct"><strong>Prescription</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Match the definition with an appropriate word: A compound or preparation used for the treatment or prevention of disease, especially a drug or drugs taken by mouth.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Medicine</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Treatment</li>
+<li class="opt">Illness</li>
+<li class="opt">Prescription</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Match the definition with an appropriate word: Someone who knows a lot about a subject.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Specialist</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Surgery</li>
+<li class="opt">Surgeon</li>
+<li class="opt">File</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Fill in the blank with the correct word to complete the sentence: _______ is a doctor who does operations in a hospital.</div>
+<ul class="options-list">
+<li class="opt">Specialist</li>
+<li class="opt">Surgery</li>
+<li class="opt correct"><strong>Surgeon</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">File</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> According this short dialogue. What do they talk about? Choose the best option.</div>
+<div class="q-desc">Danny: Doctor, I have some pain in my back and joints, especially the knees. 
+Doctor: How long have you had this pain? 
+Danny: It started two or three weeks ago.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Danny's illness</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Danny's feeling</li>
+<li class="opt">Danny's problems</li>
+<li class="opt">Danny's success</li>
+</ul>
+</div></div></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 20 • 📓 Book 5 (B1.1 - Independent) - Guía de Inglés UTM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 900px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-btn, .print-btn {
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .back-btn:hover, .print-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 0 0 6px 0;
+        }
+        .header .subtitle {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: inline-flex;
+            gap: 16px;
+            background: #f1f5f9;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+        .skill-section {
+            margin-top: 40px;
+        }
+        .skill-section h2 {
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 6px solid #2563eb;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .task-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .task-card h3 {
+            color: #1e293b;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .task-obj {
+            font-size: 14px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .task-expl {
+            font-size: 14px;
+            color: #0369a1;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        .question-card {
+            background: #fafafa;
+            border-left: 4px solid #3b82f6;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+        .q-header {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .q-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .q-num {
+            color: #3b82f6;
+            margin-right: 4px;
+        }
+        .q-desc {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .options-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .opt {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .opt.correct {
+            background: #ecfdf5;
+            border-color: #10b981;
+            color: #065f46;
+            font-weight: 600;
+        }
+        .badge-correct {
+            background: #10b981;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            float: right;
+            font-weight: 600;
+        }
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .match-table th, .match-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .match-table th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        .match-ans {
+            color: #065f46;
+            background: #ecfdf5;
+            font-weight: 600;
+        }
+        .order-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        .fill-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .fill-list li {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        @media print {
+            body { background: #ffffff; padding: 0; }
+            .top-nav { display: none; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .task-card { page-break-inside: avoid; }
+            .question-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="../index.html" class="back-btn">← Volver al Portal General</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Guardar / Imprimir PDF</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>📘 Universidad Técnica de Manabí</h1>
+            <div class="subtitle">Simulador de Inglés • Unidad 20 • 📓 Book 5 (B1.1 - Independent)</div>
+            <div class="stats">
+                <span>📋 18 Tareas</span>
+                <span>❓ 181 Preguntas Verificadas</span>
+            </div>
+        </div>
+        <div class="skill-section"><h2 style="border-left-color: #2563eb">🧠 Grammar (Estructuras Gramaticales)</h2><div class="task-card"><h3>📌 Tarea #305: HAD BETTER</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To identify the use of 'Had better' to give strong advice.</p><div class="task-expl">💡 <strong>Explicación:</strong> This is an activity of Grammar, where students can learn the use of this semi-modal verb to talk about actions we think people should do or which are desirable in a specific situation.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the correct definition:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Had better is a semi-modal verb that induces a strong expression, it means that when we use it, we think there will be negative results if someone does not what is desired or suggested</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Had better is a semi-modal verb that induces a strong expression, it means that when we use it, there’s a possibility to get negative results if someone does what is desired or suggested</li>
+<li class="opt">Had better is a semi-modal verb that induces a polite expression, it means, that when we use it, there’s a possibility to get positive or negative results if someone does or doesn't do what is desired or suggested.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> True or false</div>
+<div class="tf-block">
+<p><strong>• We normally use'd better (contraction) in formal situations.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• When you use had better, it is followed by the infinitive verb without to.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The negative of had better is had better not ('d better not).</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Complete the sentences with the correct form of the verb: Michael had better _______ this medicine.</div>
+<ul class="options-list">
+<li class="opt">to take</li>
+<li class="opt correct"><strong>take</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">taken</li>
+<li class="opt">took</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Complete the sentences with the correct form of the verb: You had better _______ the tickets now.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>buy</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">bought</li>
+<li class="opt">to buy</li>
+<li class="opt">had bought</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Complete the sentences with the correct form of the verb: Marcus had better _______ the train to London.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>not miss</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">don't miss</li>
+<li class="opt">not misses</li>
+<li class="opt">doesn't miss</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Complete the sentences with the correct form of the verb: You _______ say that to your boss.  He'll be angry with you.</div>
+<ul class="options-list">
+<li class="opt">had better</li>
+<li class="opt correct"><strong>had better not</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">not had better</li>
+<li class="opt">don't had better</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Match the questions with the sentences</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Mark and Alan get very thirsty when they're in the gym. What should they do? </td><td class="match-ans"><strong>They had better drink plenty water. Mark and Alan will be dehydrated if they don't.</strong> ✅</td></tr>
+<tr><td>Peter shouted at his daughter today and he's sorry. What should he do?</td><td class="match-ans"><strong>He had better apologize to her daughter immediately. She'll leave the country in a few hours.</strong> ✅</td></tr>
+<tr><td>I'm always tired and sometimes I fall asleep at my work. What should I do?</td><td class="match-ans"><strong>You had better try and get enough sleep. You won't only perform at your job, but you will also get sick.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> Draw a line to join the sentences.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>It's a very important secret.</td><td class="match-ans"><strong>You had better not tell anybody.</strong> ✅</td></tr>
+<tr><td>It is going to rain.</td><td class="match-ans"><strong>You had better take an umbrella.</strong> ✅</td></tr>
+<tr><td>Nobody likes you.</td><td class="match-ans"><strong>You had better not come to our party.</strong> ✅</td></tr>
+<tr><td>My mother doesn't like when you smoke in the yard.</td><td class="match-ans"><strong>You had better not smoke over here.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#9</span> Put the following words in order to make sentences.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Kate is weak and looks pale, she had better consult a doctor."</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#10</span> Put the following words in order to make sentences.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I'm not allowed to come back home late, so I had better go now"</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #306: 'I'M SORRY', HE SAID</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Using reported speech to communicate what other people said.</p><div class="task-expl">💡 <strong>Explicación:</strong> This is an activity of Grammar, where students can learn about the use of reported speech in past tense.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Transform the following sentence into reported speech, choose the best answer: I can speak perfect English.</div>
+<ul class="options-list">
+<li class="opt">He said that he can speak perfect English.</li>
+<li class="opt">He says that he can speak perfect English.</li>
+<li class="opt">He says that he could speak perfect English.</li>
+<li class="opt correct"><strong>He said that he could speak perfect English.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Transform the following sentence into reported speech, choose the best answer: Have you got a computer?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>He wanted to know if I had a computer.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He wanted to know if I have a computer.</li>
+<li class="opt">He wanted to know if I has a computer.</li>
+<li class="opt">He wants to know if I had a computer.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Transform the following sentence into reported speech, choose the best answer: Can you type?</div>
+<ul class="options-list">
+<li class="opt">She asked if I can type.</li>
+<li class="opt correct"><strong>She asked if I could type.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">She asks if I can type.</li>
+<li class="opt">She ask if I could type.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Transform the following sentence into reported speech, choose the best answer: Did you come by train?</div>
+<ul class="options-list">
+<li class="opt">He asked if I come by train.</li>
+<li class="opt correct"><strong>He asked if I had come by train.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He asks if I have come by train.</li>
+<li class="opt">He asked if I have come by train.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Transform the following sentence into reported speech, choose the best answer: Have you been to Quito before?</div>
+<ul class="options-list">
+<li class="opt">She asked if I have been to Quito before.</li>
+<li class="opt">She asks if I have been to Quito before.</li>
+<li class="opt">She asks if I had been to Quito before.</li>
+<li class="opt correct"><strong>She asked if I had been to Quito before.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Transform the following sentence into reported speech, choose the best answer: I like ice cream.</div>
+<ul class="options-list">
+<li class="opt">She said that she likes ice cream.</li>
+<li class="opt">She says that she likes ice cream.</li>
+<li class="opt correct"><strong>She said that she liked ice cream.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">She says that she liked ice cream.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Transform the following sentence into reported speech, choose the best answer: I have to study at the weekend.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>She said that she had to study at the weekend.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">She said that she has to study at the weekend.</li>
+<li class="opt">She said that she have to study at the weekend.</li>
+<li class="opt">She says that she had to study at the weekend.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Transform the following sentence into reported speech, choose the best answer: Where is the Post Office?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>She asked me where the Post Office was.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">She asked me where the Post Office is.</li>
+<li class="opt">She asks me where the Post Office was.</li>
+<li class="opt">She ask me where the Post Office is.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Transform the following sentence into reported speech, choose the best answer: Do you love me?</div>
+<ul class="options-list">
+<li class="opt">She asked me if I love her.</li>
+<li class="opt correct"><strong>She asked me if I loved her.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">She asks me if I loved her.</li>
+<li class="opt">She asks me If I love her.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Transform the following sentence into reported speech, choose the best answer: Do you like chocolate?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>She asked me if I liked chocolate.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">She asks me if I liked chocolate.</li>
+<li class="opt">She asked me if I like chocolate.</li>
+<li class="opt">She asks me if I like chocolate.</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #307: ACTIVE AND PASSIVE VOICE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Upon completion of this lesson, students will be able to: Distinguish between active and passive voice in sentences. Understand why active or passive voice is appropriate to use in certain contexts. Create sentences in the active and passive voice.</p><div class="task-expl">💡 <strong>Explicación:</strong> Read the instructions and complete the activities according with the unit content, practice on grammar exercises.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#1</span> Drag and unscramble the words to make correct passive phrases.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"My house has been broken into"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#2</span> Drag and unscramble the words to make correct passive phrases.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The penguins will have been fed"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#3</span> Drag and unscramble the words to make correct passive phrases.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The computers were being replaced"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#4</span> Match the active with its passive voice.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>People said that the President is ill.</td><td class="match-ans"><strong>It was said that the President is ill.</strong> ✅</td></tr>
+<tr><td>We must write to her.</td><td class="match-ans"><strong>She must be written to.</strong> ✅</td></tr>
+<tr><td>The lady gave me the keys.</td><td class="match-ans"><strong>I was given the keys.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> Match the active with its passive voice.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Jack has installed a new computer software.</td><td class="match-ans"><strong>A new computer software has been instaled.</strong> ✅</td></tr>
+<tr><td>They expected us to build the road.</td><td class="match-ans"><strong>We were expected to build the road.</strong> ✅</td></tr>
+<tr><td>Who said it?</td><td class="match-ans"><strong>It was said by whom?</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Drag and drop the correct passive forms to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• I</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The manager</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Drag and drop the correct passive forms to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• She</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Yesterday a boy</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Drag and drop the correct passive forms to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• She</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The project of form 8</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#9</span> Drag the words or phrases to form sentences in passive.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"These toys are made from plastic"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#10</span> DRAG THE WORDS TO FORM THE SENTENCES INTO PASSIVE VOICE</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The doors are locked at 10pm"</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #308: WAITING FOR YOU, I MADE SOME COFFEE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To identify the use of participle clauses  is a subordinate clause which  begins with a participle. They usually show things like event order, time, cause and effect.</p><div class="task-expl">💡 <strong>Explicación:</strong> This is an activity where students are going to learn about participle clause. These clauses are used to avoid making sentences overly complicated. They are used mainly in written English and they allow us to convey a great deal of information in a shorter form.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the correct sentence:</div>
+<ul class="options-list">
+<li class="opt">Not knowing my son sleeping, he was phoned.</li>
+<li class="opt">Not knowing was my son sleeping, he phoned.</li>
+<li class="opt">Not was knowing my son sleeping, he phoned.</li>
+<li class="opt correct"><strong>Not knowing my son was sleeping, he phoned.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the correct sentence:</div>
+<ul class="options-list">
+<li class="opt">Fried in orange, would the chicken taste delicious</li>
+<li class="opt correct"><strong>Fried in orange, the chicken would taste delicious.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Fried in orange, the chicken taste would delicious.</li>
+<li class="opt">Fried would orange, the chicken taste delicious.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the correct sentence:</div>
+<ul class="options-list">
+<li class="opt">We stepping on camera, relaxed completely.</li>
+<li class="opt">Stepping on camera, relaxed we completely.</li>
+<li class="opt">Stepping on we camera, relaxed completely.</li>
+<li class="opt correct"><strong>Stepping on camera, we relaxed completely.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the correct sentence:</div>
+<ul class="options-list">
+<li class="opt">Knowing he was wore a shir, he filming today.</li>
+<li class="opt">Knowing he wore a shirt, was filming today.</li>
+<li class="opt correct"><strong>Knowing he was filming today, he wore a shirt.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Knowing was he filming today, he wore a shirt.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the correct sentence:</div>
+<ul class="options-list">
+<li class="opt">Seeing the mistake, I correct it immediately.</li>
+<li class="opt correct"><strong>Seeing the mistake, I corrected it immediately.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Seeing the mistake, I corrected immediately.</li>
+<li class="opt">Seeing the mistake, It corrected immediately.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the correct sentence:</div>
+<ul class="options-list">
+<li class="opt">Feeling depressed, she went to psychiatrist.</li>
+<li class="opt correct"><strong>Feeling depressed, she went to the psychiatrist.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Feeling depressed, she the went to psychiatrist.</li>
+<li class="opt">Feeling depressed, to the psychiatrist she went.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the correct sentence:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>After lunch, we sat on the porch.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">After lunch, on the porch we sat.</li>
+<li class="opt">After lunch, we sat the porch on.</li>
+<li class="opt">After lunch, we on the porch sat.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct sentence:</div>
+<ul class="options-list">
+<li class="opt">While waiting, about my family I thought.</li>
+<li class="opt">While waiting, I thought my family about.</li>
+<li class="opt correct"><strong>While waiting, I thought about my family.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">While waiting, thought I about my family.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct sentence:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Before leaving for lunch, we watch tv.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Before leaving for tv, we watch lunch.</li>
+<li class="opt">Before we leaving for lunch, watch tv.</li>
+<li class="opt">Before leaving lunch, we watch for tv.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the correct sentence:</div>
+<ul class="options-list">
+<li class="opt">Since coming to USA, has he met a lot of girls.</li>
+<li class="opt">Since coming to USA, he have met a lot of girls.</li>
+<li class="opt correct"><strong>Since coming to USA, he has met a lot of girls.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Since coming to USA, a lot of girls he has met.</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #059669">📖 Vocabulary (Vocabulario)</h2><div class="task-card"><h3>📌 Tarea #297: FEELINGS AND EMOTIONS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To identify feelings and express their emotions by using a variety of words.</p><div class="task-expl">💡 <strong>Explicación:</strong> This is an activity of Vocabulary, where students will learn the difference among Feeling and Emotion.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> Complete the text with the expressions from the box.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>My best friend lent me her favorite necklace. I wore it to a party last Saturday. But when I got home, it wasn't on my neck. I've lost it. Now, she is</td><td class="match-ans"><strong>upset with</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#2</span> Put in order the following letters to guess the hidden word.</div>
+<ul class="fill-list">
+<li><code>TIDSGSU</code> ➔ <strong>DISGUST</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>DFAFEBL</code> ➔ <strong>BAFFLED</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>EMASDU</code> ➔ <strong>AMUSED</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>IBFNERDE</code> ➔ <strong>BEFRIEND</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#3</span> Draw a line to join the sentences</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>My younger brother took my money</td><td class="match-ans"><strong>I am very angry with him.</strong> ✅</td></tr>
+<tr><td>I'll travel to Baños on Holiday next week</td><td class="match-ans"><strong>I am excited to visit a new place.</strong> ✅</td></tr>
+<tr><td>My daughter hates the darkness</td><td class="match-ans"><strong>She still is in fear of it.</strong> ✅</td></tr>
+<tr><td>You are working too much</td><td class="match-ans"><strong>You look so tired.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#4</span> Match the definitions to the right word.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Emotion</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Feeling</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Happiness</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Sadness</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> Choose the best option to complete the sentences.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Victor and his team were</td><td class="match-ans"><strong>dejected</strong> ✅</td></tr>
+<tr><td>My grandparent was always</td><td class="match-ans"><strong>optimistic</strong> ✅</td></tr>
+<tr><td>The doctor had a</td><td class="match-ans"><strong>confident</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the paragraph and select the sentence that better fits the text.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The future bride was surprised because of the proposal.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The future bride was terrified by the moment and people around.</li>
+<li class="opt">The future bride was disappointed and disgusted.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the paragraph and select the sentence that better fits the text.</div>
+<ul class="options-list">
+<li class="opt">She had a stunning life, and she won't be honored by the dwellers.</li>
+<li class="opt correct"><strong>She had a charmed life, and she will be honored by the dwellers.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">She had a resentful life, so his name is not remembered by the dwellers.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> Complete the text with the expressions from the box.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Anna saw two classmates looking at each other's papers during an exam.  She didn’t know what to do.  She knew it was wrong to cheat, but she didn't want her friends to</td><td class="match-ans"><strong>get into trouble</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#9</span> Complete the text with the expressions from the box.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Mike was at a department store and he was holding a watch when accidentally broke it.  He didn't have the money to pay for it, so he put it back on the shelf and left the shop.  Mike didn't</td><td class="match-ans"><strong>feel good about</strong> ✅</td></tr>
+</tbody></table>
+</div></div><div class="task-card"><h3>📌 Tarea #298: CRIME AND PUNISHMENT</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Using the right vocabulary about Justice in the city.</p><div class="task-expl">💡 <strong>Explicación:</strong> This is an activity of vocabulary, where students can learn about the terms used in justice.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the best answer, what is the meaning of the following word? BADGE</div>
+<ul class="options-list">
+<li class="opt">A distinctive emblem worn as a mark of victims.</li>
+<li class="opt correct"><strong>A distinctive emblem worn as a mark of office.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A distinctive emblem worn as a mark of criminals.</li>
+<li class="opt">A distinctive emblem worn as a mark of robbery.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the best answer, what is the meaning of the following word? SUSPECT</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The person who the police think is guilty.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The person who the police think is free.</li>
+<li class="opt">The person who the police think is innocent.</li>
+<li class="opt">The person who the police think is nervous.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the best answer, what is the meaning of the following word? DEFENDANT</div>
+<ul class="options-list">
+<li class="opt">The person in a court who is accused of not having done something wrong.</li>
+<li class="opt">The person in a court who is accused of having done something good.</li>
+<li class="opt">The person in a court who isn't accused of having done something wrong.</li>
+<li class="opt correct"><strong>The person in a court who is accused of having done something wrong.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the best answer, what is the meaning of the following word? JAIL</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The place of confinement for people who had done something wrong.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The place of confinement for people who had done something good</li>
+<li class="opt">The place of confinement for people who hadn't done something bad.</li>
+<li class="opt">The place of confinement for people who has done something good.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the best answer, what is the meaning of the following word? WITNESS</div>
+<ul class="options-list">
+<li class="opt">The person who has not seen a crime or has information.</li>
+<li class="opt">The person who has seen a crime or has no information.</li>
+<li class="opt correct"><strong>The person who has seen a crime or has information.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The person who has seen a crime or has the victims.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the best answer, what is the meaning of the following word? JUDGE</div>
+<ul class="options-list">
+<li class="opt">The person in court who does not make the decisions.</li>
+<li class="opt correct"><strong>The person in court who makes the decisions.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The person in the street who makes the decisions.</li>
+<li class="opt">The person on TV who makes the decisions.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the best answer, what is the meaning of the following word? DETECTIVE</div>
+<ul class="options-list">
+<li class="opt">The person who is in charge of judge a crime.</li>
+<li class="opt">The person who is not in charge of investigate a crime.</li>
+<li class="opt correct"><strong>The person who is in charge of investigate a crime.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The person who is in charge of investigate to a victim.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the best answer, what is the meaning of the following word? DEFENSE ATTORNEY</div>
+<ul class="options-list">
+<li class="opt">The judge who works for the defendant.</li>
+<li class="opt correct"><strong>The lawyer who works for the defendant.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The police officer who works for the defendant.</li>
+<li class="opt">The witness who works for the defendant.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the best answer, what is the meaning of the following word? HANDCUFFS</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A pair of lockable metal rings for securing a prisoner's wrists.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A pair of lockable cardboard rings for securing a prisoner's wrists.</li>
+<li class="opt">A pair of lockable metal rings for securing an innocent's wrists.</li>
+<li class="opt">A pair of lockable metal rings for securing a lawyer's wrists.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the best answer, what is the meaning of the following word? POLICE OFFICER</div>
+<ul class="options-list">
+<li class="opt">A person who works for the victims.</li>
+<li class="opt">A person who works for the judges.</li>
+<li class="opt">A person who works for the mafia.</li>
+<li class="opt correct"><strong>A person who works for the police force.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #299: ELECTRONIC DEVICES</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Upon completion of this lesson, students will be able to:  learn the names for common electronic devices as well as verbs for describing how they use their smartphones and the Internet.</p><div class="task-expl">💡 <strong>Explicación:</strong> Read the instructions and complete the activities according with the lesson content, practice on vocabulary exercises.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#1</span> READ THE WORDS AND MATCH THE OPTIONS AS APPROPIATE:</div>
+<ul class="fill-list">
+<li><code>R-R-E-H-I-D-Y-A-R</code> ➔ <strong>HAIR DRYER</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>T-A-E-T-B-L</code> ➔ <strong>TABLET</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>E-F-D-G-R-I</code> ➔ <strong>FRIDGE</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>O-T-A-A-R-U-C-L-L-C</code> ➔ <strong>CALCULATOR</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>I-V-I-T-O-E-N-E-S-L</code> ➔ <strong>TELEVISION</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>O-I-R-N</code> ➔ <strong>IRON</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>H-N-F-X-A-C-M-E-A-I</code> ➔ <strong>FAX MACHINE</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the electronic device for the following description: Is a tool used to extract juice from fruits, herbs, leafy greens and other types of vegetables in a process.</div>
+<ul class="options-list">
+<li class="opt">Radio</li>
+<li class="opt">Laptop</li>
+<li class="opt">Flash drive</li>
+<li class="opt">Fan</li>
+<li class="opt">Cooker</li>
+<li class="opt">Washing machine</li>
+<li class="opt correct"><strong>Fruit juicer</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the electronic device for the following description: A machine for washing clothes, bed linens, etc.</div>
+<ul class="options-list">
+<li class="opt">Radio</li>
+<li class="opt">Laptop</li>
+<li class="opt">Flash drive</li>
+<li class="opt">Fan</li>
+<li class="opt">Cooker</li>
+<li class="opt correct"><strong>Washing machine</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Fruit juicer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the electronic device for the following description: A device that plays digital audio files.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Radio</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Laptop</li>
+<li class="opt">Flash drive</li>
+<li class="opt">Fan</li>
+<li class="opt">Cooker</li>
+<li class="opt">Washing machine</li>
+<li class="opt">Fruit juicer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the electronic device for the following description: A computer that is portable and suitable for use while traveling.</div>
+<ul class="options-list">
+<li class="opt">Radio</li>
+<li class="opt correct"><strong>Laptop</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Flash drive</li>
+<li class="opt">Fan</li>
+<li class="opt">Cooker</li>
+<li class="opt">Washing machine</li>
+<li class="opt">Fruit juicer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the electronic device for the following description: An appliance used for cooking food.</div>
+<ul class="options-list">
+<li class="opt">Radio</li>
+<li class="opt">Laptop</li>
+<li class="opt">Flash drive</li>
+<li class="opt">Fan</li>
+<li class="opt correct"><strong>Cooker</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Washing machine</li>
+<li class="opt">Fruit juicer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the electronic device for the following description: An instrument for producing a current of air.</div>
+<ul class="options-list">
+<li class="opt">Radio</li>
+<li class="opt">Laptop</li>
+<li class="opt">Flash drive</li>
+<li class="opt correct"><strong>Fan</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cooker</li>
+<li class="opt">Washing machine</li>
+<li class="opt">Fruit juicer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the electronic device for the following description: A small electronic device containing flash memory that is used for storing data or transferring it to or from a computer, digital camera, etc.</div>
+<ul class="options-list">
+<li class="opt">Radio</li>
+<li class="opt">Laptop</li>
+<li class="opt correct"><strong>Flash drive</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Fan</li>
+<li class="opt">Cooker</li>
+<li class="opt">Washing machine</li>
+<li class="opt">Fruit juicer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#9</span> Drag and drop the phrasal verbs connected with the use of electronic devices with their opposites.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>turn on</td><td class="match-ans"><strong>turn off</strong> ✅</td></tr>
+<tr><td>put on</td><td class="match-ans"><strong>put away</strong> ✅</td></tr>
+<tr><td>turn up</td><td class="match-ans"><strong>turn down</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#10</span> Drag and drop the phrasal verbs connected with the use of electronic devices with their opposites.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>take out</td><td class="match-ans"><strong>take off</strong> ✅</td></tr>
+<tr><td>plug in</td><td class="match-ans"><strong>pull out</strong> ✅</td></tr>
+<tr><td>switch on</td><td class="match-ans"><strong>switch off</strong> ✅</td></tr>
+</tbody></table>
+</div></div><div class="task-card"><h3>📌 Tarea #300: EARTH AND SPACE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To identify the vocabulary related to earth and space.</p><div class="task-expl">💡 <strong>Explicación:</strong> This is an activity where students are going to learn about earth , space, ocean, atmosphere, and life of our planet. Also explores the cyclical interactions between the Earth system and the Sun and Moon.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the correct definition: Vegetation</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The plants of an area or a region; plant life.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It is a liquid found on Earth that has no odor or taste.</li>
+<li class="opt">It is the ground or the surface of the Earth.</li>
+<li class="opt">The elastic, invisible mixture of gases that surrounds the earth.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the correct definition: Air</div>
+<ul class="options-list">
+<li class="opt">The plants of an area or a region; plant life.</li>
+<li class="opt">It is a liquid found on Earth that has no odor or taste.</li>
+<li class="opt">It is the ground or the surface of the Earth.</li>
+<li class="opt correct"><strong>The elastic, invisible mixture of gases that surrounds the earth.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the correct definition: Water</div>
+<ul class="options-list">
+<li class="opt">The plants of an area or a region; plant life.</li>
+<li class="opt correct"><strong>It is a liquid found on Earth that has no odor or taste.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It is the ground or the surface of the Earth.</li>
+<li class="opt">The elastic, invisible mixture of gases that surrounds the earth.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the correct definition: Land</div>
+<ul class="options-list">
+<li class="opt">The plants of an area or a region; plant life.</li>
+<li class="opt">It is a liquid found on Earth that has no odor or taste.</li>
+<li class="opt correct"><strong>It is the ground or the surface of the Earth.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The elastic, invisible mixture of gases that surrounds the earth.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the correct definition: Earth</div>
+<ul class="options-list">
+<li class="opt correct"><strong>It is defined as the planet that you live on.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It is an obscuring of light, particularly of the sun or moon or a loss of greatness.</li>
+<li class="opt">A star that is the center of a planetary system.</li>
+<li class="opt">It is a large mass that revolves around a star.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the correct definition: Sun</div>
+<ul class="options-list">
+<li class="opt">It is defined as the planet that you live on.</li>
+<li class="opt">It is an obscuring of light, particularly of the sun or moon or a loss of greatness.</li>
+<li class="opt correct"><strong>A star that is the center of a planetary system.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It is a large mass that revolves around a star.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the correct definition: Planet</div>
+<ul class="options-list">
+<li class="opt">It is defined as the planet that you live on.</li>
+<li class="opt">It is an obscuring of light, particularly of the sun or moon or a loss of greatness.</li>
+<li class="opt">A star that is the center of a planetary system.</li>
+<li class="opt correct"><strong>It is a large mass that revolves around a star.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct definition: Eclipse</div>
+<ul class="options-list">
+<li class="opt">It is defined as the planet that you live on.</li>
+<li class="opt correct"><strong>It is an obscuring of light, particularly of the sun or moon or a loss of greatness.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A star that is the center of a planetary system.</li>
+<li class="opt">It is a large mass that revolves around a star.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct definition: Sunrise</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The time of day when the sun appears above the eastern horizon.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It is an obscuring of light, particularly of the sun or moon or a loss of greatness.</li>
+<li class="opt">A star that is the center of a planetary system.</li>
+<li class="opt">The event or time of the disappearance of the upper circumferential edge of the sun as it sets below the horizon.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the correct definition: Sunset</div>
+<ul class="options-list">
+<li class="opt">The time of day when the sun appears above the eastern horizon.</li>
+<li class="opt">It is an obscuring of light, particularly of the sun or moon or a loss of greatness.</li>
+<li class="opt">A star that is the center of a planetary system.</li>
+<li class="opt correct"><strong>The event or time of the disappearance of the upper circumferential edge of the sun as it sets below the horizon.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #d97706">📚 Reading (Comprensión Lectora)</h2><div class="task-card"><h3>📌 Tarea #301: MAYBE IT IS NOT WHAT YOU THINK</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Students will be able to skim a short text to identify the main purpose.</p><div class="task-expl">💡 <strong>Explicación:</strong> Read the text several times as you need it. Analyze and answer the questions to check your comprehension and develop other reading skills.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#1</span> READ THE OPTIONS AND ORDER THE SENTENCE</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The new encyclopedia runs to several thousand pages"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> CHOOSE THE CORRECT OPTIONS:</div>
+<div class="tf-block">
+<p><strong>• The writer's dad made new friends in chat rooms.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• We can't get a lot of information through our computers.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Students today are luckier than before.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• You will also learn using information from the internet.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read again and mark true or false.</div>
+<div class="q-desc"><p class="ql-align-justify">1) Do you know what makes you happy? Maybe you have a list in your things that make you happy. Many of them are funny and&nbsp;&nbsp;&nbsp;when doing them because you feel well and all around you is ok.</p><p class="ql-align-justify">2) For most people, fun is not enough for real happiness. Paul Dolan “Happiness by design”. He things that happiness comes from purpose. If most of the things on your list are about pleasure, it is when you are happy. But you also need activities with a purpose. </p><p class="ql-align-justify">3) There are different ways you can find purposes in things. Some of them motivating because they work for the good of people and the world are a student, your job is studying and passing the exams. It is easy to you like but subjects you don´t like are less motivating.</p><p class="ql-align-justify">&nbsp;They&nbsp;have to study them you need to have a purpose. </p><p class="ql-align-justify">&nbsp;4) Go back to your list of things that makes you happy. How many of that bring purpose?</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• The writer's dad used email a lot.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Today it's harder to find information.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The writer thinks homework websites can help you to learn.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The writer thinks studying was more fun when her dad was at school.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Answer the question: What is the book's name that Dolan wrote?</div>
+<div class="q-desc"><p class="ql-align-justify">1) Do you know what makes you happy? Maybe you have a list in your things that make you happy. Many of them are funny and&nbsp;&nbsp;&nbsp;when doing them because you feel well and all around you is ok.</p><p class="ql-align-justify">2) For most people, fun is not enough for real happiness. Paul Dolan “Happiness by design”. He things that happiness comes from purpose. If most of the things on your list are about pleasure, it is when you are happy. But you also need activities with a purpose. </p><p class="ql-align-justify">3) There are different ways you can find purposes in things. Some of them motivating because they work for the good of people and the world are a student, your job is studying and passing the exams. It is easy to you like but subjects you don´t like are less motivating.</p><p class="ql-align-justify">&nbsp;They&nbsp;have to study them you need to have a purpose. </p><p class="ql-align-justify">&nbsp;4) Go back to your list of things that makes you happy. How many of that bring purpose?</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">Looking for Happiness</li>
+<li class="opt correct"><strong>Happiness by Design</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Designing Happiness</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Read again and mark true or false.</div>
+<div class="q-desc"><p class="ql-align-justify">1) Do you know what makes you happy? Maybe you have a list in your things that make you happy. Many of them are funny and&nbsp;&nbsp;&nbsp;when doing them because you feel well and all around you is ok.</p><p class="ql-align-justify">2) For most people, fun is not enough for real happiness. Paul Dolan “Happiness by design”. He things that happiness comes from purpose. If most of the things on your list are about pleasure, it is when you are happy. But you also need activities with a purpose. </p><p class="ql-align-justify">3) There are different ways you can find purposes in things. Some of them motivating because they work for the good of people and the world are a student, your job is studying and passing the exams. It is easy to you like but subjects you don´t like are less motivating.</p><p class="ql-align-justify">&nbsp;They&nbsp;have to study them you need to have a purpose. </p><p class="ql-align-justify">&nbsp;4) Go back to your list of things that makes you happy. How many of that bring purpose?</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• People feel worried when doing funny things.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Dolan thinks happiness comes from pleasure and purpose.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Things that produce pleasure, makes you sad.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Some activities might be motivating because they work for the good of people.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the text quickly and choose the best title for it.</div>
+<div class="q-desc"><p class="ql-align-justify">1) Do you know what makes you happy? Maybe you have a list in your things that make you happy. Many of them are funny and&nbsp;&nbsp;&nbsp;when doing them because you feel well and all around you is ok.</p><p class="ql-align-justify">2) For most people, fun is not enough for real happiness. Paul Dolan “Happiness by design”. He things that happiness comes from purpose. If most of the things on your list are about pleasure, it is when you are happy. But you also need activities with a purpose. </p><p class="ql-align-justify">3) There are different ways you can find purposes in things. Some of them motivating because they work for the good of people and the world are a student, your job is studying and passing the exams. It is easy to you like but subjects you don´t like are less motivating.</p><p class="ql-align-justify">&nbsp;They&nbsp;have to study them you need to have a purpose. </p><p class="ql-align-justify">&nbsp;4) Go back to your list of things that makes you happy. How many of that bring purpose?</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">A list of things that make you happy.</li>
+<li class="opt">What is happiness?</li>
+<li class="opt correct"><strong>How to achieve happiness?</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Match the following words with their meaning.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Purpose</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Motivation</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Pleasure</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Mind</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> Drag and drop the words in front of their definitions</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>An area on the internet or other computer network where users can communicate typically dedicated to a particular topic.</td><td class="match-ans"><strong>Website</strong> ✅</td></tr>
+<tr><td>Try to find something by looking or otherwise seeking carefully and thoroughly.</td><td class="match-ans"><strong>Search</strong> ✅</td></tr>
+<tr><td>Books that contain factual information.</td><td class="match-ans"><strong>Encyclopedias</strong> ✅</td></tr>
+<tr><td>Act dishonestly or unfairly.</td><td class="match-ans"><strong>Cheat</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the text quickly and choose the best tittle for it.</div>
+<div class="q-desc"><p class="ql-align-justify">1) Do you know what makes you happy? Maybe you have a list in your things that make you happy. Many of them are funny and&nbsp;&nbsp;&nbsp;when doing them because you feel well and all around you is ok.</p><p class="ql-align-justify">2) For most people, fun is not enough for real happiness. Paul Dolan “Happiness by design”. He things that happiness comes from purpose. If most of the things on your list are about pleasure, it is when you are happy. But you also need activities with a purpose. </p><p class="ql-align-justify">3) There are different ways you can find purposes in things. Some of them motivating because they work for the good of people and the world are a student, your job is studying and passing the exams. It is easy to you like but subjects you don´t like are less motivating.</p><p class="ql-align-justify">&nbsp;They&nbsp;have to study them you need to have a purpose. </p><p class="ql-align-justify">&nbsp;4) Go back to your list of things that makes you happy. How many of that bring purpose?</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">Students and Technology</li>
+<li class="opt">Old days in School</li>
+<li class="opt correct"><strong>School, yesterday and now</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #302: A BAD IDEA</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can scan short texts to locate specific information.</p><div class="task-expl">💡 <strong>Explicación:</strong> This is an activity of reading, where students can learn to infer information from a text.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the text and choose the best answer: To be frightened means _______</div>
+<ul class="options-list">
+<li class="opt">Very cold</li>
+<li class="opt">Very cool</li>
+<li class="opt correct"><strong>Very scared</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Very angry</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the text and choose the best answer: The father and son worked together guarding the sheep of their _______</div>
+<ul class="options-list">
+<li class="opt">Country</li>
+<li class="opt correct"><strong>Village</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Town</li>
+<li class="opt">Province</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the text and choose the best answer: A shepherd is _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A caretaker of sheep</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A farmer</li>
+<li class="opt">A butcher</li>
+<li class="opt">A dog sitter</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the text and choose the best answer: To wonder means _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>To question</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">To know</li>
+<li class="opt">To be surprised</li>
+<li class="opt">To travel</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the text and choose the best answer: To be furious means to be _______</div>
+<ul class="options-list">
+<li class="opt">Very hungry</li>
+<li class="opt correct"><strong>Very angry</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Very frightened</li>
+<li class="opt">Very fast</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the text and choose the best answer: _______, There was a little boy whose father was a shepherd</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Once upon a time</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A time</li>
+<li class="opt">That night</li>
+<li class="opt">The next night</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the text and choose the best answer: _______ all the men of the village came running as fast as they could to protect the little boy and the sheep.</div>
+<ul class="options-list">
+<li class="opt">Last night</li>
+<li class="opt">Of course</li>
+<li class="opt">Once upon a time</li>
+<li class="opt correct"><strong>Once more</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the text and choose the best answer: The next night there was a full _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Moon</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Sheep</li>
+<li class="opt">Shepherd</li>
+<li class="opt">Moonlight</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the text and choose the best answer: The men were very _______</div>
+<ul class="options-list">
+<li class="opt">Frightened</li>
+<li class="opt">Hungry</li>
+<li class="opt correct"><strong>Angry</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Fast</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read the text and choose the best answer: The little boy looked extremely _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Frightened</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Hungry</li>
+<li class="opt">Angry</li>
+<li class="opt">Fast</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #303: THE BEST WAY TO LEARN</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Upon completion of this lesson, students will be able to Self-study to take learning at their own pace, focusing on areas they are most interested in (or want to understand a bit better). This helps reduce feelings of frustration, anxiety, or boredom that students may struggle with in a classroom setting.</p><div class="task-expl">💡 <strong>Explicación:</strong> Read the instructions and complete the activities according with the lesson content, practice on reading exercises.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the instructions and complete: What does he get when he starts to read?</div>
+<div class="q-desc"><p class="ql-align-justify">It is<strong> </strong>difficult for me to prepare before a test. I always fall asleep. I start checking my notes at night because is not really hot. I look for a comfortable place and then, I start reading. After 15 minutes, it is too late. I am already asleep. Mike¡¡¡¡</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt correct"><strong>asleep</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">boring</li>
+<li class="opt">worried</li>
+<li class="opt">happy</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the instructions and complete: Mike checks his notes _______</div>
+<div class="q-desc"><p class="ql-align-justify">It is<strong> </strong>difficult for me to prepare before a test. I always fall asleep. I start checking my notes at night because is not really hot. I look for a comfortable place and then, I start reading. After 15 minutes, it is too late. I am already asleep. Mike¡¡¡¡</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">in the afternoon</li>
+<li class="opt">in the morning</li>
+<li class="opt correct"><strong>at night</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">at noon</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the instructions and complete: What does she do to be ready in the morning?</div>
+<div class="q-desc"><p class="ql-align-justify">I love to study alone listening to music. I can concentrate more and more and understand better the different topics. The music relaxes me and helps me to keep alert. I start late in the afternoon so I can rest enough and be ready in the morning. Laura.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">to dance</li>
+<li class="opt correct"><strong>to rest</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">to get out</li>
+<li class="opt">study</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the instructions and complete: Laura learns better _______</div>
+<div class="q-desc"><p class="ql-align-justify">I love to study alone listening to music. I can concentrate more and more and understand better the different topics. The music relaxes me and helps me to keep alert. I start late in the afternoon so I can rest enough and be ready in the morning. Laura.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">completing information</li>
+<li class="opt correct"><strong>listening to music</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">with some friends</li>
+<li class="opt">practicing at home</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Read the texts again and match the words with their definitions</div>
+<div class="q-desc"><p class="ql-align-justify">It is<strong> </strong>difficult for me to prepare before a test. I always fall asleep. I start checking my notes at night because is not really hot. I look for a comfortable place and then, I start reading. After 15 minutes, it is too late. I am already asleep. Mike¡¡¡¡</p><p>I love to study alone listening to music. I can concentrate more and more and understand better the different topics. The music relaxes me and helps me to keep alert. I start late in the afternoon so I can rest enough and be ready in the morning. Laura.</p></div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Read the texts again and match the words with their definitions</div>
+<div class="q-desc"><p class="ql-align-justify">It is<strong> </strong>difficult for me to prepare before a test. I always fall asleep. I start checking my notes at night because is not really hot. I look for a comfortable place and then, I start reading. After 15 minutes, it is too late. I am already asleep. Mike¡¡¡¡</p><p>I love to study alone listening to music. I can concentrate more and more and understand better the different topics. The music relaxes me and helps me to keep alert. I start late in the afternoon so I can rest enough and be ready in the morning. Laura.</p></div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the conversation and complete the missing words.</div>
+<ul class="options-list">
+<li class="opt">1-scores; 2- certification; 3- understand; 4-stress; 5-professor; 6- relax; 7-concentrate; 8-subject.</li>
+<li class="opt">1-understand; 2-concentrate; 3-scores; 4-relax; 5-professor; 6- subject; 7-certification; 8-stress.</li>
+<li class="opt correct"><strong>1-scores; 2-concentrate; 3- understand; 4-relax; 5-professor; 6-stress; 7-certification; 8-subject.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the instructions and complete: For Mike is _______ to preapare.</div>
+<div class="q-desc"><p class="ql-align-justify">It is<strong> </strong>difficult for me to prepare before a test. I always fall asleep. I start checking my notes at night because is not really hot. I look for a comfortable place and then, I start reading. After 15 minutes, it is too late. I am already asleep. Mike¡¡¡¡</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">so exciting</li>
+<li class="opt correct"><strong>very difficult</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">so easy</li>
+<li class="opt">very confuse</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the instructions and complete:  What does the music produce to Laura?</div>
+<div class="q-desc"><p class="ql-align-justify">I love to study alone listening to music. I can concentrate more and more and understand better the different topics. The music relaxes me and helps me to keep alert. I start late in the afternoon so I can rest enough and be ready in the morning. Laura.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">happiness</li>
+<li class="opt">boredom</li>
+<li class="opt">stress</li>
+<li class="opt correct"><strong>relax</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Read the texts again and match the words with their definitions</div>
+<div class="q-desc"><p class="ql-align-justify">It is<strong> </strong>difficult for me to prepare before a test. I always fall asleep. I start checking my notes at night because is not really hot. I look for a comfortable place and then, I start reading. After 15 minutes, it is too late. I am already asleep. Mike¡¡¡¡</p><p>I love to study alone listening to music. I can concentrate more and more and understand better the different topics. The music relaxes me and helps me to keep alert. I start late in the afternoon so I can rest enough and be ready in the morning. Laura.</p></div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #304: THEY LOOK THE SAME BUT THEY AREN'T!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To identify similarities and differences between two short texts in the same topic.</p><div class="task-expl">💡 <strong>Explicación:</strong> This is an activity where students are going to learn about similarities and differences between two short texts , in this case related to the Bermuda Triangle.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> True or False</div>
+<div class="q-desc"><p class="ql-align-justify">Many people believe that an area of ocean, the Bermuda Triangle, holds an unsolved mystery. This is because a large number of boats and planes have vanished there. People have come up with all kinds of strange ideas about these disappearances. However, there's nothing really mysterious about them. They are likely due to storms, rough waves, and human mistakes. Experts say there are no more disappearances in the Triangle than in other&nbsp;well-traveled seas. In fact, the U.S. Coast Guard doesn't even view the Triangle as separate from the rest of the ocean. That's why you won't find it marked on official maps.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Experts say there are no more disappearances in the Triangle tan in other well traveled seas.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the correct:  Mysterious are likely due to _______</div>
+<div class="q-desc"><p class="ql-align-justify">Many people believe that an area of ocean, the Bermuda Triangle, holds an unsolved mystery. This is because a large number of boats and planes have vanished there. People have come up with all kinds of strange ideas about these disappearances. However, there's nothing really mysterious about them. They are likely due to storms, rough waves, and human mistakes. Experts say there are no more disappearances in the Triangle than in other&nbsp;well-traveled seas. In fact, the U.S. Coast Guard doesn't even view the Triangle as separate from the rest of the ocean. That's why you won't find it marked on official maps.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">boats and planes</li>
+<li class="opt correct"><strong>storms, rough waves, and human mistakes</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">U.S. Coast Guard</li>
+<li class="opt">official maps</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the correct:  A large number of boats and _______ have vanished there.</div>
+<div class="q-desc"><p class="ql-align-justify">Many people believe that an area of ocean, the Bermuda Triangle, holds an unsolved mystery. This is because a large number of boats and planes have vanished there. People have come up with all kinds of strange ideas about these disappearances. However, there's nothing really mysterious about them. They are likely due to storms, rough waves, and human mistakes. Experts say there are no more disappearances in the Triangle than in other&nbsp;well-traveled seas. In fact, the U.S. Coast Guard doesn't even view the Triangle as separate from the rest of the ocean. That's why you won't find it marked on official maps.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">bykes</li>
+<li class="opt">cars</li>
+<li class="opt">trucks</li>
+<li class="opt correct"><strong>planes</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> True or False</div>
+<div class="q-desc"><p class="ql-align-justify">Many people believe that an area of ocean, the Bermuda Triangle, holds an unsolved mystery. This is because a large number of boats and planes have vanished there. People have come up with all kinds of strange ideas about these disappearances. However, there's nothing really mysterious about them. They are likely due to storms, rough waves, and human mistakes. Experts say there are no more disappearances in the Triangle than in other&nbsp;well-traveled seas. In fact, the U.S. Coast Guard doesn't even view the Triangle as separate from the rest of the ocean. That's why you won't find it marked on official maps.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• You can find the Bermuda Triangle marked on official maps.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the correct. In 1945, _______ Navy planes disappeared while over the Triangle.</div>
+<div class="q-desc"><p class="ql-align-justify">On his way to America, Christopher Columbus noticed something strange about his compass. Its needle was&nbsp;moving in an unexpected manner. At the time, Columbus was sailing between Florida and the island of Bermuda. Today, this area of ocean is sometimes called the&nbsp;Bermuda Triangle. Columbus wasn't the only person to note strange happenings there.</p><p class="ql-align-justify">&nbsp;In 1945, five Navy planes&nbsp;disappeared while over the Triangle. Years later, a ship vanished. Some people say that these things cannot be explained by science. Believe it or not, some think time travel takes place there. Others claim creatures from outer space are involved. No one knows for sure.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">3</li>
+<li class="opt correct"><strong>5</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">7</li>
+<li class="opt">9</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> True or False</div>
+<div class="q-desc"><p class="ql-align-justify">On his way to America, Christopher Columbus noticed something strange about his compass. Its needle was&nbsp;moving in an unexpected manner. At the time, Columbus was sailing between Florida and the island of Bermuda. Today, this area of ocean is sometimes called the&nbsp;Bermuda Triangle. Columbus wasn't the only person to note strange happenings there.</p><p class="ql-align-justify">&nbsp;In 1945, five Navy planes&nbsp;disappeared while over the Triangle. Years later, a ship vanished. Some people say that these things cannot be explained by science. Believe it or not, some think time travel takes place there. Others claim creatures from outer space are involved. No one knows for sure.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Columbus was the only person to note strange happenings there.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the correct: Some people say _______</div>
+<div class="q-desc"><p class="ql-align-justify">On his way to America, Christopher Columbus noticed something strange about his compass. Its needle was&nbsp;moving in an unexpected manner. At the time, Columbus was sailing between Florida and the island of Bermuda. Today, this area of ocean is sometimes called the&nbsp;Bermuda Triangle. Columbus wasn't the only person to note strange happenings there.</p><p class="ql-align-justify">&nbsp;In 1945, five Navy planes&nbsp;disappeared while over the Triangle. Years later, a ship vanished. Some people say that these things cannot be explained by science. Believe it or not, some think time travel takes place there. Others claim creatures from outer space are involved. No one knows for sure.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">some think travel takes place there.</li>
+<li class="opt correct"><strong>that these things cannot be explained by science.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">is not called the Bermuda Triangle.</li>
+<li class="opt">no one knows for sure.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> True or False</div>
+<div class="q-desc"><p class="ql-align-justify">Many people believe that an area of ocean, the Bermuda Triangle, holds an unsolved mystery. This is because a large number of boats and planes have vanished there. People have come up with all kinds of strange ideas about these disappearances. However, there's nothing really mysterious about them. They are likely due to storms, rough waves, and human mistakes. Experts say there are no more disappearances in the Triangle than in other&nbsp;well-traveled seas. In fact, the U.S. Coast Guard doesn't even view the Triangle as separate from the rest of the ocean. That's why you won't find it marked on official maps.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Many people believe that an area of ocean, the Bermuda Triangle, holds an unsolved mystery.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> True or False</div>
+<div class="q-desc"><p class="ql-align-justify">On his way to America, Christopher Columbus noticed something strange about his compass. Its needle was&nbsp;moving in an unexpected manner. At the time, Columbus was sailing between Florida and the island of Bermuda. Today, this area of ocean is sometimes called the&nbsp;Bermuda Triangle. Columbus wasn't the only person to note strange happenings there.</p><p class="ql-align-justify">&nbsp;In 1945, five Navy planes&nbsp;disappeared while over the Triangle. Years later, a ship vanished. Some people say that these things cannot be explained by science. Believe it or not, some think time travel takes place there. Others claim creatures from outer space are involved. No one knows for sure.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Columbus was sailing between Florida and the Island of Bermuda.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> True or False</div>
+<div class="q-desc"><p class="ql-align-justify">On his way to America, Christopher Columbus noticed something strange about his compass. Its needle was&nbsp;moving in an unexpected manner. At the time, Columbus was sailing between Florida and the island of Bermuda. Today, this area of ocean is sometimes called the&nbsp;Bermuda Triangle. Columbus wasn't the only person to note strange happenings there.</p><p class="ql-align-justify">&nbsp;In 1945, five Navy planes&nbsp;disappeared while over the Triangle. Years later, a ship vanished. Some people say that these things cannot be explained by science. Believe it or not, some think time travel takes place there. Others claim creatures from outer space are involved. No one knows for sure.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Columbus was sailing in an unexperted manner.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #7c3aed">🎧 Listening (Comprensión Auditiva)</h2><div class="task-card"><h3>📌 Tarea #360: SECTION 7</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Which group of people is most seriously affected by losing a mobile phone?</div>
+<ul class="options-list">
+<li class="opt">taxicab driver</li>
+<li class="opt">phone owner</li>
+<li class="opt correct"><strong>businesses</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> How many medals did the speaker win?</div>
+<ul class="options-list">
+<li class="opt">none</li>
+<li class="opt">one</li>
+<li class="opt correct"><strong>two</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> What is the woman talking about?</div>
+<ul class="options-list">
+<li class="opt">schools</li>
+<li class="opt correct"><strong>museums</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">toy shop</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> What is the man suggesting?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>It was harder for him when he was a student.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He doesn’t know how to help her the computer.</li>
+<li class="opt">She needs to work on her research skills.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> The speakers are</div>
+<ul class="options-list">
+<li class="opt correct"><strong>complaining</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">volunteering</li>
+<li class="opt">arguing</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> How does the man feel about modern life?</div>
+<ul class="options-list">
+<li class="opt">Things will get worse in the future.</li>
+<li class="opt correct"><strong>Things are changing too future.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It’s an exciting time to be alive.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> The speakers are</div>
+<ul class="options-list">
+<li class="opt">admiring current fashion trends.</li>
+<li class="opt correct"><strong>reflecting on differences in fashion trends.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">predicting future fashion trends.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> What does the caller think about sports?</div>
+<ul class="options-list">
+<li class="opt">It requires less Skill than other pastimes.</li>
+<li class="opt">It is more important that the arts.</li>
+<li class="opt correct"><strong>It receives too much support.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> what are the speakers talking about?</div>
+<ul class="options-list">
+<li class="opt">travel</li>
+<li class="opt">fashion</li>
+<li class="opt correct"><strong>crime</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> What is the man speaking about?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>the basic need for people to connect with one another</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">technology that leaves people feeling disconnected</li>
+<li class="opt">society’s lack of connected structure</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #361: SECTION 8</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> How many medals did the speaker win?</div>
+<ul class="options-list">
+<li class="opt">none</li>
+<li class="opt">one</li>
+<li class="opt correct"><strong>two</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> The man doesn’t like the city because</div>
+<ul class="options-list">
+<li class="opt">there’s a lot of noise.</li>
+<li class="opt correct"><strong>everything is expensive.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">there’s nothing to do.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> What does the girl want to do next year?</div>
+<ul class="options-list">
+<li class="opt">continue studying</li>
+<li class="opt correct"><strong>travel abroad</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">save money</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Who is the speaker?</div>
+<ul class="options-list">
+<li class="opt">An author.</li>
+<li class="opt correct"><strong>A book critic.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A publisher.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> The speaker are</div>
+<ul class="options-list">
+<li class="opt">on a plane.</li>
+<li class="opt">on a coach.</li>
+<li class="opt correct"><strong>on a ship.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> What is the man suggesting?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>It was harder for him when he was a student.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He doesn’t know how to help her with the computer.</li>
+<li class="opt">She needs to work on her research skills.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> What is Danny doing after the party?</div>
+<ul class="options-list">
+<li class="opt">driving home</li>
+<li class="opt">sharing a taxi</li>
+<li class="opt correct"><strong>staying in a hotel</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> The woman says the weather recently has been</div>
+<ul class="options-list">
+<li class="opt">cool.</li>
+<li class="opt correct"><strong>hot.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">rainy.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Why isn’t Tony Vee on his radio show tonight?</div>
+<ul class="options-list">
+<li class="opt">He’s working.</li>
+<li class="opt">He’s feeling unwell.</li>
+<li class="opt correct"><strong>He’s with his wife.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> What is the main focus of the discussion about Capel Hill?</div>
+<ul class="options-list">
+<li class="opt">its age</li>
+<li class="opt">its size</li>
+<li class="opt correct"><strong>its colour.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #db2777">✍️ Writing (Expresión Escrita)</h2><div class="task-card"><h3>📌 Tarea #293: I'M OLDER THAN YOU</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Students will be able to compare their own and other's possessions using simple language.</p><div class="task-expl">💡 <strong>Explicación:</strong> Read the instructions, activities and samples to practice your writing skills.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#1</span> READ THE OPTIONS AND CHOOSE THE SUPERLATIVE FORM:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>WORST</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">LAZIER</li>
+<li class="opt correct"><strong>TASTIEST</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">BETTER</li>
+<li class="opt correct"><strong>MOST DIFFICULT</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">HOTTER</li>
+<li class="opt correct"><strong>BIGGEST</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">MORE INTERESTING</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#2</span> READ THE ALTERNATIVES AND CHOOSE COMPARATIVE FORMS:</div>
+<ul class="options-list">
+<li class="opt">WORST</li>
+<li class="opt correct"><strong>LAZIER</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">TASTIEST</li>
+<li class="opt correct"><strong>BETTER</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">MOST DIFFICULT</li>
+<li class="opt correct"><strong>HOTTER</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">BIGGEST</li>
+<li class="opt correct"><strong>MORE INTERESTING</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the text quickly and answer the question: What did the author compare?</div>
+<ul class="options-list">
+<li class="opt">Houses</li>
+<li class="opt">Cars</li>
+<li class="opt correct"><strong>Cellphone</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Shopping centers</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the text quickly and answer the question: Where did she go?</div>
+<ul class="options-list">
+<li class="opt">She goes to the shopping center</li>
+<li class="opt correct"><strong>She went to the shopping center</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">She go to the shopping center</li>
+<li class="opt">She did go to the shopping center</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the text quickly and answer the question: How many devices did she compare?</div>
+<ul class="options-list">
+<li class="opt">Only one</li>
+<li class="opt">Two or three</li>
+<li class="opt correct"><strong>Three or four</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">More than a dozen</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the text quickly and answer the question: What features did the device have?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Smaller, cheaper and modern</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Smaller, more expensive and modern</li>
+<li class="opt">Expensiver, cheaper and modern</li>
+<li class="opt">More expensive, more small and modern</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Choose the correct option to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• I think swimming is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Choose the correct option to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Choose the correct option to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• I'm having a wonderful time in L. A. The weather is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#10</span> Put the words in the correct order to form a sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The tea tastes a bit more bitter than the others"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#11</span> Put the words in the correct order to form a sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Could you speak more slowly, please?"</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #294: A BAD IDEA</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can express enthusiasm and excitement in a limited way.</p><div class="task-expl">💡 <strong>Explicación:</strong> This is an activity of writing, where students can identify the difference between enthusiasm and excitement.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Read the sentences and choose the best answer:</div>
+<div class="tf-block">
+<p><strong>• Marcus approved an exam today, he looked extremely</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Read the sentences and choose the best answer:</div>
+<div class="tf-block">
+<p><strong>• Samantha is looking forward to the weekend, she seems to be</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read the sentences and choose the best answer:</div>
+<div class="tf-block">
+<p><strong>• Michelle won a trip to Europe, she looked very</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read the sentences and choose the best answer:</div>
+<div class="tf-block">
+<p><strong>• Tom was verY</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Read the sentences and choose the best answer:</div>
+<div class="tf-block">
+<p><strong>• The audience was very</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Read the sentences and choose the best answer:</div>
+<div class="tf-block">
+<p><strong>• He's very</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Read the sentences and choose the best answer:</div>
+<div class="tf-block">
+<p><strong>• Her parents are</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Read the sentences and choose the best answer:</div>
+<div class="tf-block">
+<p><strong>• He was a very</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Read the sentences and choose the best answer:</div>
+<div class="tf-block">
+<p><strong>• A: Welcome to my house! B: Thank you, I am</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Read the sentences and choose the best answer:</div>
+<div class="tf-block">
+<p><strong>• Look at my little dog, he is playing with his toys, How</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#11</span> Read the sentences and choose the best answer:</div>
+<div class="tf-block">
+<p><strong>• We</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #295: WHOSE IS THIS LETTER?</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Upon completion of this lecture students will be able to: explore different forms of communication from the past and the present. Students will improve their letter writing skills. Students will recognize that letter writing remains an important skill, even in the age of digital technologies.</p><div class="task-expl">💡 <strong>Explicación:</strong> Read the instructions and complete the activities according with the lesson content, practice on writing exercises.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> ACCORDING TO THE CONTENT OF THE IMAGE CHOOSE TRUE OR FALSE:</div>
+<div class="tf-block">
+<p><strong>• Mrs. Leyva ordered a pink cotton blouse.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Read the letter and choose True or False in front of each sentence.</div>
+<div class="tf-block">
+<p><strong>• The sales manager is seeking a venue for a sales convention.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read the letter and choose True or False in front of each sentence.</div>
+<div class="tf-block">
+<p><strong>• The manager expects 60 delegates.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read the letter and choose True or False in front of each sentence.</div>
+<div class="tf-block">
+<p><strong>• Mrs. Leyva paid €24 for the blouse.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Read the letter and choose True or False in front of each sentence.</div>
+<div class="tf-block">
+<p><strong>• The blouse color Mrs. Leyva received was blue.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the letter and choose the best answer: When will be the convention?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>On July</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">February 15th</li>
+<li class="opt">January 12th</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the letter and choose the best answer: What information does the sales manager enquiries?</div>
+<ul class="options-list">
+<li class="opt">refund the postage</li>
+<li class="opt correct"><strong>facilities,charges</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the letter and choose the best answer: When the sales manager sent the letter?</div>
+<ul class="options-list">
+<li class="opt">On July</li>
+<li class="opt">February 15th</li>
+<li class="opt correct"><strong>January 12th</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the letter and choose the best answer: Mrs. Leyva placed the order on _______</div>
+<ul class="options-list">
+<li class="opt">On July</li>
+<li class="opt correct"><strong>February 15th</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">January 12th</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read the letter and choose the best answer: What does Mrs. Leyva request?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>refund the postage</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">facilities,charges</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#11</span> Drag and drop the kind of letter with its definition.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Business letter</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Bad news letter</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Audio letter</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Complaint letter</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Thank you letter</strong> ✅</td></tr>
+</tbody></table>
+</div></div><div class="task-card"><h3>📌 Tarea #296: HOLIDAY DESTINATIONS IN ECUADOR</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand the meaning of words related to tourism in context.</p><div class="task-expl">💡 <strong>Explicación:</strong> This is an activity where students are going to learn about amazing places in our country, and also they are going to practice vocabulary related to tourism.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the correct: It is the second highest mountain peak in Ecuador.</div>
+<ul class="options-list">
+<li class="opt">Quilotoa</li>
+<li class="opt correct"><strong>Cotopaxi</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cajas</li>
+<li class="opt">Tena</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the correct: It is very near Quito, which makes it a great hiking experience for visitors.</div>
+<ul class="options-list">
+<li class="opt">Quilotoa</li>
+<li class="opt correct"><strong>Cotopaxi</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cajas</li>
+<li class="opt">Tena</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the correct: This lake is more than 250 meters deep.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Quilotoa</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cotopaxi</li>
+<li class="opt">Cajas</li>
+<li class="opt">Tena</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the correct: This lake holds stunningly beautiful water where people can relax, sailing on it.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Quilotoa</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cotopaxi</li>
+<li class="opt">Cajas</li>
+<li class="opt">Tena</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the correct: This lake is amazing. The color shifts between the most eye catching blues and greens as the sun changes angles along its surface.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Quilotoa</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cotopaxi</li>
+<li class="opt">Cajas</li>
+<li class="opt">Tena</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the correct: This place features more than 250 lake for visitors to explore.</div>
+<ul class="options-list">
+<li class="opt">Quilotoa</li>
+<li class="opt">Cotopaxi</li>
+<li class="opt correct"><strong>Cajas National Park</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Tena</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the correct: In this place you can observe one of the most bio diverse collections of spice plants on the planet.</div>
+<ul class="options-list">
+<li class="opt">Quilotoa</li>
+<li class="opt">Cotopaxi</li>
+<li class="opt correct"><strong>Cajas National Park</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Tena</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct: It is one of the best places in Ecuador to go white water rafting.</div>
+<ul class="options-list">
+<li class="opt">Quilotoa</li>
+<li class="opt">Cotopaxi</li>
+<li class="opt">Montañita</li>
+<li class="opt correct"><strong>Tena</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct: This little village  is home to some great  resorts and some of the most beautiful Oceanside property in the word.</div>
+<ul class="options-list">
+<li class="opt">Quilotoa</li>
+<li class="opt">Cotopaxi</li>
+<li class="opt correct"><strong>Montañita</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Tena</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the correct: It is a great place for visitors who want to learn to surf.</div>
+<ul class="options-list">
+<li class="opt">Quilotoa</li>
+<li class="opt">Cotopaxi</li>
+<li class="opt correct"><strong>Montañita</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Tena</li>
+</ul>
+</div></div></div>
+    </div>
+</body>
+</html>

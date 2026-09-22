@@ -1,0 +1,330 @@
+{
+  "3": {
+    "_id": 3,
+    "type": "writing",
+    "unit_id": 1,
+    "topic": {
+      "top": "MY FAMILY"
+    },
+    "objetive": {
+      "text": "Write simple sentences about their and other people´s family and where they live. Spell a range of common names and greetings."
+    },
+    "explanation": "Greetings are nice things to say when people meet each other. Greetings may be different from culture to culture.",
+    "imgs": null,
+    "unit": {
+      "_id": 1,
+      "unit": 1,
+      "module": 1,
+      "book": 1
+    }
+  },
+  "4": {
+    "_id": 4,
+    "type": "vocabulary",
+    "unit_id": 1,
+    "topic": {
+      "top": "TIME FLIES"
+    },
+    "objetive": {
+      "text": "Understand, learn and use vocabulary related to days of the week and months of the year."
+    },
+    "explanation": null,
+    "imgs": null,
+    "unit": {
+      "_id": 1,
+      "unit": 1,
+      "module": 1,
+      "book": 1
+    }
+  },
+  "5": {
+    "_id": 5,
+    "type": "vocabulary",
+    "unit_id": 1,
+    "topic": {
+      "top": "ECUADOR MY COUNTRY"
+    },
+    "objetive": {
+      "text": "Understand and use vocabulary related to geography"
+    },
+    "explanation": null,
+    "imgs": null,
+    "unit": {
+      "_id": 1,
+      "unit": 1,
+      "module": 1,
+      "book": 1
+    }
+  },
+  "6": {
+    "_id": 6,
+    "type": "vocabulary",
+    "unit_id": 1,
+    "topic": {
+      "top": "My style",
+      "img": "set-urban-people-character_1308-44494.jpg"
+    },
+    "objetive": {
+      "text": "Understand and use vocabulary related to clothing and style"
+    },
+    "explanation": "Clothing is what someone wears to cover their body. Any of a wide variety of articles, usually made of fabrics, animal hair, animal skin, or some combination of them. The wearing of clothing is mainly restricted to human beings and is a characteristic of all human societies. Clothes are used in order to provide a barrier between the skin and the environment.",
+    "imgs": [
+      "clothes-vocabulary-picture-dictionaries_46420_1.jpg"
+    ],
+    "unit": {
+      "_id": 1,
+      "unit": 1,
+      "module": 1,
+      "book": 1
+    }
+  },
+  "8": {
+    "_id": 8,
+    "type": "reading",
+    "unit_id": 1,
+    "topic": {
+      "top": "MEETING OTHER PEOPLE"
+    },
+    "objetive": {
+      "text": "Can recognize the letters of the alphabet"
+    },
+    "explanation": null,
+    "imgs": null,
+    "unit": {
+      "_id": 1,
+      "unit": 1,
+      "module": 1,
+      "book": 1
+    }
+  },
+  "9": {
+    "_id": 9,
+    "type": "reading",
+    "unit_id": 1,
+    "topic": {
+      "top": "GETTING TO KNOW MY FAMILY"
+    },
+    "objetive": {
+      "text": "Can understand simple descriptions of people’s physical appearance."
+    },
+    "explanation": null,
+    "imgs": null,
+    "unit": {
+      "_id": 1,
+      "unit": 1,
+      "module": 1,
+      "book": 1
+    }
+  },
+  "12": {
+    "_id": 12,
+    "type": "grammar",
+    "unit_id": 1,
+    "topic": {
+      "top": "She is my friend"
+    },
+    "objetive": {
+      "text": "Can use subject pronouns with the correct form of the verb ´be´ in the simple present"
+    },
+    "explanation": "When using the verb to be and a subject pronoun, we often use contractions. A contraction is created when two words and made into one. Example: I + am = I’m",
+    "imgs": null,
+    "unit": {
+      "_id": 1,
+      "unit": 1,
+      "module": 1,
+      "book": 1
+    }
+  },
+  "14": {
+    "_id": 14,
+    "type": "writing",
+    "unit_id": 2,
+    "topic": {
+      "top": "TRAVELLING ABROAD"
+    },
+    "objetive": {
+      "text": "Complete simple forms with basic personal details and complete a simple form requiring travel information (e.g. landing card, customs declaration)."
+    },
+    "explanation": null,
+    "imgs": null,
+    "unit": {
+      "_id": 2,
+      "unit": 2,
+      "module": 1,
+      "book": 1
+    }
+  },
+  "16": {
+    "_id": 16,
+    "type": "reading",
+    "unit_id": 2,
+    "topic": {
+      "top": "In the hotel"
+    },
+    "objetive": {
+      "text": "Can recognize cardinal numbers up to 10"
+    },
+    "explanation": null,
+    "imgs": null,
+    "unit": {
+      "_id": 2,
+      "unit": 2,
+      "module": 1,
+      "book": 1
+    }
+  },
+  "18": {
+    "_id": 18,
+    "type": "reading",
+    "unit_id": 2,
+    "topic": {
+      "top": "This is my family"
+    },
+    "objetive": {
+      "text": "Can read and understand simple prices. Can identify very common food and drink on a menu."
+    },
+    "explanation": null,
+    "imgs": null,
+    "unit": {
+      "_id": 2,
+      "unit": 2,
+      "module": 1,
+      "book": 1
+    }
+  },
+  "19": {
+    "_id": 19,
+    "type": "vocabulary",
+    "unit_id": 2,
+    "topic": {
+      "top": "¿HOW OFTEN DO YOU …………?"
+    },
+    "objetive": {
+      "text": "Understand and use frequency adverbs"
+    },
+    "explanation": null,
+    "imgs": [
+      "Capturweea.JPG"
+    ],
+    "unit": {
+      "_id": 2,
+      "unit": 2,
+      "module": 1,
+      "book": 1
+    }
+  },
+  "37": {
+    "_id": 37,
+    "type": "grammar",
+    "unit_id": 3,
+    "topic": {
+      "top": "THE APPLE IS ON THE TABLE"
+    },
+    "objetive": {
+      "text": "Can use basic prepositions of place whit nouns and noun phrases"
+    },
+    "explanation": "Prepositions of Place are used to show the position or location of one thing with another.",
+    "imgs": null,
+    "unit": {
+      "_id": 3,
+      "unit": 1,
+      "module": 2,
+      "book": 1
+    }
+  },
+  "107": {
+    "_id": 107,
+    "type": "reading",
+    "unit_id": 8,
+    "topic": {
+      "top": "HOW DOES IT WORK?"
+    },
+    "objetive": {
+      "text": "To understand simple instructions on everyday equipment."
+    },
+    "explanation": "When you know how to do something, you have a skill. When you understand how something works, you can alter that knowledge and adapt it for your best uses. If you simply remember how to do something, then all you can do is use it the same way over and over, but if you understand how it works, you can reason about it. Once you can reason about something in your mind you can contemplate why it is the way it is, you can apply your entire creative mind to making the most of it, and you can implement and question improvement – you own it intellectually.",
+    "imgs": null,
+    "unit": {
+      "_id": 8,
+      "unit": 2,
+      "module": 4,
+      "book": 2
+    }
+  },
+  "129": {
+    "_id": 129,
+    "type": "grammar",
+    "unit_id": 9,
+    "topic": {
+      "top": "GALAPAGOS IS SMALLER THAN QUITO"
+    },
+    "objetive": {
+      "text": "TO MAKE COMPARISONS WITH REGULAR SHORTER ADJECTIVES + ER."
+    },
+    "explanation": "STUDENTS CAN MAKE COMPARISONS BETWEEN TWO NOUNS USING SHORTER ADJECTIVES ENDING IN ER.",
+    "imgs": null,
+    "unit": {
+      "_id": 9,
+      "unit": 1,
+      "module": 5,
+      "book": 3
+    }
+  },
+  "176": {
+    "_id": 176,
+    "type": "reading",
+    "unit_id": 12,
+    "topic": {
+      "top": "FABLES!"
+    },
+    "objetive": {
+      "text": "To understand short, simple narratives. To understand familiar phrases in a simple text."
+    },
+    "explanation": null,
+    "imgs": null,
+    "unit": {
+      "_id": 12,
+      "unit": 2,
+      "module": 6,
+      "book": 3
+    }
+  },
+  "257": {
+    "_id": 257,
+    "type": "grammar",
+    "unit_id": 17,
+    "topic": {
+      "top": "RELATIVE PRONOUNS"
+    },
+    "objetive": {
+      "text": "To understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialization."
+    },
+    "explanation": "We use relative pronouns to refer to a noun (a person or a thing) mentioned before and to which we want to add more information or modify. Relative pronouns can refer to something or someone in the singular or plural. Some relative pronouns can be used only with people, some with only things, and some with both.",
+    "imgs": null,
+    "unit": {
+      "_id": 17,
+      "unit": 1,
+      "module": 9,
+      "book": 5
+    }
+  },
+  "331": {
+    "_id": 331,
+    "type": "listening",
+    "unit_id": 3,
+    "topic": {
+      "top": "Professions"
+    },
+    "objetive": {},
+    "explanation": null,
+    "imgs": [
+      null
+    ],
+    "unit": {
+      "_id": 3,
+      "unit": 1,
+      "module": 2,
+      "book": 1
+    }
+  }
+}

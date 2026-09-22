@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 11 • 📙 Book 3 (A2.1 - Pre-Intermediate) - Guía de Inglés UTM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 900px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-btn, .print-btn {
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .back-btn:hover, .print-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 0 0 6px 0;
+        }
+        .header .subtitle {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: inline-flex;
+            gap: 16px;
+            background: #f1f5f9;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+        .skill-section {
+            margin-top: 40px;
+        }
+        .skill-section h2 {
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 6px solid #2563eb;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .task-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .task-card h3 {
+            color: #1e293b;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .task-obj {
+            font-size: 14px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .task-expl {
+            font-size: 14px;
+            color: #0369a1;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        .question-card {
+            background: #fafafa;
+            border-left: 4px solid #3b82f6;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+        .q-header {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .q-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .q-num {
+            color: #3b82f6;
+            margin-right: 4px;
+        }
+        .q-desc {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .options-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .opt {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .opt.correct {
+            background: #ecfdf5;
+            border-color: #10b981;
+            color: #065f46;
+            font-weight: 600;
+        }
+        .badge-correct {
+            background: #10b981;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            float: right;
+            font-weight: 600;
+        }
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .match-table th, .match-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .match-table th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        .match-ans {
+            color: #065f46;
+            background: #ecfdf5;
+            font-weight: 600;
+        }
+        .order-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        .fill-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .fill-list li {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        @media print {
+            body { background: #ffffff; padding: 0; }
+            .top-nav { display: none; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .task-card { page-break-inside: avoid; }
+            .question-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="../index.html" class="back-btn">← Volver al Portal General</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Guardar / Imprimir PDF</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>📘 Universidad Técnica de Manabí</h1>
+            <div class="subtitle">Simulador de Inglés • Unidad 11 • 📙 Book 3 (A2.1 - Pre-Intermediate)</div>
+            <div class="stats">
+                <span>📋 18 Tareas</span>
+                <span>❓ 173 Preguntas Verificadas</span>
+            </div>
+        </div>
+        <div class="skill-section"><h2 style="border-left-color: #2563eb">🧠 Grammar (Estructuras Gramaticales)</h2><div class="task-card"><h3>📌 Tarea #161: SHE HAS TO TELL THE TRUTH</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> TO EXPRESS OBLIGATION AND NECESSITY IN THE PRESENT WITH HAVE TO.</p><div class="task-expl">💡 <strong>Explicación:</strong> STUDENTS CAN APPLY HAVE TO WHEN REFERING TO OBLIGATION AND NECESSITY.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> CHOOSE THE RIGHT ANSWER USING HAVE TO/ HAS TO:</div>
+<div class="tf-block">
+<p><strong>• WE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> CHOOSE THE RIGHT ANSWER USING HAVE TO/ HAS TO:</div>
+<div class="tf-block">
+<p><strong>• UTM STUDENTS</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#3</span> Match the halves to make sentences.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>They</td><td class="match-ans"><strong>have to clean the desk.</strong> ✅</td></tr>
+<tr><td>Carolina</td><td class="match-ans"><strong>has to write a letter to her room.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#4</span> Match the halves to make sentences.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Ecuadorians</td><td class="match-ans"><strong>have to learn English.</strong> ✅</td></tr>
+<tr><td>Andree</td><td class="match-ans"><strong>has to help his little brother.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> Match the halves to make sentences.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>We</td><td class="match-ans"><strong>have to finish this task for tomorrow.</strong> ✅</td></tr>
+<tr><td>Sarah</td><td class="match-ans"><strong>has to feed her pet every day.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> CHOOSE THE RIGHT ANSWER USING HAVE TO/ HAS TO:</div>
+<div class="tf-block">
+<p><strong>• HE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> CHOOSE THE RIGHT ANSWER USING HAVE TO/ HAS TO:</div>
+<div class="tf-block">
+<p><strong>• ANDRES</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> CHOOSE THE RIGHT ANSWER USING HAVE TO/ HAS TO:</div>
+<div class="tf-block">
+<p><strong>• YOU </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> CHOOSE THE RIGHT ANSWER USING HAVE TO/ HAS TO:</div>
+<div class="tf-block">
+<p><strong>• VICTORIA</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> CHOOSE THE RIGHT ANSWER USING HAVE TO/ HAS TO:</div>
+<div class="tf-block">
+<p><strong>• THE TEACHER</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #162: YOU MUST STUDY HARD</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> TO USE MUST TO EXPRESS OBLIGATION AND NECESSITY IN THE PRESENT AND NEAR FUTURE.</p><div class="task-expl">💡 <strong>Explicación:</strong> STUDENTS CAN LEARN WHEN USING MUST FOR OBLIGATION AND NECESSITY.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> CHOOSE THE RIGHT QUESTION USING MUST/ MUST NOT:</div>
+<div class="tf-block">
+<p><strong>• PEOPLE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> CHOOSE THE RIGHT QUESTION USING MUST/ MUST NOT:</div>
+<div class="tf-block">
+<p><strong>• YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> CHOOSE THE RIGHT QUESTION USING MUST/ MUST NOT:</div>
+<div class="tf-block">
+<p><strong>• YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> CHOOSE THE RIGHT QUESTION USING MUST/ MUST NOT:</div>
+<div class="tf-block">
+<p><strong>• YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> CHOOSE THE RIGHT QUESTION USING MUST/ MUST NOT:</div>
+<div class="tf-block">
+<p><strong>• YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> CHOOSE THE RIGHT QUESTION USING MUST/ MUST NOT:</div>
+<div class="tf-block">
+<p><strong>• STUDENTS</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> CHOOSE THE RIGHT QUESTION USING MUST/ MUST NOT:</div>
+<div class="tf-block">
+<p><strong>• YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> CHOOSE THE RIGHT QUESTION USING MUST/ MUST NOT:</div>
+<div class="tf-block">
+<p><strong>• YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> CHOOSE THE RIGHT QUESTION USING MUST/ MUST NOT:</div>
+<div class="tf-block">
+<p><strong>• YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> CHOOSE THE RIGHT QUESTION USING MUST/ MUST NOT:</div>
+<div class="tf-block">
+<p><strong>• YOU</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #163: MAY I USE YOUR CAR TODAY?</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> TO USE MAY I/WE...? FOR FORMAL AND POLITE REQUESTS FOR PERMISSION.</p><div class="task-expl">💡 <strong>Explicación:</strong> STUDENTS CAN UNDERSTAND WHEN A POLITE REQUEST IS NEEDED USING MAY.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> ORDER THE FOLLOWING QUESTION: USE/ CAN / PEN / YOUR / I</div>
+<ul class="options-list">
+<li class="opt correct"><strong>CAN I USE YOUR PEN?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">CAN I USE PEN YOUR?</li>
+<li class="opt">I CAN USE YOUR PEN?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> ORDER THE FOLLOWING QUESTION: CAN / START / I / A QUESTION</div>
+<ul class="options-list">
+<li class="opt">CAN I A QUESTION START?</li>
+<li class="opt correct"><strong>CAN I START A QUESTION?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">CAN START I A QUESTION?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> ORDER THE FOLLOWING QUESTION: TOMORROW / LATE / BE / MAY I</div>
+<ul class="options-list">
+<li class="opt">TOMORROW MAY I BE LATE?</li>
+<li class="opt correct"><strong>MAY I BE LATE TOMORROW?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">MAY I BE TOMORROW LATE?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> ORDER THE FOLLOWING QUESTION: OPEN / MAY / I / WINDOW / THE</div>
+<ul class="options-list">
+<li class="opt">MAY I THE OPEN WINDOW?</li>
+<li class="opt correct"><strong>MAY I OPEN THE WINDOW?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">MAY OPEN I THE WINDOW?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> ORDER THE FOLLOWING QUESTION: PARK / I / HERE / MAY</div>
+<ul class="options-list">
+<li class="opt">MAY PARK HERE I?</li>
+<li class="opt correct"><strong>MAY I PARK HERE?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">MAY PARK I HERE?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> ORDER THE FOLLOWING QUESTION: EARLY / LEAVE / MAY / I</div>
+<ul class="options-list">
+<li class="opt">EARLY MAY I LEAVE?</li>
+<li class="opt correct"><strong>MAY I LEAVE EARLY?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">MAY LEAVE I EARLY?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> ORDER THE FOLLOWING QUESTION: A SECOND /  MAY WE / FOR / TALK</div>
+<ul class="options-list">
+<li class="opt">MAY WE FOR TALK A SECOND?</li>
+<li class="opt correct"><strong>MAY WE TALK FOR A SECOND?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">MAY WE FOR A SECOND TALK?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> ORDER THE FOLLOWING QUESTION: YOUR ATTENTION / MAY / I / HAVE</div>
+<ul class="options-list">
+<li class="opt">MAY I YOUR ATTENTION HAVE?</li>
+<li class="opt correct"><strong>MAY I HAVE YOUR ATTENTION?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">MAY HAVE I YOUR ATTENTION?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> ORDER THE FOLLOWING QUESTION: COME IN /  MAY  / I</div>
+<ul class="options-list">
+<li class="opt">MAY I IN COME?</li>
+<li class="opt correct"><strong>MAY I COME IN?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">MAY COME I IN?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> ORDER THE FOLLOWING QUESTION: BORROW / MAY / YOUR LIGHTER / I</div>
+<ul class="options-list">
+<li class="opt">MAY YOUR BORROW I LIGHTER?</li>
+<li class="opt correct"><strong>MAY I BORROW YOUR LIGHTER?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">MAY I YOUR LIGHTER BORROW?</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #164: WHEN I WAS A CHILD, I COUDLN'T STOP PLAYING</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> TO REFER TO IMPOSSIBILITY AND INABILITY IN THE PAST USING COULDN'T.</p><div class="task-expl">💡 <strong>Explicación:</strong> STUDENTS CAN MAKE PHRASES IN THE PAST REFERING TO ABILITIES THAT THEY USED TO HAVE.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> USE COULD OR COULDN'T TO COMPLETE THE QUESTION</div>
+<div class="tf-block">
+<p><strong>• WHEN</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> USE COULD OR COULDN'T TO COMPLETE THE QUESTION.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> USE COULD OR COULDN'T TO COMPLETE THE QUESTION.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> USE COULD OR COULDN'T TO COMPLETE THE QUESTION.</div>
+<div class="tf-block">
+<p><strong>• COULD YOU DREAM IN COLORS? NO, I</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> USE COULD OR COULDN'T TO COMPLETE THE QUESTION.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> USE COULD OR COULDN'T TO COMPLETE THE QUESTION.</div>
+<div class="tf-block">
+<p><strong>• COULD YOU SING WHEN YOU WERE A CHILD? NO, I</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> USE COULD OR COULDN'T TO COMPLETE THE QUESTION.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> USE COULD OR COULDN'T TO COMPLETE THE QUESTION.</div>
+<div class="tf-block">
+<p><strong>• LUIS</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> USE COULD OR COULDN'T TO COMPLETE THE QUESTION.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> USE COULD OR COULDN'T TO COMPLETE THE QUESTION.</div>
+<div class="tf-block">
+<p><strong>• SHE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #059669">📖 Vocabulary (Vocabulario)</h2><div class="task-card"><h3>📌 Tarea #153: FREE TIME</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To learn and use vocabulary related to free time.</p><div class="task-expl">💡 <strong>Explicación:</strong> Description of preferences related to free time activities.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#1</span> Look at the words: classify them into: the subject, verb and complement.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I running everyday"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"He goes camping"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"We play Ping Pong"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#2</span> Match the correct picture with the line.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>play computer games</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>play an instrument</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>listen to music</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>go swimming</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Look at the picture. Guess the word.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>go shopping</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">watch TV</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Choose the best option.</div>
+<div class="tf-block">
+<p><strong>• I am</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Complete the question</div>
+<div class="tf-block">
+<p><strong>• Do you want to</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#6</span> Order the next sentences.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"They go dancing on the weekends"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Complete the sentences with the best option: ____ they _____ football every day?</div>
+<ul class="options-list">
+<li class="opt">Does / plays</li>
+<li class="opt">Does / play</li>
+<li class="opt correct"><strong>Do / play</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Circle the correct word in each sentence.</div>
+<div class="tf-block">
+<p><strong>• My sister</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• My father</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• They</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Complete the question and answer with the right words: A: What ____ you do after school? B: I _____.</div>
+<ul class="options-list">
+<li class="opt">Is/eat</li>
+<li class="opt">Does/eats</li>
+<li class="opt correct"><strong>Do/eat</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the sentence with the right order: school - swim - after - they.</div>
+<ul class="options-list">
+<li class="opt">School swim after they</li>
+<li class="opt correct"><strong>They swim after school</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Swim they after school</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #154: TEAM OR INDIVIDUAL</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand and use vocabulary related to sports.</p><div class="task-expl">💡 <strong>Explicación:</strong> In the lesson he presents exercises on terms related to sports.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#1</span> Order the sentences.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"She doesn't like roller blading"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"She likes play tennis"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Every day I play football.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I play every day football.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Look at the picture and complete the sentence: WE ARE PLAYING ________</div>
+<ul class="options-list">
+<li class="opt">TENNIS</li>
+<li class="opt">SOCCER</li>
+<li class="opt correct"><strong>VOLLEYBALL</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#4</span> Match the correct thing with a line.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Bat</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Cricket</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Roller skates</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Basket</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> True or False.</div>
+<div class="tf-block">
+<p><strong>• Can I use my hands to play football?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Look at the picture and answer the question: WHAT IS SHE DOING?</div>
+<ul class="options-list">
+<li class="opt">HE IS PLAYING SOCCER.</li>
+<li class="opt correct"><strong>SHE IS WORKING ON THE COMPUTER.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• She</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#8</span> Order and form the word according to the sport.</div>
+<ul class="fill-list">
+<li><code>CCEROS</code> ➔ <strong>SOCCER</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>KBASBLLAET</code> ➔ <strong>BASKETBALL</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>GIPNPNGO</code> ➔ <strong>PING PONG</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• I never do</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• What do you need to play tennis?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #155: FOLLOWING THE LAW</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand and use vocabulary related to law and crime.</p><div class="task-expl">💡 <strong>Explicación:</strong> The activities of the lesson will allow to use terms related to the laws and among others</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the best option: A place where a judge makes decisions.</div>
+<ul class="options-list">
+<li class="opt">LAW</li>
+<li class="opt correct"><strong>COURT</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">JUDGE</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the best option: A place for people accused of crime.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>JAIL</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">ALLOW</li>
+<li class="opt">ABUSE</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the best option: What is this?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>THEFT</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">JAIL</li>
+<li class="opt">POLICE</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#4</span> </div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>JAIL</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>CRIME</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>JUDGE</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Choose the right word according to the description to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• The use of physical force generates</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Hurting a person physically or emotionally is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#6</span> Order the next sentences.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"How did you steal all this ?"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"He tried to steal your newspaper"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the correct answer: The highest appeals court in the nation?</div>
+<ul class="options-list">
+<li class="opt">Circuit Court</li>
+<li class="opt correct"><strong>Supreme Court</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Justice Court</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> True or False.</div>
+<div class="tf-block">
+<p><strong>• A judge has the right to make up laws while presiding over a case?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> </div>
+<div class="tf-block">
+<p><strong>• The decisions made by the Supreme court are final.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the best option: Keep them in custody for a period of time.</div>
+<ul class="options-list">
+<li class="opt">Waive</li>
+<li class="opt correct"><strong>Detain</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Counseling</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #156: WWW-@</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand and use vocabulary related to technology and the internet.Ç</p><div class="task-expl">💡 <strong>Explicación:</strong> Learn vocabulary related to digital resources</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the best option: Website that's a bit like a diary.</div>
+<ul class="options-list">
+<li class="opt">Password</li>
+<li class="opt correct"><strong>Blog</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Laptop</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Circle the correct answer: A computer you carry around with you.</div>
+<ul class="options-list">
+<li class="opt">password</li>
+<li class="opt">surf</li>
+<li class="opt correct"><strong>laptop</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Complete the sentence with the right answer: The part of a computer where you type is _______</div>
+<ul class="options-list">
+<li class="opt">Password</li>
+<li class="opt">screen</li>
+<li class="opt correct"><strong>keyboard</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Circle the correct answer: 1) A word that means to move around the internet.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>surf</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">upload</li>
+<li class="opt">hardware</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose A, B, or C: What provides long term memory for your computer.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>hard drive</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">soft drive</li>
+<li class="opt">disk drive</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Circle the correct answer: What is the CPU?</div>
+<ul class="options-list">
+<li class="opt">the main circuit board</li>
+<li class="opt">soft drive</li>
+<li class="opt correct"><strong>the brain of the computer</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Circle the correct answer: What does the term 'bug' mean for technology?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>problem</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">an insect</li>
+<li class="opt">not enough memory</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Look at picture and choose the right answer: Name this Logo is ________</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Windows</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Bing</li>
+<li class="opt">Yahoo</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> True or False:</div>
+<div class="tf-block">
+<p><strong>• A Browser is an example of a software program or application.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Look at picture and choose the right answer: What does this icon represent?</div>
+<ul class="options-list">
+<li class="opt">Microsoft</li>
+<li class="opt correct"><strong>Android</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Apple</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #d97706">📚 Reading (Comprensión Lectora)</h2><div class="task-card"><h3>📌 Tarea #157: AN IMPORTANT EVENT</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To identify specific information in simple letters, brochures and short articles.</p><div class="task-expl">💡 <strong>Explicación:</strong> Students can develop reading skills through the use of a type of text like a brochure or a flyer.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the text below and answer the question: This flyer provides information about:</div>
+<div class="q-desc">SECOND ELT CONGRESS: PORTOVIEJO 
+
+IMPLICATIONS AND APPLICATIONS OF MODERN LANGUAGE TEACHING APPROACHES AND METHODOLOGIES 
+
+The principles of the communicative approach to language learning and teaching foster the use of appropriate, positive learning strategies. Communicative principles and learning strategies in combination have powerful implications for the language classroom. 
+
+Place: Manabí Technical University – Salón de Actos Culturales 
+Date: October 24th, 25th 
+Time: 8:30 am 
+Price: Students: $10.00, Professionals: $15.00 
+Registration: English Department at U.T.M. 
+For further information: roispoma@yahoo.com 
+05 2632677 ext. 196</div>
+<ul class="options-list">
+<li class="opt">A new academic semester</li>
+<li class="opt correct"><strong>An academic event</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A concert at the university</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the flyer and choose the right answer for the question: The topic for the Congress is:</div>
+<div class="q-desc">SECOND ELT CONGRESS: PORTOVIEJO 
+
+IMPLICATIONS AND APPLICATIONS OF MODERN LANGUAGE TEACHING APPROACHES AND METHODOLOGIES 
+
+The principles of the communicative approach to language learning and teaching foster the use of appropriate, positive learning strategies. Communicative principles and learning strategies in combination have powerful implications for the language classroom. 
+
+Place: Manabí Technical University – Salón de Actos Culturales 
+Date: October 24th, 25th 
+Time: 8:30 am 
+Price: Students: $10.00, Professionals: $15.00 
+Registration: English Department at U.T.M. 
+For further information: roispoma@yahoo.com 
+05 2632677 ext. 196</div>
+<ul class="options-list">
+<li class="opt">Second ELT Congress: Portoviejo</li>
+<li class="opt correct"><strong>Implications and applications of modern language teaching approaches and methodologies.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#3</span> Complete the  main parts of a flyer in the picture.</div>
+<div class="q-desc">SECOND ELT CONGRESS: PORTOVIEJO 
+
+IMPLICATIONS AND APPLICATIONS OF MODERN LANGUAGE TEACHING APPROACHES AND METHODOLOGIES 
+
+The principles of the communicative approach to language learning and teaching foster the use of appropriate, positive learning strategies. Communicative principles and learning strategies in combination have powerful implications for the language classroom. 
+
+Place: Manabí Technical University – Salón de Actos Culturales 
+Date: October 24th, 25th 
+Time: 8:30 am 
+Price: Students: $10.00, Professionals: $15.00 
+Registration: English Department at U.T.M. 
+For further information: roispoma@yahoo.com 
+05 2632677 ext. 196</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Contact information</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>Headline</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Graphics</li>
+<li class="opt correct"><strong>Content</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>General information</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#4</span> Match the pictures with their names.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>A brochure</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>A flyer</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Complete the sentences using the words:</div>
+<div class="tf-block">
+<p><strong>• A</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• A</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the flyer and choose the right answer for the question: How long will this event last?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>October 24th, 25th</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">8:30 am</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the flyer and choose the right answer for the question: How much do you have to pay for the congress if you are a student?</div>
+<div class="q-desc">SECOND ELT CONGRESS: PORTOVIEJO 
+
+IMPLICATIONS AND APPLICATIONS OF MODERN LANGUAGE TEACHING APPROACHES AND METHODOLOGIES 
+
+The principles of the communicative approach to language learning and teaching foster the use of appropriate, positive learning strategies. Communicative principles and learning strategies in combination have powerful implications for the language classroom. 
+
+Place: Manabí Technical University – Salón de Actos Culturales 
+Date: October 24th, 25th 
+Time: 8:30 am 
+Price: Students: $10.00, Professionals: $15.00 
+Registration: English Department at U.T.M. 
+For further information: roispoma@yahoo.com 
+05 2632677 ext. 196</div>
+<ul class="options-list">
+<li class="opt">$15,00</li>
+<li class="opt correct"><strong>$10,00</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> True or false</div>
+<div class="tf-block">
+<p><strong>• The information provided in a flyer is more basic than a brochure.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• A</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #158: A FRUSTRATED FLIGHT</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand reports of travel delays and cancellations.</p><div class="task-expl">💡 <strong>Explicación:</strong> Students can develop reading skills through the description of information related to common situations.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the paragraph and choose the best answer for the question: Why was the flight cancelled specifically?</div>
+<div class="q-desc">September 25th, 2017 
+
+Monica Lissette Domo 
+Urbina Av. And Francia St. 
+208, Portoviejo – Manabí 
+
+Dear Sir or Madam, 
+AMERICAN AIRLINES 
+
+I am writing to you in relation to the flight 277 GYE-NJ EC on which I was booked to travel on date September 23th, 2017. 
+
+The flight was supposed to depart from Jose Joaquin de Olmedo Airport at 10:14 pm with destination to New Jersey, but it was delayed by 2 hours and finally it was canceled because of an extraordinary circumstance.</div>
+<ul class="options-list">
+<li class="opt">The reason is not clearly explained</li>
+<li class="opt correct"><strong>There was an extraordinary circumstance</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the paragraph and choose the best answer for the question: When should Monica board the flight?</div>
+<div class="q-desc">September 25th, 2017 
+
+Monica Lissette Domo 
+Urbina Av. And Francia St. 
+208, Portoviejo – Manabí 
+
+Dear Sir or Madam, 
+AMERICAN AIRLINES 
+
+I am writing to you in relation to the flight 277 GYE-NJ EC on which I was booked to travel on date September 23th, 2017. 
+
+The flight was supposed to depart from Jose Joaquin de Olmedo Airport at 10:14 pm with destination to New Jersey, but it was delayed by 2 hours and finally it was canceled because of an extraordinary circumstance.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>September 23rd, 2017</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">September 25th, 2017</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the paragraph and choose the best answer for the question: Why is Monica affected?</div>
+<div class="q-desc">Routine technical difficulties are not extraordinary circumstances and I spent my time, my money and mainly I put at risk my children security. 
+Under the Ecuadorian Denied Boarding Regulation 456/2005, I am entitled to the sum of $2500 in compensation and I look forward to receiving it in the next 15 days. 
+I attach a copy of my tickets and previous correspondence I have had with your airline. 
+
+Yours sincerely, 
+
+Monica Lissette Domo 
+AIRLINE CUSTOMER</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Because she spent time and money and exposed her children</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Because she will receive some money as compensation</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the letter again: Monica's flight number was</div>
+<div class="q-desc">September 25th, 2017 
+
+Monica Lissette Domo 
+Urbina Av. And Francia St. 
+208, Portoviejo – Manabí 
+
+Dear Sir or Madam, 
+AMERICAN AIRLINES 
+
+I am writing to you in relation to the flight 277 GYE-NJ EC on which I was booked to travel on date September 23th, 2017. 
+The flight was supposed to depart from Jose Joaquin de Olmedo Airport at 10:14 pm with destination to New Jersey, but it was delayed by 2 hours and finally it was canceled because of an extraordinary circumstance. 
+Routine technical difficulties are not extraordinary circumstances and I spent my time, my money and mainly I put at risk my children security. 
+Under the Ecuadorian Denied Boarding Regulation 456/2005, I am entitled to the sum of $2500 in compensation and I look forward to receiving it in the next 15 days. 
+I attach a copy of my tickets and previous correspondence I have had with your airline. 
+
+Yours sincerely, 
+
+Monica Lissette Domo 
+AIRLINE CUSTOMER</div>
+<ul class="options-list">
+<li class="opt">to New Jersey</li>
+<li class="opt correct"><strong>277GYE-NJ EC</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the letter again: Destination was</div>
+<div class="q-desc">September 25th, 2017 
+
+Monica Lissette Domo 
+Urbina Av. And Francia St. 
+208, Portoviejo – Manabí 
+
+Dear Sir or Madam, 
+AMERICAN AIRLINES 
+
+I am writing to you in relation to the flight 277 GYE-NJ EC on which I was booked to travel on date September 23th, 2017. 
+The flight was supposed to depart from Jose Joaquin de Olmedo Airport at 10:14 pm with destination to New Jersey, but it was delayed by 2 hours and finally it was canceled because of an extraordinary circumstance. 
+Routine technical difficulties are not extraordinary circumstances and I spent my time, my money and mainly I put at risk my children security. 
+Under the Ecuadorian Denied Boarding Regulation 456/2005, I am entitled to the sum of $2500 in compensation and I look forward to receiving it in the next 15 days. 
+I attach a copy of my tickets and previous correspondence I have had with your airline. 
+
+Yours sincerely, 
+
+Monica Lissette Domo 
+AIRLINE CUSTOMER</div>
+<ul class="options-list">
+<li class="opt correct"><strong>to New Jersey</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">277GYE-NJ EC</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the letter. Choose the best option to complete the idea: This letter is because _______</div>
+<div class="q-desc">September 25th, 2017 
+
+Monica Lissette Domo 
+Urbina Av. And Francia St. 
+208, Portoviejo – Manabí 
+
+Dear Sir or Madam, 
+AMERICAN AIRLINES 
+
+I am writing to you in relation to the flight 277 GYE-NJ EC on which I was booked to travel on date September 23th, 2017. 
+The flight was supposed to depart from Jose Joaquin de Olmedo Airport at 10:14 pm with destination to New Jersey, but it was delayed by 2 hours and finally it was canceled because of an extraordinary circumstance. 
+Routine technical difficulties are not extraordinary circumstances and I spent my time, my money and mainly I put at risk my children security. 
+Under the Ecuadorian Denied Boarding Regulation 456/2005, I am entitled to the sum of $2500 in compensation and I look forward to receiving it in the next 15 days. 
+I attach a copy of my tickets and previous correspondence I have had with your airline. 
+
+Yours sincerely, 
+
+Monica Lissette Domo 
+AIRLINE CUSTOMER</div>
+<ul class="options-list">
+<li class="opt">Monica wants to thank the airline for its services.</li>
+<li class="opt">She wants to complain about bad service.</li>
+<li class="opt correct"><strong>She wants to claim compensation for a canceled flight.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Match these verbs with their definition.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Entitle</td><td class="match-ans"><strong>to have the right for something</strong> ✅</td></tr>
+<tr><td>Book</td><td class="match-ans"><strong>to reserve a seat, place of flight</strong> ✅</td></tr>
+<tr><td>Delay</td><td class="match-ans"><strong>to postpone or being late</strong> ✅</td></tr>
+<tr><td>Look forward to</td><td class="match-ans"><strong>to wait with desire for something</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the paragraph and choose the best answer for the question: What was Monica destination?</div>
+<div class="q-desc">September 25th, 2017 
+
+Monica Lissette Domo 
+Urbina Av. And Francia St. 
+208, Portoviejo – Manabí 
+
+Dear Sir or Madam, 
+AMERICAN AIRLINES 
+
+I am writing to you in relation to the flight 277 GYE-NJ EC on which I was booked to travel on date September 23th, 2017. 
+
+The flight was supposed to depart from Jose Joaquin de Olmedo Airport at 10:14 pm with destination to New Jersey, but it was delayed by 2 hours and finally it was canceled because of an extraordinary circumstance.</div>
+<ul class="options-list">
+<li class="opt">José Joaquín de Olmedo</li>
+<li class="opt correct"><strong>New Jersey</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the paragraph and choose the best answer for the question: How much does Monica will receive as compensation?</div>
+<div class="q-desc">Routine technical difficulties are not extraordinary circumstances and I spent my time, my money and mainly I put at risk my children security. 
+Under the Ecuadorian Denied Boarding Regulation 456/2005, I am entitled to the sum of $2500 in compensation and I look forward to receiving it in the next 15 days. 
+I attach a copy of my tickets and previous correspondence I have had with your airline. 
+
+Yours sincerely, 
+
+Monica Lissette Domo 
+AIRLINE CUSTOMER</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The sum of $2500 in compensation</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A copy of the tickets and correspondence</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read the paragraph and choose the best answer for the question. What does Monica attach with this letter?</div>
+<div class="q-desc">Routine technical difficulties are not extraordinary circumstances and I spent my time, my money and mainly I put at risk my children security. 
+Under the Ecuadorian Denied Boarding Regulation 456/2005, I am entitled to the sum of $2500 in compensation and I look forward to receiving it in the next 15 days. 
+I attach a copy of my tickets and previous correspondence I have had with your airline. 
+
+Yours sincerely, 
+
+Monica Lissette Domo 
+AIRLINE CUSTOMER</div>
+<ul class="options-list">
+<li class="opt">The sum of $2500 in compensation</li>
+<li class="opt correct"><strong>A copy of the tickets and correspondence</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #159: REBEL GUYS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To identify specific information in a simple factual text.</p><div class="task-expl">💡 <strong>Explicación:</strong> Students can express their personal point of views about the general topics through the use of a text.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the paragraph and choose the best title for it.</div>
+<div class="q-desc">It is not enough to have laws that repress disorientated adolescents, but also provide measures to show equality and justice by creating an atmosphere of hope and peace for our children.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Last recommendation</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Factors for antisocial behaviors</li>
+<li class="opt">Plans in different areas</li>
+<li class="opt">Legal systems procedures</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the paragraph one more time. Choose the right answer for the question: What is the reconmendation to the end of the text?</div>
+<div class="q-desc">It is not enough to have laws that repress disorientated adolescents, but also provide measures to show equality and justice by creating an atmosphere of hope and peace for our children.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>To provide measures to show equality and justice for a peaceful and hopeful environment.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">To have laws that repress disorientated adolescents.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the paragraph one more time. Choose the right answer for the question: What is the most common procedure that legal system prescribes to deal with young criminals?</div>
+<div class="q-desc">Our country is also affected by this situation. Although most legal systems prescribe specific procedures for dealing with young criminals such as detention centers, the first step to control this group is to promote campaigns planned to sensitize youth about the negative effects of violence in their familiar nucleus and community. It is also important to focus on the family and its main role in the prevention of juvenile delinquency and the necessity of communicate without violence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The detention centers, the first step to control this group is to promote campaigns planned to sensitixe youth aboute the negative effects.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Prevention of juvenile delinquency and the necessity of communicate without violence.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the article and choose the best title for the text. Circle the right option.</div>
+<div class="q-desc">Nowadays, the antisocial behavior of children or teenagers is considered a serious problem all over the world. It is caused by economic, social, and cultural factors. They affect especially marginal sectors of urban areas in many cities, where children are exposed to violence either as observers or as victims. This results in serious cases of juvenile delinquency. 
+
+Our country is also affected by this situation. Although most legal systems prescribe specific procedures for dealing with young criminals such as detention centers, the first step to control this group is to promote campaigns planned to sensitize youth about the negative effects of violence in their familiar nucleus and community. It is also important to focus on the family and its main role in the prevention of juvenile delinquency and the necessity of communicate without violence. 
+
+The Ecuadorian government should generate plans focused on education, employment, and leisure programs, as well as assisted guides for those girls and boys who come from broken families or have dropped out of school. 
+
+It is not enough to have laws that repress disorientated adolescents, but also provide measures to show equality and justice by creating an atmosphere of hope and peace for our children.</div>
+<ul class="options-list">
+<li class="opt">Familiar violence</li>
+<li class="opt correct"><strong>Juvenile delinquency</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Legal systems</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the paragraph one more time. Choose the right answer for the question: What other alternatives should laws in Ecuador provide to help disorientated adolescents?</div>
+<div class="q-desc">The Ecuadorian government should generate plans focused on education, employment and leisure programs, as well as assisted guides for those girls and boys who come from broken families or have dropped out school.</div>
+<ul class="options-list">
+<li class="opt">Provide measures to show equality and justice by creating an atmosphere of hope and peace for children.</li>
+<li class="opt correct"><strong>Plan focused on educative, employment and leisure programs.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Read the text again and complete (T) for true sentences and an (F) to the false ones:</div>
+<div class="tf-block">
+<p><strong>• Juvenile delinquency is caused by cultural factors.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• Children are exposed to violence in many cities.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• Ecuadorian government should generate a plan for good students only.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the paragraph and choose the best title for it</div>
+<div class="q-desc">Our country is also affected by this situation. Although most legal systems prescribe specific procedures for dealing with young criminals such as detention centers, the first step to control this group is to promote campaigns planned to sensitize youth about the negative effects of violence in their familiar nucleus and community. It is also important to focus on the family and its main role in the prevention of juvenile delinquency and the necessity of communicate without violence.</div>
+<ul class="options-list">
+<li class="opt">Last recommendation</li>
+<li class="opt">Factors for antisocial behaviors</li>
+<li class="opt">Plans in different areas</li>
+<li class="opt correct"><strong>Legal systems procedures</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the paragraph and choose the best title for it.</div>
+<div class="q-desc">Nowadays, the antisocial behavior of children or  teenagers is considered a serious problem all over the  world. It is caused by economic, social and cultural  factors. They affect especially marginal sectors of urban  areas in many cities, where children are exposed to  violence either as observers or as victims. This results in  serious cases of juvenile delinquency</div>
+<ul class="options-list">
+<li class="opt">Last recommendation</li>
+<li class="opt correct"><strong>Factors for antisocial behaviors</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Plans in different areas</li>
+<li class="opt">Legal systems procedures</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the paragraph one more time. Choose the right answer for the question: What are the causes which provoke the antisocial behavior in our children and teenagers?</div>
+<div class="q-desc">Nowadays, the antisocial behavior of children or teenagers is considered a serious problem all over the world. It is caused by economic, social and cultural factors. They affect especially marginal sectors of urban areas in many cities, where children are exposed to violence either as observers or as victims. This results in serious cases of juvenile delinquency.</div>
+<ul class="options-list">
+<li class="opt">Children are exposed to violence and juvenile delinquency.</li>
+<li class="opt correct"><strong>Antisocial behavior is caused by economic, social and cultural factors.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read the paragraph and choose the best title for it.</div>
+<div class="q-desc">The Ecuadorian government should generate plans focused on education, employment, and leisure programs, as well as assisted guides for those girls and boys who come from broken families or have dropped out of school.</div>
+<ul class="options-list">
+<li class="opt">Last recommendation</li>
+<li class="opt">Factors for antisocial behaviors</li>
+<li class="opt correct"><strong>Plans in different areas</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Legal systems procedures</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #160: IN MEMORIAL</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand short, simple biographies.</p><div class="task-expl">💡 <strong>Explicación:</strong> Students will read information about famous people and events in past. Look at these pictures. Match the name with the correct option.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> TRUE OR FALSE</div>
+<div class="q-desc">The American superstar Michael Jackson was born in Gary, Indiana, on August 29th, 1958. He wanted to be an artist since he was a child. In 1964, Michael began to perform with his brothers Jackie, Tito, Jermaine and Marlon and soon he become the dominant voice of The Jackson 5. 
+
+Solo success for Michael was inevitable, and by the 1980s, he became more popular than his brotherly group. He sold millions of records culminating in the biggest-selling album of all the time, “Thriller” in 1982. 
+
+He married Lisa Marie Presley, Elvis Presley’s daughter in 1994 and got divorced a few months later. He had three children with his second wife Deborah Rowe. 
+
+He died on June 25th, 2009, at age 50 in a cruel medical tragedy. He will be remembered as a great artist, singer, dancer, writer and businessman. Among his most heard songs besides “Thriller”, are “Don’t stop till you get enough”, “Billie Jean” “We are the world”, “Smooth criminal”, “Black or white”, and “Earth song”.</div>
+<div class="tf-block">
+<p><strong>• Who was Michael Jackson?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• When did he died?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> TRUE OR FALSE</div>
+<div class="q-desc">The American superstar Michael Jackson was born in Gary, Indiana, on August 29th, 1958. He wanted to be an artist since he was a child. In 1964, Michael began to perform with his brothers Jackie, Tito, Jermaine and Marlon and soon he become the dominant voice of The Jackson 5. 
+
+Solo success for Michael was inevitable, and by the 1980s, he became more popular than his brotherly group. He sold millions of records culminating in the biggest-selling album of all the time, “Thriller” in 1982. 
+
+He married Lisa Marie Presley, Elvis Presley’s daughter in 1994 and got divorced a few months later. He had three children with his second wife Deborah Rowe. 
+
+He died on June 25th, 2009, at age 50 in a cruel medical tragedy. He will be remembered as a great artist, singer, dancer, writer and businessman. Among his most heard songs besides “Thriller”, are “Don’t stop till you get enough”, “Billie Jean” “We are the world”, “Smooth criminal”, “Black or white”, and “Earth song”.</div>
+<div class="tf-block">
+<p><strong>• Michael become the dominant voice of Backstreet boys.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Michael has 3 children with his second wife.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> TRUE OR FALSE</div>
+<div class="q-desc">The American superstar Michael Jackson was born in Gary, Indiana, on August 29th, 1958. He wanted to be an artist since he was a child. In 1964, Michael began to perform with his brothers Jackie, Tito, Jermaine and Marlon and soon he become the dominant voice of The Jackson 5. 
+
+Solo success for Michael was inevitable, and by the 1980s, he became more popular than his brotherly group. He sold millions of records culminating in the biggest-selling album of all the time, “Thriller” in 1982. 
+
+He married Lisa Marie Presley, Elvis Presley’s daughter in 1994 and got divorced a few months later. He had three children with his second wife Deborah Rowe. 
+
+He died on June 25th, 2009, at age 50 in a cruel medical tragedy. He will be remembered as a great artist, singer, dancer, writer and businessman. Among his most heard songs besides “Thriller”, are “Don’t stop till you get enough”, “Billie Jean” “We are the world”, “Smooth criminal”, “Black or white”, and “Earth song”.</div>
+<div class="tf-block">
+<p><strong>• Michael become the dominant voice of</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>•  He had</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He died in 2009 at</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the text. Answer the question: This article is about:</div>
+<div class="q-desc">The American superstar Michael Jackson was born in Gary, Indiana, on August 29th, 1958. He wanted to be an artist since he was a child. In 1964, Michael began to perform with his brothers Jackie, Tito, Jermaine and Marlon and soon he become the dominant voice of The Jackson 5. 
+
+Solo success for Michael was inevitable, and by the 1980s, he became more popular than his brotherly group. He sold millions of records culminating in the biggest-selling album of all the time, “Thriller” in 1982. 
+
+He married Lisa Marie Presley, Elvis Presley’s daughter in 1994 and got divorced a few months later. He had three children with his second wife Deborah Rowe. 
+
+He died on June 25th, 2009, at age 50 in a cruel medical tragedy. He will be remembered as a great artist, singer, dancer, writer and businessman. Among his most heard songs besides “Thriller”, are “Don’t stop till you get enough”, “Billie Jean” “We are the world”, “Smooth criminal”, “Black or white”, and “Earth song”.</div>
+<ul class="options-list">
+<li class="opt">A scientific article</li>
+<li class="opt correct"><strong>A biography</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A story</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#5</span> Look at these pictures. Match the name with the correct option.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Bob Marley</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Michael Jackson</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Elvis Presley</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the paragraph and choose the best title for it.</div>
+<div class="q-desc">The American superstar Michael Jackson was born in Gary, Indiana, on August 29th, 1958. He wanted to be an artist since he was a child. In 1964, Michael began to perform with his brothers Jackie, Tito, Jermaine, and Marlon and soon he became the dominant voice of The Jackson 5.</div>
+<ul class="options-list">
+<li class="opt">Popularity</li>
+<li class="opt correct"><strong>Childhood and family</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Succesful songs</li>
+<li class="opt">Marriage</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the paragraph and choose the best title for it.</div>
+<div class="q-desc">Solo success for Michael was inevitable, and by the 1980s, he became more popular than his brotherly group. He sold millions of records culminating in the biggest-selling album of all the time, “Thriller” in 1982.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Popularity</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Childhood and family</li>
+<li class="opt">Succesful songs</li>
+<li class="opt">Marriage</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the paragraph and choose the best title for it.</div>
+<div class="q-desc">He died on June 25th, 2009, at age 50 in a cruel medical tragedy. He will be remembered as a great artist, singer, dancer, writer and businessman. Among his most heard songs besides “Thriller”, are “Don’t stop till you get enough”, “Billie Jean” “We are the world”, “Smooth criminal”, “Black or white”, and “Earth song”.</div>
+<ul class="options-list">
+<li class="opt">Popularity</li>
+<li class="opt">Childhood and family</li>
+<li class="opt correct"><strong>Succesful songs</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Marriage</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the paragraph and choose the best title for it.</div>
+<div class="q-desc">He married Lisa Marie Presley, Elvis Presley’s daughter in 1994 and got divorced a few months later. He had three children with his second wife Deborah Rowe.</div>
+<ul class="options-list">
+<li class="opt">Popularity</li>
+<li class="opt">Childhood and family</li>
+<li class="opt">Succesful songs</li>
+<li class="opt correct"><strong>Marriage</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> TRUE OR FALSE</div>
+<div class="q-desc">The American superstar Michael Jackson was born in Gary, Indiana, on August 29th, 1958. He wanted to be an artist since he was a child. In 1964, Michael began to perform with his brothers Jackie, Tito, Jermaine and Marlon and soon he become the dominant voice of The Jackson 5. 
+
+Solo success for Michael was inevitable, and by the 1980s, he became more popular than his brotherly group. He sold millions of records culminating in the biggest-selling album of all the time, “Thriller” in 1982. 
+
+He married Lisa Marie Presley, Elvis Presley’s daughter in 1994 and got divorced a few months later. He had three children with his second wife Deborah Rowe. 
+
+He died on June 25th, 2009, at age 50 in a cruel medical tragedy. He will be remembered as a great artist, singer, dancer, writer and businessman. Among his most heard songs besides “Thriller”, are “Don’t stop till you get enough”, “Billie Jean” “We are the world”, “Smooth criminal”, “Black or white”, and “Earth song”.</div>
+<div class="tf-block">
+<p><strong>• Michael Jackson was born in New Jersey.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He married Lisa Marie Presley, Elvis Presley's daughter in 1994.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #7c3aed">🎧 Listening (Comprensión Auditiva)</h2><div class="task-card"><h3>📌 Tarea #340: At the Doctor's Office</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> What should Maria do according to the doctor?</div>
+<ul class="options-list">
+<li class="opt">Go to work</li>
+<li class="opt correct"><strong>Drink plenty of water</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Travel</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Why did Maria visit the doctor?</div>
+<ul class="options-list">
+<li class="opt">For a check-up</li>
+<li class="opt correct"><strong>Because of a sore throat</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">For a vaccination</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> What did the doctor say about Maria’s condition?</div>
+<ul class="options-list">
+<li class="opt">It was a serious illness</li>
+<li class="opt correct"><strong>It was a minor infection</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It was a cold</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> What did the doctor give Maria?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A prescription for medicine</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A book</li>
+<li class="opt">A thermometer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> What will Maria do if she does not feel better?</div>
+<ul class="options-list">
+<li class="opt">Go to a new doctor</li>
+<li class="opt">Call her friends</li>
+<li class="opt correct"><strong>Come back to the doctor</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#6</span> Select the true sentences.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Maria visited the doctor because she had a sore throat.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>The doctor described Maria's condition as a minor infection</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>Maria was advised to drink plenty of water and rest.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The doctor informed Maria that she needed to undergo surgery for her sore throat.</li>
+<li class="opt">Maria was told to take her medicine only if she felt worse in a week.</li>
+<li class="opt">Maria was instructed to return to the doctor immediately if she felt better.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Complete the text</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Maria</td><td class="match-ans"><strong>sore throat</strong> ✅</td></tr>
+<tr><td>The</td><td class="match-ans"><strong>minor</strong> ✅</td></tr>
+<tr><td>She</td><td class="match-ans"><strong>medicine</strong> ✅</td></tr>
+<tr><td>Maria</td><td class="match-ans"><strong>rest</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#8</span> Match the word with the correct picture.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>sore throat</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>medicine</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>water</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>doctor</strong> ✅</td></tr>
+</tbody></table>
+</div></div><div class="task-card"><h3>📌 Tarea #341: At the Gym</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> What did Mark do first at the gym?</div>
+<ul class="options-list">
+<li class="opt">Lifted weights</li>
+<li class="opt correct"><strong>Did a workout on the treadmill</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Took a shower</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> How often does Mark go to the gym?</div>
+<ul class="options-list">
+<li class="opt">Once a week</li>
+<li class="opt">Twice a week</li>
+<li class="opt correct"><strong>Three times a week</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> True or False: Mark's workout routine included lifting weights before doing the treadmill exercise.</div>
+<ul class="options-list">
+<li class="opt">True</li>
+<li class="opt correct"><strong>False</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> How long did Mark lift weights?</div>
+<ul class="options-list">
+<li class="opt">15 minutes</li>
+<li class="opt correct"><strong>30 minutes</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">45 minutes</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> What did Mark do after his workout?</div>
+<ul class="options-list">
+<li class="opt">Ate a meal</li>
+<li class="opt correct"><strong>Took a shower</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Went for a run</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> How does Mark feel after exercising?</div>
+<ul class="options-list">
+<li class="opt">Tired and weak</li>
+<li class="opt correct"><strong>Great</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Hungry</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Fill in the Blanks</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Mark</td><td class="match-ans"><strong>three</strong> ✅</td></tr>
+<tr><td>Today,</td><td class="match-ans"><strong>30</strong> ✅</td></tr>
+<tr><td></td><td class="match-ans"><strong>weights</strong> ✅</td></tr>
+<tr><td>After</td><td class="match-ans"><strong>shower</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> True or False:  Mark only did a 15-minute workout on the treadmill today.</div>
+<ul class="options-list">
+<li class="opt">True</li>
+<li class="opt correct"><strong>False</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> True or False: Mark felt great after exercising and had a protein shake after his workout.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>True</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">False</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #db2777">✍️ Writing (Expresión Escrita)</h2><div class="task-card"><h3>📌 Tarea #149: VACATIONS!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To write short basic descriptions of past events and activities.</p><div class="task-expl">💡 <strong>Explicación:</strong> The past perfect tense is used to express two types of actions which occurred or completed in the past. It is usually used to express an action which occurred a long time ago in past. It gives a sense of completion of an activity in past.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the right answer according to the question: A person on Holiday is a:</div>
+<ul class="options-list">
+<li class="opt">Traveler</li>
+<li class="opt">Vacationer</li>
+<li class="opt correct"><strong>Tourist</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the best option to answer the following question: What is your favorite activity to do on a hot summer vacation?</div>
+<ul class="options-list">
+<li class="opt">Read a book</li>
+<li class="opt correct"><strong>Go swimming</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Watch movies</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the best option to answer the following question: Who do you go with?</div>
+<ul class="options-list">
+<li class="opt">Canada</li>
+<li class="opt correct"><strong>With my Family</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the best option to answer the following question: Where do you usually go on Holydays?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Camping</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Take a nap</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the sentences and choose the best option to the following question: What did you do in Mexico?</div>
+<ul class="options-list">
+<li class="opt">We played the guitar.</li>
+<li class="opt correct"><strong>We visited the Frida Kahlo Museum</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> Match the two columns to complete the meanings:</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>A short journey taken for a pleasure</td><td class="match-ans"><strong>Excursion</strong> ✅</td></tr>
+<tr><td>A small house in the country</td><td class="match-ans"><strong>Cottage</strong> ✅</td></tr>
+<tr><td>A person who shows tourists the city</td><td class="match-ans"><strong>Guide</strong> ✅</td></tr>
+<tr><td>The places that visitors go</td><td class="match-ans"><strong>Destination</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> True or False:</div>
+<div class="tf-block">
+<p><strong>• A holiday is a period when a break is taken from work or studies.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the right answer according to the question: What do people commonly wear at Valentine's day?</div>
+<ul class="options-list">
+<li class="opt">Yellow shirts</li>
+<li class="opt">Orange shoes</li>
+<li class="opt correct"><strong>Red Clothes</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the right answer according to the question: What do you need to travel to another country?</div>
+<ul class="options-list">
+<li class="opt">ID. Card</li>
+<li class="opt correct"><strong>Passport</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Ticket</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the best option to answer the following question: What do you like to do in your summer vacations?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Watching movies and hiking</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I am from New England.</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #150: LET'S CELEBRATE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To write informal email/letter with simple basic structure.</p><div class="task-expl">💡 <strong>Explicación:</strong> It is an important method of business communication that is fast, cheap, accessible and easily replicated. Using email can greatly benefit businesses as it provides efficient and effective ways to transmit all kinds of electronic data.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Write True or False.</div>
+<div class="tf-block">
+<p><strong>• On December 31st we celebrate Christmas Party</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• On December 25th  we celebrate Christmas</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read and choose the things that you need for a party.</div>
+<ul class="options-list">
+<li class="opt">Food, date, place, music, books, pencils</li>
+<li class="opt correct"><strong>Invitation, food, music, place</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Books, food, music</li>
+<li class="opt">Date, Time, Place, Address </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read and choose the right occasion.</div>
+<ul class="options-list">
+<li class="opt">Christmas</li>
+<li class="opt">Halloween</li>
+<li class="opt correct"><strong>Valentine's day</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Complete the following sentence with the correct verb: (Give, bring)</div>
+<div class="tf-block">
+<p><strong>• You need to</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Complete and choose the best option: New Year's eve is celebrated on:</div>
+<ul class="options-list">
+<li class="opt">July 4th</li>
+<li class="opt correct"><strong>December 31st</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">October 18th</li>
+<li class="opt">February 14th</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Choose the best answer for the question: What do you celebrate on this days?</div>
+<div class="tf-block">
+<p><strong>• October 31st.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read and choose the information you should include in an invitation</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Date</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Decorations</li>
+<li class="opt">Guests </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the right option to answer the question: What do you usually do at Christmas'Eve?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Give gifts</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Play football</li>
+<li class="opt">Go to the mountains</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read and choose the information you should not include in an invitation.</div>
+<ul class="options-list">
+<li class="opt">Place, address</li>
+<li class="opt">To, from</li>
+<li class="opt">Date, time</li>
+<li class="opt correct"><strong>Music, food</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> According to the information provided choose the right option to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• My favorite season is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #151: ADVICE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To give basic advice in writing using simple language.</p><div class="task-expl">💡 <strong>Explicación:</strong> Conditionals are extremely important in the English language because they help us express things that may happen in the present and future.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#1</span> Look at the pictures and match them with the words.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>dancing</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>drink water</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>doing exercises</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#2</span> Read and match some advice with the advisor.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>You should take a pill everyday</td><td class="match-ans"><strong>Doctor</strong> ✅</td></tr>
+<tr><td>You should read to improve your vocabulary</td><td class="match-ans"><strong>Teacher</strong> ✅</td></tr>
+<tr><td>You should always put the seat bell</td><td class="match-ans"><strong>Police officer</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> True or False</div>
+<div class="tf-block">
+<p><strong>• This is some advice 'You should see the doctor'.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the article. Choose the best option to answer the question: What is the topic about?</div>
+<ul class="options-list">
+<li class="opt">Obesity and its benefits</li>
+<li class="opt">Obesity and its consequences</li>
+<li class="opt correct"><strong>General information about obesity</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> Complete the following sentences using the information provided.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Are you eating a lot of junk food. You will be</td><td class="match-ans"><strong>sick</strong> ✅</td></tr>
+<tr><td>I should</td><td class="match-ans"><strong>drink milk</strong> ✅</td></tr>
+<tr><td>You should visit</td><td class="match-ans"><strong>the dentist</strong> ✅</td></tr>
+<tr><td>You should run to keep fit. You need to</td><td class="match-ans"><strong>do exercises</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Choose the best option to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• We  have to  rush. We</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Choose the best option to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• You</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Choose the best option to complete the question.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Choose the best option to complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• Do not be late for your English exam. You</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #152: EMAILS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To write simple short messages relating to everyday matters using an appropriate opening and ending in simple informal emails.</p><div class="task-expl">💡 <strong>Explicación:</strong> One importance of email writing is keeping in communication with others. For example, you can email your friends and family who live far away or business partners and even clients for your work to communicate with them in an easy way.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Complete with the correct phrases the following email</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• You</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• It is becoming longer. Could you buy the snacks and drinks for them, please?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#2</span> Identify and choose the best option for the opening and ending of these emails.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Andrew I hope you are doing well. Can you go shopping and bring some tomatoes? Remember tonight dinner with the Cantos Family. Try to come early, Lily</td><td class="match-ans"><strong>Opening</strong> ✅</td></tr>
+<tr><td>Susan Please get the material for the Science project. We can meet in the library in the afternoon. What do you think?  Thanks in advance. Leopold</td><td class="match-ans"><strong>Ending</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#3</span> Read these 2 emails. Which of them are formal or informal?</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>HI Celene, I hope you are enjoying the warm weather. I just want to request the contact information of Martha Loor. Thanks, Viviana Gómez</td><td class="match-ans"><strong>Informal</strong> ✅</td></tr>
+<tr><td>Dear Emily. How are you? I hope you are fine. Let me know when are you arriving to the airport? Bye, Laura.</td><td class="match-ans"><strong>Formal</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the activities and choose the phrases or words used to write letters.</div>
+<ul class="options-list">
+<li class="opt">Do homework and clean the house</li>
+<li class="opt correct"><strong>Dear, thanks, see you</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Read a book and play football</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Choose True or False:</div>
+<div class="tf-block">
+<p><strong>• An informal email is: It straight to the point, less detailed and it uses passive voice.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the best option to answer the following question: Have your ever written a formal letter?</div>
+<ul class="options-list">
+<li class="opt">No, I do not</li>
+<li class="opt correct"><strong>Yes, I have</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">No, I has not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the best option to answer the question: Which of the following would be a suitable greeting?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Dear Mr. Hopkins</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Hi</li>
+<li class="opt">What about you Mr. Moya?</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the best option to complete information: A Formal letter should start with the following phrase:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Dear Mrs. Bidden</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">What's up?</li>
+<li class="opt">Hi</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the best option to complete information: Start a formal letter with:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Dear Sir or Madam</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Elizabeth</li>
+<li class="opt">I need to tell you</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the best option to answer the question: How did you not send a formal letter?</div>
+<ul class="options-list">
+<li class="opt">By post</li>
+<li class="opt">By email</li>
+<li class="opt correct"><strong>By hand</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div></div>
+    </div>
+</body>
+</html>

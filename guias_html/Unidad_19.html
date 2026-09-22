@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 19 • 📓 Book 5 (B1.1 - Independent) - Guía de Inglés UTM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 900px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-btn, .print-btn {
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .back-btn:hover, .print-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 0 0 6px 0;
+        }
+        .header .subtitle {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: inline-flex;
+            gap: 16px;
+            background: #f1f5f9;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+        .skill-section {
+            margin-top: 40px;
+        }
+        .skill-section h2 {
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 6px solid #2563eb;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .task-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .task-card h3 {
+            color: #1e293b;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .task-obj {
+            font-size: 14px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .task-expl {
+            font-size: 14px;
+            color: #0369a1;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        .question-card {
+            background: #fafafa;
+            border-left: 4px solid #3b82f6;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+        .q-header {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .q-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .q-num {
+            color: #3b82f6;
+            margin-right: 4px;
+        }
+        .q-desc {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .options-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .opt {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .opt.correct {
+            background: #ecfdf5;
+            border-color: #10b981;
+            color: #065f46;
+            font-weight: 600;
+        }
+        .badge-correct {
+            background: #10b981;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            float: right;
+            font-weight: 600;
+        }
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .match-table th, .match-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .match-table th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        .match-ans {
+            color: #065f46;
+            background: #ecfdf5;
+            font-weight: 600;
+        }
+        .order-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        .fill-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .fill-list li {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        @media print {
+            body { background: #ffffff; padding: 0; }
+            .top-nav { display: none; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .task-card { page-break-inside: avoid; }
+            .question-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="../index.html" class="back-btn">← Volver al Portal General</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Guardar / Imprimir PDF</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>📘 Universidad Técnica de Manabí</h1>
+            <div class="subtitle">Simulador de Inglés • Unidad 19 • 📓 Book 5 (B1.1 - Independent)</div>
+            <div class="stats">
+                <span>📋 18 Tareas</span>
+                <span>❓ 179 Preguntas Verificadas</span>
+            </div>
+        </div>
+        <div class="skill-section"><h2 style="border-left-color: #2563eb">🧠 Grammar (Estructuras Gramaticales)</h2><div class="task-card"><h3>📌 Tarea #289: I WISH</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can understand the concept of deforestation, its effects on the environment and how people are working to save forests.</p><div class="task-expl">💡 <strong>Explicación:</strong> We can use 'wish' to talk about something that we would like to be different in the present or the future. It's used for things which are impossible or very unlikely.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the correct answer: The neighbors are playing loud music now.</div>
+<ul class="options-list">
+<li class="opt">I wish they would stop.</li>
+<li class="opt">I wish they wouldn’t play loud music</li>
+<li class="opt correct"><strong>I wish they weren't playing loud music.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the correct answer: I wish we _______ (live) near the beach.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>lived</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">live</li>
+<li class="opt">lives</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the correct answer: I wish we _______ (can go) to the environmental speech.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>could go</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">can go</li>
+<li class="opt">can goes</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the correct answer: Mary really likes flowers. I wish I _______ enough money to buy her some.</div>
+<ul class="options-list">
+<li class="opt">have</li>
+<li class="opt correct"><strong>had</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">were having</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the correct answer: It's cold. I wish it _______ warmer.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>was</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">had</li>
+<li class="opt">could</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Which word completes the sentence? I wish I _______ come to the zoo with you next weekend, but I'm going to be busy.</div>
+<ul class="options-list">
+<li class="opt">had</li>
+<li class="opt correct"><strong>could</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">will</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Which sentence is NOT correct?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I wish could do that!</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I wish you wouldn't do that.</li>
+<li class="opt">I wish I were stronger.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct answer:  I wish we _______ more laws obligating sustainable development.</div>
+<ul class="options-list">
+<li class="opt">have</li>
+<li class="opt">could</li>
+<li class="opt correct"><strong>had</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct answer: Many people wish farmers _______ pesticides. Our food has too many toxic chemicals.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>didn't use</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">don't use</li>
+<li class="opt">can use</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the correct answer: Native communities wish there _______ more natural habitats and less endangered species.</div>
+<ul class="options-list">
+<li class="opt">was</li>
+<li class="opt">is</li>
+<li class="opt correct"><strong>were</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #290: IF ONLY</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use simple language to describe people's personality and emotions.</p><div class="task-expl">💡 <strong>Explicación:</strong> We use 'If only...' to express a strong wish that things could be different. It means the same as “I wish” but is stronger. We use it to talk about past, present and future unreal conditions.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the correct answer: If only we _______ the wrong road!</div>
+<ul class="options-list">
+<li class="opt correct"><strong>hadn't taken</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">had taken</li>
+<li class="opt">haven't taken</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the correct answer: If only it _______ raining!</div>
+<ul class="options-list">
+<li class="opt">can stop</li>
+<li class="opt">will stop</li>
+<li class="opt correct"><strong>would stop</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the correct answer: I am sorry I don't know how to use the computer. If only I _______ how to use it.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>knew</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">know</li>
+<li class="opt">could</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the correct answer: If only she _______ the doctor earlier. He could have saved her.</div>
+<ul class="options-list">
+<li class="opt">hadn't seen</li>
+<li class="opt correct"><strong>had seen</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">saw</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the correct answer:  If only I _______ guitar!</div>
+<ul class="options-list">
+<li class="opt">can play</li>
+<li class="opt">will play</li>
+<li class="opt correct"><strong>could play</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the correct answer:  If only you _______ how to swim when you were younger!</div>
+<ul class="options-list">
+<li class="opt">have learned</li>
+<li class="opt">will learn</li>
+<li class="opt correct"><strong>had learned</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the correct answer: The fireworks are so beautiful! If only Stella _______ here, they're her favorite</div>
+<ul class="options-list">
+<li class="opt correct"><strong>were</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">has been</li>
+<li class="opt">could</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct answer: If only we _______ to your advice. The event would have been much better.</div>
+<ul class="options-list">
+<li class="opt">have listened</li>
+<li class="opt correct"><strong>had listened</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">listened</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct answer: If only we _______ what to do.</div>
+<ul class="options-list">
+<li class="opt">know</li>
+<li class="opt">had known</li>
+<li class="opt correct"><strong>knew</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the correct answer: I'm really busy. If only I _______ more time.</div>
+<ul class="options-list">
+<li class="opt">have</li>
+<li class="opt">can have</li>
+<li class="opt correct"><strong>had</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #291: WILL FOR INSTANT DECISIONS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Use of will for instant decisions and promises in the future.</p><div class="task-expl">💡 <strong>Explicación:</strong> The future simple tense is used to express future intentions that are decided at the time of speaking (spontaneous offers, promises, and decisions).</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Which sentence is correct?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I won't be late.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The manager won't late.</li>
+<li class="opt">Dennis won't coming with us.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Which is the correct reply? Sorry, the director isn't here at the moment.</div>
+<ul class="options-list">
+<li class="opt">Okay, I will to come back later.</li>
+<li class="opt correct"><strong>Okay, I'll come back later.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Okay, I come back later.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Which question is NOT correct?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>What time will the party start?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">When will you get the results? </li>
+<li class="opt">Where will you live? </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Which sentence uses will incorrectly? (Which sentence is not a prediction?)</div>
+<ul class="options-list">
+<li class="opt">Electric cars will become more and more popular.</li>
+<li class="opt">James won't be on time.</li>
+<li class="opt correct"><strong>I will go on holiday to France next week.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Which sentence uses will incorrectly? (Which sentence is not an offer?)</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Sarah will go to a meeting in Brussels next week.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I'll bring you a chair.</li>
+<li class="opt">James will help you make the dinner.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Which sentence is correct?</div>
+<ul class="options-list">
+<li class="opt">Paul will to give you a receipt.</li>
+<li class="opt">Sorry, I'll late for the meeting</li>
+<li class="opt correct"><strong>Harry won't enjoy the concert.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Which sentence will be correct? (Which sentence is not a plan?)</div>
+<ul class="options-list">
+<li class="opt">I'll go on holiday to Spain next week.</li>
+<li class="opt">My friend Julie will visit me at the weekend.</li>
+<li class="opt correct"><strong>It'll probably rain tomorrow.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Which reply is correct? Oh no! I forgot my wallet!</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Don't worry. I'll buy you a drink.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Don't worry. I'll buying you a drink.</li>
+<li class="opt">Don't worry. I buy you a drink.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> What's the correct reply? Will you be at the meeting tomorrow?</div>
+<ul class="options-list">
+<li class="opt">Yes, I'll.</li>
+<li class="opt correct"><strong>Yes, I will.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">No, I'll not.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Complete the sentence: I'm afraid _______ at the meeting tomorrow.</div>
+<ul class="options-list">
+<li class="opt">I won't</li>
+<li class="opt">I'll be not</li>
+<li class="opt correct"><strong>I won't be</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #292: WOULD</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Use of 'would' for unreal situations and talking about willingness in the past.</p><div class="task-expl">💡 <strong>Explicación:</strong> The word would is used for unreal or imagined situations: 'I would love to visit New York.' Use would in the past to talk about the willingness of a person or people: They would die for me if they had to.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Complete the sentence: I knew he would _______ famous one day.</div>
+<ul class="options-list">
+<li class="opt">to be</li>
+<li class="opt correct"><strong>be</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">will</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Complete the sentence: He said that _______ help me.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>he'd</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">he would to</li>
+<li class="opt">he woulded</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Complete the sentence: I asked him to walk faster but he _______ at first.</div>
+<ul class="options-list">
+<li class="opt">would</li>
+<li class="opt correct"><strong>wouldn't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">'d</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Complete the sentence: As children we would _______ together every day.</div>
+<ul class="options-list">
+<li class="opt">playing</li>
+<li class="opt">to play</li>
+<li class="opt correct"><strong>play</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Complete the sentence: Nobody knew that one day he _______ be rich.</div>
+<ul class="options-list">
+<li class="opt">will</li>
+<li class="opt correct"><strong>would</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">would to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Complete the sentence: If you asked me _______ say you were crazy.</div>
+<ul class="options-list">
+<li class="opt">would I</li>
+<li class="opt">I'd would</li>
+<li class="opt correct"><strong>I'd</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Complete the sentence: Would you _______ to go?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>like</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">liked</li>
+<li class="opt">to like</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Complete the sentence: Do you think he'd help? | I'm sure _______ if you asked.</div>
+<ul class="options-list">
+<li class="opt">he help</li>
+<li class="opt">he'd</li>
+<li class="opt correct"><strong>he would</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Complete the sentence: He would _______ to be improving.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>seem</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">seems</li>
+<li class="opt">seem'd</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Complete the sentence: We want to play tennis. I wish _______ stop raining.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>it would</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">it had</li>
+<li class="opt">it will</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #059669">📖 Vocabulary (Vocabulario)</h2><div class="task-card"><h3>📌 Tarea #281: FORESTS ARE DISAPPEARING</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> At the end of the lesson, students can understand the concept of deforestation, its effects on the environment and how people are working to save forests.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the right option: The word 'clear-cut' means _______</div>
+<ul class="options-list">
+<li class="opt">The place or environment where a plant or animal naturally or normally lives and grows.</li>
+<li class="opt correct"><strong>An area of forest in which all the trees have been cut down.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">To have a direct effect.</li>
+<li class="opt">Something (as a law or rule) that limits.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the right option: The word 'reforestation' means _______</div>
+<ul class="options-list">
+<li class="opt">Something (as a law or rule) that limits.</li>
+<li class="opt correct"><strong>The action of renewing forest cover (as by natural seeding or by the artificial planting of seeds or young trees).</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The place or environment where a plant or animal naturally or normally lives and grows.</li>
+<li class="opt">An area of forest in which all the trees have been cut down.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the right option: The word 'impact' means _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>To have a direct effect.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The release of carbon into the atmosphere.</li>
+<li class="opt">An area of forest in which all the trees have been cut down.</li>
+<li class="opt">The action of renewing forest cover (as by natural seeding or by the artificial planting of seeds or young trees).</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the right option: The words 'carbon emissions' mean _______</div>
+<ul class="options-list">
+<li class="opt">An area of forest in which all the trees have been cut down.</li>
+<li class="opt correct"><strong>The release of carbon into the atmosphere.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The act or process of changing from one form, state, etc., to another.</li>
+<li class="opt">The act or process of damaging something so badly that it no longer exists or cannot be repaired.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the right option: The word 'habitat' means _______</div>
+<ul class="options-list">
+<li class="opt">To have a direct effect</li>
+<li class="opt correct"><strong>The place or environment where a plant or animal naturally or normally lives and grows.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The action of renewing forest cover (as by natural seeding or by the artificial planting of seeds or young trees)</li>
+<li class="opt">Something (as a law or rule) that limits</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the right option: This picture corresponds to the word _______</div>
+<ul class="options-list">
+<li class="opt">Restriction</li>
+<li class="opt">Habitat</li>
+<li class="opt correct"><strong>Destruction </strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Ecosystem </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Look at the picture and select the correct definition</div>
+<ul class="options-list">
+<li class="opt correct"><strong>An epidemic disease.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">To cut for lumber (wood).</li>
+<li class="opt">An edible fat obtained from the flesh of the fruits of several palms.</li>
+<li class="opt">To harvest something excessively and especially to a harmful degree.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Look at the picture and select the correct definition</div>
+<ul class="options-list">
+<li class="opt">An area of cleared enclosed land used for cultivation.</li>
+<li class="opt">The act or process to deteriorate.</li>
+<li class="opt correct"><strong>A dark or black carbon prepared from vegetable substances.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The feeding of bovine animals on a farm using plants such as grass.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the right option: The definition of 'cattle pasture' is _______</div>
+<ul class="options-list">
+<li class="opt">An epidemic disease.</li>
+<li class="opt">To cut for lumber (wood).</li>
+<li class="opt correct"><strong>The feeding of bovine animals on a farm using plants such as grass.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The act or process to deteriorate.</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #282: WHAT A CRAZY PERSON!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> At the end of the lesson, students can use simple language to describe people's personality and emotions.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> Match the correct definition  with a line</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>stubborn</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>strong</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>jealous</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Look at the picture and select the correct option</div>
+<ul class="options-list">
+<li class="opt correct"><strong>frustrated</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">heavy</li>
+<li class="opt">light</li>
+<li class="opt">brave</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the right option: The word 'curious' means _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>having a desire to learn or know more about something or someone</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">very enthusiastic and eager about something</li>
+<li class="opt">showing a lack of patience</li>
+<li class="opt">feeling a mean anger toward someone because he or she is more successful</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the right option: The word 'outgoing' means _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>used to describe someone who is friendly and likes being with and talking to other people</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">having or showing the attitude of people who think that they are better or more important than others</li>
+<li class="opt">having great physical power and ability</li>
+<li class="opt">refusing to change your ideas or to stop doing something</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the right option: The word 'excited' means _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>very enthusiastic and eager about something</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">showing a lack of patience</li>
+<li class="opt">feeling a mean anger toward someone because he or she is more successful</li>
+<li class="opt">used to describe someone who is friendly and likes being with and talking to other people</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the right option: The word 'proud' means _______</div>
+<ul class="options-list">
+<li class="opt">having great physical power and ability</li>
+<li class="opt correct"><strong>having or showing the attitude of people who think that they are better or more important than others</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">refusing to change your ideas or to stop doing something</li>
+<li class="opt">having a desire to learn or know more about something or someone</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the right option: The word 'impatient' means _______</div>
+<ul class="options-list">
+<li class="opt">feeling a mean anger toward someone because he or she is more successful.</li>
+<li class="opt correct"><strong>showing a lack of patience.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">used to describe someone who is friendly and likes being with and talking to other people.</li>
+<li class="opt">having or showing the attitude of people who think that they are better or more important than others.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the right option: The antonym for the word angry is _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>friendly</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">sad</li>
+<li class="opt">curious</li>
+<li class="opt">lazy</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the right option: The antonym for the word careless is _______</div>
+<ul class="options-list">
+<li class="opt">ugly</li>
+<li class="opt">gorgeous</li>
+<li class="opt">brave</li>
+<li class="opt correct"><strong>careful</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Look at the picture and select the correct option</div>
+<ul class="options-list">
+<li class="opt">feeling or showing no fear</li>
+<li class="opt correct"><strong>very pleasing to look at</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">offensive to the right</li>
+<li class="opt">affected with or expressive of grief or unhappiness</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #283: ENJOY IT!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> At the end of the lesson, students can discuss what to do in the evening or at the weekend in their holidays.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Look at the picture and choose the correct option: This picture corresponds to the word _______</div>
+<ul class="options-list">
+<li class="opt">Easter</li>
+<li class="opt">Birthday</li>
+<li class="opt correct"><strong>Christmas</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Father's Day</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the right option: The definition: 'a date that is remembered or celebrated because a special or notable event occurred on that date in a previous year' corresponds to the word</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Anniversary</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Fair</li>
+<li class="opt">Festivity</li>
+<li class="opt">Firework</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the right option: The word 'parade' means _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>public celebration of a special day or event that usually includes many people and groups moving down a street by marching or riding in cars or on special vehicles (called floats).</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">a very impressive show.</li>
+<li class="opt">a period of time that a person spends away from home, school, or business usually in order to relax or travel.</li>
+<li class="opt">enjoyable activities at the time of a holiday or other special occasion.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#4</span> Match the words with their respective definitions</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Vacation</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Firework</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Tradition</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the right option: The word 'fair' means _______</div>
+<ul class="options-list">
+<li class="opt">a day when most people do not have to work.</li>
+<li class="opt correct"><strong>an exhibition designed to acquaint prospective buyers or the general public with a product.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">a way of thinking, behaving, or doing something that has been used by the people in a particular group, family, society, etc., for a long time.</li>
+<li class="opt">a period of time that a person spends away from home, school, or business usually in order to relax or travel.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the right option: The word 'memorial' means _______</div>
+<ul class="options-list">
+<li class="opt">public celebration of a special day or event that usually includes many people and groups moving down a street by marching or riding in cars or on special vehicles (called floats)</li>
+<li class="opt correct"><strong>something (such as a monument or ceremony) that honors a person who has died or serves as a reminder of an event in which many people died</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">a very impressive show</li>
+<li class="opt">a day when most people do not have to work</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Look at the picture and choose the correct option: This picture corresponds to the word _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Thanksgiving</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Wedding</li>
+<li class="opt">Birthday</li>
+<li class="opt">Mother's Day</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Look at the picture and choose the correct option: This picture corresponds to the celebration _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>New Year's Eve</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Christmas</li>
+<li class="opt">Easter</li>
+<li class="opt">Wedding </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Look at the picture and choose the correct option: This picture corresponds to the word _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Easter</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Wedding</li>
+<li class="opt">Birthday</li>
+<li class="opt">Mother's Day</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Look at the picture and choose the correct option: This picture corresponds to the word _______</div>
+<ul class="options-list">
+<li class="opt">Birthday</li>
+<li class="opt">Easter</li>
+<li class="opt correct"><strong>Valentine's Day</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Father's Day</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #284: I WAS A SOLDIER</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> At the end of the lesson, students Can describe very basic events in the past using words and expressions related to history.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the right option: Which definition does not correspond to the word DEMOCRACY?</div>
+<ul class="options-list">
+<li class="opt">people have the right to express one's opinion against the government without fear of being killed.</li>
+<li class="opt">control of an organization or group by the majority of its members.</li>
+<li class="opt">system of government where citizens have the right to elect their leaders</li>
+<li class="opt correct"><strong>cruel and oppressive form of government.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the right option: The expression 'Bloody revolution' means _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>a resistance or rebellion against the government in which many people are killed</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">system of government where citizens have the right to elect their leaders</li>
+<li class="opt">people have the right to express one's opinion against the government without fear of being killed.</li>
+<li class="opt">authoritarian form of government</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the right option: The word 'genocide' means _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>massive killing of people intentionally</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">a military or political group that governs a country after taking power by force</li>
+<li class="opt">cruel and oppressive form of government.</li>
+<li class="opt">the act of rebellion</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the right option: The definition 'the act of rebellion' corresponds to the word _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Uprising</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Junta</li>
+<li class="opt">Tyranny</li>
+<li class="opt">Democracy</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the right option: The word 'Junta' means _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>a military or political group that governs a country after taking power by force.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">cruel and oppressive form of government.</li>
+<li class="opt">the act of rebellion.</li>
+<li class="opt">massive killing of people intentionally.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the right option: The proverb 'History repeats itself' means _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Same events that happened in the past that will happen over and over again.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">To remove the highest leader of a nation.</li>
+<li class="opt">It means making people believe that something occurred in a particular way when it is not the truth.</li>
+<li class="opt">something that can impact in a great scale.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the right option: The expression 'Overthrow a government' means _______</div>
+<ul class="options-list">
+<li class="opt">The way things happened or going to happen.</li>
+<li class="opt">It means making people believe that something occurred in a particular way when it is not the truth.</li>
+<li class="opt correct"><strong>To remove the highest leader of a nation.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Same events that happened in the past that will happen over and over again.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the right option: The expression 'alter the course of history' means _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>an event that history will be changed from this day forward</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">the beliefs and judgment of most people</li>
+<li class="opt">the best part (of something)</li>
+<li class="opt">he middle class of society</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the right option: The expression 'Historical proportions' means _______</div>
+<ul class="options-list">
+<li class="opt">the very best people or things in a group.</li>
+<li class="opt">the lowest possible condition, level, etc.</li>
+<li class="opt correct"><strong>something has changed the course of history in some way.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">in relation to the entire world.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the right option: The expression 'Shapes The Future' means _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>something that is changing the history or the way that things have been done</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">a period of quiet that comes before a time of activity, excitement, violence, etc</li>
+<li class="opt">an organization or situation in which everyone is treated equally and has equal rights</li>
+<li class="opt">a tendency toward or actual exercise of strong autocratic or dictatorial control</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #d97706">📚 Reading (Comprensión Lectora)</h2><div class="task-card"><h3>📌 Tarea #285: HUMAN IMPACT IN OUR</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand the concept of deforestation, its effects on the environment and how people are working to save forests.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Mark true (T) or false (F).</div>
+<div class="q-desc"><p>(__) We all need healthy forests. They help keep our climate stable, absorbing carbon dioxide and releasing oxygen, and they regulate our water supply and improve its quality. They also provide a home to more than half of all species found on land—a rich variety of life that keeps so many natural systems running. Over 1 billion people live in and around forests, depending on them for fuel, food, medicines, and building materials. And all of us use wood in our daily lives. But human impacts have already led to the loss of around 40% of the world’s forests. And today, an area the size of a football pitch is still being destroyed every second. Protecting and restoring forests have never been more urgent.</p><p>(__) Every year, 8.8 million hectares of forest is destroyed, making way for activities like cattle pasture, palm oil plantations, soy fields or roads. Even larger areas are suffering from degradation—where the forest remains, but its richness and health is in decline. Threats include illegal and unsustainable logging, overharvesting of wood for fuel and charcoal, small I- scale farming, hunting, forest fires, and pests and diseases. All this threatens the survival of countless species, fuels climate change, jeopardizes people’s livelihoods, and undermines the vital services that forests provide.</p><p>(__) With better protection, forests can continue to provide a welcome home for wildlife and resources for indigenous people and local communities. And, globally, they can keep providing us all with essentials such as fresh air and clean water. With better management, we can boost timber production without damaging the local environment. And with better planning, we can produce enough food for growing populations without having to convert forests to farmland. We can even go further, by replanting and restoring forests that have been destroyed or degraded. This can help combat climate, extend and reconnect wildlife habitats, and reduce problems like flooding and erosion.</p><p>(__) There’s never been greater support for stopping and starting to reverse the loss of forests. We aim to achieve big things over the next few years: by 2030, we’re working to end deforestation, protect or improve the management of half the world’s forests, and begin restoring forest landscapes across an area larger than India. Of course, we can’t do this alone—so we’re working together with many partners to make things happen on a big scale. Together, we can ensure forests continue to provide</p></div>
+<div class="tf-block">
+<p><strong>• Over 3 billion people live in and around forests, depending on them for fuel, food, medicines and building materials. </strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#2</span> Match the sentences to the corresponding paragraph:</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Seeing the wood for the trees</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Forests</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#3</span> Match the sentences to the corresponding paragraph:</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>What we're doing</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Death by a thousand cuts</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Mark true (T) or false (F).</div>
+<div class="q-desc"><p>(__) We all need healthy forests. They help keep our climate stable, absorbing carbon dioxide and releasing oxygen, and they regulate our water supply and improve its quality. They also provide a home to more than half of all species found on land—a rich variety of life that keeps so many natural systems running. Over 1 billion people live in and around forests, depending on them for fuel, food, medicines, and building materials. And all of us use wood in our daily lives. But human impacts have already led to the loss of around 40% of the world’s forests. And today, an area the size of a football pitch is still being destroyed every second. Protecting and restoring forests have never been more urgent.</p><p><br></p><p>(__) Every year, 8.8 million hectares of forest is destroyed, making way for activities like cattle pasture, palm oil plantations, soy fields or roads. Even larger areas are suffering from degradation—where the forest remains, but its richness and health is in decline. Threats include illegal and unsustainable logging, overharvesting of wood for fuel and charcoal, small I- scale farming, hunting, forest fires, and pests and diseases. All this threatens the survival of countless species, fuels climate change, jeopardizes people’s livelihoods, and undermines the vital services that forests provide.</p><p><br></p><p>(__) With better protection, forests can continue to provide a welcome home for wildlife and resources for indigenous people and local communities. And, globally, they can keep providing us all with essentials such as fresh air and clean water. With better management, we can boost timber production without damaging the local environment. And with better planning, we can produce enough food for growing populations without having to convert forests to farmland. We can even go further, by replanting and restoring forests that have been destroyed or degraded. This can help combat climate, extend and reconnect wildlife habitats, and reduce problems like flooding and erosion.</p><p><br></p><p>(__) There’s never been greater support for stopping and starting to reverse the loss of forests. We aim to achieve big things over the next few years: by 2030, we’re working to end deforestation, protect or improve the management of half the world’s forests, and begin restoring forest landscapes across an area larger than India. Of course, we can’t do this alone—so we’re working together with many partners to make things happen on a big scale. Together, we can ensure forests continue to provide.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Every year, 8.8 million hectares of forest is destroyed, making way for activities like cattle pasture, palm oil plantations, soy fields or roads.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Mark true (T) or false (F).</div>
+<div class="q-desc"><p>(__) We all need healthy forests. They help keep our climate stable, absorbing carbon dioxide and releasing oxygen, and they regulate our water supply and improve its quality. They also provide a home to more than half of all species found on land—a rich variety of life that keeps so many natural systems running. Over 1 billion people live in and around forests, depending on them for fuel, food, medicines, and building materials. And all of us use wood in our daily lives. But human impacts have already led to the loss of around 40% of the world’s forests. And today, an area the size of a football pitch is still being destroyed every second. Protecting and restoring forests have never been more urgent.</p><p><br></p><p>(__) Every year, 8.8 million hectares of forest is destroyed, making way for activities like cattle pasture, palm oil plantations, soy fields or roads. Even larger areas are suffering from degradation—where the forest remains, but its richness and health is in decline. Threats include illegal and unsustainable logging, overharvesting of wood for fuel and charcoal, small I- scale farming, hunting, forest fires, and pests and diseases. All this threatens the survival of countless species, fuels climate change, jeopardizes people’s livelihoods, and undermines the vital services that forests provide.</p><p><br></p><p>(__) With better protection, forests can continue to provide a welcome home for wildlife and resources for indigenous people and local communities. And, globally, they can keep providing us all with essentials such as fresh air and clean water. With better management, we can boost timber production without damaging the local environment. And with better planning, we can produce enough food for growing populations without having to convert forests to farmland. We can even go further, by replanting and restoring forests that have been destroyed or degraded. This can help combat climate, extend and reconnect wildlife habitats, and reduce problems like flooding and erosion.</p><p><br></p><p>(__) There’s never been greater support for stopping and starting to reverse the loss of forests. We aim to achieve big things over the next few years: by 2030, we’re working to end deforestation, protect or improve the management of half the world’s forests, and begin restoring forest landscapes across an area larger than India. Of course, we can’t do this alone—so we’re working together with many partners to make things happen on a big scale. Together, we can ensure forests continue to provide.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Together, we can ensure forests continue to provide for people and nature, now and for generations to come.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Mark true (T) or false (F).</div>
+<div class="q-desc"><p>(__) We all need healthy forests. They help keep our climate stable, absorbing carbon dioxide and releasing oxygen, and they regulate our water supply and improve its quality. They also provide a home to more than half of all species found on land—a rich variety of life that keeps so many natural systems running. Over 1 billion people live in and around forests, depending on them for fuel, food, medicines, and building materials. And all of us use wood in our daily lives. But human impacts have already led to the loss of around 40% of the world’s forests. And today, an area the size of a football pitch is still being destroyed every second. Protecting and restoring forests have never been more urgent.</p><p><br></p><p>(__) Every year, 8.8 million hectares of forest is destroyed, making way for activities like cattle pasture, palm oil plantations, soy fields or roads. Even larger areas are suffering from degradation—where the forest remains, but its richness and health is in decline. Threats include illegal and unsustainable logging, overharvesting of wood for fuel and charcoal, small I- scale farming, hunting, forest fires, and pests and diseases. All this threatens the survival of countless species, fuels climate change, jeopardizes people’s livelihoods, and undermines the vital services that forests provide.</p><p><br></p><p>(__) With better protection, forests can continue to provide a welcome home for wildlife and resources for indigenous people and local communities. And, globally, they can keep providing us all with essentials such as fresh air and clean water. With better management, we can boost timber production without damaging the local environment. And with better planning, we can produce enough food for growing populations without having to convert forests to farmland. We can even go further, by replanting and restoring forests that have been destroyed or degraded. This can help combat climate, extend and reconnect wildlife habitats, and reduce problems like flooding and erosion.</p><p><br></p><p>(__) There’s never been greater support for stopping and starting to reverse the loss of forests. We aim to achieve big things over the next few years: by 2030, we’re working to end deforestation, protect or improve the management of half the world’s forests, and begin restoring forest landscapes across an area larger than India. Of course, we can’t do this alone—so we’re working together with many partners to make things happen on a big scale. Together, we can ensure forests continue to provide.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Protecting and restoring forests has never been less urgent.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Mark true (T) or false (F).</div>
+<div class="q-desc"><p>(__) We all need healthy forests. They help keep our climate stable, absorbing carbon dioxide and releasing oxygen, and they regulate our water supply and improve its quality. They also provide a home to more than half of all species found on land—a rich variety of life that keeps so many natural systems running. Over 1 billion people live in and around forests, depending on them for fuel, food, medicines, and building materials. And all of us use wood in our daily lives. But human impacts have already led to the loss of around 40% of the world’s forests. And today, an area the size of a football pitch is still being destroyed every second. Protecting and restoring forests have never been more urgent.</p><p><br></p><p>(__) Every year, 8.8 million hectares of forest is destroyed, making way for activities like cattle pasture, palm oil plantations, soy fields or roads. Even larger areas are suffering from degradation—where the forest remains, but its richness and health is in decline. Threats include illegal and unsustainable logging, overharvesting of wood for fuel and charcoal, small I- scale farming, hunting, forest fires, and pests and diseases. All this threatens the survival of countless species, fuels climate change, jeopardizes people’s livelihoods, and undermines the vital services that forests provide.</p><p><br></p><p>(__) With better protection, forests can continue to provide a welcome home for wildlife and resources for indigenous people and local communities. And, globally, they can keep providing us all with essentials such as fresh air and clean water. With better management, we can boost timber production without damaging the local environment. And with better planning, we can produce enough food for growing populations without having to convert forests to farmland. We can even go further, by replanting and restoring forests that have been destroyed or degraded. This can help combat climate, extend and reconnect wildlife habitats, and reduce problems like flooding and erosion.</p><p><br></p><p>(__) There’s never been greater support for stopping and starting to reverse the loss of forests. We aim to achieve big things over the next few years: by 2030, we’re working to end deforestation, protect or improve the management of half the world’s forests, and begin restoring forest landscapes across an area larger than India. Of course, we can’t do this alone—so we’re working together with many partners to make things happen on a big scale. Together, we can ensure forests continue to provide.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Human impacts have already led to the loss of around 40% of the world's forests.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Complete the sentence: This can help combat climate, extend and reconnect wildlife habitats, and reduce problems like _______</div>
+<div class="q-desc"><p>(__) We all need healthy forests. They help keep our climate stable, absorbing carbon dioxide and releasing oxygen, and they regulate our water supply and improve its quality. They also provide a home to more than half of all species found on land—a rich variety of life that keeps so many natural systems running. Over 1 billion people live in and around forests, depending on them for fuel, food, medicines, and building materials. And all of us use wood in our daily lives. But human impacts have already led to the loss of around 40% of the world’s forests. And today, an area the size of a football pitch is still being destroyed every second. Protecting and restoring forests have never been more urgent.</p><p><br></p><p>(__) Every year, 8.8 million hectares of forest is destroyed, making way for activities like cattle pasture, palm oil plantations, soy fields or roads. Even larger areas are suffering from degradation—where the forest remains, but its richness and health is in decline. Threats include illegal and unsustainable logging, overharvesting of wood for fuel and charcoal, small I- scale farming, hunting, forest fires, and pests and diseases. All this threatens the survival of countless species, fuels climate change, jeopardizes people’s livelihoods, and undermines the vital services that forests provide.</p><p><br></p><p>(__) With better protection, forests can continue to provide a welcome home for wildlife and resources for indigenous people and local communities. And, globally, they can keep providing us all with essentials such as fresh air and clean water. With better management, we can boost timber production without damaging the local environment. And with better planning, we can produce enough food for growing populations without having to convert forests to farmland. We can even go further, by replanting and restoring forests that have been destroyed or degraded. This can help combat climate, extend and reconnect wildlife habitats, and reduce problems like flooding and erosion.</p><p><br></p><p>(__) There’s never been greater support for stopping and starting to reverse the loss of forests. We aim to achieve big things over the next few years: by 2030, we’re working to end deforestation, protect or improve the management of half the world’s forests, and begin restoring forest landscapes across an area larger than India. Of course, we can’t do this alone—so we’re working together with many partners to make things happen on a big scale. Together, we can ensure forests continue to provide.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">earthquakes and tsunamis</li>
+<li class="opt correct"><strong>flooding and erosion</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">drought and floods</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Complete the sentence:  Every year, _______ of forest is destroyed, making way for activities like cattle pasture, palm oil plantations, soy fields or roads.</div>
+<div class="q-desc"><p>(__) We all need healthy forests. They help keep our climate stable, absorbing carbon dioxide and releasing oxygen, and they regulate our water supply and improve its quality. They also provide a home to more than half of all species found on land—a rich variety of life that keeps so many natural systems running. Over 1 billion people live in and around forests, depending on them for fuel, food, medicines, and building materials. And all of us use wood in our daily lives. But human impacts have already led to the loss of around 40% of the world’s forests. And today, an area the size of a football pitch is still being destroyed every second. Protecting and restoring forests have never been more urgent.</p><p><br></p><p>(__) Every year, 8.8 million hectares of forest is destroyed, making way for activities like cattle pasture, palm oil plantations, soy fields or roads. Even larger areas are suffering from degradation—where the forest remains, but its richness and health is in decline. Threats include illegal and unsustainable logging, overharvesting of wood for fuel and charcoal, small I- scale farming, hunting, forest fires, and pests and diseases. All this threatens the survival of countless species, fuels climate change, jeopardizes people’s livelihoods, and undermines the vital services that forests provide.</p><p><br></p><p>(__) With better protection, forests can continue to provide a welcome home for wildlife and resources for indigenous people and local communities. And, globally, they can keep providing us all with essentials such as fresh air and clean water. With better management, we can boost timber production without damaging the local environment. And with better planning, we can produce enough food for growing populations without having to convert forests to farmland. We can even go further, by replanting and restoring forests that have been destroyed or degraded. This can help combat climate, extend and reconnect wildlife habitats, and reduce problems like flooding and erosion.</p><p><br></p><p>(__) There’s never been greater support for stopping and starting to reverse the loss of forests. We aim to achieve big things over the next few years: by 2030, we’re working to end deforestation, protect or improve the management of half the world’s forests, and begin restoring forest landscapes across an area larger than India. Of course, we can’t do this alone—so we’re working together with many partners to make things happen on a big scale. Together, we can ensure forests continue to provide.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt correct"><strong>8.8 million hectares</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Beaches</li>
+<li class="opt">Parks</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> This article is about:</div>
+<div class="q-desc"><p>(__) We all need healthy forests. They help keep our climate stable, absorbing carbon dioxide and releasing oxygen, and they regulate our water supply and improve its quality. They also provide a home to more than half of all species found on land—a rich variety of life that keeps so many natural systems running. Over 1 billion people live in and around forests, depending on them for fuel, food, medicines, and building materials. And all of us use wood in our daily lives. But human impacts have already led to the loss of around 40% of the world’s forests. And today, an area the size of a football pitch is still being destroyed every second. Protecting and restoring forests have never been more urgent.</p><p><br></p><p>(__) Every year, 8.8 million hectares of forest is destroyed, making way for activities like cattle pasture, palm oil plantations, soy fields or roads. Even larger areas are suffering from degradation—where the forest remains, but its richness and health is in decline. Threats include illegal and unsustainable logging, overharvesting of wood for fuel and charcoal, small I- scale farming, hunting, forest fires, and pests and diseases. All this threatens the survival of countless species, fuels climate change, jeopardizes people’s livelihoods, and undermines the vital services that forests provide.</p><p><br></p><p>(__) With better protection, forests can continue to provide a welcome home for wildlife and resources for indigenous people and local communities. And, globally, they can keep providing us all with essentials such as fresh air and clean water. With better management, we can boost timber production without damaging the local environment. And with better planning, we can produce enough food for growing populations without having to convert forests to farmland. We can even go further, by replanting and restoring forests that have been destroyed or degraded. This can help combat climate, extend and reconnect wildlife habitats, and reduce problems like flooding and erosion.</p><p><br></p><p>(__) There’s never been greater support for stopping and starting to reverse the loss of forests. We aim to achieve big things over the next few years: by 2030, we’re working to end deforestation, protect or improve the management of half the world’s forests, and begin restoring forest landscapes across an area larger than India. Of course, we can’t do this alone—so we’re working together with many partners to make things happen on a big scale. Together, we can ensure forests continue to provide.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">People who live in different places</li>
+<li class="opt correct"><strong>Human Impact in our environment</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Economic resources of two places</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #286: TALKING ABOUT ME</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use simple language to describe people's personality and emotions.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> According to the text. Which the sentence is correct?</div>
+<div class="q-desc"><p>Hello, my name is Darla. I am 23 years old. I am short and thin. Well, I considered myself as a generous person because I like to help people, also I am very loyal to my friend. I am happy and talkative because I like to share special moments with nice people.</p><p>My best friend, Mayra is very friendly because she likes to have a lot of friends. She is tall and a little heavy but she likes to practice sports. We are volunteers in a foundation which takes care of homeless people giving them food and shelter.</p></div>
+<ul class="options-list">
+<li class="opt">Yesterday I went to the shopping center because I wanted to buy a new electronic device.</li>
+<li class="opt correct"><strong>We are volunteers in a foundation which takes care of homeless people giving them food and shelter.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">There are different ways we can find purpose in things.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the text answer the following question: Where do they volunteer?</div>
+<div class="q-desc"><p>Hello, my name is Darla. I am 23 years old. I am short and thin. Well, I considered myself as a generous person because I like to help people, also I am very loyal to my friend. I am happy and talkative because I like to share special moments with nice people.</p><p>My best friend, Mayra is very friendly because she likes to have a lot of friends. She is tall and a little heavy but she likes to practice sports. We are volunteers in a foundation which takes care of homeless people giving them food and shelter.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">In a Church</li>
+<li class="opt">In a Hospital</li>
+<li class="opt correct"><strong>In a Foundation</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read the following paragraph. True or False</div>
+<div class="q-desc"><p>Hello, my name is Darla. I am 23 years old. I am short and thin. Well, I considered myself as a generous person because I like to help people, also I am very loyal to my friend. I am happy and talkative because I like to share special moments with nice people.</p><p>My best friend, Mayra is very friendly because she likes to have a lot of friends. She is tall and a little heavy but she likes to practice sports. We are volunteers in a foundation which takes care of homeless people giving them food and shelter.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Darla is 32 years old.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Darla's best friend is very friendly.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#4</span> Order the letters to make personality adjectives.</div>
+<ul class="fill-list">
+<li><code>yldneirf </code> ➔ <strong>friendly</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>vercel</code> ➔ <strong>clever</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>kavtlieta</code> ➔ <strong>talkative</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Choose the correct adjectives to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• My brother hates parties because he's really</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>•  Mayra is very</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I think it's important to be</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> Match the halves to complete the sentences.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Darla is a generous person</td><td class="match-ans"><strong>because she likes to help people.</strong> ✅</td></tr>
+<tr><td>Mayra is very friendly</td><td class="match-ans"><strong>because she likes to have a lot of friend.</strong> ✅</td></tr>
+<tr><td>Darla is happy and talkative</td><td class="match-ans"><strong>because she likes to share special moments with nice people.</strong> ✅</td></tr>
+<tr><td>Mayra is tall and a little heavy</td><td class="match-ans"><strong>because she likes to practice sports.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Match.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>She doesn't like speaking in public</td><td class="match-ans"><strong>She is shy</strong> ✅</td></tr>
+<tr><td>She speaks a lot</td><td class="match-ans"><strong>She is talkative</strong> ✅</td></tr>
+<tr><td>Darla helps other people</td><td class="match-ans"><strong>She is generous</strong> ✅</td></tr>
+<tr><td>Mayra likes to practice sports</td><td class="match-ans"><strong>She is a little heavy</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Read the following paragraph. True or False</div>
+<div class="q-desc"><p>Hello, my name is Darla. I am 23 years old. I am short and thin. Well, I considered myself as a generous person because I like to help people, also I am very loyal to my friend. I am happy and talkative because I like to share special moments with nice people.</p><p>My best friend, Mayra is very friendly because she likes to have a lot of friends. She is tall and a little heavy but she likes to practice sports. We are volunteers in a foundation which takes care of homeless people giving them food and shelter.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Mayra likes practice sports.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• Darla is tall.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the text answer the following question: What are they?</div>
+<div class="q-desc"><p>Hello, my name is Darla. I am 23 years old. I am short and thin. Well, I considered myself as a generous person because I like to help people, also I am very loyal to my friend. I am happy and talkative because I like to share special moments with nice people.</p><p>My best friend, Mayra is very friendly because she likes to have a lot of friends. She is tall and a little heavy but she likes to practice sports. We are volunteers in a foundation which takes care of homeless people giving them food and shelter.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">Fire women</li>
+<li class="opt correct"><strong>Volunteers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Police women</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#10</span> Put in order the following letters to create words related to personality and emotions.</div>
+<ul class="fill-list">
+<li><code>GNIOGTUO</code> ➔ <strong>OUTGOING</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>VERAB</code> ➔ <strong>BRAVE</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>GLUY</code> ➔ <strong>UGLY</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>SUOLAJE</code> ➔ <strong>JEALOUS</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #287: PLANS FOR DOING TOGETHER</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can discuss what to do in the evening or at the weekend.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> According to the text. Which the sentence is correct?</div>
+<div class="q-desc"><p><strong> a.</strong> Hello Maria. Do you have a minute?</p><p><strong> b.</strong> Hi, Andres. Tell me.</p><p> <strong>a.</strong> What are you going to do this Friday?</p><p> <strong>b.</strong> Nothing. I think I will go to the church with my family.</p><p> <strong>a.</strong> There will be a party this Friday. Would you like to come with me?</p><p> <strong>b.</strong> It sounds good, but you know I really have to go. I promised my mother that I will go with all of them.</p><p> <strong>a.</strong> What about after the mass? I could pick you up at 10 pm.</p><p> <strong>b.</strong> Great! No problem. I’ll go with you, thanks.</p><p> <strong>a.</strong> Ok. I’ll be in your house at that time.</p><p> <strong>b.</strong> I’ll be waiting for you.</p><p> <strong>a.</strong> See you on Friday. Bye</p><p> <strong>b.</strong> Bye.</p></div>
+<ul class="options-list">
+<li class="opt">I chose this one because it was smaller, cheaper and modern than my old mobile.</li>
+<li class="opt correct"><strong>Nothing. I think I will go to the church with my family.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">There are different ways we can find purpose in things.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the text again answer the following question: Where did Andres invite Maria?</div>
+<div class="q-desc"><p>a. Hello Maria. Do you have a minute?</p><p>b. Hi, Andres. Tell me.</p><p>a. What are you going to do this Friday?</p><p>b. Nothing. I think I will go to the church with my family.</p><p>a. There will be a party this Friday. Would you like to come with me?</p><p>b. It sounds good, but you know I really have to go. I promised my mother that I will go with all of them.</p><p>a. What about after the mass? I could pick you up at 10 pm.</p><p>b. Great! No problem. I’ll go with you, thanks.</p><p>a. Ok. I’ll be in your house at that time.</p><p>b. I’ll be waiting for you.</p><p>a. See you on Friday. Bye</p><p>b. Bye.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">At movie</li>
+<li class="opt correct"><strong>To a party</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">To the church</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> According to the text. Choose the correct sentence.</div>
+<div class="q-desc"><p>a. Hello Maria. Do you have a minute?</p><p>b. Hi, Andres. Tell me.</p><p>a. What are you going to do this Friday?</p><p>b. Nothing. I think I will go to the church with my family.</p><p>a. There will be a party this Friday. Would you like to come with me?</p><p>b. It sounds good, but you know I really have to go. I promised my mother that I will go with all of them.</p><p>a. What about after the mass? I could pick you up at 10 pm.</p><p>b. Great! No problem. I’ll go with you, thanks.</p><p>a. Ok. I’ll be in your house at that time.</p><p>b. I’ll be waiting for you.</p><p>a. See you on Friday. Bye</p><p>b. Bye.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">I'm tired because I was in my school all day working with my classmates.</li>
+<li class="opt correct"><strong>I promised my mother that I will go with all of them.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt"> Well Leo it was a nice conversation but it's time to go home, have a nice weekend, bye!</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> According to the dialogue. Put true or false.</div>
+<div class="q-desc"><p>a. Hello Maria. Do you have a minute?</p><p>b. Hi, Andres. Tell me.</p><p>a. What are you going to do this Friday?</p><p>b. Nothing. I think I will go to the church with my family.</p><p>a. There will be a party this Friday. Would you like to come with me?</p><p>b. It sounds good, but you know I really have to go. I promised my mother that I will go with all of them.</p><p>a. What about after the mass? I could pick you up at 10 pm.</p><p>b. Great! No problem. I’ll go with you, thanks.</p><p>a. Ok. I’ll be in your house at that time.</p><p>b. I’ll be waiting for you.</p><p>a. See you on Friday. Bye</p><p>b. Bye.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• Andres y Maria will to go the church.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The party is on Friday.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Match the correct sentences.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The movie is going to start at 9 pm.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I next Sunday will go to the beach.</li>
+<li class="opt">This evening English classes start will.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#6</span> Put in order the following letters to create words related to evenings and weekends.</div>
+<ul class="fill-list">
+<li><code>CHAEB</code> ➔ <strong>BEACH</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>VIMOE</code> ➔ <strong>MOVIE</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>MUESUM</code> ➔ <strong>MUSEUM</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>LLAM</code> ➔ <strong>MALL</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the text again answer the following question: What time will Andres pick up Maria?</div>
+<div class="q-desc"><p>a. Hello Maria. Do you have a minute?</p><p>b. Hi, Andres. Tell me.</p><p>a. What are you going to do this Friday?</p><p>b. Nothing. I think I will go to the church with my family.</p><p>a. There will be a party this Friday. Would you like to come with me?</p><p>b. It sounds good, but you know I really have to go. I promised my mother that I will go with all of them.</p><p>a. What about after the mass? I could pick you up at 10 pm.</p><p>b. Great! No problem. I’ll go with you, thanks.</p><p>a. Ok. I’ll be in your house at that time.</p><p>b. I’ll be waiting for you.</p><p>a. See you on Friday. Bye</p><p>b. Bye.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">At 8:00 p.m.</li>
+<li class="opt">At 9:00 a.m.</li>
+<li class="opt correct"><strong>At 10:00 p.m.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> According to the dialogue. Put true or false.</div>
+<div class="q-desc"><p>a. Hello Maria. Do you have a minute?</p><p>b. Hi, Andres. Tell me.</p><p>a. What are you going to do this Friday?</p><p>b. Nothing. I think I will go to the church with my family.</p><p>a. There will be a party this Friday. Would you like to come with me?</p><p>b. It sounds good, but you know I really have to go. I promised my mother that I will go with all of them.</p><p>a. What about after the mass? I could pick you up at 10 pm.</p><p>b. Great! No problem. I’ll go with you, thanks.</p><p>a. Ok. I’ll be in your house at that time.</p><p>b. I’ll be waiting for you.</p><p>a. See you on Friday. Bye</p><p>b. Bye.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• He will pick her up at 11pm.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Maria agreed to go to the party after arriving from church.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Circle the correct word in each sentences</div>
+<div class="tf-block">
+<p><strong>• We're</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• We</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• This is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I am really tired. I</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #288: PICHINCHA BATTLE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can describe very basic events in the past using simple linking words.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> According to the text. Which sentence is correct?</div>
+<div class="q-desc"><p><strong>Pichincha Battle</strong></p><p>The battle of Pichincha was a historical fact that was recorded in Ecuador on May 24, 1922.</p><p>Soldiers from Ecuador commanded by Venezuelan General Antonio Jose de Sucre fought against the Spanish army, the events occurred in Quito. After the battle, Ecuador was free and began its republican life. With this background the other countries of America were liberated and exercised their democracy.</p></div>
+<ul class="options-list">
+<li class="opt">Soldiers from Ecuador commanded by a Colombian General.</li>
+<li class="opt correct"><strong>With this background the other countries of America were liberated and exercised them democracy.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The battle was a ficticial fact.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Which of the following relevant historical events took place in Ecuador?</div>
+<div class="q-desc"><p><strong>Pichincha Battle</strong></p><p>The battle of Pichincha was a historical fact that was recorded in Ecuador on May 24, 1922.</p><p>Soldiers from Ecuador commanded by Venezuelan General Antonio Jose de Sucre fought against the Spanish army, the events occurred in Quito. After the battle, Ecuador was free and began its republican life. With this background the other countries of America were liberated and exercised their democracy.</p></div>
+<ul class="options-list">
+<li class="opt">Vietnam war</li>
+<li class="opt">The battle of Berlin</li>
+<li class="opt correct"><strong>Pichincha Battle</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> According to the text. Answer the question: What happen after this event?</div>
+<div class="q-desc"><p><strong>Pichincha Battle</strong></p><p>The battle of Pichincha was a historical fact that was recorded in Ecuador on May 24, 1922.</p><p>Soldiers from Ecuador commanded by Venezuelan General Antonio Jose de Sucre fought against the Spanish army, the events occurred in Quito. After the battle, Ecuador was free and began its republican life. With this background the other countries of America were liberated and exercised their democracy.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">After the battle, Ecuador wasn't free.</li>
+<li class="opt">After the battle Venezuela was free and began its republican life.</li>
+<li class="opt correct"><strong>After the battle, Ecuador was free and began its republican life.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Choose the correct option. True or False.</div>
+<div class="q-desc"><p><strong>Pichincha Battle</strong></p><p>The battle of Pichincha was a historical fact that was recorded in Ecuador on May 24, 1922.</p><p>Soldiers from Ecuador commanded by Venezuelan General Antonio Jose de Sucre fought against the Spanish army, the events occurred in Quito. After the battle, Ecuador was free and began its republican life. With this background the other countries of America were liberated and exercised their democracy.</p><p><br></p></div>
+<div class="tf-block">
+<p><strong>• That battle was a fictional fact.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Soldiers from Ecuador commanded by Colombian General.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• With this background the other countries of America were liberated.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• After, the battle Ecuador wasn't free.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> Mark the events with the correct date</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Earthquake on the Ecuadorian coast.</td><td class="match-ans"><strong>On April 16, 2016</strong> ✅</td></tr>
+<tr><td>Cenepa war.</td><td class="match-ans"><strong>During the months of January and February 1995</strong> ✅</td></tr>
+<tr><td>Pichincha Battle.</td><td class="match-ans"><strong>On May 24, 1922</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> According to the text. Answer the question: What happened?</div>
+<div class="q-desc"><p><strong>Pichincha Battle</strong></p><p>The battle of Pichincha was a historical fact that was recorded in Ecuador on May 24, 1922.</p><p>Soldiers from Ecuador commanded by Venezuelan General Antonio Jose de Sucre fought against the Spanish army, the events occurred in Quito. After the battle, Ecuador was free and began its republican life. With this background the other countries of America were liberated and exercised their democracy.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt correct"><strong>Soldiers from Ecuador commanded by Venezuelan General Antonio Jose de Sucre fought against the Spanish army</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Soldiers from Ecuador commanded by Venezuelan General Simon Bolivar fought against the Mexican army.</li>
+<li class="opt">Soldiers from Peru commanded by Venezuelan General Simon Bolivar fought against the Ecuadorian army.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> According to the text, mark the correct sentence:</div>
+<div class="q-desc"><p><strong>Pichincha Battle</strong></p><p>The battle of Pichincha was a historical fact that was recorded in Ecuador on May 24, 1922.</p><p>Soldiers from Ecuador commanded by Venezuelan General Antonio Jose de Sucre fought against the Spanish army, the events occurred in Quito. After the battle, Ecuador was free and began its republican life. With this background the other countries of America were liberated and exercised their democracy.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">Soldiers from Ecuador commanded by Mexican General Antonio Jose de Sucre.</li>
+<li class="opt">After the battle, Ecuador wasn't free.</li>
+<li class="opt correct"><strong>The battle of Pichincha was a historical fact that was recorded in Ecuador on May 24, 1922.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The events occurred in Ambato.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> Complete the sentences with the correct linking words.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>There will be no peace</td><td class="match-ans"><strong>until</strong> ✅</td></tr>
+<tr><td>She went to bed</td><td class="match-ans"><strong>after</strong> ✅</td></tr>
+<tr><td>It has not been the same around here</td><td class="match-ans"><strong>since</strong> ✅</td></tr>
+<tr><td>Peter is crying</td><td class="match-ans"><strong>because</strong> ✅</td></tr>
+<tr><td>Ana loves oranges,</td><td class="match-ans"><strong>but</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Read the following events. Mark them true or false if they are real or fictitious.</div>
+<div class="tf-block">
+<p><strong>• The Hogwarts Battle</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Vietnam War</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• The Star War</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Pichincha Battle</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#10</span> Mark correctly the countries of the following events</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Vietnam War</td><td class="match-ans"><strong>Vietnam</strong> ✅</td></tr>
+<tr><td>The Berlin Battle</td><td class="match-ans"><strong>German</strong> ✅</td></tr>
+<tr><td>Pichincha Battle</td><td class="match-ans"><strong>Ecuador</strong> ✅</td></tr>
+<tr><td>The Moscow Battle</td><td class="match-ans"><strong>Russia</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#11</span> Put in order the following letters to create words related to evenings and weekends</div>
+<ul class="fill-list">
+<li><code>SEUCAEB</code> ➔ <strong>BECAUSE</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>TERFA</code> ➔ <strong>AFTER</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>TINUL</code> ➔ <strong>UNTIL</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>CENSI</code> ➔ <strong>SINCE</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#12</span> Read the text again and answer the following question: Who were the protagonists?</div>
+<div class="q-desc"><p><strong>Pichincha Battle</strong></p><p>The battle of Pichincha was a historical fact that was recorded in Ecuador on May 24, 1922.</p><p>Soldiers from Ecuador commanded by Venezuelan General Antonio Jose de Sucre fought against the Spanish army, the events occurred in Quito. After the battle, Ecuador was free and began its republican life. With this background the other countries of America were liberated and exercised their democracy.</p><p><br></p></div>
+<ul class="options-list">
+<li class="opt">Soldiers from Brazil</li>
+<li class="opt correct"><strong>Soldiers from Ecuador</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Soldiers from Peru</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #7c3aed">🎧 Listening (Comprensión Auditiva)</h2><div class="task-card"><h3>📌 Tarea #358: SECTION 5</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> How does the woman feel?</div>
+<ul class="options-list">
+<li class="opt">exited</li>
+<li class="opt correct"><strong>worried</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">angry</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Where are they going?</div>
+<ul class="options-list">
+<li class="opt">to school</li>
+<li class="opt correct"><strong>on holiday</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">shopping</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Where will the group be tomorrow</div>
+<ul class="options-list">
+<li class="opt">in the classroom</li>
+<li class="opt">at the shops</li>
+<li class="opt correct"><strong>on a day trip</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> How much does the man want to spend?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>15 pounds</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">50 pounds</li>
+<li class="opt">16 pounds</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Why did the woman enjoy her holiday?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The hotel was good</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The guests were friendly</li>
+<li class="opt">She enjoyed all the meals</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> The man doesn’t like the city because</div>
+<ul class="options-list">
+<li class="opt">there’s a lot of noise.</li>
+<li class="opt correct"><strong>everything is expensive.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">there’s nothing to do.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> What is Danny doing after the party?</div>
+<ul class="options-list">
+<li class="opt">driving home</li>
+<li class="opt">sharing a taxi</li>
+<li class="opt correct"><strong>staying in a hotel</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> when does the woman go to the flower market?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>early morning</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">at midday</li>
+<li class="opt">after breakfast</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> what is the man trying to do?</div>
+<ul class="options-list">
+<li class="opt">have some time alone</li>
+<li class="opt">listen to the radio</li>
+<li class="opt correct"><strong>talk on the phone</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> what social problem is the man talking about?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>homelessness</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">unemployment</li>
+<li class="opt">drug addition</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #359: SECTION 6</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> How does the customer feel?</div>
+<ul class="options-list">
+<li class="opt">She’s satisfied with every aspect of the meal.</li>
+<li class="opt">She’s not satisfied with the food.</li>
+<li class="opt correct"><strong>She’s not satisfied with the drink.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Why is he giving information?</div>
+<ul class="options-list">
+<li class="opt">to tell people there is a problem on the trains</li>
+<li class="opt correct"><strong>to tell people they might be delayed on the roads</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">to tell people they might not fly today</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Where is he?</div>
+<ul class="options-list">
+<li class="opt">in a supermarket</li>
+<li class="opt correct"><strong>in the kitchen of a restaurant</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">in a market place</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> What kind of charity does she support?</div>
+<ul class="options-list">
+<li class="opt">a homeless charity</li>
+<li class="opt">a children’s charity</li>
+<li class="opt correct"><strong>an animal charity</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Who is the woman?</div>
+<ul class="options-list">
+<li class="opt">the swimmer’s mother</li>
+<li class="opt correct"><strong>a news reporter</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">the swimmer’s teacher</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> What is the man doing?</div>
+<ul class="options-list">
+<li class="opt">buying a train ticket</li>
+<li class="opt">planning a journey</li>
+<li class="opt correct"><strong>getting directions to the station</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> What is the result of the conversation?</div>
+<ul class="options-list">
+<li class="opt">The woman gives money to the charity.</li>
+<li class="opt correct"><strong>The woman doesn’t give money to the charity.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The woman will give money to charity the following day.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> What is the pilot doing?</div>
+<ul class="options-list">
+<li class="opt">welcoming the passengers on the flight</li>
+<li class="opt">thanking the passengers for travelling with her airline</li>
+<li class="opt correct"><strong>warning the passengers that the plane might move suddenly soon</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> What are the two people doing?</div>
+<ul class="options-list">
+<li class="opt">thanking</li>
+<li class="opt correct"><strong>persuading </strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">complaining</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> What’s the result of the phone call?</div>
+<ul class="options-list">
+<li class="opt">The customer books a table for Saturday.</li>
+<li class="opt">The customer books a table for Sunday.</li>
+<li class="opt correct"><strong>The customer doesn’t book a table at the Thai Garden.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #db2777">✍️ Writing (Expresión Escrita)</h2><div class="task-card"><h3>📌 Tarea #277: I WISH</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use 'I wish' in a normal dialogue and learn the mean of that.</p><div class="task-expl">💡 <strong>Explicación:</strong> We can use 'I wish' for express desires.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the correct option: I want my mother to buy me a purse.</div>
+<ul class="options-list">
+<li class="opt">I wish my father will buy me a purse</li>
+<li class="opt correct"><strong>I wish my mother would buy me a purse</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I wish I could buy me a purse</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read and choose the right option: If I were Italian, I would be a better cook.</div>
+<ul class="options-list">
+<li class="opt">He wishes he could be a Italian.</li>
+<li class="opt">He wishes he would be a cook.</li>
+<li class="opt correct"><strong>He wishes he could be a better cook.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He wish he could have a cook</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the correct option: Select the correct sentence to translate this wish: No tengo tiempo, ojalá lo tuviera</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I wish I had time</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I wish I could be free</li>
+<li class="opt">I wish I couldn't had time</li>
+<li class="opt">I wish i hadn't be free</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the correct option: I don't speak Spanish very well</div>
+<ul class="options-list">
+<li class="opt">I wish I could speak</li>
+<li class="opt">I wish I learn speak more</li>
+<li class="opt correct"><strong>I wish I spoke Spanish better</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I wish I speak Spanish better</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the correct option: I live in Madrid, but I prefer Roma.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I wish I lived in Roma</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I wish I lived in Madrid</li>
+<li class="opt">I wish I live in my country</li>
+<li class="opt">I wish I live in Europa</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the correct option: I ______ I ______ buy a house</div>
+<ul class="options-list">
+<li class="opt">wish- can</li>
+<li class="opt correct"><strong>wish- could</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">wishes-can</li>
+<li class="opt">wishes-could</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the correct option: I'm sorry I don't know her phone number.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I wish I knew her phone number </strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I wish I know my number</li>
+<li class="opt">I wish she knows her phone number</li>
+<li class="opt">I wish she knows my phone number</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct option to complete the sentence: I wish I _______ more money every week</div>
+<ul class="options-list">
+<li class="opt">can saved</li>
+<li class="opt">could saved</li>
+<li class="opt">can save</li>
+<li class="opt correct"><strong>could save</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct option: I wish be a chef</div>
+<ul class="options-list">
+<li class="opt correct"><strong>She wishes she could cook</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">She wish cooking</li>
+<li class="opt">She wishes cooking</li>
+<li class="opt">She wish she can cook</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the right option: Desearía leer más.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I wish I read more</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I love read more</li>
+<li class="opt">I like to read more</li>
+<li class="opt">I wish read</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #278: IF ONLY</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Be able to learn how to use it correctly.</p><div class="task-expl">💡 <strong>Explicación:</strong> We can use 'If only' to express a strong wish that things could be different.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> I am sorry I don't know how to use the computer.</div>
+<ul class="options-list">
+<li class="opt">I am  knew how to use it.</li>
+<li class="opt correct"><strong>If only I knew to use it</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">If only I worked to use it</li>
+<li class="opt">If only I work to use it</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> She doesn't know the truth, but he wishes she did. If _______ she _______ the truth.</div>
+<ul class="options-list">
+<li class="opt">only-know</li>
+<li class="opt">only-knows</li>
+<li class="opt correct"><strong>only-knew</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">only-known</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Too bad he didn't come</div>
+<ul class="options-list">
+<li class="opt">If only I had come</li>
+<li class="opt correct"><strong>If only he had come</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Id only he has come</li>
+<li class="opt">Id only I has come</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> If _______ I _______ in the countryside.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>only-lived</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">only-live</li>
+<li class="opt">only-lives</li>
+<li class="opt">only-be</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> If only I _______ fly</div>
+<ul class="options-list">
+<li class="opt correct"><strong>could</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">lived</li>
+<li class="opt">can</li>
+<li class="opt">live</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> The event would have been much better. If _______ we _______ your advice</div>
+<ul class="options-list">
+<li class="opt correct"><strong>only-had listened</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">only-have listened</li>
+<li class="opt">only-had listen</li>
+<li class="opt">only-have listen</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> _______ had studied harder, he _______ have passed his exams</div>
+<ul class="options-list">
+<li class="opt correct"><strong>If only he-could</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">If only I-could</li>
+<li class="opt">If only he-can</li>
+<li class="opt">If only I-can</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> If only I had taken the train</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I hadn't taken the train</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I want to take the train</li>
+<li class="opt">She does take the train</li>
+<li class="opt">I take the train</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> He was running very fast when he had a heart attack. If _______ he _______ run so fast.</div>
+<ul class="options-list">
+<li class="opt">only-didn't</li>
+<li class="opt correct"><strong>only-hadn't</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">only-did</li>
+<li class="opt">only-had</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> IF ONLY I _______ A STOMACHACHE</div>
+<ul class="options-list">
+<li class="opt correct"><strong>didn’t have</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">had</li>
+<li class="opt">was</li>
+<li class="opt">didn’t</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #279: WILL FOR INSTANT DECISIONS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use will in our day.</p><div class="task-expl">💡 <strong>Explicación:</strong> We can use the future simply to express future intentions that are decide at the time of speaking.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> (I/do/this/later)</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I will do this later</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I am doing this later</li>
+<li class="opt">I will doing this later</li>
+<li class="opt">I will do that later</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> I promise I (be/not) late.</div>
+<ul class="options-list">
+<li class="opt">will be</li>
+<li class="opt correct"><strong>will not be</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">will have</li>
+<li class="opt">will have not</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> I think they (get) married in this year.</div>
+<ul class="options-list">
+<li class="opt">will not getting</li>
+<li class="opt correct"><strong>will get</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">will</li>
+<li class="opt">won't</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the incorrect option.</div>
+<ul class="options-list">
+<li class="opt">we will not win the lottery</li>
+<li class="opt">we won't win the lottery</li>
+<li class="opt">we will win the lottery</li>
+<li class="opt correct"><strong>we will the lottery</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> I am really tired. I _______ get some sleep</div>
+<ul class="options-list">
+<li class="opt">no</li>
+<li class="opt">will not</li>
+<li class="opt">both</li>
+<li class="opt correct"><strong>will</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> My mom thinks it ______ (snow) tomorrow.</div>
+<ul class="options-list">
+<li class="opt">snow</li>
+<li class="opt correct"><strong>will snow</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">will not rain</li>
+<li class="opt">will rain</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Which do you prefer, tea or coffee?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I will have a coffee</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I will not</li>
+<li class="opt">I will has a coffee</li>
+<li class="opt">I don't will nothing</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> He (believe/not) us.</div>
+<ul class="options-list">
+<li class="opt">He don't  believe us</li>
+<li class="opt correct"><strong>He will not believe us</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He do believe us</li>
+<li class="opt">He will believe us</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Will he not go with his wife to Moscow?</div>
+<ul class="options-list">
+<li class="opt">Yes, he will go</li>
+<li class="opt">No, he will not go.</li>
+<li class="opt correct"><strong>Yes, he will stay. </strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">No, he will not stay. </li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #280: WOULD</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Be able to know what it means and can use it in a conversation.</p><div class="task-expl">💡 <strong>Explicación:</strong> We use would for unreal or imagined situations.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> I _______ like a cup of tea, please.</div>
+<ul class="options-list">
+<li class="opt">will</li>
+<li class="opt correct"><strong>would</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">both</li>
+<li class="opt">no</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Have some sweets.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Would you like sweets?</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Will you like sweets?</li>
+<li class="opt">Won't you like some sweets?</li>
+<li class="opt">You like some sweets</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the correct sentence.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I would get up at 6am to go to school.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">My daughter will not work if I had enough money.</li>
+<li class="opt">He will come with us if he didn't have to study.</li>
+<li class="opt">a, b, c.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Cuando era más joven, no solía ir a la disco</div>
+<ul class="options-list">
+<li class="opt">When I was younger, I would like go to the disco.</li>
+<li class="opt correct"><strong>When I was younger, I wouldn't go to the disco.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">When I was old, I wouldn't go to the disco.</li>
+<li class="opt">When I was younger, I will like to go to the disco.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> If I won the lottery, I _______ travel around the world</div>
+<ul class="options-list">
+<li class="opt">want</li>
+<li class="opt">do</li>
+<li class="opt correct"><strong>would</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">see</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> I would love to meet her</div>
+<ul class="options-list">
+<li class="opt correct"><strong>He wants to meet her</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He wants to see her</li>
+<li class="opt">He loves her</li>
+<li class="opt">He likes her</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the right option:</div>
+<ul class="options-list">
+<li class="opt">We call him if we know his phone number.</li>
+<li class="opt correct"><strong>We would call him if we knew his phone number.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">We call him if we knew his phone number.</li>
+<li class="opt">We would call him if we know his phone number.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Which question is incorrect?</div>
+<ul class="options-list">
+<li class="opt">Would you like to have a drink?</li>
+<li class="opt">Would you like to sit down?</li>
+<li class="opt">Would you like to take my car?</li>
+<li class="opt correct"><strong>Would you like to sandwich?</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> WE _______ MISS HER A LOT.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>will</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">would</li>
+<li class="opt">could</li>
+<li class="opt">might</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> I _______ read the newspaper if I _______ money to buy it</div>
+<ul class="options-list">
+<li class="opt correct"><strong>would have - had had</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">could have - had had</li>
+<li class="opt">would had - have</li>
+<li class="opt">could had - have</li>
+</ul>
+</div></div></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 12 • 📙 Book 3 (A2.1 - Pre-Intermediate) - Guía de Inglés UTM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 900px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-btn, .print-btn {
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .back-btn:hover, .print-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 0 0 6px 0;
+        }
+        .header .subtitle {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: inline-flex;
+            gap: 16px;
+            background: #f1f5f9;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+        .skill-section {
+            margin-top: 40px;
+        }
+        .skill-section h2 {
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 6px solid #2563eb;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .task-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .task-card h3 {
+            color: #1e293b;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .task-obj {
+            font-size: 14px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .task-expl {
+            font-size: 14px;
+            color: #0369a1;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        .question-card {
+            background: #fafafa;
+            border-left: 4px solid #3b82f6;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+        .q-header {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .q-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .q-num {
+            color: #3b82f6;
+            margin-right: 4px;
+        }
+        .q-desc {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .options-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .opt {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .opt.correct {
+            background: #ecfdf5;
+            border-color: #10b981;
+            color: #065f46;
+            font-weight: 600;
+        }
+        .badge-correct {
+            background: #10b981;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            float: right;
+            font-weight: 600;
+        }
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .match-table th, .match-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .match-table th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        .match-ans {
+            color: #065f46;
+            background: #ecfdf5;
+            font-weight: 600;
+        }
+        .order-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        .fill-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .fill-list li {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        @media print {
+            body { background: #ffffff; padding: 0; }
+            .top-nav { display: none; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .task-card { page-break-inside: avoid; }
+            .question-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="../index.html" class="back-btn">← Volver al Portal General</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Guardar / Imprimir PDF</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>📘 Universidad Técnica de Manabí</h1>
+            <div class="subtitle">Simulador de Inglés • Unidad 12 • 📙 Book 3 (A2.1 - Pre-Intermediate)</div>
+            <div class="stats">
+                <span>📋 18 Tareas</span>
+                <span>❓ 165 Preguntas Verificadas</span>
+            </div>
+        </div>
+        <div class="skill-section"><h2 style="border-left-color: #2563eb">🧠 Grammar (Estructuras Gramaticales)</h2><div class="task-card"><h3>📌 Tarea #177: SHE CALLED ME WHILE I WAS TAKING A SHOWER</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> TO DISTINGUISH BETWEEN THE PAST SIMPLE AND PAST CONTINUOUS.</p><div class="task-expl">💡 <strong>Explicación:</strong> Through grammatical structures, students will be able to describe situations or actions experienced in the past.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> COMPLETE THE SENTENCES WITH THE CORRECT PAST FORM</div>
+<div class="tf-block">
+<p><strong>• MY SON</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> COMPLETE THE SENTENCES WITH THE CORRECT PAST FORM</div>
+<div class="tf-block">
+<p><strong>• I WAS</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> COMPLETE THE SENTENCES WITH THE CORRECT PAST FORM</div>
+<div class="tf-block">
+<p><strong>• I</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> COMPLETE THE SENTENCES WITH THE CORRECT PAST FORM</div>
+<div class="tf-block">
+<p><strong>• WE WERE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> COMPLETE THE SENTENCES WITH THE CORRECT PAST FORM</div>
+<div class="tf-block">
+<p><strong>• AS SOON AS WE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> COMPLETE THE SENTENCES WITH THE CORRECT PAST FORM</div>
+<div class="tf-block">
+<p><strong>• WHEN I</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> COMPLETE THE SENTENCES WITH THE CORRECT PAST FORM</div>
+<div class="tf-block">
+<p><strong>• SHE WAS READING A BOOK WHEN THE PHONE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> COMPLETE THE SENTENCES WITH THE CORRECT PAST FORM</div>
+<div class="tf-block">
+<p><strong>• SHE WAS</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> COMPLETE THE SENTENCES WITH THE CORRECT PAST FORM</div>
+<div class="tf-block">
+<p><strong>• WHEN THEY</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> COMPLETE THE SENTENCES WITH THE CORRECT PAST FORM</div>
+<div class="tf-block">
+<p><strong>• THE MIXER BROKE DOWN WHEN I WAS</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #178: SHE'S WON A LOT OF TROPHIES</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> TO USE THE PRESENT PERFECT TO REFER TO PERSONAL EXPERIENCES.</p><div class="task-expl">💡 <strong>Explicación:</strong> Present perfect is a verb tense that we use to talk about something. That happened in the past but has relevance in the present, either because it happened very recently or because it is an action that has not yet finished.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> COMPLETE THE SENTENCES WITH THE PRESENT PERFECT FORM.</div>
+<div class="tf-block">
+<p><strong>• I</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> COMPLETE THE SENTENCES WITH THE PRESENT PERFECT FORM.</div>
+<div class="tf-block">
+<p><strong>• SHE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> COMPLETE THE SENTENCES WITH THE PRESENT PERFECT FORM.</div>
+<div class="tf-block">
+<p><strong>• WE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> COMPLETE THE SENTENCES WITH THE PRESENT PERFECT FORM.</div>
+<div class="tf-block">
+<p><strong>• THEY</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> COMPLETE THE SENTENCES WITH THE PRESENT PERFECT FORM.</div>
+<div class="tf-block">
+<p><strong>• CAROL</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> COMPLETE THE SENTENCES WITH THE PRESENT PERFECT FORM.</div>
+<div class="tf-block">
+<p><strong>• IT</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> COMPLETE THE SENTENCES WITH THE PRESENT PERFECT FORM.</div>
+<div class="tf-block">
+<p><strong>• WE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> COMPLETE THE SENTENCES WITH THE PRESENT PERFECT FORM.</div>
+<div class="tf-block">
+<p><strong>• I</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> COMPLETE THE SENTENCES WITH THE PRESENT PERFECT FORM.</div>
+<div class="tf-block">
+<p><strong>• WHO</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> COMPLETE THE SENTENCES WITH THE PRESENT PERFECT FORM.</div>
+<div class="tf-block">
+<p><strong>• PAUL</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #179: SHE'S COMING TOMORROW</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> TO USE THE PRESENT CONTINUOUS WITH FUTURE REFERENCE.</p><div class="task-expl">💡 <strong>Explicación:</strong> We use the present continuous both to talk about things we are doing at the moment and to comment on what we already have planned to do in the future, but adding time expressions for the future such as next week, next year, tomorrow, later, tonight, etc.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> CHOOSE THE RIGHT SENTENCES WITH THE PRESENT CONTINUOUS FOR FUTURE</div>
+<ul class="options-list">
+<li class="opt">I MEET JIM AT THE AIRPORT.</li>
+<li class="opt correct"><strong>I AM MEETING JIM AT THE AIRPORT TONIGHT.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> CHOOSE THE RIGHT SENTENCES WITH THE PRESENT CONTINUOUS FOR FUTURE</div>
+<ul class="options-list">
+<li class="opt">I WILL GO TO THE PARTY IN THE EVENING.</li>
+<li class="opt correct"><strong>I AM GOING TO THE PARTY IN THE EVENING.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> CHOOSE THE RIGHT SENTENCES WITH THE PRESENT CONTINUOUS FOR FUTURE</div>
+<ul class="options-list">
+<li class="opt">I SEND MY CURRICULUM VITAE TOMORROW.</li>
+<li class="opt correct"><strong>I AM SENDING MY CURRICULUM VITAE TOMORROW.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> CHOOSE THE RIGHT SENTENCES WITH THE PRESENT CONTINUOUS FOR FUTURE</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I AM STUDYING FOR THE EXAM THIS WEEKEND.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I AM STUDYING FOR THE EXAM.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> CHOOSE THE RIGHT SENTENCES WITH THE PRESENT CONTINUOUS FOR FUTURE</div>
+<ul class="options-list">
+<li class="opt">LUIS AND ALBERT GOES TO THE BEACH.</li>
+<li class="opt correct"><strong>LUIS AND ALBERT ARE GOING TO THE BEACH IN THE SUMMER.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> CHOOSE THE RIGHT SENTENCES WITH THE PRESENT CONTINUOUS FOR FUTURE</div>
+<ul class="options-list">
+<li class="opt correct"><strong>THEY ARE PLANNING A TRIP TO PUYO NEXT YEAR.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">THEY PLAN A TRIP TO PUYO.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> CHOOSE THE RIGHT SENTENCES WITH THE PRESENT CONTINUOUS FOR FUTURE</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I AM LEAVING TOMORROW.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I LEAVE TOMORROW.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> CHOOSE THE RIGHT SENTENCES WITH THE PRESENT CONTINUOUS FOR FUTURE</div>
+<ul class="options-list">
+<li class="opt correct"><strong>WE ARE HAVING A STAFF MEETING NEXT MONDAY.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">WE HAVE A STAFF MEETING NEXT MONDAY.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> CHOOSE THE RIGHT SENTENCES WITH THE PRESENT CONTINUOUS FOR FUTURE</div>
+<ul class="options-list">
+<li class="opt">ARE YOU READY FOR SCHOOL?</li>
+<li class="opt correct"><strong>ARE YOU GETTING READY FOR NEXT CLASS?</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> CHOOSE THE RIGHT SENTENCES WITH THE PRESENT CONTINUOUS FOR FUTURE</div>
+<ul class="options-list">
+<li class="opt correct"><strong>JIM IS TAKING THE DOG FOR A WALK TONIGHT.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">JIM TAKES THE DOG FOR A WALK TONIGHT.</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #180: WHEN YOU ARE AROUND ME!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> TO USE BEFORE / AFTER / WHEN AS CONJUNCTIONS WITH COMPLEMENTS CLAUSES.</p><div class="task-expl">💡 <strong>Explicación:</strong> 'When' is used to indicate short actions that fall in the middle of a longer action. After is used to indicate that one event has occurred after another. Before is used to indicate that one action precedes another.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> CHOOSE THE BEST OPTION TO COMPLEMENT THE CLAUSES.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> CHOOSE THE BEST OPTION TO COMPLEMENT THE CLAUSES.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> CHOOSE THE BEST OPTION TO COMPLEMENT THE CLAUSES.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> CHOOSE THE BEST OPTION TO COMPLEMENT THE CLAUSES.</div>
+<div class="tf-block">
+<p><strong>• SHE BRUSHED HER TEETH</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> CHOOSE THE BEST OPTION TO COMPLEMENT THE CLAUSES.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> CHOOSE THE BEST OPTION TO COMPLEMENT THE CLAUSES.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> CHOOSE THE BEST OPTION TO COMPLEMENT THE CLAUSES.</div>
+<div class="tf-block">
+<p><strong>• FIRST, I GET UP</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> CHOOSE THE BEST OPTION TO COMPLEMENT THE CLAUSES.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> CHOOSE THE BEST OPTION TO COMPLEMENT THE CLAUSES.</div>
+<div class="tf-block">
+<p><strong>• I PICK UP SOME SNACKS</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> CHOOSE THE BEST OPTION TO COMPLEMENT THE CLAUSES.</div>
+<div class="tf-block">
+<p><strong>• I SELECT A MOVIE</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #059669">📖 Vocabulary (Vocabulario)</h2><div class="task-card"><h3>📌 Tarea #169: LIVING ONE DAY AT A TIME!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand and use vocabulary referring to the time.</p><div class="task-expl">💡 <strong>Explicación:</strong> In the lesson you will find terms related to time and dates.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Look at the picture. What month of the year is it?</div>
+<ul class="options-list">
+<li class="opt">January</li>
+<li class="opt correct"><strong>December</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">November</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Complete the sentence.</div>
+<div class="tf-block">
+<p><strong>• I've been waiting for your phone call</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the right option to answer the question: Which of the following sentences is correct?</div>
+<ul class="options-list">
+<li class="opt">I'm so tired. I have worked since 6 o'clockthis morning ago!</li>
+<li class="opt">I'm so tired. I have been working for 6 o'clockthis morning!</li>
+<li class="opt correct"><strong>I'm so tired. I have been working since 6 o'clock this morning!</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the right option to answer the question: What day comes BEFORE Thursday?</div>
+<ul class="options-list">
+<li class="opt">Friday</li>
+<li class="opt correct"><strong>Wednesday</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Monday</li>
+<li class="opt">Saturday</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the right option to answer the question: Which of the following sentences is correct?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>He has been writing that book now for two years.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He have been writes this book now for two years.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the right option to answer the question: In which month do we celebrate Halloween?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>October</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">November</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Choose the best option</div>
+<div class="tf-block">
+<p><strong>• In which month do we celebrate Christmas?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• What is the first month of the year?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the right option to answer the question: What are the two weekend days?</div>
+<ul class="options-list">
+<li class="opt">Thursday Friday</li>
+<li class="opt correct"><strong>Saturday Sunday</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the best option: What pair of days are in order?</div>
+<ul class="options-list">
+<li class="opt">Thursday Sunday</li>
+<li class="opt">Tuesday Monday</li>
+<li class="opt">Saturday Friday</li>
+<li class="opt correct"><strong>Wednesday Thursday</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Choose the best option</div>
+<div class="tf-block">
+<p><strong>• She never sleeps</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• We are used to celebrate with a special dinner</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He is punctual. He always arrives</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #170: HEALTHY MOOD</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To identify and use vocabulary related to health and a good life style.</p><div class="task-expl">💡 <strong>Explicación:</strong> In this lesson students will become familiar with words related to health, habits and lifestyles.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the main idea: What is the convesation about?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The man is sick</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The man is very good</li>
+<li class="opt">They are really good friends</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the best option to answer the question: What do these pictures represent?</div>
+<ul class="options-list">
+<li class="opt">Feelings</li>
+<li class="opt">Emoticons</li>
+<li class="opt correct"><strong>health problems</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Look at the picture and complete the sentence with fever/stomachache.</div>
+<div class="tf-block">
+<p><strong>• I have a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#4</span> Match the correct thing with a line</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>I've got a terrible stomach</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>I've got a terrible headache</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>I have the flu</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Choose the best option.</div>
+<div class="tf-block">
+<p><strong>• The lady has a fever and a cough. She is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>•  He is sick. He does not have</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Choose the correct word</div>
+<div class="tf-block">
+<p><strong>• The doctor gave me an</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I have a headache. I'll take</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#7</span> Order the sentences.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I eat 5 portions of fruit every day"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"She's broken her leg and needs crutches"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the right sentence</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I'm in good health.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I am in good healthy.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct sentence</div>
+<ul class="options-list">
+<li class="opt correct"><strong>In order to stay healthy, you need to exercise regularly.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">In order to stay health, you need to exercise regularly.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> True or false</div>
+<div class="tf-block">
+<p><strong>• Other healthy habits may make up for smoking.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There are good ways to manage stress without smoking.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #171: PLANNING YOUR TRIP</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To use and practice vocabulary related to travelling.</p><div class="task-expl">💡 <strong>Explicación:</strong> Through this lesson, students will learn terms related to planning a trip.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the verb correctly to complete the sentence</div>
+<div class="q-desc">Fligh_______ at eight</div>
+<ul class="options-list">
+<li class="opt">arrive</li>
+<li class="opt correct"><strong>arrives</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">you arrive</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Choose de best option</div>
+<div class="tf-block">
+<p><strong>• My mum and dad have booked a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Excuse me, I'm a bit lost. Can you tell me the best</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> True or False</div>
+<div class="tf-block">
+<p><strong>• Alberto travels to an island by motorcycle.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The subway has a train.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There are ships in the sea.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Complete the sentence</div>
+<div class="tf-block">
+<p><strong>• Robert takes a plane trip. Now he goes to the</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The plane reached the destination on time. Now, the passengers</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#5</span> Order the sentences</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Flights are cheaper in winter"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I like my hotel room"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Choose the verb correctly to complete the sentence</div>
+<div class="tf-block">
+<p><strong>• My family and I</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Match the information to complete the sentences</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>I swim on the</td><td class="match-ans"><strong>beach</strong> ✅</td></tr>
+<tr><td>My flight leaves at 3pm. I must be at the</td><td class="match-ans"><strong>airport</strong> ✅</td></tr>
+<tr><td>We'll meet at the</td><td class="match-ans"><strong>train station</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the best option: Which sentences is correct.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Every passenger is in his seat.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Every passenger are in his seat.</li>
+<li class="opt">Every passenger has in his seat.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Choose the best option</div>
+<div class="tf-block">
+<p><strong>• Karla and Luis visit</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #172: FOOD AROUND THE WORLD</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To identify vocabulary related to food and drinks around the world.</p><div class="task-expl">💡 <strong>Explicación:</strong> The world of healthy food can be fun and delicious. Provide lots of healthy food options in your home.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#1</span> Complete the words with the correct vowels.</div>
+<ul class="fill-list">
+<li><code> _PPL_</code> ➔ <strong>APPLE</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code> T_M_T_</code> ➔ <strong>TOMATO</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code> _V_C_D_</code> ➔ <strong>AVOCADO</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code> _R_NG_</code> ➔ <strong>ORANGE</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#2</span> Match the right thing with a line</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Mexico</td><td class="match-ans"><strong>chili</strong> ✅</td></tr>
+<tr><td>China</td><td class="match-ans"><strong>rice</strong> ✅</td></tr>
+<tr><td>Japan</td><td class="match-ans"><strong>fish</strong> ✅</td></tr>
+<tr><td>Italy</td><td class="match-ans"><strong>tomato</strong> ✅</td></tr>
+<tr><td>Argentina</td><td class="match-ans"><strong>meat</strong> ✅</td></tr>
+<tr><td>Ecuador</td><td class="match-ans"><strong>banana</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Choose the best option.</div>
+<div class="tf-block">
+<p><strong>• My mother doesn't like spaghetti with</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I am going to eat an apple and a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Complete the sentences</div>
+<div class="tf-block">
+<p><strong>• Let's buy</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• My favorite food is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the right sentence: Wich the sentences is correct.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I will go to eat rice and beans.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I does go to eat rice and beans.</li>
+<li class="opt">I were going to eat rice and beans.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#6</span> Put the words in the correct order, and form a sentence.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Tomorrow my best friend and I are going to eat chicken wings with chili"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Choose and complete the correct answer.</div>
+<div class="tf-block">
+<p><strong>• The most common type of pasta is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#8</span> Put in order the following letters to create to words related to food.</div>
+<ul class="fill-list">
+<li><code>ladas</code> ➔ <strong>salad</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>betaleveg</code> ➔ <strong>vegetable</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>riftu</code> ➔ <strong>fruit</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>ciuje</code> ➔ <strong>juice</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #d97706">📚 Reading (Comprensión Lectora)</h2><div class="task-card"><h3>📌 Tarea #173: A NEW PATIENT</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand simple form medical information. To follow simple instructions to a medical information.</p><div class="task-expl">💡 <strong>Explicación:</strong> Students can practice reading skills through a different type of text like a registration form.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> True or false. According to the registration form among the conditions are:</div>
+<div class="q-desc">PATIENT REGISTRATION FORM 
+
+Name: ___________________________ 
+
+Sex: Male ( ) Female ( ) 
+
+Date of birth: //__________ 
+MONTH DATE YEAR 
+
+Contact Number: ____________________ 
+
+E-mail: ___________________________ 
+
+Marital Status: 
+Single ( ) 
+Married ( ) 
+Divorced ( ) 
+Legally separated ( ) 
+Widowed ( ) 
+
+Address: __________________________ 
+Street address ________________________ 
+City __________________________________ 
+State/Province _________________________ 
+
+Height (inches): __________________ 
+Weight (pounds): __________________ 
+
+Forma 
+
+Check the conditions that apply to you or to any members of your immediate relatives. 
+
+___ Asthma 
+___ Cardiac Disease 
+___ Psychiatric Disorder 
+
+Are you currently taking any medication? 
+Yes ( ) No ( ) 
+
+Do you have any medication allergies? 
+Yes ( ) No ( ) Not sure ( ) 
+
+Do you use or have history of using tobacco? 
+Yes ( ) No ( ) 
+
+Do you use or have history of using illegal drugs? 
+Yes ( ) No ( ) 
+
+How often do you consume alcohol? 
+Daily ______ Weekly ______ Monthly ______ 
+Occasionally ______ 
+Never ______</div>
+<div class="tf-block">
+<p><strong>• Cardiac disease, epilepsy, cancer, asthma, diabetes, psychiatric disorder and hypertension.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#2</span> Circle the aspects that are not important in a patient registration form.</div>
+<div class="q-desc">PATIENT REGISTRATION FORM 
+
+Name: ___________________________ 
+
+Sex: Male ( ) Female ( ) 
+
+Date of birth: //__________ 
+MONTH DATE YEAR 
+
+Contact Number: ____________________ 
+
+E-mail: ___________________________ 
+
+Marital Status: 
+Single ( ) 
+Married ( ) 
+Divorced ( ) 
+Legally separated ( ) 
+Widowed ( ) 
+
+Address: __________________________ 
+Street address ________________________ 
+City __________________________________ 
+State/Province _________________________ 
+
+Height (inches): __________________ 
+Weight (pounds): __________________ 
+
+Forma 
+
+Check the conditions that apply to you or to any members of your immediate relatives. 
+
+___ Asthma 
+___ Cardiac Disease 
+___ Psychiatric Disorder 
+
+Are you currently taking any medication? 
+Yes ( ) No ( ) 
+
+Do you have any medication allergies? 
+Yes ( ) No ( ) Not sure ( ) 
+
+Do you use or have history of using tobacco? 
+Yes ( ) No ( ) 
+
+Do you use or have history of using illegal drugs? 
+Yes ( ) No ( ) 
+
+How often do you consume alcohol? 
+Daily ______ Weekly ______ Monthly ______ 
+Occasionally ______ 
+Never ______</div>
+<ul class="options-list">
+<li class="opt">Date of birth</li>
+<li class="opt correct"><strong>Hair color</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Emergency contact</li>
+<li class="opt correct"><strong>Eyes color</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt correct"><strong>Academic information</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#3</span> From the list below, identify the information requested in the form. Choose the right options.</div>
+<div class="q-desc">PATIENT REGISTRATION FORM 
+
+Name: ___________________________ 
+
+Sex: Male ( ) Female ( ) 
+
+Date of birth: //__________ 
+MONTH DATE YEAR 
+
+Contact Number: ____________________ 
+
+E-mail: ___________________________ 
+
+Marital Status: 
+Single ( ) 
+Married ( ) 
+Divorced ( ) 
+Legally separated ( ) 
+Widowed ( ) 
+
+Address: __________________________ 
+Street address ________________________ 
+City __________________________________ 
+State/Province _________________________ 
+
+Height (inches): __________________ 
+Weight (pounds): __________________ 
+
+Forma 
+
+Check the conditions that apply to you or to any members of your immediate relatives. 
+
+___ Asthma 
+___ Cardiac Disease 
+___ Psychiatric Disorder 
+
+Are you currently taking any medication? 
+Yes ( ) No ( ) 
+
+Do you have any medication allergies? 
+Yes ( ) No ( ) Not sure ( ) 
+
+Do you use or have history of using tobacco? 
+Yes ( ) No ( ) 
+
+Do you use or have history of using illegal drugs? 
+Yes ( ) No ( ) 
+
+How often do you consume alcohol? 
+Daily ______ Weekly ______ Monthly ______ 
+Occasionally ______ 
+Never ______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Address e-mail</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Children</li>
+<li class="opt correct"><strong>Weight</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Favorite artist</li>
+<li class="opt">Hair color</li>
+<li class="opt correct"><strong>Addictions</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_n</span> <span class="q-num">#4</span> Circle the information requested in a medical form.</div>
+<div class="q-desc">PATIENT REGISTRATION FORM 
+
+Name: ___________________________ 
+
+Sex: Male ( ) Female ( ) 
+
+Date of birth: //__________ 
+MONTH DATE YEAR 
+
+Contact Number: ____________________ 
+
+E-mail: ___________________________ 
+
+Marital Status: 
+Single ( ) 
+Married ( ) 
+Divorced ( ) 
+Legally separated ( ) 
+Widowed ( ) 
+
+Address: __________________________ 
+Street address ________________________ 
+City __________________________________ 
+State/Province _________________________ 
+
+Height (inches): __________________ 
+Weight (pounds): __________________ 
+
+Forma 
+
+Check the conditions that apply to you or to any members of your immediate relatives. 
+
+___ Asthma 
+___ Cardiac Disease 
+___ Psychiatric Disorder 
+
+Are you currently taking any medication? 
+Yes ( ) No ( ) 
+
+Do you have any medication allergies? 
+Yes ( ) No ( ) Not sure ( ) 
+
+Do you use or have history of using tobacco? 
+Yes ( ) No ( ) 
+
+Do you use or have history of using illegal drugs? 
+Yes ( ) No ( ) 
+
+How often do you consume alcohol? 
+Daily ______ Weekly ______ Monthly ______ 
+Occasionally ______ 
+Never ______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Age</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Favorite artist</li>
+<li class="opt">Occupation</li>
+<li class="opt correct"><strong>Relative's health condition</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Eyes color</li>
+<li class="opt correct"><strong>Sex</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the patient registration form. What information does it request? Choose the best option.</div>
+<div class="q-desc">PATIENT REGISTRATION FORM 
+
+Name: ___________________________ 
+
+Sex: Male ( ) Female ( ) 
+
+Date of birth: //__________ 
+MONTH DATE YEAR 
+
+Contact Number: ____________________ 
+
+E-mail: ___________________________ 
+
+Marital Status: 
+Single ( ) 
+Married ( ) 
+Divorced ( ) 
+Legally separated ( ) 
+Widowed ( ) 
+
+Address: __________________________ 
+Street address ________________________ 
+City __________________________________ 
+State/Province _________________________ 
+
+Height (inches): __________________ 
+Weight (pounds): __________________ 
+
+Forma 
+
+Check the conditions that apply to you or to any members of your immediate relatives. 
+
+___ Asthma 
+___ Cardiac Disease 
+___ Psychiatric Disorder 
+
+Are you currently taking any medication? 
+Yes ( ) No ( ) 
+
+Do you have any medication allergies? 
+Yes ( ) No ( ) Not sure ( ) 
+
+Do you use or have history of using tobacco? 
+Yes ( ) No ( ) 
+
+Do you use or have history of using illegal drugs? 
+Yes ( ) No ( ) 
+
+How often do you consume alcohol? 
+Daily ______ Weekly ______ Monthly ______ 
+Occasionally ______ 
+Never ______</div>
+<ul class="options-list">
+<li class="opt">Personal information</li>
+<li class="opt correct"><strong>Medical information</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Academic information</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> Match the questions with their answers.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>What is your full name?</td><td class="match-ans"><strong>Carlos Alberto Mendoza</strong> ✅</td></tr>
+<tr><td>When were you born?</td><td class="match-ans"><strong>On August 29th, 1998</strong> ✅</td></tr>
+<tr><td>Where do you live?</td><td class="match-ans"><strong>On Pedro Gual St. Portoviejo</strong> ✅</td></tr>
+<tr><td>Why are you here?</td><td class="match-ans"><strong>Because I feel very tired and I have a terrible back pain.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> Match the words according to any characteristic in common.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Patient</td><td class="match-ans"><strong>sick person</strong> ✅</td></tr>
+<tr><td>Height</td><td class="match-ans"><strong>inches</strong> ✅</td></tr>
+<tr><td>Condition</td><td class="match-ans"><strong>asthma</strong> ✅</td></tr>
+<tr><td>Weight</td><td class="match-ans"><strong>pounds</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the right option according to the registration form. Which aspects are asked in a patient registration form?</div>
+<div class="q-desc">PATIENT REGISTRATION FORM 
+
+Name: ___________________________ 
+
+Sex: Male ( ) Female ( ) 
+
+Date of birth: //__________ 
+MONTH DATE YEAR 
+
+Contact Number: ____________________ 
+
+E-mail: ___________________________ 
+
+Marital Status: 
+Single ( ) 
+Married ( ) 
+Divorced ( ) 
+Legally separated ( ) 
+Widowed ( ) 
+
+Address: __________________________ 
+Street address ________________________ 
+City __________________________________ 
+State/Province _________________________ 
+
+Height (inches): __________________ 
+Weight (pounds): __________________ 
+
+Forma 
+
+Check the conditions that apply to you or to any members of your immediate relatives. 
+
+___ Asthma 
+___ Cardiac Disease 
+___ Psychiatric Disorder 
+
+Are you currently taking any medication? 
+Yes ( ) No ( ) 
+
+Do you have any medication allergies? 
+Yes ( ) No ( ) Not sure ( ) 
+
+Do you use or have history of using tobacco? 
+Yes ( ) No ( ) 
+
+Do you use or have history of using illegal drugs? 
+Yes ( ) No ( ) 
+
+How often do you consume alcohol? 
+Daily ______ Weekly ______ Monthly ______ 
+Occasionally ______ 
+Never ______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>medication, alcohol, drugs</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">frequency of drugs</li>
+<li class="opt">frequency of medication</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #174: NOT TO ME!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand simple factual titles and headlines relating to common events.</p><div class="task-expl">💡 <strong>Explicación:</strong> Students can practice reading skills through a text based on common and daily situation.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the paragraph. Match the paragragh with the right idea.</div>
+<div class="q-desc">They usually spend the time by moving around their seats, they drop their toys on the floor, they spill their milk or juice on your clothes, they cry a lot! It is a mess when you travel next to them even if they are supervised by an adult. 
+Either way, it is a privilege you can take a nap or read a book while traveling if you do not meet one of these.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Children as passengers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Different unpleasant passengers</li>
+<li class="opt">Passengers who like to talk a lot</li>
+<li class="opt">Passengers bigger than you</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the text again and answer the questions: What do the children usually do when they travel by bus?</div>
+<div class="q-desc">When you travel to your job or study center by using public transportation like buses, you can find unpleasant passengers you don’t want to have next to you. Here there is a list of the most common: 
+
+A. _______________________________________ 
+
+They start talking about the weather, politicians or the economic condition in the country. Sometimes, they ask you about personal issues like where do you work and your phone number. It is very difficult not to talk to these people, and you have to deal with the situation until you reach your destination. 
+
+B. _______________________________________ 
+
+They are not necessarily big, but they take up all their space and some of yours. You can’t move because their legs and arms are really close to you or they have a lot of hand luggage. Some of them are so unlikable that they even fall asleep on your shoulder. 
+
+C. _______________________________________ 
+
+They usually spend the time by moving around their seats, they drop their toys on the floor, they spill their milk or juice on your clothes, they cry a lot! It is a mess when you travel next to them even if they are supervised by an adult. 
+
+Either way, it is a privilege you can take a nap or read a book while traveling if you do not meet one of these.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>They usually spend the time by moving around their seats and they cry a lot.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">They always were quiet.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the text again and answer the questions: What is the worst habit of an invader?</div>
+<div class="q-desc">When you travel to your job or study center by using public transportation like buses, you can find unpleasant passengers you don’t want to have next to you. Here there is a list of the most common: 
+
+A. _______________________________________ 
+
+They start talking about the weather, politicians or the economic condition in the country. Sometimes, they ask you about personal issues like where do you work and your phone number. It is very difficult not to talk to these people, and you have to deal with the situation until you reach your destination. 
+
+B. _______________________________________ 
+
+They are not necessarily big, but they take up all their space and some of yours. You can’t move because their legs and arms are really close to you or they have a lot of hand luggage. Some of them are so unlikable that they even fall asleep on your shoulder. 
+
+C. _______________________________________ 
+
+They usually spend the time by moving around their seats, they drop their toys on the floor, they spill their milk or juice on your clothes, they cry a lot! It is a mess when you travel next to them even if they are supervised by an adult. 
+
+Either way, it is a privilege you can take a nap or read a book while traveling if you do not meet one of these.</div>
+<ul class="options-list">
+<li class="opt">They fall asleep on your shoulder.</li>
+<li class="opt correct"><strong>They don't respect your space .</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Read this short article. Complete the sentences with the right information.</div>
+<div class="q-desc">When you travel to your job or study center by using public transportation like buses, you can find unpleasant passengers you don’t want to have next to you. Here there is a list of the most common: 
+
+A. _______________________________________ 
+
+They start talking about the weather, politicians or the economic condition in the country. Sometimes, they ask you about personal issues like where do you work and your phone number. It is very difficult not to talk to these people, and you have to deal with the situation until you reach your destination. 
+
+B. _______________________________________ 
+
+They are not necessarily big, but they take up all their space and some of yours. You can’t move because their legs and arms are really close to you or they have a lot of hand luggage. Some of them are so unlikable that they even fall asleep on your shoulder. 
+
+C. _______________________________________ 
+
+They usually spend the time by moving around their seats, they drop their toys on the floor, they spill their milk or juice on your clothes, they cry a lot! It is a mess when you travel next to them even if they are supervised by an adult. 
+
+Either way, it is a privilege you can take a nap or read a book while traveling if you do not meet one of these.</div>
+<div class="tf-block">
+<p><strong>• You can find</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• There are</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> According to the picture, choose the correct option: What type of passenger is?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Quiet passenger</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Talkative passenger</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the paragraph. Match the paragragh with the right idea.</div>
+<div class="q-desc">When you travel to your job or study center by using public transportation like buses, you can find unpleasant passengers you don’t want to have next to you. Here there is a list of the most common:</div>
+<ul class="options-list">
+<li class="opt">Children as passengers</li>
+<li class="opt correct"><strong>Different unpleasant passengers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Passengers who like to talk a lot</li>
+<li class="opt">Passengers bigger than you</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the paragraph. Match the paragragh with the right idea.</div>
+<div class="q-desc">They are not necessarily big, but they take up all their space and some of yours. You can’t move because their legs and arms are really close to you or they have a lot of hand luggage. Some of them are so unlikable that they even fall asleep on your shoulder.</div>
+<ul class="options-list">
+<li class="opt">Children as passengers</li>
+<li class="opt">Different unpleasant passengers</li>
+<li class="opt">Passengers who like to talk a lot</li>
+<li class="opt correct"><strong>Passengers bigger than you</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the paragraph. Match the paragragh with the right idea.</div>
+<div class="q-desc">They start talking about the weather, politicians or the economic condition in the country. Sometimes, they ask you about personal issues like where do you work and your phone number. It is very difficult not to talk to these people, and you have to deal with the situation until you reach your destination.</div>
+<ul class="options-list">
+<li class="opt">Children as passengers</li>
+<li class="opt">Different unpleasant passengers</li>
+<li class="opt correct"><strong>Passengers who like to talk a lot</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Passengers bigger than you</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read this short article. Choose the main option to complete the idea: This text is about</div>
+<div class="q-desc">When you travel to your job or study center by using public transportation like buses, you can find unpleasant passengers you don’t want to have next to you. Here there is a list of the most common: 
+
+A. _______________________________________ 
+
+They start talking about the weather, politicians or the economic condition in the country. Sometimes, they ask you about personal issues like where do you work and your phone number. It is very difficult not to talk to these people, and you have to deal with the situation until you reach your destination. 
+
+B. _______________________________________ 
+
+They are not necessarily big, but they take up all their space and some of yours. You can’t move because their legs and arms are really close to you or they have a lot of hand luggage. Some of them are so unlikable that they even fall asleep on your shoulder. 
+
+C. _______________________________________ 
+
+They usually spend the time by moving around their seats, they drop their toys on the floor, they spill their milk or juice on your clothes, they cry a lot! It is a mess when you travel next to them even if they are supervised by an adult. 
+
+Either way, it is a privilege you can take a nap or read a book while traveling if you do not meet one of these.</div>
+<ul class="options-list">
+<li class="opt">People who don't like to travel by bus.</li>
+<li class="opt correct"><strong>People who commute to their job or university by bus.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">People who have terrible habits when they travel by bus.</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #175: A SPECIAL ROUTINE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To follow the sequence of actions or events in a text in a familiar everyday topic. To understand short texts.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the paragragh and match it with the idea that best describe it.</div>
+<div class="q-desc">Dr. Ponce did some blood tests on my grandmother. He found that his blood contained very little vitamins and minerals. He recommended my granny begin to eat more fruits and vegetables. In addition, she should exercise every day for thirty minutes at least.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Discovering the health problem</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A special routine</li>
+<li class="opt">Last results</li>
+<li class="opt">When the problem started</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the paragragh and match it with the idea that best describe it.</div>
+<div class="q-desc">My granny wanted to feel better, so she followed her doctor’s advice. First, every morning she woke up, she had some bread, an egg and tea for breakfast. Around ten, she had five green grapes and drank a glass of water. She had a very light lunch with some chicken or fish, rice and salad. Then she walked around the park for one hour and finally, she went back home for a healthy dinner.</div>
+<ul class="options-list">
+<li class="opt">Discovering the health problem</li>
+<li class="opt correct"><strong>A special routine</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Last results</li>
+<li class="opt">When the problem started</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Read the text again. Mark true or false</div>
+<div class="q-desc">My grandmother is a well-liked person in the neighborhood. One day she woke up and she didn’t feel so well. She decided to go to see Dr. Ponce to know what the problem could be. 
+
+Dr. Ponce did some blood tests on my grandmother. He found that his blood contained very little vitamins and minerals. He recommended my granny begin to eat more fruits and vegetables. In addition, she should exercise every day for thirty minutes at least. 
+
+My granny wanted to feel better, so she followed her doctor’s advice. First, every morning she woke up, she had some bread, an egg and tea for breakfast. Around ten, she had five green grapes and drank a glass of water. She had a very light lunch with some chicken or fish, rice and salad. Then she walked around the park for one hour and finally, she went back home for a healthy dinner. 
+
+Months went on and my grandmother feels better now. She began to help Mrs. Moreira with some work for the community and they usually have a cup of tea on Friday afternoons.</div>
+<div class="tf-block">
+<p><strong>• The grandmother went to sleep when she started to feel bad.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Dr. Ponce did some blood tests to the grandmother.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Dr. Ponce advised her to eat healthy food and do exercises.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Read the text again answer the following questions: Why did my grandmother decide to visit Dr Ponce?</div>
+<div class="q-desc">My grandmother is a well-liked person in the neighborhood. One day she woke up and she didn’t feel so well. She decided to go to see Dr. Ponce to know what the problem could be. 
+
+Dr. Ponce did some blood tests on my grandmother. He found that his blood contained very little vitamins and minerals. He recommended my granny begin to eat more fruits and vegetables. In addition, she should exercise every day for thirty minutes at least. 
+
+My granny wanted to feel better, so she followed her doctor’s advice. First, every morning she woke up, she had some bread, an egg and tea for breakfast. Around ten, she had five green grapes and drank a glass of water. She had a very light lunch with some chicken or fish, rice and salad. Then she walked around the park for one hour and finally, she went back home for a healthy dinner. 
+
+Months went on and my grandmother feels better now. She began to help Mrs. Moreira with some work for the community and they usually have a cup of tea on Friday afternoons.</div>
+<ul class="options-list">
+<li class="opt">Because she wanted to a buy a pizza.</li>
+<li class="opt correct"><strong>Because she didn't feel so well.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Because she is the girlfriend of the Dr.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Read the text. Choose an appropriate title for it.</div>
+<div class="q-desc">My grandmother is a well-liked person in the neighborhood. One day she woke up and she didn’t feel so well. She decided to go to see Dr. Ponce to know what the problem could be. 
+
+Dr. Ponce did some blood tests on my grandmother. He found that his blood contained very little vitamins and minerals. He recommended my granny begin to eat more fruits and vegetables. In addition, she should exercise every day for thirty minutes at least. 
+
+My granny wanted to feel better, so she followed her doctor’s advice. First, every morning she woke up, she had some bread, an egg and tea for breakfast. Around ten, she had five green grapes and drank a glass of water. She had a very light lunch with some chicken or fish, rice and salad. Then she walked around the park for one hour and finally, she went back home for a healthy dinner. 
+
+Months went on and my grandmother feels better now. She began to help Mrs. Moreira with some work for the community and they usually have a cup of tea on Friday afternoons.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A special routine</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">My grandmother's medical appointment</li>
+<li class="opt">Blood test results</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the paragragh and match it with the idea that best describe it.</div>
+<div class="q-desc">My grandmother is a well-liked person in the neighborhood. One day she woke up and she didn’t feel so well. She decided to go to see Dr. Ponce to know what the problem could be.</div>
+<ul class="options-list">
+<li class="opt">Discovering the health problem</li>
+<li class="opt">A special routine</li>
+<li class="opt">Last results</li>
+<li class="opt correct"><strong>When the problem started</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the paragragh and match it with the idea that best describe it.</div>
+<div class="q-desc">Months went on and my grandmother feels better now. She began to help Mrs. Moreira with some work for the community and they usually have a cup of tea on Friday afternoons.</div>
+<ul class="options-list">
+<li class="opt">Discovering the health problem</li>
+<li class="opt">A special routine</li>
+<li class="opt correct"><strong>Last results</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">When the problem started</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> Match the halves to complete the sentences.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>She has some bread</td><td class="match-ans"><strong>eggs and tea for breakfast</strong> ✅</td></tr>
+<tr><td>She had a very light lunch</td><td class="match-ans"><strong>with some chicken or fish</strong> ✅</td></tr>
+<tr><td>She walked around the park</td><td class="match-ans"><strong>for one hour</strong> ✅</td></tr>
+<tr><td>She went back home</td><td class="match-ans"><strong>for a healthy dinner</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#9</span> Put the events in order by using 1-6</div>
+<div class="q-desc">My grandmother is a well-liked person in the neighborhood. One day she woke up and she didn’t feel so well. She decided to go to see Dr. Ponce to know what the problem could be. 
+
+Dr. Ponce did some blood tests on my grandmother. He found that his blood contained very little vitamins and minerals. He recommended my granny begin to eat more fruits and vegetables. In addition, she should exercise every day for thirty minutes at least. 
+
+My granny wanted to feel better, so she followed her doctor’s advice. First, every morning she woke up, she had some bread, an egg and tea for breakfast. Around ten, she had five green grapes and drank a glass of water. She had a very light lunch with some chicken or fish, rice and salad. Then she walked around the park for one hour and finally, she went back home for a healthy dinner. 
+
+Months went on and my grandmother feels better now. She began to help Mrs. Moreira with some work for the community and they usually have a cup of tea on Friday afternoons.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"One day, my grandmother didn't feel well. Dr. Ponce recommended eating healthier and exercising. My grandmother started a routine. After a few months, my granny felt better. Now, she helps people in the community. She has tea meetings with friends on Friday afternoons."</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #176: FABLES!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand short, simple narratives. To understand familiar phrases in a simple text.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the paragraph and match it with the best idea</div>
+<div class="q-desc">"I can get where I’m going sooner than you think," said the tortoise, and with that he challenged the hare to a race.</div>
+<ul class="options-list">
+<li class="opt">Excessive  hare's confidence</li>
+<li class="opt">Crossing the finish line</li>
+<li class="opt">Tortoise's challenge</li>
+<li class="opt correct"><strong>Beginning of the fable</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the text and complete the sentence: The hare made fun of a tortoise _______</div>
+<div class="q-desc">There was once a hare who made fun of a tortoise because he was too slow. “You will never get anywhere,” the hare laughed. 
+
+“I can get where I’m going sooner than you think,” said the tortoise, and with that he challenged the hare to a race. 
+
+The hare thought this was a great joke. The race began, and the hare was soon far ahead. Knowing he would win, he lay down to take a little nap while he waited for the tortoise to catch up. 
+
+Meanwhile, the tortoise kept going slowly and steadily. After a while, he passed the hare, who was now snoring in the shade. When the hare woke up, he saw the tortoise crossing the finish line. He ran as fast as he could, but he could not win the race. 
+
+An Aesop’s Fable. Taken from Eureka</div>
+<ul class="options-list">
+<li class="opt">Was soon far ahead.</li>
+<li class="opt">Slowly and steadily.</li>
+<li class="opt correct"><strong>Because he was too slow.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Mark true (T) or false (F)</div>
+<div class="q-desc">There was once a hare who made fun of a tortoise because he was too slow. “You will never get anywhere,” the hare laughed. 
+
+“I can get where I’m going sooner than you think,” said the tortoise, and with that he challenged the hare to a race. 
+
+The hare thought this was a great joke. The race began, and the hare was soon far ahead. Knowing he would win, he lay down to take a little nap while he waited for the tortoise to catch up. 
+
+Meanwhile, the tortoise kept going slowly and steadily. After a while, he passed the hare, who was now snoring in the shade. When the hare woke up, he saw the tortoise crossing the finish line. He ran as fast as he could, but he could not win the race. 
+
+An Aesop’s Fable. Taken from Eureka</div>
+<div class="tf-block">
+<p><strong>• The race was in a park</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The hare wins the race</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Mark true (T) or false (F)</div>
+<div class="q-desc">There was once a hare who made fun of a tortoise because he was too slow. “You will never get anywhere,” the hare laughed. 
+
+“I can get where I’m going sooner than you think,” said the tortoise, and with that he challenged the hare to a race. 
+
+The hare thought this was a great joke. The race began, and the hare was soon far ahead. Knowing he would win, he lay down to take a little nap while he waited for the tortoise to catch up. 
+
+Meanwhile, the tortoise kept going slowly and steadily. After a while, he passed the hare, who was now snoring in the shade. When the hare woke up, he saw the tortoise crossing the finish line. He ran as fast as he could, but he could not win the race. 
+
+An Aesop’s Fable. Taken from Eureka</div>
+<div class="tf-block">
+<p><strong>• The hare laughs at the tortoise</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• The tortoise loses the race</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> Match the halves to complete the ideas.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>'You will never</td><td class="match-ans"><strong>get anywhere'</strong> ✅</td></tr>
+<tr><td>'I can get where</td><td class="match-ans"><strong>I am going sonner than you think'</strong> ✅</td></tr>
+<tr><td>The hare take</td><td class="match-ans"><strong>a little nap</strong> ✅</td></tr>
+<tr><td>He saw the tortoise</td><td class="match-ans"><strong>crossing the finish line</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Look at the pictures. Answer the question: What is the fable that you remember with this picture?</div>
+<ul class="options-list">
+<li class="opt">The ant and the grasshopper</li>
+<li class="opt">The mouse and the lion</li>
+<li class="opt correct"><strong>The hare and the tortoise</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read the paragraph and match it with the best idea</div>
+<div class="q-desc">The hare thought this was a great joke. The race began, and the hare was soon far ahead. Knowing he would win, he lay down to take a little nap while he waited for the tortoise to catch up.</div>
+<ul class="options-list">
+<li class="opt">Excessive  hare's confidence</li>
+<li class="opt correct"><strong>Crossing the finish line</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Tortoise's challenge</li>
+<li class="opt">Beginning of the fable</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Read the paragraph and match it with the best idea</div>
+<div class="q-desc">"I can get where I’m going sooner than you think," said the tortoise, and with that he challenged the hare to a race.</div>
+<ul class="options-list">
+<li class="opt">Excessive  hare's confidence</li>
+<li class="opt">Crossing the finish line</li>
+<li class="opt correct"><strong>Tortoise's challenge</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Beginning of the fable</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Read the text again and choose the correct option to answer the questions: Why did the hare lose the race?</div>
+<div class="q-desc">There was once a hare who made fun of a tortoise because he was too slow. “You will never get anywhere,” the hare laughed. 
+
+“I can get where I’m going sooner than you think,” said the tortoise, and with that he challenged the hare to a race. 
+
+The hare thought this was a great joke. The race began, and the hare was soon far ahead. Knowing he would win, he lay down to take a little nap while he waited for the tortoise to catch up. 
+
+Meanwhile, the tortoise kept going slowly and steadily. After a while, he passed the hare, who was now snoring in the shade. When the hare woke up, he saw the tortoise crossing the finish line. He ran as fast as he could, but he could not win the race. 
+
+An Aesop’s Fable. Taken from Eureka</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Because the hare to take a little nap.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Because the hare got sick.</li>
+<li class="opt">Because the tortoise wore turbo shoes.</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #7c3aed">🎧 Listening (Comprensión Auditiva)</h2><div class="task-card"><h3>📌 Tarea #342: At the Post Office</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> How much does the package weigh?</div>
+<ul class="options-list">
+<li class="opt">One kilogram</li>
+<li class="opt correct"><strong>Two kilograms</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Three kilograms</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> How long will it take for the package to arrive?</div>
+<ul class="options-list">
+<li class="opt">A few days</li>
+<li class="opt correct"><strong>A week</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Two weeks</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Who is the package for?</div>
+<ul class="options-list">
+<li class="opt">Emily’s colleague</li>
+<li class="opt correct"><strong>Her friend</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Her family member</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Based on the audio, why might Emily have chosen to send the package via the post office rather than another method?</div>
+<ul class="options-list">
+<li class="opt">She might have wanted a more personal delivery.</li>
+<li class="opt">The post office was the only option available.</li>
+<li class="opt correct"><strong>The post office offered the most affordable shipping option.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> True or False: Emily’s package is expected to arrive in two weeks.</div>
+<ul class="options-list">
+<li class="opt">True</li>
+<li class="opt correct"><strong>False</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> How might Emily have felt after the post office clerk helped her with the forms?</div>
+<ul class="options-list">
+<li class="opt">Frustrated due to the extra effort required.</li>
+<li class="opt correct"><strong>Relieved because she received assistance.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Indifferent as it was part of her routine.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Why did Emily go to the post office?</div>
+<ul class="options-list">
+<li class="opt">To buy stamps</li>
+<li class="opt correct"><strong>To send a package</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">To withdraw money</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> How much does it cost to send the package?</div>
+<ul class="options-list">
+<li class="opt">Five dollars</li>
+<li class="opt correct"><strong>Ten dollars</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Fifteen dollars</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #343: At the Restaurant</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> How much was the total bill?</div>
+<ul class="options-list">
+<li class="opt">Fifteen dollars</li>
+<li class="opt correct"><strong>Twenty-five dollars</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Thirty-five dollars</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> What did Tom order for dinner?</div>
+<ul class="options-list">
+<li class="opt">Pizza and soda</li>
+<li class="opt correct"><strong>Steak with vegetables and red wine</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Pasta and water</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> How was the steak cooked?</div>
+<ul class="options-list">
+<li class="opt">Overcooked</li>
+<li class="opt">Raw</li>
+<li class="opt correct"><strong>Perfectly cooked</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> What was Tom’s drink?</div>
+<ul class="options-list">
+<li class="opt">White wine</li>
+<li class="opt correct"><strong>Red wine</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Beer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> How was the service at the restaurant?</div>
+<ul class="options-list">
+<li class="opt">Poor</li>
+<li class="opt">Average</li>
+<li class="opt correct"><strong>Excellent</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Considering Tom’s description of the meal and service, what might be inferred about his overall dining experience?</div>
+<ul class="options-list">
+<li class="opt">He found the experience unsatisfactory due to high costs.</li>
+<li class="opt correct"><strong>He was likely impressed with both the quality of the food and the level of service.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He thought the meal was average but was indifferent to the service.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> True or False: Tom had a steak and a dessert with his dinner.</div>
+<ul class="options-list">
+<li class="opt">True</li>
+<li class="opt correct"><strong>False</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Based on Tom’s review, which of the following statements about the steak and vegetables can be inferred?</div>
+<ul class="options-list">
+<li class="opt">The steak was overcooked and the vegetables were bland.</li>
+<li class="opt correct"><strong>The steak was cooked to Tom’s liking, and the vegetables were of high quality.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The steak was undercooked, but Tom liked the vegetables.</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #db2777">✍️ Writing (Expresión Escrita)</h2><div class="task-card"><h3>📌 Tarea #165: A NEW PATIENT</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To complete a simple form asking for a medical information.</p><div class="task-expl">💡 <strong>Explicación:</strong> Health information system help gather and analyze health data to help manage population health and reduce healthcare costs.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#1</span> Look at the pictures. Do you know these illnesses? Complete their names under each picture.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Cough</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Got fever</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Toothache</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Read the form and write True or False next to the statements.( T or F)</div>
+<div class="tf-block">
+<p><strong>• Gerardo is forty years old</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He is allergy to the salty food</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He does not take any medicine</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• He lives in Portoviejo</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#3</span> Identify the illnesses according to each picture. Complete their names under each picture.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Stomachache</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Headache</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>toothache</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the best option to answer the question: Which of the options below is an example of transmissible disease?</div>
+<ul class="options-list">
+<li class="opt">Obesity</li>
+<li class="opt">Tooth decay</li>
+<li class="opt correct"><strong>Cholera </strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the best option to answer the question: Which system of the body is infected by HIV?</div>
+<ul class="options-list">
+<li class="opt">Digestive</li>
+<li class="opt">Nervous</li>
+<li class="opt correct"><strong>Immune</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the best option to answer the question: Which illnesses do you know?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Cough</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Broken leg</li>
+<li class="opt">Fever </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the best option to answer the question: Are you taking any medication Lily?</div>
+<ul class="options-list">
+<li class="opt">No. I am not</li>
+<li class="opt correct"><strong>Yes, only two tablets</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">No, I do no</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> Match the definition with the illness.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Cough</td><td class="match-ans"><strong>An act of coughing</strong> ✅</td></tr>
+<tr><td>Fever</td><td class="match-ans"><strong>Get red and hot</strong> ✅</td></tr>
+<tr><td>Stomachache</td><td class="match-ans"><strong>Feel ache in your stomach</strong> ✅</td></tr>
+<tr><td>Sore throat</td><td class="match-ans"><strong>Have swollen throat</strong> ✅</td></tr>
+</tbody></table>
+</div></div><div class="task-card"><h3>📌 Tarea #166: I'M SO SORRY</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To write personal emails/letters, Thanks and Apology.</p><div class="task-expl">💡 <strong>Explicación:</strong> Apology letters are important in the workplace because they create a physical or digital record of your admitting and attempting to rectify a mistake or failure.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> Match the phrases on the left with the correct ending on the right.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>I am so sorry because</td><td class="match-ans"><strong>not being able to attend your event.</strong> ✅</td></tr>
+<tr><td>I want to thank you for</td><td class="match-ans"><strong>your help with my homework.</strong> ✅</td></tr>
+<tr><td>I would like to apologize for</td><td class="match-ans"><strong>I could send your invitation.</strong> ✅</td></tr>
+<tr><td>I really appreciate your help with</td><td class="match-ans"><strong>the vaccination campaign.</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Read the following email and complete the information.</div>
+<div class="tf-block">
+<p><strong>• The writer's name is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The receiver's name is</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the right option to complete the information: The correct definition of an email is ______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>It is a method to exchanging messages through electronic devices.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Written messages sending by post office</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#4</span> Match the phrases on the left with the appropriate response on the right. Choose between 'thanks' and 'apology'.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>You are so helpful</td><td class="match-ans"><strong>thanks</strong> ✅</td></tr>
+<tr><td>I am sorry for</td><td class="match-ans"><strong>apology</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the right option to complete the information: Lincon:  I am so ______ . I am late. There was so much traffic.</div>
+<ul class="options-list">
+<li class="opt">Excuse</li>
+<li class="opt">Forgive</li>
+<li class="opt correct"><strong>Sorry</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Apologize </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the right option to complete the information: Please ______ . my sincere apologies for the mistake. It will not happen again.</div>
+<ul class="options-list">
+<li class="opt">Pardon</li>
+<li class="opt correct"><strong>Accept</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Excuse</li>
+<li class="opt">Have</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the right option to answer the question: Which one of below is apologizing and making a promise?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I am terribly sorry. I shouldn't have done that.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I am ashamed of being late.</li>
+<li class="opt">Please forgive me to forget your birthday.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the right option to complete the information: I would like to ______ .  For my fault. I should not done have that.</div>
+<ul class="options-list">
+<li class="opt">Forgive</li>
+<li class="opt">Sorry</li>
+<li class="opt correct"><strong>Apologize</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Accept </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the right option to complete the information: I am ______ but you are sitting on my sofa.</div>
+<ul class="options-list">
+<li class="opt">Pardon</li>
+<li class="opt">Excuse</li>
+<li class="opt correct"><strong>Sorry</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Have</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #167: COUNTRIES ABROAD!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To take a short simple message. if they can ask to repeat and reformulate it.</p><div class="task-expl">💡 <strong>Explicación:</strong> By immersing ourselves in other cultures beyond our own, we can learn about each other. Where people came from, what their traditions are, and what they struggle with as a community.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#1</span> Look at the pictures. Do you know which countries are them? Choose the right names.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Ecuador</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Canada</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Brazil</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#2</span> According to these PICTURES, identify the countries: Complete the information</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Brazil</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Colombia</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Peru</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#3</span> Match the columns about Ecuador and its Regions.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>San Cristobal</td><td class="match-ans"><strong>Galapagos Islands</strong> ✅</td></tr>
+<tr><td>Esmeraldas</td><td class="match-ans"><strong>Coast or Litoral Region</strong> ✅</td></tr>
+<tr><td>Quito</td><td class="match-ans"><strong>Highland Region</strong> ✅</td></tr>
+<tr><td>Puyo</td><td class="match-ans"><strong>Amazon or Orient Region</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#4</span> Complete the sentences with the countries about your nationality.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>I am Australian I am from</td><td class="match-ans"><strong>AUSTRALIA</strong> ✅</td></tr>
+<tr><td>I am Italian. We are from</td><td class="match-ans"><strong>ITALY</strong> ✅</td></tr>
+<tr><td>I am Chinese. I am from</td><td class="match-ans"><strong>CHINA</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Look at the picture (flag) and the information provided to fill in the blanks</div>
+<div class="tf-block">
+<p><strong>• My name is Liz. I am 22 years old. I was born in</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• I am</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the best option: Tamara is from Russia: She is</div>
+<ul class="options-list">
+<li class="opt">Canadian</li>
+<li class="opt">Russa</li>
+<li class="opt correct"><strong>Russian </strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the best option: Juan is from Mexico. He is</div>
+<ul class="options-list">
+<li class="opt">Korean</li>
+<li class="opt">Guatemalan</li>
+<li class="opt correct"><strong>Mexican </strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the best option: Where are you from?</div>
+<ul class="options-list">
+<li class="opt">I am American</li>
+<li class="opt">I am United States</li>
+<li class="opt correct"><strong>I am from the United States</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the best option: What is your nationality?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>I am Italian</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">I am Italy</li>
+<li class="opt">I am from Italian</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the best option: Is Anita Akimoto from China?</div>
+<ul class="options-list">
+<li class="opt">Yes, she does</li>
+<li class="opt correct"><strong>No, she is not.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Yes, Anita is.</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #168: DELICIOUS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To write basic instructions for making a recipe with a simple list of ingredients.</p><div class="task-expl">💡 <strong>Explicación:</strong> It is important that every person who is engaged in the separation of food be thoroughly familiar with the various terms that are used in cookery. Many of these are not understood by the people, because they are foreign terms or words that are seldom employed in other occupations.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the best option to complete the informatio: A person who prepares in a restaurant the food is called:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Chef</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Barman</li>
+<li class="opt">Waiter </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#2</span> Look at the texts. Identify What type of texts are they? Choose the right answer.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Alejandro: It's great to know you are coming. I'm going to be glad to show you all the city. See you soon, Susan.</td><td class="match-ans"><strong>a letter</strong> ✅</td></tr>
+<tr><td>First put the beef in a pan. Add the chopped onions and garlic. Then, pour a cup of red wine. Add a pinch of salt and pepper. After that bake the beef for about an hour. Serve with fried potatoes and some salad.</td><td class="match-ans"><strong>a recipe</strong> ✅</td></tr>
+<tr><td>Ecuador is in South America. It has four important regions which are: Litoral or Coast, Highland or Sierra, Amazon or Orient and Galapagos Islands.</td><td class="match-ans"><strong>a simple description</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the correct ingredients for making an omelet according to the recipe: To prepare an omelete, we need the following ingredients:</div>
+<ul class="options-list">
+<li class="opt">Eggs, salt, oil, vinegar, coke</li>
+<li class="opt correct"><strong>Salt, eggs, oil, bacon</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Oil, mustard, tomato sauce, candies</li>
+<li class="opt">Vinegar, mustard, eggs, tomato sauce, milk  </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose and circle the right ingredients to prepare “CEVICHE”.</div>
+<ul class="options-list">
+<li class="opt">Fish, lemons, vinegar, mustard, tomato sauce, salt, honey, onions, cucumber.</li>
+<li class="opt correct"><strong>Fish, lemons, salt, oil, mustard, tomato sauce, onions.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar_img</span> <span class="q-num">#5</span> Label the pictures with their names.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>Tomatoes</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>honey</strong> ✅</td></tr>
+<tr><td>*(Imagen / Código de referencia)*</td><td class="match-ans"><strong>meat</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the ingredients to prepare a 'tuna sandwich'</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Tuna fish, mustard, salt, lemons, bread</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Tuna fish, mustard, lemon, sugar, tomatoes </li>
+<li class="opt">Tuna fish, tomatoes, onions, mustard, lemons</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the adequate option to answer the question: What is your favorite food?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Shrimp soup</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Mustard</li>
+<li class="opt">Sugar</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the adequate option to complete the information: A person who serves alcoholic beverages in a restaurant is called a:</div>
+<ul class="options-list">
+<li class="opt">Chef</li>
+<li class="opt correct"><strong>Barman</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Waiter </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the right ingredients for preparing a ceviche.</div>
+<ul class="options-list">
+<li class="opt">Fish, lemon. Salt, oil, sugar, water</li>
+<li class="opt">Fish, water, salt, oil, lemon, onions, tomatoes, honey</li>
+<li class="opt correct"><strong>Fish, water, salt, lemons, oil, tomatoes, onions, mustard </strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the best option to answer the question: What is your favorite drink?</div>
+<ul class="options-list">
+<li class="opt">Chicken soup</li>
+<li class="opt correct"><strong>Milkshake</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">jelly </li>
+</ul>
+</div></div></div>
+    </div>
+</body>
+</html>

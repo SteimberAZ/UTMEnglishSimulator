@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 14 • 📕 Book 4 (A2.2 - Intermediate) - Guía de Inglés UTM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 900px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-btn, .print-btn {
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .back-btn:hover, .print-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 0 0 6px 0;
+        }
+        .header .subtitle {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: inline-flex;
+            gap: 16px;
+            background: #f1f5f9;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+        .skill-section {
+            margin-top: 40px;
+        }
+        .skill-section h2 {
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 6px solid #2563eb;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .task-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .task-card h3 {
+            color: #1e293b;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .task-obj {
+            font-size: 14px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .task-expl {
+            font-size: 14px;
+            color: #0369a1;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        .question-card {
+            background: #fafafa;
+            border-left: 4px solid #3b82f6;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+        .q-header {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .q-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .q-num {
+            color: #3b82f6;
+            margin-right: 4px;
+        }
+        .q-desc {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .options-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .opt {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .opt.correct {
+            background: #ecfdf5;
+            border-color: #10b981;
+            color: #065f46;
+            font-weight: 600;
+        }
+        .badge-correct {
+            background: #10b981;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            float: right;
+            font-weight: 600;
+        }
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .match-table th, .match-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .match-table th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        .match-ans {
+            color: #065f46;
+            background: #ecfdf5;
+            font-weight: 600;
+        }
+        .order-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        .fill-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .fill-list li {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        @media print {
+            body { background: #ffffff; padding: 0; }
+            .top-nav { display: none; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .task-card { page-break-inside: avoid; }
+            .question-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="../index.html" class="back-btn">← Volver al Portal General</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Guardar / Imprimir PDF</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>📘 Universidad Técnica de Manabí</h1>
+            <div class="subtitle">Simulador de Inglés • Unidad 14 • 📕 Book 4 (A2.2 - Intermediate)</div>
+            <div class="stats">
+                <span>📋 18 Tareas</span>
+                <span>❓ 178 Preguntas Verificadas</span>
+            </div>
+        </div>
+        <div class="skill-section"><h2 style="border-left-color: #2563eb">🧠 Grammar (Estructuras Gramaticales)</h2><div class="task-card"><h3>📌 Tarea #197: I WAS GOING TO CALL YOU, BUT I FORGOT</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use 'was/were going to' to refer to past intentions.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Sorry, I _______ you today, but I forgot.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Was going to call</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Was calling</li>
+<li class="opt">Would call</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> He asked whether I _______ Him, but. There was nothing I could do.</div>
+<ul class="options-list">
+<li class="opt">was helping</li>
+<li class="opt">will help</li>
+<li class="opt correct"><strong>would help</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> He _______  to Iraq, but he came down with an infection before the trip.</div>
+<ul class="options-list">
+<li class="opt">Was sending</li>
+<li class="opt correct"><strong>was going to be sent</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">would be sent</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> I saw he had a gun, but I didn't think he _______</div>
+<ul class="options-list">
+<li class="opt">Was shooting</li>
+<li class="opt correct"><strong>Was going to shoot</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Will shoot</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> I knew you _______ the exam. You didn't make any effort!</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Would fail</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Are going to fail </li>
+<li class="opt">We're failing </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> I lost my passport the day before we _______ for bun honeymoon.</div>
+<ul class="options-list">
+<li class="opt">Would leave</li>
+<li class="opt">Left</li>
+<li class="opt correct"><strong>Were leaving</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> She promised she _______ an end the situation, but failed to do so.</div>
+<ul class="options-list">
+<li class="opt">Was putting</li>
+<li class="opt correct"><strong>Would put</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Would have put</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> That night I was very excited because the next mining I _______ back home on the first train.</div>
+<ul class="options-list">
+<li class="opt">would go</li>
+<li class="opt correct"><strong>was going</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">went </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> I told him not to call me that evening, because I _______ or my family all might.</div>
+<ul class="options-list">
+<li class="opt">Was studying</li>
+<li class="opt">Studied</li>
+<li class="opt correct"><strong>Would be studying </strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> I _______ the car, but I thought I did not really need it and decided not to do it.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Was going to buy</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Was buying</li>
+<li class="opt">Would buy</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #198: SHE ASKED ME TO STOP TALKING</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can report past orders and requests with 'tell/ask'. Use the correct tense or form as well</p><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Choose the correct verb (tell or ask) to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• My grandma loves</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> Choose the correct verb (tell or ask) to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>•  Do you have a watch? Can you</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> Choose the correct verb (tell or ask) to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• I like Jenny so much. I think I'll</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> Choose the correct verb (tell or ask) to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• Come on!</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Choose the correct verb (tell or ask) to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• Vincent is a professional comedian. He works in a night club and</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Choose the correct verb (tell or ask) to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• Excuse me! I'd like to</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> Choose the correct verb (tell or ask) to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• If I were you, I'd never</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Choose the correct verb (tell or ask) to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• I spoke to James today. He</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Choose the correct verb (tell or ask) to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• I can't</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Choose the correct verb (tell or ask) to complete the sentences.</div>
+<div class="tf-block">
+<p><strong>• Can</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #199: I USED TO BELIEVE GHOSTS EXISTED</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use 'used to' to refer to past habits and routines.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> My father _______ a mile  to school every day when he was a boy.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Used to walk</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Used walk</li>
+<li class="opt">Used to walking</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> I _______ much years ago, but now I read every day.</div>
+<ul class="options-list">
+<li class="opt">Didn't used to read</li>
+<li class="opt correct"><strong>Didn't use to read</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Used to not reading </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> My brother and I _______  a lot when we were young.</div>
+<ul class="options-list">
+<li class="opt">Used to fought</li>
+<li class="opt">Used to be fighting</li>
+<li class="opt correct"><strong>Used to fight</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> I _______ skinny when I was young.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Used to be</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Used be</li>
+<li class="opt">Used to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> We _______ in Quito.</div>
+<ul class="options-list">
+<li class="opt">Used be living</li>
+<li class="opt">Used live</li>
+<li class="opt correct"><strong>Used to live</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Meli speaks English now, but she _______  it when she was young.</div>
+<ul class="options-list">
+<li class="opt">Didn't used to speak</li>
+<li class="opt">Not used to speak </li>
+<li class="opt correct"><strong>Didn't use to speak</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> People _______ to the radio more in the old days.</div>
+<ul class="options-list">
+<li class="opt">Used to listening</li>
+<li class="opt">Used listen</li>
+<li class="opt correct"><strong>Used to listen</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> I _______ in Santa Claus when I was little.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Used to believe</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Use to believe</li>
+<li class="opt">Used believe</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Can you believe that grandpa _______ tennis when he was young?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Used to play</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Used play</li>
+<li class="opt">Used to be playing</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> My Mom _______ me a bedtime story every night.</div>
+<ul class="options-list">
+<li class="opt">Used read</li>
+<li class="opt correct"><strong>Used to read</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Used to reading </li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #200: YOU ARE THE ENGLISH TEACHER, AREN'T YOU?</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can use a range of negative question tags.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> James is English, _______ ?</div>
+<ul class="options-list">
+<li class="opt">does he</li>
+<li class="opt">is he</li>
+<li class="opt correct"><strong>isn't he</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">doesn't he</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> We can go to the amusement park with you, _______ ?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>can't we</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">don't we</li>
+<li class="opt">can we</li>
+<li class="opt">aren't we</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> He never goes to bed before 10 o'clock, _______ ?</div>
+<ul class="options-list">
+<li class="opt">isn't he</li>
+<li class="opt">is he</li>
+<li class="opt">doesn't he</li>
+<li class="opt correct"><strong>does he</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Those cars are very expensive, _______ ?</div>
+<ul class="options-list">
+<li class="opt">are cars</li>
+<li class="opt correct"><strong>aren't they</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">aren't cars</li>
+<li class="opt">are they</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> You didn't play tennis last week, _______ ?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>did you</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">didn't you</li>
+<li class="opt">aren't you</li>
+<li class="opt">haven't you</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> She has got a lot of books, _______ ?</div>
+<ul class="options-list">
+<li class="opt">does she</li>
+<li class="opt">doesn't she</li>
+<li class="opt correct"><strong>hasn't she</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">haven't she</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Everyone came to the wedding, _______ ?</div>
+<ul class="options-list">
+<li class="opt">weren't they</li>
+<li class="opt">wasn't it</li>
+<li class="opt">isn't it</li>
+<li class="opt correct"><strong>didn't they</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> There are a lot of students in the garden, _______ ?</div>
+<ul class="options-list">
+<li class="opt">aren't they</li>
+<li class="opt correct"><strong>aren't there</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">don't they</li>
+<li class="opt">do there</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> I am the tallest player in the team, _______ ?</div>
+<ul class="options-list">
+<li class="opt">don't I</li>
+<li class="opt">am not I</li>
+<li class="opt correct"><strong>aren't I</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">am I</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Let's watch a film, _______ ?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>shall we</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">don't we</li>
+<li class="opt">do we</li>
+<li class="opt">aren't we</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #059669">📖 Vocabulary (Vocabulario)</h2><div class="task-card"><h3>📌 Tarea #201: Failure in fashion</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> to describe outfits using different vocabulary about cloth.</p><div class="task-expl">💡 <strong>Explicación:</strong> there is so much to learn in English online, and maybe the best of all is when we use this language in the real world. The week of fashion is very outstanding all over the world and this is the opportunity to learn words about fashion.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Complete the sentence using and choose the correct option: my dad needs to wear a tie. He needs to buy a _____</div>
+<ul class="options-list">
+<li class="opt">T-shirt</li>
+<li class="opt">Blouse</li>
+<li class="opt correct"><strong>Shirt</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Watch</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Complete with the correct word: Cecilia works at a University; she wears a _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Suit</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Shorts</li>
+<li class="opt">T-shirt</li>
+<li class="opt">Hat</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Complete with the correct word: This is a cloth for men _______</div>
+<ul class="options-list">
+<li class="opt">Dress</li>
+<li class="opt">Skirt</li>
+<li class="opt">Blouse</li>
+<li class="opt correct"><strong>Tie</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Complete with the correct word: This is a cloth for women _______</div>
+<ul class="options-list">
+<li class="opt">Tie</li>
+<li class="opt">Shirt</li>
+<li class="opt correct"><strong>Bra</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Polo shirt</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Complete with the correct word: Julio needs to know the time. He wears a _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Watch</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Chain</li>
+<li class="opt">Tie</li>
+<li class="opt">Hat</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Complete with the correct word: My kids are going to play soccer. They are wearing a pair of _______</div>
+<ul class="options-list">
+<li class="opt">Suit</li>
+<li class="opt">Tie</li>
+<li class="opt correct"><strong>Shoes</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Under wear</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Complete with the correct word: My mother is a fanatic of the Barcelona soccer team. She is wearing a _______ T-shrirt.</div>
+<ul class="options-list">
+<li class="opt">Green</li>
+<li class="opt">Black</li>
+<li class="opt correct"><strong>Yellow</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Blue</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Complete with the correct word: Jose cannot see very well. He needs to buy some _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Glasses</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Shoes</li>
+<li class="opt">Jeans</li>
+<li class="opt">Trousers</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Complete with the correct word: David is going to the beach. He is wearing a bathing _______</div>
+<ul class="options-list">
+<li class="opt">Tie</li>
+<li class="opt">Shirt</li>
+<li class="opt correct"><strong>Suit</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Gloves</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read and choose the correct alternative to complete the sentence: Juan´s hands are cold. He wears some  _______</div>
+<ul class="options-list">
+<li class="opt">T-shirt</li>
+<li class="opt">Tie</li>
+<li class="opt correct"><strong>Gloves</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Glasses</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #202: The best way to learn</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> to understand and use some vocabulary related to education.</p><div class="task-expl">💡 <strong>Explicación:</strong> practicing this vocabulary, you can learn some words and phrases that you need to have some advantages in an English school.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Complete with the correct word: Juan is a good student. He gets good _______</div>
+<ul class="options-list">
+<li class="opt">Books</li>
+<li class="opt">Notebooks</li>
+<li class="opt correct"><strong>Grades</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Class</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Complete with the correct word: Ana likes numbers. Her favorite _______ is Math.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Subject</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">School</li>
+<li class="opt">Science</li>
+<li class="opt">Teacher</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Match with the definitions presented. Choose the correct option: To direct your attention or your efforts towards a particular activity, subject, or problem _______</div>
+<ul class="options-list">
+<li class="opt">Stress</li>
+<li class="opt">Textbook</li>
+<li class="opt">Teacher</li>
+<li class="opt correct"><strong>Subject</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Match with the definitions presented. Choose the correct option: To know why or how something happens or works _______</div>
+<ul class="options-list">
+<li class="opt">Class</li>
+<li class="opt">Subject</li>
+<li class="opt correct"><strong>Teachers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Textbook</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Match with the definitions presented. Choose the correct option: To become calmer and happier _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Grades</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Textbook</li>
+<li class="opt">Class</li>
+<li class="opt">Teacher</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Match with the definitions presented. Choose the correct option: To stop being active in order to relax and get back your Strength _______</div>
+<ul class="options-list">
+<li class="opt">Subject</li>
+<li class="opt">Textbook</li>
+<li class="opt correct"><strong>Stress</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Teacher</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the correct option: Juan studies Science and _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Social Studies</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Stress</li>
+<li class="opt">Teacher</li>
+<li class="opt">Class</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct option: David is good at Chemistry. He studies at a _______</div>
+<ul class="options-list">
+<li class="opt">Teacher</li>
+<li class="opt">Subject</li>
+<li class="opt correct"><strong>School of Sciences</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Grades</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Match with the definitions presented. Choose the correct option: A short piece of writing _______</div>
+<ul class="options-list">
+<li class="opt">Grades</li>
+<li class="opt">Textbook</li>
+<li class="opt correct"><strong>Certification</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Notes</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Match the correct definition and choose the correct option: “to look at” about something _______</div>
+<ul class="options-list">
+<li class="opt">T-shirt</li>
+<li class="opt">Blouse</li>
+<li class="opt correct"><strong>Textbook</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Watch</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #203: Top chef</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> to use words related to food and cooking.</p><div class="task-expl">💡 <strong>Explicación:</strong> Everyone loves food, no matter what language you speak. It is especially fun to prepare and share a meal with someone from another country or culture. Even if you can't communicate with words, it's easy to make yourself understood in these kinds of situations.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Match with the definitions presented. Choose the correct option: To heat a container so the liquid in it boils _______</div>
+<ul class="options-list">
+<li class="opt">Oven</li>
+<li class="opt">Pan</li>
+<li class="opt correct"><strong>Boil</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Freezer</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Match with the definitions presented. Choose the correct option: Quality of the food when you put it in your mouth _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Taste</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Dish</li>
+<li class="opt">Salt</li>
+<li class="opt">Oven</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Match with the definitions presented. Choose the correct option: A small tool for picking up and eating food _______</div>
+<ul class="options-list">
+<li class="opt">Dish</li>
+<li class="opt">Oven</li>
+<li class="opt">Knife</li>
+<li class="opt correct"><strong>Fork</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Match with the definitions presented. Choose the correct option: A set of instructions that tell you how to cook something _______</div>
+<ul class="options-list">
+<li class="opt">Menu</li>
+<li class="opt">Dish</li>
+<li class="opt correct"><strong>Recipe</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Napkin</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Match with the definitions presented. Choose the correct option: A metal container that you use for cooking _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Pan</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cook</li>
+<li class="opt">Oven</li>
+<li class="opt">Knife</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Match with the definitions presented. Choose the correct option: A piece of equipment that you cook food inside _______</div>
+<ul class="options-list">
+<li class="opt">Boil</li>
+<li class="opt">Knife</li>
+<li class="opt correct"><strong>Oven</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cook</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Match with the definitions presented. Choose the correct option: To make a liquid flow out of a container _______</div>
+<ul class="options-list">
+<li class="opt">Pan</li>
+<li class="opt">Fork</li>
+<li class="opt correct"><strong>Pour</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Glass</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Match with the definitions presented. Choose the correct option: A piece of equipment that you cook food using a pan _______</div>
+<ul class="options-list">
+<li class="opt">Knife</li>
+<li class="opt">Freezer</li>
+<li class="opt correct"><strong>Stove</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Refrigerator</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Match with the definitions presented. Choose the correct option: A tool for cutting food in pieces _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Knife</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cook</li>
+<li class="opt">Fork</li>
+<li class="opt">Spoon</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Match with the definitions presented. Choose the correct option: This is a device that you can heat food in a few minutes _______</div>
+<ul class="options-list">
+<li class="opt">Boil</li>
+<li class="opt">Spoon</li>
+<li class="opt correct"><strong>Microwave oven</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Knife</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #204: Holiday destinations in Ecuador</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> to understand the meaning of words related to tourism in context.</p><div class="task-expl">💡 <strong>Explicación:</strong> People working in the travel industry around the world generally use English as a common language to communicate with international tourists. This not only includes tour guides, but also people who work in hotels, restaurants, transportation services, and more. You could work in a bakery in a busy tourist district, as a taxi driver, a hotel receptionist, or even a bicycle tour guide.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Complete with the correct word: This is the principal economic city in Ecuador _______</div>
+<ul class="options-list">
+<li class="opt">Ambato</li>
+<li class="opt">Portoviejo</li>
+<li class="opt correct"><strong>Guayaquil</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cuenca</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Complete with the correct word: This is the capital city of Ecuador _______</div>
+<ul class="options-list">
+<li class="opt">Cuenca</li>
+<li class="opt">Manta</li>
+<li class="opt">Guayaquil</li>
+<li class="opt correct"><strong>Quito</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Complete with the correct word: The three principal cities in Ecuador are _______</div>
+<ul class="options-list">
+<li class="opt">Quito, Cuenca and Manta</li>
+<li class="opt">Cuenca, Guayaquil and Manta</li>
+<li class="opt correct"><strong>Guayaquil, Quito and Cuenca</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Quito, Guayaquil and Manta</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Complete with the correct word: the  most visited beach in Ecuador is:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Montañita</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Quito</li>
+<li class="opt">Guayaquil</li>
+<li class="opt">Machala</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Complete with the correct word: The Cajas National Park is located in the province of _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Azuay</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Manabí</li>
+<li class="opt">Guayas</li>
+<li class="opt">Cañar</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Complete with the correct word: This province is located outside of continental equator _______</div>
+<ul class="options-list">
+<li class="opt">Manabí</li>
+<li class="opt">Esmeraldas</li>
+<li class="opt correct"><strong>Galapagos islands</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">El Oro</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Complete with the correct word: People can practice extreme sports in _______</div>
+<ul class="options-list">
+<li class="opt">Portoviejo</li>
+<li class="opt">Quevedo</li>
+<li class="opt correct"><strong>Baños</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Guayaquil</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Complete with the correct word: The amazon region has a lot of _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Jungles</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Volcanos</li>
+<li class="opt">buildings</li>
+<li class="opt">beaches</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Complete with the correct word: which is the main seaport of ecuador?</div>
+<ul class="options-list">
+<li class="opt">Guayaquil</li>
+<li class="opt">Portoviejo</li>
+<li class="opt correct"><strong>Manta</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Quito</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #d97706">📚 Reading (Comprensión Lectora)</h2><div class="task-card"><h3>📌 Tarea #205: A BAD IDEA</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can scan short texts to locate specific information.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Read the content and choose the correct answer: True or false.</div>
+<div class="tf-block">
+<p><strong>• He didn't particularly enjoy the Sardinian one.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the correct statement according to the reading.</div>
+<ul class="options-list">
+<li class="opt">The wedding at the mountains of Sardinia was one of his first weddings abroad.</li>
+<li class="opt correct"><strong>The wedding at the mountains of Sardinia was one of his last weddings abroad.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The writer didn't go to the wedding at the mountains of Sardinia.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the correct statement according to the reading.</div>
+<ul class="options-list">
+<li class="opt">The writer always enjoys weddings.</li>
+<li class="opt correct"><strong>The writer usually enjoys weddings.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The writer doesn't enjoy weddings at all.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the correct statement according to the reading.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>The writer has gone to few weddings abroad.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The writer has never been abroad for a wedding.</li>
+<li class="opt">He likes to visit friends around the world.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the correct answer: How does it take to prepare all the food?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Three weeks</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Two weeks</li>
+<li class="opt">Three months</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the correct answer: According to the reading, the string of tin cans trailing behind the car _______</div>
+<ul class="options-list">
+<li class="opt">Only happens in the UK.</li>
+<li class="opt">Never happens.</li>
+<li class="opt correct"><strong>Happens in both the UK and Sardinia.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the correct answer: In the UK the food for the wedding is made by _______</div>
+<ul class="options-list">
+<li class="opt">The groom family</li>
+<li class="opt">The bride family</li>
+<li class="opt correct"><strong>The caterers</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> Read the content and choose the correct answer: True or false.</div>
+<div class="tf-block">
+<p><strong>• The writer generally likes weddings.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Read the content and choose the correct answer: True or false.</div>
+<div class="tf-block">
+<p><strong>• All the weddings are the same.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> Read the content and choose the correct answer: True or false.</div>
+<div class="tf-block">
+<p><strong>• The families helped the caterers to prepare the food.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #206: MAYBE IT IS NOT WHAT YOU THINK!</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can skim a short text to identify its main purpose.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> Read the content and choose the correct answer: True or false.</div>
+<div class="tf-block">
+<p><strong>• Chaplin's birthplace is London without a doubt.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the correct answer to complete the sentence: Chaplin's parents were _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Entertainers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Doctors</li>
+<li class="opt">Carpenters</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> His parents separation was _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>after his birth</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Before his birth</li>
+<li class="opt">They never separated</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the correct sentence: According to the reading 'There is some doubt whether April 16 is actually his birthday' means:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>His birthdate is not clear.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">His birthdate is clear.</li>
+<li class="opt">His birthday is on April 16th.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> Read the content and choose the correct answer: True or false.</div>
+<div class="tf-block">
+<p><strong>• Chaplin might have been born some years earlier than is currently believed.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Read the content and choose the correct answer: True or false.</div>
+<div class="tf-block">
+<p><strong>• Chaplin's parentage is also in doubt.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Read and choose the correct option.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>It is possible Chaplin was not born in 1889</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It is possible Chaplin was not born on 1889</li>
+<li class="opt">It is possible Chaplin was not born at 1889</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct option to complete the blanks: Chaplin's _______ is _______.</div>
+<ul class="options-list">
+<li class="opt">Name / not clear</li>
+<li class="opt correct"><strong>Birthplace / not clear</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Birthday / clear</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct option to complete the blanks: Chaplin's mother was known as _______ on stage.</div>
+<ul class="options-list">
+<li class="opt">Music Hall</li>
+<li class="opt">Hannah Harriette</li>
+<li class="opt correct"><strong>Lily Harley</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the correct option to complete the blanks: When their parents separated he _______ with _______.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Stayed / his mom</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Stay/ his mom</li>
+<li class="opt">Stayed/ her mom</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #207: WHOSE IS THIS LETTER?</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can understand basic types of standard letters and emails on familiar topics (e.g. enquiries, complaints)</p><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> True or false.</div>
+<div class="tf-block">
+<p><strong>• You can meet famous people in the hotel.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> True or false.</div>
+<div class="tf-block">
+<p><strong>• Some famous people have stayed at the hotel.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> True or false.</div>
+<div class="tf-block">
+<p><strong>• The Fame Hotel is near Hollywood.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the correct option to fill in the blanks: The hotel is _______ 10 _______ outside _______.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Located / miles / Los Angeles</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Locate / miles / Los Angeles</li>
+<li class="opt">Located / kilometers / Los Angeles</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the correct option: The Fame Hotel has _______.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>32 rooms</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">23 rooms</li>
+<li class="opt">30 rooms</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the correct option: Where is Elvis's room?</div>
+<ul class="options-list">
+<li class="opt">On the first floor</li>
+<li class="opt">On the second floor</li>
+<li class="opt correct"><strong>On the third floor</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> True or false.</div>
+<div class="tf-block">
+<p><strong>• Clint Eastwood and Elvis rooms are on the same floor.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct option to complete the sentence: The rooms are _______ _______ _______ people.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Named / after / famous</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">After / named / famous</li>
+<li class="opt">Named / famous / after</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct option: Marc Twain and Agatha Christie are _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Writers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Singers</li>
+<li class="opt">Actors</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the correct option: Mike Tyson is a _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Sport star</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Hollywood star</li>
+<li class="opt">Music star</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #208: AGENDA FOR THE WEEKEND</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can find and understand information in advertisements for sporting, social or cultural events.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> True or false.</div>
+<div class="tf-block">
+<p><strong>• When Lincoln grew up, he didn't work on the family farm anymore.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the correct option: When Lincon grew up he ________.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Worked in a general store</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Was a slave</li>
+<li class="opt">Worked in the family farm</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the correct option: At that time slavery was _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Legal</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Not legal</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the correct option: According to the reading 'Lincoln's father, refused to own any slaves' means that:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>He didn't want to have slaves.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He wanted to have slaves.</li>
+<li class="opt">He has many slaves.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the correct option: According to the reading 'when he was 22 years old he left home' means that:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>At the age of 22 he moved from home</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">At the age of 22 he stayed with his parents</li>
+<li class="opt">At the age of 22 he traveled the world.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the correct option: When Lincon grew up he ________.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Worked in a general store</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Was a slave</li>
+<li class="opt">Worked in the family farm</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> True or false.</div>
+<div class="tf-block">
+<p><strong>• Lincoln spend many years at school.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the correct option: At that time slavery was _______</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Legal</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Not legal</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct option: According to the reading 'Lincoln's father, refused to own any slaves' means that:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>He didn't want to have slaves.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He wanted to have slaves.</li>
+<li class="opt">He has many slaves.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the correct option: According to the reading 'when he was 22 years old he left home' means that:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>At the age of 22 he moved from home</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">At the age of 22 he stayed with his parents</li>
+<li class="opt">At the age of 22 he traveled the world.</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #7c3aed">🎧 Listening (Comprensión Auditiva)</h2><div class="task-card"><h3>📌 Tarea #346: My Pet Cat</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> What is the name of the speaker’s cat?</div>
+<ul class="options-list">
+<li class="opt">Fluffy</li>
+<li class="opt correct"><strong>Whiskers</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Shadow</li>
+<li class="opt">Socks</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> What color is Whiskers?</div>
+<ul class="options-list">
+<li class="opt">Black</li>
+<li class="opt">White</li>
+<li class="opt correct"><strong>Gray</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Brown</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> True or False: Whiskers has blue eyes.</div>
+<ul class="options-list">
+<li class="opt">True</li>
+<li class="opt correct"><strong>False</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> What does Whiskers like to chase?</div>
+<ul class="options-list">
+<li class="opt">Balls</li>
+<li class="opt">Birds</li>
+<li class="opt">Mice</li>
+<li class="opt correct"><strong>The red dot from a laser pointer</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> The word “affectionate” most likely means:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Loving</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Angry</li>
+<li class="opt">Lazy</li>
+<li class="opt">Hungry</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> How does Whiskers wake up the speaker?</div>
+<ul class="options-list">
+<li class="opt">Meowing loudly</li>
+<li class="opt correct"><strong>Jumping on the bed</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Scratching the door</li>
+<li class="opt">Knocking things over</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> True or False: Whiskers likes to watch birds.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>True</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">False</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Where does Whiskers like to sit?</div>
+<ul class="options-list">
+<li class="opt">On the couch</li>
+<li class="opt correct"><strong>By the window</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Under the table</li>
+<li class="opt">On the floor</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Why does the speaker enjoy spending time with Whiskers?</div>
+<ul class="options-list">
+<li class="opt">She is quiet</li>
+<li class="opt correct"><strong>She is playful and affectionate</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">She is shy</li>
+<li class="opt">She is independent</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> What can you infer about the speaker’s relationship with Whiskers?</div>
+<ul class="options-list">
+<li class="opt">The speaker is annoyed by Whiskers</li>
+<li class="opt correct"><strong>The speaker loves Whiskers very much</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The speaker is afraid of Whiskers</li>
+<li class="opt">The speaker thinks Whiskers is too playful</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #347: My Morning Routine</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> What time does the speaker wake up?</div>
+<ul class="options-list">
+<li class="opt">5:30 a.m.</li>
+<li class="opt correct"><strong>6:30 a.m.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">7:30 a.m.</li>
+<li class="opt">8:30 a.m.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> What does the speaker do first in the morning?</div>
+<ul class="options-list">
+<li class="opt">Make coffee</li>
+<li class="opt correct"><strong>Brush teeth</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Eat breakfast</li>
+<li class="opt">Check emails</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> True or False: The speaker eats cereal for breakfast.</div>
+<ul class="options-list">
+<li class="opt">True</li>
+<li class="opt correct"><strong>False</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> What does the speaker do after eating breakfast?</div>
+<ul class="options-list">
+<li class="opt">Go to work</li>
+<li class="opt">Brush teeth</li>
+<li class="opt correct"><strong>Get dressed</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Make coffee</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> The word “organized” most likely means:</div>
+<ul class="options-list">
+<li class="opt">Messy</li>
+<li class="opt correct"><strong>Prepared</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Confused</li>
+<li class="opt">Busy</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> What time does the speaker leave the house?</div>
+<ul class="options-list">
+<li class="opt">6:30 a.m.</li>
+<li class="opt">7:00 a.m.</li>
+<li class="opt correct"><strong>7:30 a.m.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">8:00 a.m.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> True or False: The speaker checks emails before getting dressed.</div>
+<ul class="options-list">
+<li class="opt">True</li>
+<li class="opt correct"><strong>False</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> What can you infer about the speaker’s feelings towards their morning routine?</div>
+<ul class="options-list">
+<li class="opt">The speaker finds it stressful</li>
+<li class="opt">The speaker dislikes it</li>
+<li class="opt correct"><strong>The speaker feels it helps them start the day well</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The speaker thinks it’s too long</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> What does the speaker have for breakfast?</div>
+<ul class="options-list">
+<li class="opt">Pancakes</li>
+<li class="opt correct"><strong>Toast, eggs, and fruit</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Cereal and milk</li>
+<li class="opt">Coffee only</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> How does the routine help the speaker?</div>
+<ul class="options-list">
+<li class="opt">It makes them late for work</li>
+<li class="opt correct"><strong>It helps them feel ready for the day</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">It makes them tired</li>
+<li class="opt">It takes too much time</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #db2777">✍️ Writing (Expresión Escrita)</h2><div class="task-card"><h3>📌 Tarea #209: LET'S ORDER A PIZZA</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To write cardinal, ordinal and fractions using both digits and words.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Answer and complete the following question, using the right number according to its structure: . What is the second month of the year?</div>
+<ul class="options-list">
+<li class="opt">January</li>
+<li class="opt correct"><strong>February</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">March</li>
+<li class="opt">April</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Answer and complete the following question, using the right number according to its structure: I am very happy because I am the _______ Student of my class.</div>
+<ul class="options-list">
+<li class="opt">one</li>
+<li class="opt">three</li>
+<li class="opt correct"><strong>first</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">many</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Answer and complete the following question, using the right number according to its structure: Monday is the _______ day of the week.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>first</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">second</li>
+<li class="opt">third</li>
+<li class="opt">one</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Answer and complete the following question, using the right number according to its structure: This is not your  _______ Mistake. Please be more careful.</div>
+<ul class="options-list">
+<li class="opt">one</li>
+<li class="opt">very</li>
+<li class="opt">a</li>
+<li class="opt correct"><strong>first </strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Answer and complete the following question, using the right number according to its structure: This school is not my (2) _______ It is my (3) _______ school</div>
+<ul class="options-list">
+<li class="opt correct"><strong>second/third</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">two/three</li>
+<li class="opt">second/threeth</li>
+<li class="opt">two/twenty</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Answer and complete the following question, using the right number according to its structure: 41th is</div>
+<ul class="options-list">
+<li class="opt correct"><strong>forty - first</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">forty - one</li>
+<li class="opt">fourth</li>
+<li class="opt">one - fourth</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Answer and complete the following question, using the right number according to its structure: 11 x 3 =</div>
+<ul class="options-list">
+<li class="opt">thirty first</li>
+<li class="opt correct"><strong>thirty-three</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">thirty third</li>
+<li class="opt">thirty-one</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Answer and complete the following question, using the right number according to its structure: 22 - 10 =</div>
+<ul class="options-list">
+<li class="opt">twenty</li>
+<li class="opt">eleven</li>
+<li class="opt correct"><strong>twelve</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">ten/two</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Answer and complete the following question, using the right number according to its structure: Do you need one - quarter of powder that means:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>1/4</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">1/3</li>
+<li class="opt">1/14</li>
+<li class="opt">1/12</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Choose the correct response to fill in the blanks: 13, 14, _______, 16, 17, _______, 19, 20.</div>
+<ul class="options-list">
+<li class="opt">fifty / eighty</li>
+<li class="opt">five / eighteenth</li>
+<li class="opt correct"><strong>fifteen / eighteen</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">fifth / eight</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #210: NEXT HOLIDAY</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To write a description of a future event or activity using the correct structure.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Choose the best alternative to the following sentences: can you give a message for ann? Probably i ________ Him at the meeting this evening.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>will see</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">am going to see</li>
+<li class="opt">saw</li>
+<li class="opt">am seeing</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Choose the best alternative to the following sentences: People will _______ On the moon in the future.</div>
+<ul class="options-list">
+<li class="opt">living</li>
+<li class="opt correct"><strong>live</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">be live</li>
+<li class="opt">are live</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Choose the best alternative to the following sentences: I _______ return the book after I read it.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>will</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">am</li>
+<li class="opt">not</li>
+<li class="opt">going to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Choose the best alternative to the following sentences:  When Susan arrives, we _______ a party.</div>
+<ul class="options-list">
+<li class="opt">will has</li>
+<li class="opt">have</li>
+<li class="opt">are going to has</li>
+<li class="opt correct"><strong>will have</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Choose the best alternative to the following sentences: I will _______ right there until Jessica comes.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>wait</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">waiting</li>
+<li class="opt">waits</li>
+<li class="opt">not waiting </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Choose the best alternative to the following sentences: Tom _______ at eight tomorrow.</div>
+<ul class="options-list">
+<li class="opt">will arrives</li>
+<li class="opt">arrives</li>
+<li class="opt">will going tomorrow</li>
+<li class="opt correct"><strong>will arrive</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Choose the best alternative to the following sentences: Nobody _______ Recognize you in that way.</div>
+<ul class="options-list">
+<li class="opt">are going to</li>
+<li class="opt correct"><strong>will</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">won't</li>
+<li class="opt">isn't go to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Choose the best alternative to the following sentences: This letter is in French, and I do not know French. Can you help me? Sure, I _______ it for you.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>will translate</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">won't translate</li>
+<li class="opt">am translated</li>
+<li class="opt">am going translate</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Choose the correct sentence:</div>
+<ul class="options-list">
+<li class="opt">He will came tomorrow.</li>
+<li class="opt correct"><strong>They will do it for me.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">He will at the meeting.</li>
+<li class="opt">Where will you be yesterday.</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #211: REQUESTS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can write a basic email/letter of a complaint requesting action.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Read the letter. What is this about?</div>
+<ul class="options-list">
+<li class="opt">to thank for everything</li>
+<li class="opt correct"><strong>to complain</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">to suggest something</li>
+<li class="opt">for call the attention</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Should I include the recipient in my letter?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Yes</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">No</li>
+<li class="opt">Maybe</li>
+<li class="opt">If you want to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> What punctuation marks are important in a complaint letter?</div>
+<ul class="options-list">
+<li class="opt">Period</li>
+<li class="opt">Comma</li>
+<li class="opt">Colon</li>
+<li class="opt correct"><strong>All the options</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> How can we write a letter of complaint incorrectly?</div>
+<ul class="options-list">
+<li class="opt">Be clear and concise.</li>
+<li class="opt correct"><strong>Write an angry and sarcastic letter.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Include your name and contact information.</li>
+<li class="opt">Be reasonable.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> What should I include in my complaint letter?</div>
+<ul class="options-list">
+<li class="opt">Time</li>
+<li class="opt">Place</li>
+<li class="opt">Name</li>
+<li class="opt correct"><strong>All the options</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Why is it important to include all these things?</div>
+<ul class="options-list">
+<li class="opt">Because they shouldn't know who is complaining</li>
+<li class="opt">Because just formality</li>
+<li class="opt correct"><strong>Because it requires it</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Just because</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> If I complain about a store, who should the letter be addressed to?</div>
+<ul class="options-list">
+<li class="opt">To the seller</li>
+<li class="opt correct"><strong>to the administrator</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">to the owner</li>
+<li class="opt">to the government</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Can I write a complaint letter in a good situation?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>No</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Yes</li>
+<li class="opt">Maybe</li>
+<li class="opt">If you want to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Which part of my complaint letter should not included:</div>
+<ul class="options-list">
+<li class="opt">Signature</li>
+<li class="opt">phone number</li>
+<li class="opt">address</li>
+<li class="opt correct"><strong>profanity</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> How to write a complaint letter: what do we need for writing it</div>
+<ul class="options-list">
+<li class="opt">Clear and concise writing</li>
+<li class="opt">Polite but firm</li>
+<li class="opt">Details of the incident</li>
+<li class="opt correct"><strong>All the options</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #212: A TERRIFIED EXPERIENCE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> Can write personal emails /letters giving some details of events, experiences, and feelings. Can write about experiences, feelings and reactions, in a simple connected text.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Which of the option is not a characteristic of a letter?</div>
+<ul class="options-list">
+<li class="opt">easy to read</li>
+<li class="opt correct"><strong>meaningful subject line</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Address them appropriately.</li>
+<li class="opt">Keep the email concise and to the point.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Read the letter. What is this about?</div>
+<ul class="options-list">
+<li class="opt">report details about the event</li>
+<li class="opt">Thank for the opportunity</li>
+<li class="opt">Describe the experience</li>
+<li class="opt correct"><strong>All the options</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Why is she describing the experience in the Lumus Conference?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Because is an experience letter</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Because she does not want to</li>
+<li class="opt">Because is a complain letter</li>
+<li class="opt">Because she wants to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> It is a _______ letter</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Formal</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Informal</li>
+<li class="opt">Friendly</li>
+<li class="opt">No one</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Can I describe a feeling or an experience in a letter?</div>
+<ul class="options-list">
+<li class="opt">No, I can't</li>
+<li class="opt correct"><strong>Yes, I can</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Maybe</li>
+<li class="opt">If you want to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> How can I write a good letter?</div>
+<ul class="options-list">
+<li class="opt">Know your recipient</li>
+<li class="opt">Use appropriately</li>
+<li class="opt">Be brief</li>
+<li class="opt correct"><strong>Use abbreviations</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> All of these are elements of a letter, except:</div>
+<ul class="options-list">
+<li class="opt">Store name and location.</li>
+<li class="opt">Relevant dates</li>
+<li class="opt">Names of sellers, customer service representatives, or managers</li>
+<li class="opt correct"><strong>Sales code</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> What does not the letter include?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>An irrelevant subject line that grabs attention and sets the tone.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A greeting that sets the tone for the event.</li>
+<li class="opt">At least one reason why the recipient was chosen for an invitation.</li>
+<li class="opt">Event details including the name, location, date, and relevance.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> In this letter, what is Jack talking about?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>About their lives</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">About their families</li>
+<li class="opt">About the university</li>
+<li class="opt">About experiences</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> How should I write an event email?</div>
+<ul class="options-list">
+<li class="opt">Thank your attendees.</li>
+<li class="opt">Share recordings from the event.</li>
+<li class="opt">Make exclusive offers to the event-goers.</li>
+<li class="opt correct"><strong>All the options.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div></div>
+    </div>
+</body>
+</html>

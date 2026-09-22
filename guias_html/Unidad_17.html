@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 17 • 📓 Book 5 (B1.1 - Independent) - Guía de Inglés UTM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .top-nav {
+            max-width: 900px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-btn, .print-btn {
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .back-btn:hover, .print-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 0 0 6px 0;
+        }
+        .header .subtitle {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: inline-flex;
+            gap: 16px;
+            background: #f1f5f9;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+        .skill-section {
+            margin-top: 40px;
+        }
+        .skill-section h2 {
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 6px solid #2563eb;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .task-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .task-card h3 {
+            color: #1e293b;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .task-obj {
+            font-size: 14px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .task-expl {
+            font-size: 14px;
+            color: #0369a1;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+        .question-card {
+            background: #fafafa;
+            border-left: 4px solid #3b82f6;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+        .q-header {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .q-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .q-num {
+            color: #3b82f6;
+            margin-right: 4px;
+        }
+        .q-desc {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .options-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .opt {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .opt.correct {
+            background: #ecfdf5;
+            border-color: #10b981;
+            color: #065f46;
+            font-weight: 600;
+        }
+        .badge-correct {
+            background: #10b981;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            float: right;
+            font-weight: 600;
+        }
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .match-table th, .match-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .match-table th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        .match-ans {
+            color: #065f46;
+            background: #ecfdf5;
+            font-weight: 600;
+        }
+        .order-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        .fill-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+        .fill-list li {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        @media print {
+            body { background: #ffffff; padding: 0; }
+            .top-nav { display: none; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .task-card { page-break-inside: avoid; }
+            .question-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="../index.html" class="back-btn">← Volver al Portal General</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Guardar / Imprimir PDF</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>📘 Universidad Técnica de Manabí</h1>
+            <div class="subtitle">Simulador de Inglés • Unidad 17 • 📓 Book 5 (B1.1 - Independent)</div>
+            <div class="stats">
+                <span>📋 18 Tareas</span>
+                <span>❓ 177 Preguntas Verificadas</span>
+            </div>
+        </div>
+        <div class="skill-section"><h2 style="border-left-color: #2563eb">🧠 Grammar (Estructuras Gramaticales)</h2><div class="task-card"><h3>📌 Tarea #257: RELATIVE PRONOUNS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialization.</p><div class="task-expl">💡 <strong>Explicación:</strong> We use relative pronouns to refer to a noun (a person or a thing) mentioned before and to which we want to add more information or modify. Relative pronouns can refer to something or someone in the singular or plural. Some relative pronouns can be used only with people, some with only things, and some with both.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> READ THE WORDS. THEN MATCH THE RELATIVE PRONOUNS WITH THEIR DEFINITIONS.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Who</td><td class="match-ans"><strong>people</strong> ✅</td></tr>
+<tr><td>Which</td><td class="match-ans"><strong>things</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> READ THE SENTENCE. THEN CHOOSE THE CORRECT OPTION TO COMPLETE IT: KASSANDRA, _______ BROTHER IS ABROAD IS GOING TO VISIT ME.</div>
+<ul class="options-list">
+<li class="opt">Who</li>
+<li class="opt correct"><strong>Whose</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">That</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• We use WHO exclusively for person/people.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• Relative pronouns are used only to add information.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> READ THE SENTENCE AND COMPLETE IT WITH THE CORRECT INFORMATION FROM THE BOX: THE MOVIE, _______ I RECOMMENDED YOU IS VERY SCARY, ISN'T IT?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Which</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Who</li>
+<li class="opt">Whose</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> READ AND COMPLETE THE SENTENCE WITH THE CORRECT WORD FROM THE BOX. WE USE RELATIVE PRONOUNS TO REFER TO A _______.</div>
+<ul class="options-list">
+<li class="opt">verb</li>
+<li class="opt correct"><strong>noun</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">adjetive</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• The relative pronouns WHO, WHOM and WHO are used with people.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> READ THE SENTENCE AND SELECT TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• We use the relative pronoun THAT only for people.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> READ THE SENTENCE AND COMPLETE IT WITH THE CORRECT INFORMATION FROM THE BOX: THE WAITER _______ HELPED ME WAS VERY NICE.</div>
+<ul class="options-list">
+<li class="opt">Whose</li>
+<li class="opt">Whom</li>
+<li class="opt correct"><strong>Who</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> READ THE SENTENCE AND COMPLETE IT WITH THE CORRECT INFORMATION FROM THE BOX: THE PERSON WITH _______ SHE WAS DISCUSSING WAS HER MOM.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Whom</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Which</li>
+<li class="opt">That</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #258: RELATIVE CLAUSES</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialization.</p><div class="task-expl">💡 <strong>Explicación:</strong> Relative pronouns are used to join two or more clauses, thus forming what we call 'relative clauses'. There are two types of relative clauses: those that add additional information and those that modify (or define) the subject of the sentence.</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> READ THE DEFINITIONS. THEN MATCH THE PHRASES TO THEM.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>The students who studied long hours completed their test on time.</td><td class="match-ans"><strong>defining relative clauses</strong> ✅</td></tr>
+<tr><td>The students, who studied long hours completed their test on time.</td><td class="match-ans"><strong>non- defining relative clauses</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• There are two types of relative clauses.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> READ THE SENTENCE AND COMPLETE IT WITH THE CORRECT INFORMATION FROM THE BOX: NON-DEFINING RELATIVE CLAUSE _______ ADDITIONAL INFORMATION.</div>
+<ul class="options-list">
+<li class="opt">define</li>
+<li class="opt">identify</li>
+<li class="opt correct"><strong>add</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> READ THE SENTENCE AND COMPLETE IT WITH THE CORRECT INFORMATION FROM THE BOX: DEFINING RELATIVE CLAUSES _______ THE NOUN AND IDENTIFY WHAT THING OR PERSON WE MEAN.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>define</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">identify</li>
+<li class="opt">determine</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> READ THE DEFINITIONS. THEN MATCH THE PHRASES TO THEM.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Commas are used</td><td class="match-ans"><strong>non- defining relative clauses</strong> ✅</td></tr>
+<tr><td>Commas are not used</td><td class="match-ans"><strong>defining relative clauses</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> READ THE SENTENCE. THEN CHOOSE THE CORRECT OPTION TO COMPLETE IT: THE BOOK _______ SHE READ IS ONE OF MY FAVORITES.</div>
+<ul class="options-list">
+<li class="opt">whom</li>
+<li class="opt correct"><strong>that</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">who</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> READ THE SENTENCE. THEN CHOOSE THE CORRECT OPTION TO COMPLETE IT: THIS IS THE ONLY KEY _______ OPENS THE LOCK.</div>
+<ul class="options-list">
+<li class="opt">who</li>
+<li class="opt">whom</li>
+<li class="opt correct"><strong>that</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> READ THE SENTENCE. THEN CHOOSE THE CORRECT OPTION TO COMPLETE IT: JUSTIN BIEBER, _______ IS MY FAVORITE SINGER IS GIVING A CONCERT THIS WEEKEND.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>who</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">which</li>
+<li class="opt">whom</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• The clauses that define the noun are called Re-defining relative clauses.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• The relative clauses that add additional information are called Non-defining relative clauses.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #259: PHRASAL VERBS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialization.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION TO COMPLETE IT: HE'D _______ THE KILLING AND MAKE YOU LOOK LIKE A FOOL.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>cover up</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">dance</li>
+<li class="opt">write</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION TO COMPLETE IT: WE'LL _______ THIS BUSINESS, SOMEHOW!</div>
+<ul class="options-list">
+<li class="opt correct"><strong>get through</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">drive in</li>
+<li class="opt">came to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION TO COMPLETE IT: SHE WAS TRYING TO _______ HER HUSBAND'S DISAPPEARANCE.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>cover up</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">hiding</li>
+<li class="opt">find</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION TO COMPLETE IT: THE PARTY WAS VERY FUN, UNTIL IT _______ THE END.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>came to</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">go to</li>
+<li class="opt">go through</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> READ THE SENTENCE. THEN CHOOSE THE CORRECT OPTION TO COMPLETE IT: ANY SPARK COULD EASILY_____ THE FUMES.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>ignite</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">hang on</li>
+<li class="opt">cover up</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> READ THE PHRASE AND CHOOSE THE CORRECT OPTION: TO HANG ON MEANS:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>to wait</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">to pass</li>
+<li class="opt">to ignite</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> READ THE SENTENCE AND CHOOSE THE CORRECT VERB TO COMPLETE IT: THE WAITER ASK ME TO _______ A MOMENT.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>hang on</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">let off</li>
+<li class="opt">broke up</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> READ THE SENTENCE AND CHOOSE THE CORRECT VERB TO COMPLETE IT: MARCOS AND YOU BROKE UP YEARS AGO, YOU SHOULD _______ IT.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>get over</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">gone to</li>
+<li class="opt">cut in</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #260: PHRASAL VERBS WITH TWO PARTICLES</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialization.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION TO COMPLETE IT: TO FEEL UP TO MEANS TO FEEL _______ TO DO SOMETHING.</div>
+<ul class="options-list">
+<li class="opt">capable</li>
+<li class="opt">excited</li>
+<li class="opt correct"><strong>incapable</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION TO COMPLETE IT: I DON'T WANT TO TALK TO MY MOM NOW. SHE HAD A BAD DAY AT WORK. SHE MAY _______ ME.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>take it out on</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">add up to</li>
+<li class="opt">catch up with</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> READ THE PHRASE AND CHOOSE THE CORRECT OPTION: TO CATCH UP WITH MEANS:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>To get the same level</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">To change to a different subject.</li>
+<li class="opt">To arrange for someone to have.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION TO COMPLETE IT: THEY ASKED ME TO _______ THE NEXT IDEA BUT I HAVEN'T CONCLUDE MY INTERVENTION.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>move on to</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">fix up with</li>
+<li class="opt">get on with</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> READ THE PHRASAL VERBS. THEN MATCH THE MEANING TO THEM.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>To fix up with</td><td class="match-ans"><strong>to arrange for someone to have</strong> ✅</td></tr>
+<tr><td>To watch out for</td><td class="match-ans"><strong>to be careful because of a danger</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION TO COMPLETE IT: THEY _______ THE DEAL.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>pulled out of</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">fix up to</li>
+<li class="opt">come in to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION TO COMPLETE IT: SHE _______ THAT INNOVATIVE IDEA TO INCREASE SALES.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>came forward with</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">let off</li>
+<li class="opt">bring to up</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION TO COMPLETE IT: I DON'T _______ MY IN-LAWS.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>get on well with</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">feel up to</li>
+<li class="opt">hang on to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION TO COMPLETE IT: I DON'T _______ GOING TO WORK TODAY.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>feel up to</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">feel</li>
+<li class="opt">have up to</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION TO COMPLETE IT: PHRASAL VERBS CONSIST OF……</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A verb plus 1,2 or even 3 particles</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">A noun plus a particle</li>
+<li class="opt">A verb plus a noun</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #059669">📖 Vocabulary (Vocabulario)</h2><div class="task-card"><h3>📌 Tarea #249: OCCUPATIONS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong>  </p><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#1</span> READ THE WORDS AND ORDER THE SENTENCES.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The dentist extrated her wisdom tooth"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Waiters serve food and drink orders"</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"He graduated as an engineer"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> READ THE SENTENCES AND MARK TRUE (T) OR FALSE (F).</div>
+<div class="tf-block">
+<p><strong>• I work in a restaurant and prepare meals for different times and seasons. I am a chef.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• I work in a repair shop and adjust and repair different types of machinery. I am a mechanic.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+<p><strong>• I work in a hospital or a health center and detect decays in the teeth. I am a carpenter.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Read the question and choose the best answer: Where does a waiter work?</div>
+<ul class="options-list">
+<li class="opt">bakery</li>
+<li class="opt">hospital</li>
+<li class="opt correct"><strong>restaurant</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> READ THE SENTENCE AND CHOOSE THE BEST OPTION: PERSON WHO TAKES CARE OF OUR TEETH.</div>
+<ul class="options-list">
+<li class="opt">A carpenter</li>
+<li class="opt">A mechanic</li>
+<li class="opt correct"><strong>A dentist</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> READ THE QUESTION AND CHOOSE THE BEST ANSWER: WHICH SENTENCE IS CORRECT?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Someone who informs customers about the day's specials, is a waiter.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Someone about the day's specials who inform customers, is a waiter.</li>
+<li class="opt">Someone customers about the day's specials who inform, is a waiter</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#6</span> READ AND PUT IN ORDER THE FOLLOWING LETTER TO CREATE WORDS RELATED TO OCCUPATIONS.</div>
+<ul class="fill-list">
+<li><code>RNEPACRET</code> ➔ <strong>CARPENTER</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>SIATRT</code> ➔ <strong>ARTIST</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>ICAEHMNC</code> ➔ <strong>MECHANIC</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#7</span> READ AND COMPLETE THE SENTENCE USING THE APPROPRIATE OCCUPATION: WHO WORKS AT A FAST-FOOD RESTAURANT?</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>A</td><td class="match-ans"><strong>waiter</strong> ✅</td></tr>
+<tr><td>An</td><td class="match-ans"><strong>engineer</strong> ✅</td></tr>
+<tr><td>An</td><td class="match-ans"><strong>artist</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> READ AND MATCH THE DEFINITION TO THE RIGHT OCCUPATION: WHO WORKS AT A FAST-FOOD RESTAURANT?</div>
+<ul class="options-list">
+<li class="opt">mechanic</li>
+<li class="opt">dentist</li>
+<li class="opt correct"><strong>chef</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> READ AND MATCH THE DEFINITION TO THE RIGHT OCCUPATION: WHO LOCATED THE ENGINE FAULT IMMEDIATELY?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>mechanic</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">dentist</li>
+<li class="opt">chef</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> READ AND MATCH THE DEFINITION TO THE RIGHT OCCUPATION: WHO TAKES CARE AND REMOVES THE TEETH?</div>
+<ul class="options-list">
+<li class="opt">mechanic</li>
+<li class="opt correct"><strong>dentist</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">chef</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #250: ADJECTIVES</h3><p class="task-obj">🎯 <strong>Objetivo:</strong>  </p><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#1</span> Look at the phrases. Classify them into: subject, verb and complement.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"She was dead for a few minutes."</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Angel's house is on a wide street."</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#2</span> COMPLETE THE WORDS WITH THE CORRECT VOWELS.</div>
+<ul class="fill-list">
+<li><code>S T R _ N G</code> ➔ <strong>STRONG</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>T H _ C K</code> ➔ <strong>THICK</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>C L _ V _ R</code> ➔ <strong>CLEVER</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> READ THE SENTENCE AND CHOOSE THE BEST OPTION TO COMPLETE IT.</div>
+<div class="tf-block">
+<p><strong>• The</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> READ THE SENTENCE AND CHOOSE THE BEST OPTION TO COMPLETE IT: THIS TOWN IS REALLY _______ AT NIGHT.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>dead</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">clever</li>
+<li class="opt">early</li>
+<li class="opt">male</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#5</span> READ AND COMPLETE THE SENTENCE USING THE APPROPRIATE WORD.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>Every</td><td class="match-ans"><strong>dead</strong> ✅</td></tr>
+<tr><td>the</td><td class="match-ans"><strong>clever</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Read the question and choose the best option to complete it: How do you feel when your room is _______?</div>
+<ul class="options-list">
+<li class="opt">early</li>
+<li class="opt correct"><strong>clean</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">male</li>
+<li class="opt">clever</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> READ THE QUESTION AND CHOOSE THE BEST ANSWER: WHICH SENTENCE IS CORRECT?</div>
+<ul class="options-list">
+<li class="opt">Mark has a of responsibility at wide part work.</li>
+<li class="opt correct"><strong>Mark has a wide part of responsibility at work.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Mark has of responsibility a wide part at work</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> READ THE SENTENCES AND MARK TRUE (T) OR FALSE (F).</div>
+<div class="tf-block">
+<p><strong>• A clever person lacks the ability or capacity to carry out certain tasks or to carry out certain actions.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• A kind person has or shows a friendly, generous, and considerate nature.</strong> ➔ <span class="badge-correct">Verdadero (True)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> READ THE SENTENCES AND CHOOSE THE BEST OPTION TO COMPLETE IT.</div>
+<div class="tf-block">
+<p><strong>• Trucks are now available in a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> READ THE SENTENCES AND CHOOSE THE BEST OPTION TO COMPLETE IT.</div>
+<div class="tf-block">
+<p><strong>• My father has a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #251: CRUDE</h3><p class="task-obj">🎯 <strong>Objetivo:</strong>  </p><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#1</span> READ THE WORDS AND ORDER THE SENTENCES.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Michael took a long slow breath, inhaling deeply."</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Crude oil is the most important commodity in the world."</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> READ THE QUESTION AND CHOOSE THE BEST ANSWER: WHICH SENTENCE IS CORRECT?</div>
+<ul class="options-list">
+<li class="opt">Exports our country Ecuador crude.</li>
+<li class="opt correct"><strong>Our country Ecuador exports crude.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Ecuador exports crude our country.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> READ THE QUESTION: ARE THESE SENTENCES CORRECT (TRUE) OR INCORRECT (FALSE)?</div>
+<div class="tf-block">
+<p><strong>• Mine affects fresh water through heavy use of water in processing ore.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Cars cause pollution, both smog and acid rain.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The dust is good for our health.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#4</span> READ AND PUT IN ORDER THE FOLLOWING LETTERS TO CREATE WORDS RELATED TO THE VOCABULARY.</div>
+<ul class="fill-list">
+<li><code>HATERB</code> ➔ <strong>BREATH</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>MGOS</code> ➔ <strong>SMOG</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>DUECR</code> ➔ <strong>CRUDE</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> READ AND MATCH THE DEFINITION TO THE RIGHT WORD: _________ IS A SUBSTANCE (SUCH AS MANURE OR A CHEMICAL MIXTURE) USED TO MAKE THE SOIL MORE FERTILE.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Fertilizer</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Environment</li>
+<li class="opt">Pollution</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#6</span> READ THE SENTENCES AND CHOOSE THE BEST OPTION TO COMPLETE THEM.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Environment</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Pollution</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> READ AND MATCH THE DEFINITION TO THE RIGHT WORD: _________ IS THE TOTALITY OF ALL THE EXTERNAL CONDITIONS AFFECTING THE LIFE, DEVELOPMENT AND SURVIVAL OF AN ORGANISM.</div>
+<ul class="options-list">
+<li class="opt">Fertilizer</li>
+<li class="opt correct"><strong>Environment</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Pollution</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> READ AND MATCH THE DEFINITION TO THE RIGHT WORD: _________ IS A SERIOUS PROBLEM IN MANY METROPOLISES AROUND THE WORLD.</div>
+<ul class="options-list">
+<li class="opt">Fertilizer</li>
+<li class="opt">Environment</li>
+<li class="opt correct"><strong>Pollution</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> Read the question and choose the best option to complete it.</div>
+<div class="tf-block">
+<p><strong>• Do you notice how damaging our</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#10</span> COMPLETE THE WORDS WITH THE CORRECT VOWELS.</div>
+<ul class="fill-list">
+<li><code> _ N V _ R _ N M _ N T</code> ➔ <strong>ENVIRONMENT</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>F _ R T _ L _ Z _ R</code> ➔ <strong>FERTILIZER</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>P _ L L _ T _ _ N</code> ➔ <strong>POLLUTION</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #252: PETROLEUM</h3><p class="task-obj">🎯 <strong>Objetivo:</strong>  </p><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#1</span> Look at the phrases. Classify them into: subject, verb and complement.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Natural gas burns with a bright blue flame."</em> ✅</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Mary puts some coal on the fire."</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> READ THE QUESTION: ARE THESE SENTENCES CORRECT (TRUE) OR INCORRECT (FALSE)?</div>
+<div class="tf-block">
+<p><strong>• Natural gas comprises gasses, occurring in underground deposits, whether liquefied or gaseous, consisting mainly of methane.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Venezuela is one of the most important producers of petroleum in the world.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• They burned coal to burn the room.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> READ AND MATCH THE DEFINITION TO THE RIGHT WORD: A NATURAL FUEL SUCH AS COAL OR GAS, FORMED IN THE GEOLOGICAL PAST FROM THE REMAINS OF LIVING ORGANISMS.</div>
+<ul class="options-list">
+<li class="opt">Coal</li>
+<li class="opt correct"><strong>Fossil fuels</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Petroleum</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> READ AND MATCH THE DEFINITION TO THE RIGHT WORD: COMBUSTIBLE BLACK OR DARK BROWN ROCK CONSISTING MAINLY OF CARBONIZED PLANT MATTER, FOUND MAINLY IN UNDERGROUND DEPOSITS AND WIDELY USED AS FUEL.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Coal</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Fossil fuels</li>
+<li class="opt">Petroleum</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> READ THE QUESTION AND CHOOSE THE BEST ANSWER: WHICH SENTENCE IS CORRECT?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Research advises that burning coal is not good for the environment.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Research advises is not good for the environment that burning coal.</li>
+<li class="opt">Research that burning coal is not good advises for the environment.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> READ THE QUESTION AND CHOOSE THE BEST ANSWER: WHICH SENTENCE IS CORRECT?</div>
+<ul class="options-list">
+<li class="opt">The objective of a oil refinery is to enhance crude petroleum.</li>
+<li class="opt">The objective of oil refinery is to enhance crude petroleum.</li>
+<li class="opt correct"><strong>The objective of an oil refinery is to enhance crude petroleum.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> READ AND MATCH THE DEFINITION TO THE RIGHT WORD: A LIQUID MIXTURE OF HYDROCARBONS THAT IS PRESENT IN CERTAIN ROCK STRATA AND CAN BE EXTRACTED AND REFINED TO PRODUCE FUELS INCLUDING GASOLINE, KEROSENE, AND DIESEL OIL.</div>
+<ul class="options-list">
+<li class="opt">Coal</li>
+<li class="opt">Fossil fuels</li>
+<li class="opt correct"><strong>Petroleum</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#8</span> READ THE SENTENCES AND CHOOSE THE BEST OPTION TO COMPLETE THEM.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Natural gas</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Fossil fuels</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">completar_texto</span> <span class="q-num">#9</span> COMPLETE THE WORDS WITH THE CORRECT VOWELS.</div>
+<ul class="fill-list">
+<li><code>C _ _ L</code> ➔ <strong>COAL</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>P _ T R _ L _ _ M</code> ➔ <strong>PETROLEUM</strong> <span class="badge-correct">COMPLETO</span></li>
+<li><code>N _ T _ R _ L  G _ S</code> ➔ <strong>NATURAL GAS</strong> <span class="badge-correct">COMPLETO</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Read the sentence and choose the best option to complete it: It is a black or dark-brown combustible mineral substance consisting of carbonized vegetable matter, used as a fuel.</div>
+<ul class="options-list">
+<li class="opt">Natural gas</li>
+<li class="opt correct"><strong>Coal</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Fossil fuels</li>
+<li class="opt">Petroleum</li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #d97706">📚 Reading (Comprensión Lectora)</h2><div class="task-card"><h3>📌 Tarea #253: INNOVATION</h3><p class="task-obj">🎯 <strong>Objetivo:</strong>  </p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE THE BEST WORD TO COMPLETE THE SENTENCE: THE COMPANY _______ CHANGES IN CUSTOMER DEMANDS AND KEEP UP WITH THE TIMES.</div>
+<ul class="options-list">
+<li class="opt">Feel the need to be aware of</li>
+<li class="opt correct"><strong>Feels the need to be aware of</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Feel the need for to be aware of </li>
+<li class="opt">Feel the need for be aware of </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> LOOK AT THE PICTURE AND READ THE PARAGRAPH. THEN MATCH THE BEST IDEA TO DESCRIBE IT.</div>
+<ul class="options-list">
+<li class="opt">Use the demo to catch customer attention.</li>
+<li class="opt">Advertising offers for new customers.</li>
+<li class="opt">Incentivizing customers with new products.</li>
+<li class="opt correct"><strong>Offering a new product or service to have new customers.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> LOOK AT THE PICTURE AND READ THE PARAGRAPH.  THEN MATCH THE BEST IDEA TO DESCRIBE IT.</div>
+<ul class="options-list">
+<li class="opt">Using the latest technology to improve your product/service</li>
+<li class="opt">Offering a new product/service to reach new customers</li>
+<li class="opt correct"><strong>Responding to customer demands by changing what is on offer</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Changing the way you provide a service.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> LOOK AT THE PICTURE AND READ THE PARAGRAPH. THEN ANSWER THE QUESTION WITH THE BEST OPTION: ARE THESE SENTENCES CORRECT (TRUE) OR INCORRECT (FALSE)?</div>
+<div class="tf-block">
+<p><strong>• Innovation is related to technology.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The use of technology cannot improve our product or service.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The use of technology simplifies the work of companies.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> LOOK AT THE PICTURE AND READ THE PARAGRAPH. THEN CHOOSE THE BEST OPTION TO COMPLETE THE SENTENCE: THE NEW IDEAS AND STRATEGIES _______ OUR PRODUCTS OR SERVICES.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>can develop</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">can damage</li>
+<li class="opt">can have</li>
+<li class="opt">can decrease</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> LOOK AT THE PICTURE AND READ THE PARAGRAPH. THEN ANSWER THE QUESTION WITH THE BEST OPTION: IS KEY TO RISING BENEFITS IN YOUR BUSINESS.</div>
+<ul class="options-list">
+<li class="opt">Innovate</li>
+<li class="opt correct"><strong>Innovation</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Innovated</li>
+<li class="opt">Innovating</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> LOOK AT THE PICTURE AND READ THE PARAGRAPH. THEN ANSWER THE QUESTION WITH THE BEST OPTION:  IS IT NECESSARY _______TO REVIEW WHAT WE ARE DOING AND HOW WE ARE DOING IT WHEN WE HAVE A BUSINESS?</div>
+<ul class="options-list">
+<li class="opt">Always</li>
+<li class="opt correct"><strong>Often</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Never</li>
+<li class="opt">Hardly ever</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> LOOK AT THE PICTURE. READ THE TEXT AND CHOOSE AN APPROPRIATE TITLE FOR IT:</div>
+<ul class="options-list">
+<li class="opt">Increasing profits</li>
+<li class="opt">How to start a business</li>
+<li class="opt correct"><strong>Innovation </strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Technology </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> LOOK AT THE PICTURE AND READ THE TEXT. AND MATCH THE BEST IDEA TO DESCRIBE IT.</div>
+<ul class="options-list">
+<li class="opt">Incentivizing customers with new products</li>
+<li class="opt correct"><strong>Changing the way, you provide a service</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Offering a new product or service to have new customers</li>
+<li class="opt">Use the demo to catch customer attention</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE THE BEST WORD TO COMPLETE THE SENTENCE: OUR BUSINESS _______ WELL, BUT THERE ARE MANY RISKS THAT YOUR COMPETITORS MIGHT TAKE AWAY SOME OF OUR CUSTOMERS.</div>
+<ul class="options-list">
+<li class="opt">could be to do</li>
+<li class="opt">could to be doing</li>
+<li class="opt correct"><strong>could be doing</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">could be to doing</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #254: NATURAL GAS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong>  </p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN READ THE SENTENCE TO CHOOSE THE BEST WORD TO COMPLETE IT: BEST WORD TO COMPLETE THE SENTENCE: THE PROCESS OF RETRIEVING GAS FROM IMPERMEABLE ROCK IS CALLED _______.</div>
+<ul class="options-list">
+<li class="opt">Hydrochloric acid</li>
+<li class="opt">Coalbed methane</li>
+<li class="opt">Unconventional gas</li>
+<li class="opt correct"><strong>Acidizing process</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN READ AND ANSWER THE QUESTION: IN WHICH OF THE FOLLOWING COUNTRIES IS MT. PARNASSUS LOCATED?</div>
+<ul class="options-list">
+<li class="opt">Italy</li>
+<li class="opt">United States</li>
+<li class="opt">France</li>
+<li class="opt correct"><strong>Greece</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN READ THE QUESTION: ARE THESE SENTENCES CORRECT (TRUE) OR INCORRECT (FALSE)?</div>
+<div class="tf-block">
+<p><strong>• Natural gas is found on the surface of the Earth?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Natural gas is made up of animal fossils under pressure in the earth for thousands of years?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• The pressure and higher temperatures form the carbon bonds.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> LOOK AT THE PICTURE AND READ THE PARAGRAPH. THEN MATCH THE BEST IDEA THAT DESCRIBE IT.</div>
+<ul class="options-list">
+<li class="opt">The use of natural gas in daily life.</li>
+<li class="opt correct"><strong>Natural gas extraction.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Technology used to search for natural gas.</li>
+<li class="opt">Conventional gas elements</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> LOOK AT THE PICTURE AND READ THE PARAGRAPH. THEN CHOOSE IN THE SENTENCES THE RIGHT ANSWER: WHICH OF THE FOLLOWING IS ASSOCIATED WITH FRACKING?</div>
+<ul class="options-list">
+<li class="opt">Shooting hot oil down into a gas well</li>
+<li class="opt correct"><strong>Shooting hot steam down into the layers of shale</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Using explosives to get at the gas supply</li>
+<li class="opt">Drilling deep into the earth straight down</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE IN THE SENTENCES THE RIGHT ANSWER: WHICH OF THE FOLLOWING IS THE MEANING OF THE WORD IMPERMEABLE?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Cannot be penetrated</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Able to be drilled through</li>
+<li class="opt">Contains no gas</li>
+<li class="opt">Is permanently attached to something</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE IN THE SENTENCES THE RIGHT ANSWER: IN WHICH OF THE FOLLOWING DOES THERMOGENIC METHANE GET TRAPPED BELOW THE EARTH'S SURFACE?</div>
+<ul class="options-list">
+<li class="opt">Craters</li>
+<li class="opt correct"><strong>Sedimentary basins</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Gas caves</li>
+<li class="opt">Gas basins </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE IN THE SENTENCES THE RIGHT ANSWER: WHICH OF THE FOLLOWING TYPES OF GAS IS FOUND WHEN MATTER DECOMPOSES WITHOUT OXYGEN PRESENT?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Biogas</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Shale gas</li>
+<li class="opt">Methane</li>
+<li class="opt">Propane </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE IN THE SENTENCES THE RIGHT ANSWER: WHICH OF THE FOLLOWING MAKES UP MOST OF WHAT WE USE AS NATURAL GAS FOR ENERGY?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Methane</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Carbon</li>
+<li class="opt">Carbon</li>
+<li class="opt">Ethane </li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> LOOK AT THE PICTURE. THEN READ THE TEXT AND CHOOSE AN APPROPRIATE TITLE FOR IT:</div>
+<ul class="options-list">
+<li class="opt">Story about Natural Gas</li>
+<li class="opt">Natural gas concept</li>
+<li class="opt">Natural gas elements</li>
+<li class="opt correct"><strong>All about Natural Gas</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #255: CRUDE OIL (PETROLEUM)</h3><p class="task-obj">🎯 <strong>Objetivo:</strong>  </p><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> ANSWER THE QUESTION: ARE THESE SENTENCES CORRECT (TRUE) OR INCORRECT (FALSE)?</div>
+<div class="tf-block">
+<p><strong>• Gasolina, kerosene and lubricating oils are products that belong to petroleum?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Crude oil is found over the earth's surface?</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+<p><strong>• Drilling a hole into the earth, you can get petroleum easily.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE IN THE SENTENCES THE RIGHT ANSWER: ALL OF THE FOLLOWING ARE TRUE EXCEPT:</div>
+<ul class="options-list">
+<li class="opt">These products vary in physical appearance</li>
+<li class="opt">They are transparent, thick, thin or a little dark</li>
+<li class="opt">Among their components can be found the carbon molecules</li>
+<li class="opt correct"><strong>They don't have hydrogen molecules into their components</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> LOOK AT THE PICTURE. READ THE TEXT AND CHOOSE AN APPROPRIATE TITLE FOR IT:</div>
+<ul class="options-list">
+<li class="opt">Petroleum elements</li>
+<li class="opt">How to extract oil from the ground</li>
+<li class="opt">Oil history</li>
+<li class="opt correct"><strong>Petroleum products</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN ANSWER THE QUESTIONS WITH THE BEST OPTION: WHAT IS THE NAME OF THE PETROLEUM PRODUCTS THAT ARE REFINED?</div>
+<ul class="options-list">
+<li class="opt">Distillate oil</li>
+<li class="opt">Residue products</li>
+<li class="opt">Hydrocarbons</li>
+<li class="opt correct"><strong>Light oils</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE THE BEST WORD TO COMPLETE THE SENTENCE: THE _______ OF PETROLEUM PRODUCTS IS COMPOSED OF ONLY TWO ELEMENTS.</div>
+<ul class="options-list">
+<li class="opt">Chemical compounds</li>
+<li class="opt">Chemical elements</li>
+<li class="opt correct"><strong>Chemical formation</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Chemical disproportion</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN MATCH THE BEST IDEA THAT DESCRIBE IT.</div>
+<ul class="options-list">
+<li class="opt">Various petroleum products.</li>
+<li class="opt correct"><strong>Oil refining processes.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Chemical structure of the hydrocarbons.</li>
+<li class="opt">Light oils</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE IN THE SENTENCES THE RIGHT OPTION: THE WORD 'MEASURED' IN LINE 2 IS CLOSEST IN MEANING TO:</div>
+<ul class="options-list">
+<li class="opt">Established</li>
+<li class="opt">Observed</li>
+<li class="opt">Worked</li>
+<li class="opt correct"><strong>Calculated</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE THE BEST OPTION TO COMPLETE THE SENTENCE: MANY THOUSANDS OF HYDROCARBON COMPOUNDS ARE POSSIBLE BECAUSE:</div>
+<ul class="options-list">
+<li class="opt">The petroleum products vary greatly in physical appearance</li>
+<li class="opt">Complicated refining processes rearrange the chemical structure</li>
+<li class="opt correct"><strong>The two atoms in the molecule assume many positions</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">The pressure needed to force it to the surface causes molecular transformation</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> LOOK AT THE PICTURE AND READ THE TEXT. CHOOSE IN THE SENTENCES THE RIGHT ANSWER: THE WORD 'MINUTE' IN LINE 1 IS CLOSEST IN MEANING TO:</div>
+<ul class="options-list">
+<li class="opt">Instant</li>
+<li class="opt">Huge</li>
+<li class="opt correct"><strong>Insignificant</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Timely</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Look at the picture. Read the text and choose the best word to complete the sentence: The carbon and hydrogen form compounds called _______</div>
+<ul class="options-list">
+<li class="opt">Atoms</li>
+<li class="opt">Molecules</li>
+<li class="opt">Combined elements</li>
+<li class="opt correct"><strong>Hydrocarbons</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #256: COAL MINING</h3><p class="task-obj">🎯 <strong>Objetivo:</strong>  </p><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN MATCH THE BEST IDEA THAT DESCRIBE IT.</div>
+<ul class="options-list">
+<li class="opt">Instructions to be more efficient with this product</li>
+<li class="opt">How to burn coal without polluting the air</li>
+<li class="opt correct"><strong>Methods to burn coal in a cleaner way</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Scientists looking for ways to keep carbon out more efficiently</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN ANSWER THE QUESTION WITH THE BEST OPTION: HOW IS SULPHUR OXIDE PRODUCED?</div>
+<ul class="options-list">
+<li class="opt">From breathing coal dust</li>
+<li class="opt">By the coal dust when it is blown</li>
+<li class="opt correct"><strong>By the emission of coal when it is burned</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">By air pollution</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN ANSWER THE QUESTION WITH THE BEST OPTION: WHAT KIND OF DISEASES HAS COAL MINING CAUSED BY BREATHING IN COAL DUST?</div>
+<ul class="options-list">
+<li class="opt">Respiratory problems</li>
+<li class="opt correct"><strong>Lung diseases</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Heart disease</li>
+<li class="opt">Skin diseases</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE THE BEST OPTION TO COMPLETE THE SENTENCE: THE VAPOUR GENERATED _______ INTO ELECTRICAL ENERGY.</div>
+<ul class="options-list">
+<li class="opt">is produced</li>
+<li class="opt">is eliminated</li>
+<li class="opt correct"><strong>is converted</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">is burned</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN ANSWER THE QUESTION WITH THE BEST OPTION: WHEN THIS TYPE OF FUEL IS BURNED, THIS HOT WATER PRODUCES _______.</div>
+<ul class="options-list">
+<li class="opt">Sulphur oxides</li>
+<li class="opt">Contamination on the ground</li>
+<li class="opt correct"><strong>Steam</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Energy</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> LOOK AT THE PICTURE.  READ THE TEXT AND CHOOSE AN APPROPRIATE TITTLE FOR IT.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Brief history about coal mining</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">How to dig in a mine</li>
+<li class="opt">What is coal mining</li>
+<li class="opt">Cleaning filters</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE IN THE SENTENCES THE RIGHT ANSWER: THE WORD 'REMAIN' IN LINE 1 IS CLOSEST IN MEANING TO:</div>
+<ul class="options-list">
+<li class="opt">Go out</li>
+<li class="opt">Leave out</li>
+<li class="opt">Depart</li>
+<li class="opt correct"><strong>Continue</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE THE BEST WORD TO COMPLETE THE SENTENCE: IN MANY COLD PLACES _______ USE COAL TO HEAT THEIR HOMES AND OFFICES.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Everybody</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Nobody</li>
+<li class="opt">Fellow</li>
+<li class="opt">Guy</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> LOOK AT THE PICTURE AND READ THE TEXT. THEN CHOOSE THE BEST WORD TO COMPLETE THE SENTENCE: COAL WILL GO ON BEING A GREAT _______ FOR A LONG TIME BECAUSE IT IS REALLY NECESSARY FOR EVERYONE.</div>
+<ul class="options-list">
+<li class="opt">Reserve of coal</li>
+<li class="opt">Lack of energy</li>
+<li class="opt">Source of pollution</li>
+<li class="opt correct"><strong>Power resource</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #7c3aed">🎧 Listening (Comprensión Auditiva)</h2><div class="task-card"><h3>📌 Tarea #330: SECTION 1</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> What is next to the Regal?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt">B</li>
+<li class="opt correct"><strong>C</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Where is the pet shop?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt correct"><strong>B</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> Which person is the speaker?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">B</li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Where is the concert ticket?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt">B</li>
+<li class="opt correct"><strong>C</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Which dog is the girl describing?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">B</li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Where are the speakers?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">B</li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> What is the ticket for?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt">B</li>
+<li class="opt correct"><strong>C</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> Who is the speaker?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt correct"><strong>B</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Which person is Danny Zola?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt correct"><strong>B</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Where does the speaker work?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt correct"><strong>B</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">C</li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #355: SECTION 2</h3><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#1</span> Where is the bike shop?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt correct"><strong>B</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#2</span> Where are they?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt">B</li>
+<li class="opt correct"><strong>C</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> What subject does Marcus prefer?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">B</li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> Where should Phillipa put the key?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">B</li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> Who is Dr. Marseille?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt">B</li>
+<li class="opt correct"><strong>C</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#6</span> Where are they?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt correct"><strong>B</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> Who is he?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt">B</li>
+<li class="opt correct"><strong>C</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> What does her father do on weekends?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt correct"><strong>B</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> Which is the correct picture?</div>
+<ul class="options-list">
+<li class="opt correct"><strong>A</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">B</li>
+<li class="opt">C</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> Where is the information point?</div>
+<ul class="options-list">
+<li class="opt">A</li>
+<li class="opt">B</li>
+<li class="opt correct"><strong>C</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div></div><div class="skill-section"><h2 style="border-left-color: #db2777">✍️ Writing (Expresión Escrita)</h2><div class="task-card"><h3>📌 Tarea #245: RELATIVE PRONOUNS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialization.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> READ THE SENTENCE AND FILL IN THE BLANK WITH THE INFORMATION FROM THE BOX.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>La Rotonda Park</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>February</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#2</span> READ THE WORDS AND ORDER THE SENTENCE.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"My aunt, who's 60, goes swimming every day"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION: HE GAVE ME THE LETTER, WHICH WAS IN A BLUE ENVELOPE.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>There was only one letter, it happened to be blue.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">There were several letter of different colors and he gave me the blue one.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#4</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION: MY STUDENTS, WHO STUDIED HARD PASSED THE EXAM.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>All my students studied hard.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Only some passed the exam.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#5</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION: HE LENT ME THE BOOK, WHICH I READ IMMEDIATELY.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>There was only one book.</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">There were several books.</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> Fill in the blanks.</div>
+<div class="tf-block">
+<p><strong>• Jack,</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#7</span> READ THE SENTENCES AND MATCH THE WORDS FROM THE BOX WITH THEM.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"The apartment which is new, is also a bit scary"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#8</span> READ THE WORDS AND ORDER THE SENTENCE.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"Sandra, whose pets I'm looking after is on vacations in Bora Bora"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#9</span> READ THE WORDS AND ORDER THE SENTENCE.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"There were a lot of people at the party, many of whom I had known for years"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#10</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION: THE DANCERS WHO PERFORMED LAST NIGHT DID A GREAT SHOW.</div>
+<ul class="options-list">
+<li class="opt">All the dancers did a great show.</li>
+<li class="opt correct"><strong>Only the dancers that performed last night did a great show.</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div></div><div class="task-card"><h3>📌 Tarea #246: RELATIVE CLAUSES</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialization.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#1</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION.</div>
+<div class="tf-block">
+<p><strong>• These shoes,</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION.</div>
+<div class="tf-block">
+<p><strong>• My friend Susan,</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#3</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION.</div>
+<div class="tf-block">
+<p><strong>• The restaurant</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#4</span> READ THE WORDS AND ORDER THE SENTENCE.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"My son broke the toy that his grandma gave him"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION.</div>
+<div class="tf-block">
+<p><strong>• The</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION.</div>
+<div class="tf-block">
+<p><strong>• Luis,</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#7</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION.</div>
+<div class="tf-block">
+<p><strong>• I talked to the girl</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION.</div>
+<div class="tf-block">
+<p><strong>• I met the person</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION.</div>
+<div class="tf-block">
+<p><strong>• They chose the</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION.</div>
+<div class="tf-block">
+<p><strong>• ___________</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div><div class="task-card"><h3>📌 Tarea #247: PHRASAL VERBS</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialization.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> READ THE SENTENCES AND MATCH THE WORDS FROM THE BOX WITH THEM.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Environment</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Fertilizer</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#2</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE ACCORDING TO IT.</div>
+<div class="tf-block">
+<p><strong>• Petroleum creates problems in our environment.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#3</span> READ THE WORDS AND ORDER THE SENTENCE.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"She was upset about not getting the job, but she got over it"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• To cover up a crime is legal.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• Get through means to pass.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• We can guess the meaning of phrasal verbs from their parts.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#7</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION: DUST MEANS:</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Fine particles of matter</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Parts of a human body</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#8</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION: GASOLINE CAN BE MADE FROM_____</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Crude oil</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Gas</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#9</span> READ THE SENTENCE AND CHOOSE THE CORRECT OPTION: I LAST MY _____ FOR A MOMENT.</div>
+<ul class="options-list">
+<li class="opt correct"><strong>Breath</strong> <span class="badge-correct">CORRECTA</span></li>
+<li class="opt">Breathe</li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#10</span> READ THE WORDS AND ORDER THE SENTENCE.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I think you can get through the first two chapters"</em> ✅</div>
+</div></div><div class="task-card"><h3>📌 Tarea #248: PHRASAL VERBS WITH TWO PARTICLES</h3><p class="task-obj">🎯 <strong>Objetivo:</strong> To understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialization.</p><div class="question-card">
+<div class="q-header"><span class="q-badge">emparejar</span> <span class="q-num">#1</span> READ THE SENTENCES AND MATCH THE WORDS FROM THE BOX ACCORDING TO THEM.</div>
+<table class="match-table"><thead><tr><th>Elemento / Pista</th><th>Respuesta Correcta</th></tr></thead><tbody>
+<tr><td>____________</td><td class="match-ans"><strong>Fossil fuels</strong> ✅</td></tr>
+<tr><td>____________</td><td class="match-ans"><strong>Petroleum</strong> ✅</td></tr>
+</tbody></table>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#2</span> READ THE WORDS AND ORDER THE SENTENCE.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"They've never really got on with each other"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">opcion_correcta_1</span> <span class="q-num">#3</span> READ THE SENTENCE AND CHOOSE THE CORRECT ANSWER: PHRASAL VERBS WITH TWO PARTICLES ARE FORMED BY ________.</div>
+<ul class="options-list">
+<li class="opt">A verb and a particle</li>
+<li class="opt">Two verbs and two particles</li>
+<li class="opt correct"><strong>A verb and two particles</strong> <span class="badge-correct">CORRECTA</span></li>
+</ul>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#4</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE ACCORDING IT.</div>
+<div class="tf-block">
+<p><strong>• If you come forward with an excellent idea that means that you kept the idea just for you.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#5</span> READ A COMPLETE THE SENTENCE WITH THE CORRECT WORD FROM THE BOX.</div>
+<div class="tf-block">
+<p><strong>• When you are angry and you take out on someone that means that you treat them in a</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#6</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE ACCORDING IT.</div>
+<div class="tf-block">
+<p><strong>• To feel up to means to have energy and strength to do something</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">ordenar</span> <span class="q-num">#7</span> READ THE WORDS AND ORDER THE SENTENCE.</div>
+<div class="order-box">🔤 <strong>Oración ordenada:</strong> <em>"I'm wearing boots, I have to watch out for the snakes"</em> ✅</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#8</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• Phrasal verbs can be formed by three particles.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#9</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• Phrasal</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div><div class="question-card">
+<div class="q-header"><span class="q-badge">true_false</span> <span class="q-num">#10</span> READ THE SENTENCE AND CHOOSE TRUE OR FALSE.</div>
+<div class="tf-block">
+<p><strong>• Phrasal verbs can be formed by a noun and a verb.</strong> ➔ <span class="badge-correct">Falso (False)</span></p>
+</div>
+</div></div></div>
+    </div>
+</body>
+</html>
