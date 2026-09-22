@@ -551,7 +551,7 @@ def generate_html_search_app(data):
         </div>
 
         <div class="stats-bar">
-            <span id="resultsCount">Mostrando 20 preguntas iniciales</span>
+            <span id="resultsCount">Esperando búsqueda...</span>
             <span>Base de datos: 3.367 preguntas</span>
         </div>
 
@@ -613,9 +613,12 @@ def generate_html_search_app(data):
             const countElem = document.getElementById('resultsCount');
 
             if (!rawQ) {
-                let initial = DB.filter(item => unit === 0 || item.u === unit).slice(0, 25);
-                countElem.innerText = `Mostrando ${initial.length} preguntas ${unit !== 0 ? '(Unidad ' + unit + ')' : ''}`;
-                container.innerHTML = initial.map(renderCard).join('');
+                countElem.innerText = 'Esperando búsqueda... (3.367 preguntas en base de datos)';
+                container.innerHTML = `
+                <div class="empty-state">
+                    <h3>⌨️ Escribí palabras clave o pegá una captura</h3>
+                    <p>Pegá una captura con <strong>Ctrl + V</strong> o escribí términos de la pregunta para ver los resultados.</p>
+                </div>`;
                 return;
             }
 
