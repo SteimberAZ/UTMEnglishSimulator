@@ -394,6 +394,44 @@ def generate_html_search_app(data):
             border-color: #60a5fa;
             transform: translateY(-2px);
         }
+        .card-rank-1 {
+            border: 2px solid #10b981 !important;
+            background: linear-gradient(180deg, rgba(16, 185, 129, 0.08) 0%, #1e293b 60%) !important;
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.22) !important;
+        }
+        .card-rank-2 {
+            border: 1px solid #3b82f6 !important;
+        }
+        .card-rank-3 {
+            border: 1px solid #64748b !important;
+        }
+        .rank-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        .rank-indicator-1 {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid #10b981;
+        }
+        .rank-indicator-2 {
+            background: rgba(59, 130, 246, 0.18);
+            color: #93c5fd;
+            border: 1px solid #3b82f6;
+        }
+        .rank-indicator-3 {
+            background: rgba(100, 116, 139, 0.2);
+            color: #cbd5e1;
+            border: 1px solid #64748b;
+        }
         .card-top {
             display: flex;
             justify-content: space-between;
@@ -561,7 +599,7 @@ def generate_html_search_app(data):
     <script>
         const DB = {{JSON_DATA}};
 
-        function renderCard(item) {
+        function renderCard(item, index) {
             let answersHtml = item.ans.map(a => `<div class="answer-item">✅ ${escapeHtml(a)}</div>`).join('');
             if (!answersHtml) {
                 answersHtml = '<div class="answer-item">Ver opciones en guía detallada</div>';
@@ -570,8 +608,23 @@ def generate_html_search_app(data):
             let descHtml = item.desc ? `<div class="card-desc">ℹ️ ${escapeHtml(item.desc)}</div>` : '';
             let explHtml = item.exp ? `<div class="card-expl">💡 <strong>Regla / Explicación:</strong> ${escapeHtml(item.exp)}</div>` : '';
 
+            let rankClass = '';
+            let rankBadge = '';
+
+            if (index === 0) {
+                rankClass = 'card-rank-1';
+                rankBadge = '<div class="rank-indicator rank-indicator-1">🎯 Coincidencia #1 • Más Propensa a ser la Respuesta</div>';
+            } else if (index === 1) {
+                rankClass = 'card-rank-2';
+                rankBadge = '<div class="rank-indicator rank-indicator-2">🥈 Coincidencia #2 • Alta Probabilidad</div>';
+            } else if (index === 2) {
+                rankClass = 'card-rank-3';
+                rankBadge = '<div class="rank-indicator rank-indicator-3">🥉 Coincidencia #3 • Alternativa</div>';
+            }
+
             return `
-            <div class="card">
+            <div class="card ${rankClass}">
+                ${rankBadge}
                 <div class="card-top">
                     <div class="badges">
                         <span class="badge-unit">${escapeHtml(item.tag || ('Unidad ' + item.u))}</span>
@@ -694,7 +747,7 @@ def generate_html_search_app(data):
                     <p>Intentá recortar la captura solo a la pregunta o borrá palabras del buscador.</p>
                 </div>`;
             } else {
-                container.innerHTML = finalResults.map(renderCard).join('');
+                container.innerHTML = finalResults.map((item, idx) => renderCard(item, idx)).join('');
             }
         }
 
