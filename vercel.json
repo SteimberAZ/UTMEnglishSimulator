@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/portal", "destination": "/portal.html" },
+    { "source": "/estudio", "destination": "/portal.html" },
+    { "source": "/buscador", "destination": "/index.html" }
+  ]
+}

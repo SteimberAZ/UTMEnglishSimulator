@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Estudio: Simulador de Inglés UTM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f1f5f9;
+            color: #0f172a;
+            margin: 0;
+            padding: 30px 20px;
+        }
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto 30px auto;
+            text-align: center;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .hero h1 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+            font-weight: 800;
+        }
+        .hero p {
+            font-size: 16px;
+            color: #94a3b8;
+            margin: 0 0 20px 0;
+        }
+        .hero-stats {
+            display: inline-flex;
+            gap: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 15px;
+            backdrop-filter: blur(5px);
+        }
+        .search-bar {
+            max-width: 600px;
+            margin: 20px auto 0 auto;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 12px;
+            border: none;
+            font-size: 15px;
+            outline: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .unit-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .unit-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border-color: #cbd5e1;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .unit-badge {
+            background: #2563eb;
+            color: #ffffff;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 13px;
+        }
+        .book-tag {
+            font-size: 12px;
+            color: #64748b;
+            font-weight: 500;
+        }
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #475569;
+            background: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        .card-actions {
+            display: flex;
+            gap: 8px;
+        }
+        .btn {
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+            transition: background 0.2s;
+        }
+        .btn-primary {
+            flex: 1;
+            background: #0f172a;
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background: #2563eb;
+        }
+        .btn-secondary {
+            background: #f1f5f9;
+            color: #334155;
+            border: 1px solid #cbd5e1;
+        }
+        .btn-secondary:hover {
+            background: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>📘 Portal de Estudio • Inglés UTM</h1>
+        <p>Banco Completo de Preguntas, Explicaciones y Respuestas Verificadas (Aulas Lenguas)</p>
+        <div class="hero-stats">
+            <span>📚 5 Libros Completos</span>
+            <span>🎯 20 Unidades</span>
+            <span>📋 355 Tareas</span>
+            <span>❓ 3.367 Preguntas</span>
+        </div>
+        <div style="margin-top: 20px;">
+            <a href="index.html" style="display: inline-block; background: #2563eb; color: #ffffff; padding: 12px 24px; border-radius: 12px; font-weight: 700; text-decoration: none; font-size: 15px; box-shadow: 0 4px 15px rgba(37,99,235,0.4);">🔍 Abrir Buscador Rápido Instantáneo (3.367 preguntas)</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="filterInput" placeholder="Buscar por número de unidad o tema..." onkeyup="filterUnits()">
+        </div>
+    </div>
+
+    <div class="grid" id="unitsGrid">
+        
+        <div class="unit-card" data-book="1" data-unit="1">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 01</span>
+                <span class="book-tag">📗 Book 1</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 17 Tareas</span>
+                <span>❓ 119 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_01.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_01.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_01.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="1" data-unit="2">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 02</span>
+                <span class="book-tag">📗 Book 1</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 17 Tareas</span>
+                <span>❓ 140 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_02.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_02.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_02.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="1" data-unit="3">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 03</span>
+                <span class="book-tag">📗 Book 1</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 17 Tareas</span>
+                <span>❓ 147 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_03.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_03.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_03.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="1" data-unit="4">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 04</span>
+                <span class="book-tag">📗 Book 1</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 16 Tareas</span>
+                <span>❓ 124 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_04.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_04.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_04.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="2" data-unit="5">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 05</span>
+                <span class="book-tag">📘 Book 2</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 185 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_05.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_05.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_05.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="2" data-unit="6">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 06</span>
+                <span class="book-tag">📘 Book 2</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 182 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_06.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_06.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_06.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="2" data-unit="7">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 07</span>
+                <span class="book-tag">📘 Book 2</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 185 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_07.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_07.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_07.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="2" data-unit="8">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 08</span>
+                <span class="book-tag">📘 Book 2</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 181 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_08.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_08.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_08.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="3" data-unit="9">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 09</span>
+                <span class="book-tag">📙 Book 3</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 174 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_09.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_09.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_09.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="3" data-unit="10">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 10</span>
+                <span class="book-tag">📙 Book 3</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 168 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_10.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_10.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_10.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="3" data-unit="11">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 11</span>
+                <span class="book-tag">📙 Book 3</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 173 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_11.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_11.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_11.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="3" data-unit="12">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 12</span>
+                <span class="book-tag">📙 Book 3</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 165 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_12.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_12.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_12.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="4" data-unit="13">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 13</span>
+                <span class="book-tag">📕 Book 4</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 172 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_13.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_13.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_13.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="4" data-unit="14">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 14</span>
+                <span class="book-tag">📕 Book 4</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 178 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_14.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_14.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_14.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="4" data-unit="15">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 15</span>
+                <span class="book-tag">📕 Book 4</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 177 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_15.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_15.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_15.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="4" data-unit="16">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 16</span>
+                <span class="book-tag">📕 Book 4</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 178 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_16.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_16.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_16.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="5" data-unit="17">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 17</span>
+                <span class="book-tag">📓 Book 5</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 177 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_17.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_17.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_17.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="5" data-unit="18">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 18</span>
+                <span class="book-tag">📓 Book 5</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 182 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_18.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_18.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_18.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="5" data-unit="19">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 19</span>
+                <span class="book-tag">📓 Book 5</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 179 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_19.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_19.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_19.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+        <div class="unit-card" data-book="5" data-unit="20">
+            <div class="card-header">
+                <span class="unit-badge">Unidad 20</span>
+                <span class="book-tag">📓 Book 5</span>
+            </div>
+            <div class="card-meta">
+                <span>📋 18 Tareas</span>
+                <span>❓ 181 Preguntas</span>
+            </div>
+            <div class="card-actions">
+                <a href="guias_html/Unidad_20.html" class="btn btn-primary">📖 Ver Guía y Respuestas</a>
+                <a href="guias_html/Unidad_20.html" onclick="setTimeout(()=>window.open('guias_html/Unidad_20.html'),100)" class="btn btn-secondary">🖨️ PDF</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        function filterUnits() {
+            let input = document.getElementById('filterInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('unit-card');
+            for (let card of cards) {
+                let text = card.innerText.toLowerCase();
+                card.style.display = text.includes(input) ? 'flex' : 'none';
+            }
+        }
+    </script>
+</body>
+</html>

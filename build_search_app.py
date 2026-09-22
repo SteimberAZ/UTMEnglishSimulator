@@ -4,7 +4,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 QUESTIONS_FILE = os.path.join(BASE_DIR, "questions_all.json")
 TASKS_FILE = os.path.join(BASE_DIR, "tasks_all.json")
-OUTPUT_HTML = os.path.join(BASE_DIR, "buscador.html")
+OUTPUT_HTML = os.path.join(BASE_DIR, "index.html")
+OUTPUT_BUSCADOR = os.path.join(BASE_DIR, "buscador.html")
 
 def build_search_data():
     with open(QUESTIONS_FILE, "r", encoding="utf-8") as f:
@@ -514,7 +515,10 @@ def generate_html_search_app(data):
             <div class="user-badge">
                 <span>👤 Conectado: <strong id="userEmailDisplay">...</strong></span>
             </div>
-            <button onclick="handleLogout()" class="btn-logout" title="Cerrar Sesión">Cerrar Sesión</button>
+            <div style="display:flex; gap:8px;">
+                <a href="portal.html" class="btn-logout" style="text-decoration:none; background:#1e3a8a; border-color:#3b82f6; display:flex; align-items:center; gap:4px;" title="Ver guías y recursos de estudio">📚 Guías</a>
+                <button onclick="handleLogout()" class="btn-logout" title="Cerrar Sesión">Cerrar Sesión</button>
+            </div>
         </div>
 
         <div class="header">
@@ -884,7 +888,9 @@ def generate_html_search_app(data):
 
     with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
         f.write(html)
-    print(f"[OK] Buscador con OCR generado en: {OUTPUT_HTML}")
+    with open(OUTPUT_BUSCADOR, "w", encoding="utf-8") as f:
+        f.write(html)
+    print(f"[OK] Buscador con login y OCR generado en: {OUTPUT_HTML} y {OUTPUT_BUSCADOR}")
 
 if __name__ == "__main__":
     print("Compilando índice de búsqueda de 3.367 preguntas...")
