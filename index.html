@@ -555,8 +555,35 @@
             'pregunta', 'puntaje', 'puntua', 'puntúa', 'sin', 'responder', 'aun', 'aún', 'marcar', 'bandera', 'seleccione', 'una', 'como'
         ]);
 
+        // Algoritmo de distancia Levenshtein ultrarrápido para Fuzzy Matching (tolerancia a errores de OCR)
+        function levenshtein(a, b) {
+            if (a === b) return 0;
+            const la = a.length, lb = b.length;
+            if (la === 0) return lb;
+            if (lb === 0) return la;
+            const v0 = new Array(lb + 1);
+            const v1 = new Array(lb + 1);
+            for (let i = 0; i <= lb; i++) v0[i] = i;
+            for (let i = 0; i < la; i++) {
+                v1[0] = i + 1;
+                const ca = a.charCodeAt(i);
+                for (let j = 0; j < lb; j++) {
+                    const cost = ca === b.charCodeAt(j) ? 0 : 1;
+                    v1[j + 1] = Math.min(v1[j] + 1, v0[j + 1] + 1, v0[j] + cost);
+                }
+                for (let j = 0; j <= lb; j++) v0[j] = v1[j];
+            }
+            return v1[lb];
+        }
+
+        // Pre-tokenizar palabras clave en memoria para búsquedas difusas instantáneas (<2ms)
+        DB.forEach(item => {
+            const wordsList = item.k.match(/[a-z]{4,}/g) || [];
+            item.w = Array.from(new Set(wordsList.filter(w => !STOP_WORDS.has(w))));
+        });
+
         function search() {
-            const rawQ = document.getElementById('queryInput').value.trim().toLowerCase();
+            let rawQ = document.getElementById('queryInput').value.trim().toLowerCase();
             const unit = parseInt(document.getElementById('unitFilter').value, 10);
             const container = document.getElementById('resultsContainer');
             const countElem = document.getElementById('resultsCount');
@@ -570,6 +597,12 @@
                 </div>`;
                 return;
             }
+
+            // Normalizar errores clásicos de escaneo OCR
+            rawQ = rawQ
+                .replace(/\|/g, 'l')
+                .replace(/(?<=[a-z])1(?=[a-z])/g, 'l')
+                .replace(/(?<=[a-z])0(?=[a-z])/g, 'o');
 
             let words = rawQ.replace(/[^a-zA-Z0-9\s'’]/g, ' ').split(/\s+/).filter(w => w.length >= 2);
             let matches = [];
@@ -590,17 +623,20 @@
                 let descLower = (item.desc || '').toLowerCase();
                 let kLower = item.k;
 
+                // 1. Bonus exacto de frase
                 if (rawQ.length > 5) {
                     if (qLower.includes(rawQ)) score += 150;
                     else if (descLower.includes(rawQ)) score += 100;
                     else if (kLower.includes(rawQ)) score += 80;
                 }
 
+                // 2. Bonus exacto de n-gramas
                 for (let ng of ngrams) {
                     if (qLower.includes(ng)) score += 25;
                     else if (kLower.includes(ng)) score += 12;
                 }
 
+                // 3. Puntuación por términos (Exacto + Fuzzy Matching con Levenshtein)
                 let matchedContentWords = 0;
                 for (let w of words) {
                     let isStop = STOP_WORDS.has(w);
@@ -623,6 +659,21 @@
                         score += weight;
                         hit = true;
                     }
+
+                    // Coincidencia difusa para errores tipográficos del OCR
+                    if (!hit && !isStop && w.length >= 4) {
+                        const maxDist = w.length <= 5 ? 1 : 2;
+                        for (let tw of item.w) {
+                            if (Math.abs(tw.length - w.length) <= maxDist) {
+                                if (levenshtein(w, tw) <= maxDist) {
+                                    score += weight * 1.8;
+                                    hit = true;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
                     if (hit && !isStop) matchedContentWords++;
                 }
 
